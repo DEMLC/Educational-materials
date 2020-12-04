@@ -1,3 +1,3 @@
-# ホームページ掲載資料レイアウトチェック用
+# データエンジニアリング人材養成演習補助教材
 
-HPは[こちら](https://demlc.github.io/pub_test)
+補助教材は[こちら](https://demlc.github.io/Educational-materials/)
