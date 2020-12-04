@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>データ研磨スキル [初級編前半]</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="01_beginner_1st_half_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="01_beginner_1st_half_files/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="for-revealjs.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="01_beginner_1st_half_files/header-attrs-2.5/header-attrs.js"></script>
+    <link href="01_beginner_1st_half_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="01_beginner_1st_half_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">データ研磨スキル<br>[初級編前半]</h1>
+    <h3 class="date">2020/11/28</h3>
+</section>
+
+<section>
+<section id="はじめに" class="title-slide slide level1 unnumbered">
+<h1 class="unnumbered">はじめに</h1>
+
+</section>
+<section id="研磨ストーリー" class="slide level2 unnumbered">
+<h2 class="unnumbered">研磨ストーリー</h2>
+<p>顧客から受領した企業リストに対して企業概要データを付与し、データの集計表や指標を算出して顧客へ渡します。</p>
+<p><img data-src="../pictures/begginer/story.png" /></p>
+</section>
+<section id="作業イメージ" class="slide level2 unnumbered">
+<h2 class="unnumbered">作業イメージ</h2>
+<p>添えてある数字が各ステップに対応しています。</p>
+<p><img data-src="../pictures/begginer/story_image.png" /></p>
+</section>
+<section id="ディレクトリ構成" class="slide level2 unnumbered">
+<h2 class="unnumbered">ディレクトリ構成</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img data-src="../pictures/begginer/dir_structure.png" /></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p><br></p>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#wgjahkengy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wgjahkengy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wgjahkengy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wgjahkengy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wgjahkengy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wgjahkengy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wgjahkengy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wgjahkengy .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wgjahkengy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wgjahkengy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wgjahkengy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wgjahkengy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wgjahkengy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#wgjahkengy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wgjahkengy .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wgjahkengy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wgjahkengy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#wgjahkengy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wgjahkengy .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#wgjahkengy .gt_left {
+  text-align: left;
+}
+
+#wgjahkengy .gt_center {
+  text-align: center;
+}
+
+#wgjahkengy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wgjahkengy .gt_font_normal {
+  font-weight: normal;
+}
+
+#wgjahkengy .gt_font_bold {
+  font-weight: bold;
+}
+
+#wgjahkengy .gt_font_italic {
+  font-style: italic;
+}
+
+#wgjahkengy .gt_super {
+  font-size: 65%;
+}
+
+#wgjahkengy .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="wgjahkengy" style="overflow-x:auto;overflow-y:auto;width:500px;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">フォルダ</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">中身</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">.</td>
+      <td class="gt_row gt_left">ルートディレクトリ(data_engineering)</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">code</td>
+      <td class="gt_row gt_left">本資料で使用する.Rファイル</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">input</td>
+      <td class="gt_row gt_left">生データやマスタデータ</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">output</td>
+      <td class="gt_row gt_left">中間ファイルや研磨後データ</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+</div>
+</div>
+</section>
+<section id="ライブラリを読み込む" class="slide level2 unnumbered">
+<h2 class="unnumbered">ライブラリを読み込む</h2>
+<ul>
+<li>tidyverseとhereを読み込みます</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(here)</span></code></pre></div>
+</section></section>
+<section>
+<section id="ステップ１csvファイルの読み込み" class="title-slide slide level1">
+<h1>ステップ１：CSVファイルの読み込み</h1>
+<ul>
+<li>read_csv</li>
+<li>glimpse</li>
+</ul>
+</section>
+<section id="sagyou_step1" class="slide level2">
+<h2>作業内容</h2>
+<ul>
+<li>以下の3種類のcsvファイルを読み込みましょう
+<ul>
+<li>企業リスト1.csv</li>
+<li>企業リスト2.csv</li>
+<li>企業概要データ_2019年1月時点.csv</li>
+</ul></li>
+</ul>
+</section>
+<section id="read_csv" class="slide level2">
+<h2><strong>read_csv</strong>でcsvデータを読み込む</h2>
+<ul>
+<li>まずは<strong>企業リスト1.csv</strong>のみを読み込みます</li>
+<li>read_csvの引数の説明は2頁先ににまとめてあります</li>
+<li>カラム型を指定しないときは、カラム型をある程度自動識別し、読み込んだカラム型のメッセージが出ます</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>df_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/企業リスト1.csv&quot;</span>),</span>
+<span id="cb2-2"><a href="#cb2-2"></a>                 <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>))</span>
+<span id="cb2-3"><a href="#cb2-3"></a>df_<span class="dv">1</span></span></code></pre></div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<pre><code>
+-- Column specification --------------------------------------------------------
+cols(
+  企業コード = col_character()
+)</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:35%;">
+<pre><code># A tibble: 500 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J31299770 
+ 2 E32002046 
+ 3 D42585413 
+ 4 J39971897 
+ 5 J93122775 
+ 6 J34719839 
+ 7 L12571447 
+ 8 D42395106 
+ 9 J34594067 
+10 E32304350 
+# ... with 490 more rows</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>同様にして<strong>企業リスト2.csv</strong>も読み込みます</li>
+<li>ここではカラム型の指定も行っています</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/企業リスト2.csv&quot;</span>),</span>
+<span id="cb5-2"><a href="#cb5-2"></a>                 <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb5-3"><a href="#cb5-3"></a>                 <span class="dt">col_types =</span> <span class="st">&quot;c&quot;</span>)</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># これでも可 col_types = cols(企業コード = col_character())</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>df_<span class="dv">2</span></span></code></pre></div>
+<pre><code># A tibble: 500 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J38109080 
+ 2 D42631600 
+ 3 H42150036 
+ 4 E32060947 
+ 5 B02122602 
+ 6 J34020161 
+ 7 J34747662 
+ 8 J34830369 
+ 9 E32572710 
+10 J34109464 
+# ... with 490 more rows</code></pre>
+</section>
+<section id="read_csv_args" class="slide level2">
+<h2>read_csvの主要な引数</h2>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#mymuyzpyqm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mymuyzpyqm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mymuyzpyqm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mymuyzpyqm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mymuyzpyqm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mymuyzpyqm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mymuyzpyqm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mymuyzpyqm .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mymuyzpyqm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mymuyzpyqm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mymuyzpyqm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mymuyzpyqm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mymuyzpyqm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#mymuyzpyqm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mymuyzpyqm .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mymuyzpyqm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mymuyzpyqm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#mymuyzpyqm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mymuyzpyqm .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#mymuyzpyqm .gt_left {
+  text-align: left;
+}
+
+#mymuyzpyqm .gt_center {
+  text-align: center;
+}
+
+#mymuyzpyqm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mymuyzpyqm .gt_font_normal {
+  font-weight: normal;
+}
+
+#mymuyzpyqm .gt_font_bold {
+  font-weight: bold;
+}
+
+#mymuyzpyqm .gt_font_italic {
+  font-style: italic;
+}
+
+#mymuyzpyqm .gt_super {
+  font-size: 65%;
+}
+
+#mymuyzpyqm .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="mymuyzpyqm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">引数</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">default</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">意味</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">file</td>
+      <td class="gt_row gt_left"></td>
+      <td class="gt_row gt_left">読み込むファイルのpathを指定</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">col_names</td>
+      <td class="gt_row gt_left">TRUE</td>
+      <td class="gt_row gt_left">1行目をカラム名として読み込む</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">col_types</td>
+      <td class="gt_row gt_left">NULL</td>
+      <td class="gt_row gt_left">読み込むカラム型を指定（指定方法は後述）</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">locale</td>
+      <td class="gt_row gt_left">UTF-8, UTC</td>
+      <td class="gt_row gt_left">locale関数でencodingやタイムゾーン等を指定する</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">skip</td>
+      <td class="gt_row gt_left">0</td>
+      <td class="gt_row gt_left">先頭n行を飛ばして読み込む</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">n_max</td>
+      <td class="gt_row gt_left">Inf</td>
+      <td class="gt_row gt_left">読み込む最大行数</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+<ul>
+<li>locale関数について
+<ul>
+<li>例) locale(encoding = “shift-jis”, tz = “Japan”)</li>
+<li>他にもdate_formatなどで日付表示方法などが指定できます</li>
+<li>timestampデータなどがあるときに有効です</li>
+</ul></li>
+</ul>
+</section>
+<section id="col_typesの書き方" class="slide level2">
+<h2>col_typesの書き方</h2>
+<ul>
+<li><strong>文字列で指定</strong>
+<ul>
+<li><strong>col_types = “cci”</strong>と書くことで、1列目と2列目は文字型、3列目は整数型で読み込みというように指定ができます</li>
+<li>簡易的なコードを書いている場合はこちらでよいでしょう</li>
+</ul></li>
+<li><strong>cols()で指定</strong>（推奨）
+<ul>
+<li><strong>col_types = cols(カラム名 = col_character())</strong> と記述します</li>
+<li>データ読み込み時点からカラム型を意識しましょう</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">カラム型</th>
+<th style="text-align: left;">関数</th>
+<th style="text-align: center;">略記</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">論理型</td>
+<td style="text-align: left;">col_logical()</td>
+<td style="text-align: center;">l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">整数型</td>
+<td style="text-align: left;">col_integer()</td>
+<td style="text-align: center;">i</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">少数型</td>
+<td style="text-align: left;">col_double()</td>
+<td style="text-align: center;">d</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">文字型</td>
+<td style="text-align: left;">col_character()</td>
+<td style="text-align: center;">c</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">因子型</td>
+<td style="text-align: left;">col_factor()</td>
+<td style="text-align: center;">f</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">skip</td>
+<td style="text-align: left;">col_skip()</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># 例）このコードは動きません</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="kw">here</span>(<span class="st">&quot;input/data.csv&quot;</span>),</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="dt">col_1 =</span> <span class="kw">col_character</span>(),</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="dt">col_2 =</span> <span class="kw">col_integer</span>()</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  ))</span></code></pre></div>
+</div>
+</div>
+</section>
+<section id="read_cosmos2" class="slide level2">
+<h2>COSMOS2（c2）データの読み込み</h2>
+<ul>
+<li>ステップ4以降で扱うCOSMOS2のデータ(企業概要データ_2019年1月時点.csv)を読み込みます</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>c2_<span class="dv">201901</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>))</span></code></pre></div>
+<pre><code>
+-- Column specification --------------------------------------------------------
+cols(
+  企業コード = col_character(),
+  本社所在地市区郡 = col_character(),
+  業種大分類 = col_character(),
+  `資本金(千円)` = col_double(),
+  従業員数 = col_double(),
+  最新期業績決算期年 = col_double(),
+  最新期業績決算期月 = col_double(),
+  `最新期業績売上高(百万円)` = col_double(),
+  `最新期業績税引後利益(千円)` = col_double(),
+  創業年 = col_double(),
+  設立年 = col_double()
+)</code></pre>
+</section>
+<section id="glimpse" class="slide level2">
+<h2><strong>glimpse</strong>でデータを見る</h2>
+<ul>
+<li>カラム数が多いときは、コンソールでデータを表示しても、全てのカラムを確認することができません</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>c2_<span class="dv">201901</span></span></code></pre></div>
+<pre><code># A tibble: 2,111 x 11
+   企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~         862800      114
+ 2 G92155065  13113_東京都渋谷区~ H:金融・保険業~        3997800     2270
+ 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~         830800      627
+ 4 G92141220  01101_北海道札幌市中央区~ E:建設業           981800      194
+ 5 G92190707  01109_北海道札幌市手稲区~ G:卸売・小売業，~         419100      267
+ 6 G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 7 G92508571  27128_大阪府大阪市中央区~ F:製造業         53879600      745
+ 8 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~       27874600     7207
+ 9 G92552130  01104_北海道札幌市白石区~ E:建設業          3275400     1409
+10 G92557890  01110_北海道札幌市清田区~ F:製造業          3815700      295
+# ... with 2,101 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
+#   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
+</section>
+<section class="slide level2">
+
+<p><strong>glimpse</strong></p>
+<ul>
+<li>大規模データの確認には<strong>glimpse</strong>を使いましょう</li>
+<li>カラムが縦に並ぶのでデータが確認しやすいです</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">glimpse</span>(c2_<span class="dv">201901</span>)</span></code></pre></div>
+<pre><code>Rows: 2,111
+Columns: 11
+$ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;01103_北海道札幌市東区&quot;, &quot;13113_東京都渋谷区&quot;, &quot;01104_北海道札幌...
+$ 業種大分類                   &lt;chr&gt; &quot;G:卸売・小売業，飲食&quot;, &quot;H:金融・保険業&quot;, &quot;G:卸売・小売業，飲食&quot;, &quot;...
+$ `資本金(千円)`               &lt;dbl&gt; 862800, 3997800, 830800, 981800, 419100, 39...
+$ 従業員数                     &lt;dbl&gt; 114, 2270, 627, 194, 267, 435, 745, 7207, ...
+$ 最新期業績決算期年           &lt;dbl&gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018,...
+$ 最新期業績決算期月           &lt;dbl&gt; 3, 3, 3, 3, 2, 3, 3, 3, 3, 12, 3, 3, 3, 12, 3, ...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 19509, 127123, 35949, 100, 42211, 18093, 82001, 1...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 631424, 252220, 88283, 15...
+$ 創業年                       &lt;dbl&gt; 1946, 0, 1932, 1917, 0, 1943, 0, 0, 0, 0,...
+$ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946, 1929,...</code></pre>
+</section>
+<section id="読み込み時に注意すべき例０落ち" class="slide level2">
+<h2>読み込み時に注意すべき例：０落ち</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>col_types = “ic”</strong></p>
+<pre><code># A tibble: 3 x 2
+  都道府県CODE 都道府県名
+         &lt;int&gt; &lt;chr&gt;     
+1            1 北海道    
+2            2 青森県    
+3            3 岩手県    </code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>col_types = “cc”</strong></p>
+<pre><code># A tibble: 3 x 2
+  都道府県CODE 都道府県名
+  &lt;chr&gt;        &lt;chr&gt;     
+1 01           北海道    
+2 02           青森県    
+3 03           岩手県    </code></pre>
+</div>
+</div>
+<ul>
+<li>左の例では、都道府県CODEを整数として読み込んでいるので頭の<strong>0が落ちてしまっています</strong></li>
+<li>頭の0に意味があるときは、0落ちは問題になります</li>
+<li>データを読み込むときは必ず生データを確認し、カラム型などを意識しましょう</li>
+</ul>
+</section>
+<section id="生データの確認方法" class="slide level2">
+<h2>生データの確認方法</h2>
+<ul>
+<li>生データのファイルは、任意のテキストエディタ等で確認する他にも、次のようにして確認する方法があります</li>
+<li><strong>read_lines</strong>関数を使って、read_csvと同様に書くことで、生データをテキストとして1行ずつ読み込みます</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">read_lines</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/都道府県マスタ.csv&quot;</span>),</span>
+<span id="cb16-2"><a href="#cb16-2"></a>           <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb16-3"><a href="#cb16-3"></a>           <span class="dt">n_max =</span> <span class="dv">10</span>) <span class="co"># 先頭から10行を読み込む</span></span></code></pre></div>
+<pre><code> [1] &quot;都道府県CODE,都道府県名&quot; &quot;01,北海道&quot;              
+ [3] &quot;02,青森県&quot;               &quot;03,岩手県&quot;              
+ [5] &quot;04,宮城県&quot;               &quot;05,秋田県&quot;              
+ [7] &quot;06,山形県&quot;               &quot;07,福島県&quot;              
+ [9] &quot;08,茨城県&quot;               &quot;09,栃木県&quot;              </code></pre>
+<ul>
+<li>都道府県CODEは文字列読み込みが良いと考えられます</li>
+</ul>
+</section>
+<section id="step1_sanko1" class="slide level2">
+<h2>参考１：カラム型指定tips</h2>
+<ul>
+<li>カラム数が多いデータでcol_typesを手作業で入力するのは面倒なので、tipsを伝授します</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>c2_<span class="dv">201901</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    企業コード  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb18-6"><a href="#cb18-6"></a>    本社所在地市区郡  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb18-7"><a href="#cb18-7"></a>    業種大分類  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb18-8"><a href="#cb18-8"></a>    <span class="st">`</span><span class="dt">資本金(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-9"><a href="#cb18-9"></a>    従業員数  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-10"><a href="#cb18-10"></a>    最新期業績決算期年  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-11"><a href="#cb18-11"></a>    最新期業績決算期月  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-12"><a href="#cb18-12"></a>    <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-13"><a href="#cb18-13"></a>    <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-14"><a href="#cb18-14"></a>    創業年  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb18-15"><a href="#cb18-15"></a>    設立年  =<span class="st"> </span><span class="kw">col_double</span>()</span>
+<span id="cb18-16"><a href="#cb18-16"></a>  )</span>
+<span id="cb18-17"><a href="#cb18-17"></a>)</span></code></pre></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>カラム型を指定せずに100行程データを読み込み、読み込んだデータを<strong>spec</strong>という関数にかけます</li>
+<li>spec関数の出力をコピーして、必要があれば編集し、read_csvの引数に与えればおっけーです</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb19-2"><a href="#cb19-2"></a>         <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb19-3"><a href="#cb19-3"></a>         <span class="dt">n_max =</span> <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spec</span>()</span></code></pre></div>
+<pre><code>cols(
+  企業コード = col_character(),
+  本社所在地市区郡 = col_character(),
+  業種大分類 = col_character(),
+  `資本金(千円)` = col_double(),
+  従業員数 = col_double(),
+  最新期業績決算期年 = col_double(),
+  最新期業績決算期月 = col_double(),
+  `最新期業績売上高(百万円)` = col_double(),
+  `最新期業績税引後利益(千円)` = col_double(),
+  創業年 = col_double(),
+  設立年 = col_double()
+)</code></pre>
+</section>
+<section id="step1_sanko2" class="slide level2">
+<h2>参考２：()付きカラムの取り扱い</h2>
+<div class="columns">
+<div class="column" style="width:43%;">
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">glimpse</span>(c2_<span class="dv">201901</span>)</span></code></pre></div>
+<pre><code>Rows: 2,111
+Columns: 11
+$ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;01103_北海道札幌市東区&quot;, &quot;13113_東京都渋谷区&quot;, &quot;01104_北海道札幌...
+$ 業種大分類                   &lt;chr&gt; &quot;G:卸売・小売業，飲食&quot;, &quot;H:金融・保険業&quot;, &quot;G:卸売・小売業，飲食&quot;, &quot;...
+$ `資本金(千円)`               &lt;dbl&gt; 862800, 3997800, 830800, 981800, 419100, 39...
+$ 従業員数                     &lt;dbl&gt; 114, 2270, 627, 194, 267, 435, 745, 7207, ...
+$ 最新期業績決算期年           &lt;dbl&gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018,...
+$ 最新期業績決算期月           &lt;dbl&gt; 3, 3, 3, 3, 2, 3, 3, 3, 3, 12, 3, 3, 3, 12, 3, ...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 19509, 127123, 35949, 100, 42211, 18093, 82001, 1...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 631424, 252220, 88283, 15...
+$ 創業年                       &lt;dbl&gt; 1946, 0, 1932, 1917, 0, 1943, 0, 0, 0, 0,...
+$ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946, 1929,...</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:55%;">
+<ul>
+<li>()付きカラムは基本的に推奨されません</li>
+<li>理由は、コードの()と混同しエラーが起こるからです</li>
+<li>Rでは()付きカラムはバッククォートで囲むようにしてください</li>
+<li>コンソールでの表示もバッククォートが付いているのがわかります</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="ステップ２データの縦結合" class="title-slide slide level1">
+<h1>ステップ２：データの縦結合</h1>
+<ul>
+<li>bind_rows</li>
+</ul>
+</section>
+<section id="sagyou_step2" class="slide level2">
+<h2>作業内容</h2>
+<ul>
+<li>ステップ1で読み込んだ以下の2つのデータを縦に結合して1つのデータにします</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>df_1</strong></p>
+<pre><code># A tibble: 500 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J31299770 
+ 2 E32002046 
+ 3 D42585413 
+ 4 J39971897 
+ 5 J93122775 
+ 6 J34719839 
+ 7 L12571447 
+ 8 D42395106 
+ 9 J34594067 
+10 E32304350 
+# ... with 490 more rows</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>df_2</strong></p>
+<pre><code># A tibble: 500 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J38109080 
+ 2 D42631600 
+ 3 H42150036 
+ 4 E32060947 
+ 5 B02122602 
+ 6 J34020161 
+ 7 J34747662 
+ 8 J34830369 
+ 9 E32572710 
+10 J34109464 
+# ... with 490 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="bind_rowsでデータの縦行結合" class="slide level2">
+<h2><strong>bind_rows</strong>でデータの縦(行)結合</h2>
+<ul>
+<li>結合したいデータをbind_rowsの引数に与えることで、データを縦結合することができます</li>
+<li>df_1とdf_2を縦結合したデータをdf_3とします</li>
+</ul>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>df_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(df_<span class="dv">1</span>, df_<span class="dv">2</span>)</span>
+<span id="cb25-2"><a href="#cb25-2"></a>df_<span class="dv">3</span></span></code></pre></div>
+<pre><code># A tibble: 1,000 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J31299770 
+ 2 E32002046 
+ 3 D42585413 
+ 4 J39971897 
+ 5 J93122775 
+ 6 J34719839 
+ 7 L12571447 
+ 8 D42395106 
+ 9 J34594067 
+10 E32304350 
+# ... with 990 more rows</code></pre>
+</section>
+<section id="参考１３つ以上のデータの縦結合" class="slide level2">
+<h2>参考１：３つ以上のデータの縦結合</h2>
+<ul>
+<li>3つ以上のデータを縦結合したい場合も、2つの場合と同様にして引数に渡します</li>
+</ul>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">bind_rows</span>(df_<span class="dv">1</span>, df_<span class="dv">2</span>, df_<span class="dv">3</span>)</span></code></pre></div>
+<pre><code># A tibble: 2,000 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J31299770 
+ 2 E32002046 
+ 3 D42585413 
+ 4 J39971897 
+ 5 J93122775 
+ 6 J34719839 
+ 7 L12571447 
+ 8 D42395106 
+ 9 J34594067 
+10 E32304350 
+# ... with 1,990 more rows</code></pre>
+</section>
+<section id="参考２カラム名不一致データの縦結合" class="slide level2">
+<h2>参考２：カラム名不一致データの縦結合</h2>
+<ul>
+<li>カラム名が一致するものはカラム名で紐づく</li>
+<li>全てのデータとカラムが保持される</li>
+<li>欠損値はNAとなる</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>d1</p>
+<pre><code># A tibble: 1 x 2
+  col_1 col_2
+  &lt;dbl&gt; &lt;dbl&gt;
+1     1     1</code></pre>
+<p>d2</p>
+<pre><code># A tibble: 1 x 2
+  col_2 col_3
+  &lt;dbl&gt; &lt;dbl&gt;
+1     2     2</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">bind_rows</span>(d1, d2)</span></code></pre></div>
+<pre><code># A tibble: 2 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     1    NA
+2    NA     2     2</code></pre>
+</div>
+</div>
+</section>
+<section id="参考３データの横列結合" class="slide level2">
+<h2>参考３：データの横（列）結合</h2>
+<ul>
+<li>縦結合と同様に<strong>bind_cols</strong>でデータを横(列)結合できます</li>
+<li>カラム名が重複すると、カラムの識別がつくようにカラム名が自動的に変更されます</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">bind_cols</span>(df_<span class="dv">1</span>, df_<span class="dv">2</span>) </span></code></pre></div>
+<pre><code># A tibble: 500 x 2
+   企業コード...1 企業コード...2
+   &lt;chr&gt;          &lt;chr&gt;         
+ 1 J31299770      J38109080     
+ 2 E32002046      D42631600     
+ 3 D42585413      H42150036     
+ 4 J39971897      E32060947     
+ 5 J93122775      B02122602     
+ 6 J34719839      J34020161     
+ 7 L12571447      J34747662     
+ 8 D42395106      J34830369     
+ 9 J34594067      E32572710     
+10 E32304350      J34109464     
+# ... with 490 more rows</code></pre>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>縦結合とは異なり、行数が揃っていないと横結合することはできません</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">bind_cols</span>(df_<span class="dv">1</span>, df_<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>Error: Can&#39;t recycle `..1` (size 500) to match `..2` (size 1000).</code></pre>
+<p><strong>補足</strong></p>
+<ul>
+<li>bind_colsはbase関数のcbindと同様の操作で、キーの指定をした横結合はしません</li>
+<li>単純にデータが横にくっつきます</li>
+<li>キーを指定する横結合はステップ５で説明します</li>
+</ul>
+</section></section>
+<section>
+<section id="ステップ３レコードの重複消去" class="title-slide slide level1">
+<h1>ステップ３：レコードの重複消去</h1>
+<ul>
+<li>n_distinct</li>
+<li>distinct</li>
+</ul>
+</section>
+<section id="sagyou_step3" class="slide level2">
+<h2>作業内容</h2>
+<ul>
+<li>企業コードを縦結合したデータには、重複しているレコードがあります</li>
+<li>重複レコードの数を調べて重複レコードを消去します</li>
+</ul>
+<p>縦結合したデータdf_3で重複している企業コード</p>
+<pre><code># A tibble: 226 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 B02122602 
+ 2 B02122602 
+ 3 B42124422 
+ 4 B42124422 
+ 5 B42539783 
+ 6 B42539783 
+ 7 B42588245 
+ 8 B42588245 
+ 9 C62177407 
+10 C62177407 
+# ... with 216 more rows</code></pre>
+</section>
+<section id="n_distinct" class="slide level2">
+<h2><strong>n_distinct</strong>で重複があるか調べる</h2>
+<ul>
+<li>n_distinctは、引数にデータを与えると、与えたデータから重複レコードを除いたレコード数を返す関数です</li>
+<li>たとえば左データでは、7行のうち2,4,5行目の計3行が重複しているので、n_distinctにかけると4が返ってきます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 7 x 1
+  code 
+  &lt;chr&gt;
+1 a    
+2 a    
+3 b    
+4 b    
+5 a    
+6 c    
+7 d    </code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">n_distinct</span>()</span></code></pre></div>
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>元のレコード数からn_distinctの返り値（重複を除いたレコード数）を引くことで、重複していたレコード数がわかります</li>
+<li>この値が0であった場合は、重複レコードは1つもないということになります</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 7 x 1
+  code 
+  &lt;chr&gt;
+1 a    
+2 a    
+3 b    
+4 b    
+5 a    
+6 c    
+7 d    </code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="kw">nrow</span>(d) <span class="op">-</span><span class="st"> </span><span class="kw">n_distinct</span>(d)</span></code></pre></div>
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</section>
+<section id="distinctで重複レコードの消去" class="slide level2">
+<h2><strong>distinct</strong>で重複レコードの消去</h2>
+<ul>
+<li>distinctの引数にデータを与えると、重複レコードが消去されたデータが返ってきます</li>
+<li>新出レコードは残し、既出レコードは消去されます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 7 x 1
+  code 
+  &lt;chr&gt;
+1 a    
+2 a    
+3 b    
+4 b    
+5 a    
+6 c    
+7 d    </code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>()</span></code></pre></div>
+<pre><code># A tibble: 4 x 1
+  code 
+  &lt;chr&gt;
+1 a    
+2 b    
+3 c    
+4 d    </code></pre>
+</div>
+</div>
+</section>
+<section id="企業コードの重複確認と重複消去" class="slide level2">
+<h2>企業コードの重複確認と重複消去</h2>
+<ul>
+<li>企業コードの重複数を確認し、重複を消去します</li>
+<li>重複を消去したデータを、df_3_distinctとします</li>
+</ul>
+<p>重複レコード数の確認</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co"># もとのデータ数 - 重複消去後のデータ数 = 重複データ数</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a><span class="kw">nrow</span>(df_<span class="dv">3</span>) <span class="op">-</span><span class="st"> </span><span class="kw">n_distinct</span>(df_<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>[1] 113</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>df_<span class="dv">3</span>_distinct &lt;-<span class="st"> </span>df_<span class="dv">3</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>() </span>
+<span id="cb52-2"><a href="#cb52-2"></a><span class="kw">nrow</span>(df_<span class="dv">3</span>_distinct)</span></code></pre></div>
+<pre><code>[1] 887</code></pre>
+</section>
+<section id="step3_sanko1" class="slide level2">
+<h2>参考１：複数カラムデータの重複消去</h2>
+<ul>
+<li>たとえば左のような複数カラムデータがあるとします</li>
+<li>カラムcol_1の重複しているレコードを消去するには、distinctの引数に重複消去するカラム名を与えます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 4 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1     1 a     東京 
+2     2 a     滋賀 
+3     2 b     大阪 
+4     2 a     滋賀 </code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>(col_<span class="dv">1</span>)</span></code></pre></div>
+<pre><code># A tibble: 2 x 1
+  col_1
+  &lt;dbl&gt;
+1     1
+2     2</code></pre>
+</div>
+</div>
+<p>カラムcol_2, col_3が消えてしまいました。</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>引数<strong>.keep_all = TRUE</strong>とすることによって、重複消去したカラム以外のカラムも残すことができます。</li>
+</ul>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 4 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1     1 a     東京 
+2     2 a     滋賀 
+3     2 b     大阪 
+4     2 a     滋賀 </code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>(col_<span class="dv">1</span>, <span class="dt">.keep_all =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code># A tibble: 2 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1     1 a     東京 
+2     2 a     滋賀 </code></pre>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>複数のカラムを引数に与えると、<strong>与えたカラムのレコードの積集合</strong>が重複していた時、レコードが消去されます</li>
+</ul>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 4 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1     1 a     東京 
+2     2 a     滋賀 
+3     2 b     大阪 
+4     2 a     滋賀 </code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>(col_<span class="dv">1</span>, col_<span class="dv">2</span>, col_<span class="dv">3</span>)</span></code></pre></div>
+<pre><code># A tibble: 3 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+1     1 a     東京 
+2     2 a     滋賀 
+3     2 b     大阪 </code></pre>
+</section></section>
+<section>
+<section id="ステップ４カラムの選択" class="title-slide slide level1">
+<h1>ステップ４：カラムの選択</h1>
+<ul>
+<li>select</li>
+</ul>
+</section>
+<section id="sagyou_step4" class="slide level2">
+<h2>作業内容</h2>
+<ul>
+<li>c2のデータから必要なカラムのみを抽出します</li>
+</ul>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<pre><code>Rows: 2,111
+Columns: 11
+$ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;01103_北海道札幌市東区&quot;, &quot;13113_東京都渋谷区&quot;, &quot;01104_北海道札幌...
+$ 業種大分類                   &lt;chr&gt; &quot;G:卸売・小売業，飲食&quot;, &quot;H:金融・保険業&quot;, &quot;G:卸売・小売業，飲食&quot;, &quot;...
+$ `資本金(千円)`               &lt;dbl&gt; 862800, 3997800, 830800, 981800, 419100, 39...
+$ 従業員数                     &lt;dbl&gt; 114, 2270, 627, 194, 267, 435, 745, 7207, ...
+$ 最新期業績決算期年           &lt;dbl&gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018,...
+$ 最新期業績決算期月           &lt;dbl&gt; 3, 3, 3, 3, 2, 3, 3, 3, 3, 12, 3, 3, 3, 12, 3, ...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 19509, 127123, 35949, 100, 42211, 18093, 82001, 1...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 631424, 252220, 88283, 15...
+$ 創業年                       &lt;dbl&gt; 1946, 0, 1932, 1917, 0, 1943, 0, 0, 0, 0,...
+$ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946, 1929,...</code></pre>
+</section>
+<section id="必要なカラム" class="slide level2">
+<h2>必要なカラム</h2>
+<ul>
+<li>必要なカラムは次の6つです</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<ul>
+<li>企業コード</li>
+<li>本社所在地市区郡</li>
+<li>業種大分類</li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:52%;">
+<ul>
+<li>従業員数</li>
+<li>最新期業績売上高(百万円)</li>
+<li>最新期業績税引後利益(千円)</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>今c2データにあるカラムは以下の11個です</li>
+</ul>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">colnames</span>()</span></code></pre></div>
+<pre><code> [1] &quot;企業コード&quot;                 &quot;本社所在地市区郡&quot;          
+ [3] &quot;業種大分類&quot;                 &quot;資本金(千円)&quot;              
+ [5] &quot;従業員数&quot;                   &quot;最新期業績決算期年&quot;        
+ [7] &quot;最新期業績決算期月&quot;         &quot;最新期業績売上高(百万円)&quot;  
+ [9] &quot;最新期業績税引後利益(千円)&quot; &quot;創業年&quot;                    
+[11] &quot;設立年&quot;                    </code></pre>
+</section>
+<section id="selectでカラムの選択" class="slide level2">
+<h2><strong>select</strong>でカラムの選択</h2>
+<ul>
+<li>データとカラム名をselectの引数に渡すことで、データから選択したカラムを抽出することができます</li>
+</ul>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span></span>
+<span id="cb70-2"><a href="#cb70-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;本社所在地市区郡&quot;</span>, <span class="st">&quot;業種大分類&quot;</span>,</span>
+<span id="cb70-3"><a href="#cb70-3"></a>         <span class="st">&quot;従業員数&quot;</span>, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>,</span>
+<span id="cb70-4"><a href="#cb70-4"></a>         <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb70-5"><a href="#cb70-5"></a><span class="st">  </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<pre><code>Rows: 2,111
+Columns: 6
+$ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;01103_北海道札幌市東区&quot;, &quot;13113_東京都渋谷区&quot;, &quot;01104_北海道札幌...
+$ 業種大分類                   &lt;chr&gt; &quot;G:卸売・小売業，飲食&quot;, &quot;H:金融・保険業&quot;, &quot;G:卸売・小売業，飲食&quot;, &quot;...
+$ 従業員数                     &lt;dbl&gt; 114, 2270, 627, 194, 267, 435, 745, 7207, ...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 19509, 127123, 35949, 100, 42211, 18093, 82001, 1...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 631424, 252220, 88283, 15...</code></pre>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>変数を選択したデータを<strong>c2_201901_selected</strong>とします</li>
+</ul>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>c2_<span class="dv">201901</span>_selected &lt;-<span class="st"> </span>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span></span>
+<span id="cb72-2"><a href="#cb72-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>,</span>
+<span id="cb72-3"><a href="#cb72-3"></a>         <span class="st">&quot;本社所在地市区郡&quot;</span>,</span>
+<span id="cb72-4"><a href="#cb72-4"></a>         <span class="st">&quot;業種大分類&quot;</span>,</span>
+<span id="cb72-5"><a href="#cb72-5"></a>         <span class="st">&quot;従業員数&quot;</span>,</span>
+<span id="cb72-6"><a href="#cb72-6"></a>         <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>,</span>
+<span id="cb72-7"><a href="#cb72-7"></a>         <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span>)</span>
+<span id="cb72-8"><a href="#cb72-8"></a>c2_<span class="dv">201901</span>_selected</span></code></pre></div>
+<pre><code># A tibble: 2,111 x 6
+   企業コード 本社所在地市区郡 業種大分類 従業員数 `最新期業績売上高(百万円)`~
+   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;         &lt;dbl&gt;            &lt;dbl&gt;
+ 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~      114            19509
+ 2 G92155065  13113_東京都渋谷区~ H:金融・保険業~     2270           127123
+ 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~      627            35949
+ 4 G92141220  01101_北海道札幌市中央区~ E:建設業        194              100
+ 5 G92190707  01109_北海道札幌市手稲区~ G:卸売・小売業，~      267            42211
+ 6 G92515950  01105_北海道札幌市豊平区~ F:製造業        435            18093
+ 7 G92508571  27128_大阪府大阪市中央区~ F:製造業        745            82001
+ 8 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~     7207              100
+ 9 G92552130  01104_北海道札幌市白石区~ E:建設業       1409            23288
+10 G92557890  01110_北海道札幌市清田区~ F:製造業        295            61249
+# ... with 2,101 more rows, and 1 more variable:
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+</section>
+<section id="step4_sanko1" class="slide level2">
+<h2>参考１：不要な読み込みはしない</h2>
+<ul>
+<li>不要カラムが事前に分かっている場合は、(特に大規模データでは)データ読み込み時点で対処した方が効率的です</li>
+</ul>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="co"># 不要なカラムはcol_skip()として読み込まないようにする</span></span>
+<span id="cb74-2"><a href="#cb74-2"></a>c2_<span class="dv">201901</span>_selected &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
+<span id="cb74-3"><a href="#cb74-3"></a>  <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb74-4"><a href="#cb74-4"></a>  <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb74-5"><a href="#cb74-5"></a>  <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
+<span id="cb74-6"><a href="#cb74-6"></a>    企業コード  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb74-7"><a href="#cb74-7"></a>    本社所在地市区郡  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb74-8"><a href="#cb74-8"></a>    業種大分類  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb74-9"><a href="#cb74-9"></a>    <span class="st">`</span><span class="dt">資本金(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb74-10"><a href="#cb74-10"></a>    従業員数  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb74-11"><a href="#cb74-11"></a>    最新期業績決算期年  =<span class="st"> </span><span class="kw">col_skip</span>(), <span class="co"># 不要</span></span>
+<span id="cb74-12"><a href="#cb74-12"></a>    最新期業績決算期月  =<span class="st"> </span><span class="kw">col_skip</span>(), <span class="co"># 不要</span></span>
+<span id="cb74-13"><a href="#cb74-13"></a>    <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb74-14"><a href="#cb74-14"></a>    <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb74-15"><a href="#cb74-15"></a>    創業年  =<span class="st"> </span><span class="kw">col_skip</span>(),  <span class="co"># 不要</span></span>
+<span id="cb74-16"><a href="#cb74-16"></a>    設立年  =<span class="st"> </span><span class="kw">col_skip</span>()   <span class="co"># 不要</span></span>
+<span id="cb74-17"><a href="#cb74-17"></a>  )</span>
+<span id="cb74-18"><a href="#cb74-18"></a>)</span></code></pre></div>
+</section>
+<section id="step4_sanko2" class="slide level2">
+<h2>参考２：ベクトルで変数の選択</h2>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>want_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;col_1&quot;</span>, <span class="st">&quot;col_2&quot;</span>)</span>
+<span id="cb75-2"><a href="#cb75-2"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">any_of</span>(want_var))</span>
+<span id="cb75-3"><a href="#cb75-3"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">all_of</span>(want_var))</span></code></pre></div>
+<ul>
+<li>上記のようにカラムをベクトルで選択することもできますが、any_ofとall_ofを使い分ける必要があります</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:90%;">
+<ul>
+<li><strong>any_of</strong>
+<ul>
+<li>カラム名ベクトルに<strong>含まれるカラム</strong>を選択します</li>
+<li>存在しないカラムがあってもエラーになりません</li>
+</ul></li>
+<li><strong>all_of</strong>
+<ul>
+<li>カラム名ベクトルの<strong>全てのカラム</strong>を選択します</li>
+<li>存在しないカラムがある場合はエラーになります</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p>次頁で例を示します。</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>any_of</strong>は存在しないカラムがあってもエラーが出ない</li>
+</ul>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a>want_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;従業員数&quot;</span>, <span class="st">&quot;企業規模&quot;</span>)</span>
+<span id="cb76-2"><a href="#cb76-2"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">any_of</span>(want_var)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code># A tibble: 2 x 2
+  企業コード 従業員数
+  &lt;chr&gt;         &lt;dbl&gt;
+1 G92155635       114
+2 G92155065      2270</code></pre>
+<ul>
+<li><strong>all_of</strong>は存在しないカラムがあるとエラーが出る</li>
+</ul>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a>want_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;従業員数&quot;</span>, <span class="st">&quot;企業規模&quot;</span>)</span>
+<span id="cb78-2"><a href="#cb78-2"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">all_of</span>(want_var)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>Error: Can&#39;t subset columns that don&#39;t exist.
+[31mx[39m Column `企業規模` doesn&#39;t exist.</code></pre>
+</section>
+<section id="step4_sanko3" class="slide level2">
+<h2>参考３：変数消去</h2>
+<ul>
+<li>選択した変数を<strong>消去</strong>したい場合は、変数名にマイナスをつけて <strong>ー変数名</strong>と書きます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 3 x 3
+      x     y     z
+  &lt;int&gt; &lt;int&gt; &lt;int&gt;
+1     1     4     7
+2     2     5     8
+3     3     6     9</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span><span class="st">&quot;y&quot;</span>, <span class="op">-</span><span class="st">&quot;z&quot;</span>) </span></code></pre></div>
+<pre><code># A tibble: 3 x 1
+      x
+  &lt;int&gt;
+1     1
+2     2
+3     3</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>ベクトルで変数消去することも可能です</li>
+<li>マイナスはall_ofかany_ofの前につけます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:38%;">
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a>d</span></code></pre></div>
+<pre><code># A tibble: 3 x 3
+      x     y     z
+  &lt;int&gt; &lt;int&gt; &lt;int&gt;
+1     1     4     7
+2     2     5     8
+3     3     6     9</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1"></a>del_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;z&quot;</span>)</span>
+<span id="cb86-2"><a href="#cb86-2"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">all_of</span>(del_var))</span></code></pre></div>
+<pre><code># A tibble: 3 x 1
+      x
+  &lt;int&gt;
+1     1
+2     2
+3     3</code></pre>
+</div>
+</div>
+</section>
+<section id="step4_sanko4" class="slide level2">
+<h2>参考４：クォート</h2>
+<ul>
+<li>selectにおいて、カラム名はクォーテーションで囲んでも、囲まなくてもOKです</li>
+<li>ただしカラム名に括弧がある場合などは例外で、<strong>バッククォート</strong>「<strong>`</strong>」で囲む必要があります
+<ul>
+<li>カラム名の括弧がコードの括弧と混同するのを防ぐためです</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb88-2"><a href="#cb88-2"></a><span class="st">  </span><span class="kw">select</span>(企業コード, <span class="st">&quot;従業員数&quot;</span>, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>) <span class="op">%&gt;%</span></span>
+<span id="cb88-3"><a href="#cb88-3"></a><span class="st">  </span><span class="kw">head</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code># A tibble: 3 x 3
+  企業コード 従業員数 `最新期業績売上高(百万円)`
+  &lt;chr&gt;         &lt;dbl&gt;                      &lt;dbl&gt;
+1 G92155635       114                      19509
+2 G92155065      2270                     127123
+3 G92143569       627                      35949</code></pre>
+</section></section>
+<section>
+<section id="ステップ５データの横結合" class="title-slide slide level1">
+<h1>ステップ５：データの横結合</h1>
+<ul>
+<li>left_join</li>
+</ul>
+</section>
+<section id="sagyou_step5" class="slide level2">
+<h2>作業内容</h2>
+<ul>
+<li>ステップ3と4で作成した以下の2つのデータを、企業コードをキーにして結合(joinやmergeとも言う)します</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1"></a>df_<span class="dv">3</span>_distinct</span></code></pre></div>
+<pre><code># A tibble: 887 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J31299770 
+ 2 E32002046 
+ 3 D42585413 
+ 4 J39971897 
+ 5 J93122775 
+ 6 J34719839 
+ 7 L12571447 
+ 8 D42395106 
+ 9 J34594067 
+10 E32304350 
+# ... with 877 more rows</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1"></a>c2_<span class="dv">201901</span>_selected</span></code></pre></div>
+<pre><code># A tibble: 2,111 x 7
+   企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~         862800      114
+ 2 G92155065  13113_東京都渋谷区~ H:金融・保険業~        3997800     2270
+ 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~         830800      627
+ 4 G92141220  01101_北海道札幌市中央区~ E:建設業           981800      194
+ 5 G92190707  01109_北海道札幌市手稲区~ G:卸売・小売業，~         419100      267
+ 6 G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 7 G92508571  27128_大阪府大阪市中央区~ F:製造業         53879600      745
+ 8 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~       27874600     7207
+ 9 G92552130  01104_北海道札幌市白石区~ E:建設業          3275400     1409
+10 G92557890  01110_北海道札幌市清田区~ F:製造業          3815700      295
+# ... with 2,101 more rows, and 2 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="いろいろな結合方法" class="slide level2">
+<h2>いろいろな結合方法</h2>
+<div class="columns">
+<div class="column" style="width:24%;">
+<p><strong>left_join</strong> <img src="../pictures/begginer/left-join.gif" height="200"></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:24%;">
+<p><strong>left_join</strong> <img src="../pictures/begginer/left-join-extra.gif" height="200"></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:24%;">
+<p><strong>right_join</strong> <img src="../pictures/begginer/right-join.gif" height="200"></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:24%;">
+<p><strong>full_join</strong> <img src="../pictures/begginer/full-join.gif" height="200"></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:24%;">
+<p><strong>inner_join</strong> <img src="../pictures/begginer/inner-join.gif" height="200"></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:24%;">
+<p><strong>anti_join</strong> <img src="../pictures/begginer/anti-join.gif" height="200"></p>
+</div>
+</div>
+</section>
+<section id="left_join_image" class="slide level2">
+<h2>left_joinのイメージ</h2>
+<p>色付きカラムが企業コードだと思ってください。</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img data-src="../pictures/begginer/left-join.gif" /></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<ul>
+<li>left_joinでは第一引数の行を全て保持します</li>
+<li>第二引数の行は、キーが第一引数と一致した行のみ残します</li>
+<li>第二引数のカラムは、キーが一致しない場合NAとなります</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="結合する方法を決める" class="slide level2">
+<h2>結合する方法を決める</h2>
+<ul>
+<li>df_3_distinctの企業コードに対してc2のデータを紐づけたいので、ここでは<strong>left_join</strong>を使って結合します</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1"></a>df_<span class="dv">3</span>_distinct</span></code></pre></div>
+<pre><code># A tibble: 887 x 1
+   企業コード
+   &lt;chr&gt;     
+ 1 J31299770 
+ 2 E32002046 
+ 3 D42585413 
+ 4 J39971897 
+ 5 J93122775 
+ 6 J34719839 
+ 7 L12571447 
+ 8 D42395106 
+ 9 J34594067 
+10 E32304350 
+# ... with 877 more rows</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:55%;">
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1"></a>c2_<span class="dv">201901</span>_selected </span></code></pre></div>
+<pre><code># A tibble: 2,111 x 7
+   企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~         862800      114
+ 2 G92155065  13113_東京都渋谷区~ H:金融・保険業~        3997800     2270
+ 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~         830800      627
+ 4 G92141220  01101_北海道札幌市中央区~ E:建設業           981800      194
+ 5 G92190707  01109_北海道札幌市手稲区~ G:卸売・小売業，~         419100      267
+ 6 G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 7 G92508571  27128_大阪府大阪市中央区~ F:製造業         53879600      745
+ 8 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~       27874600     7207
+ 9 G92552130  01104_北海道札幌市白石区~ E:建設業          3275400     1409
+10 G92557890  01110_北海道札幌市清田区~ F:製造業          3815700      295
+# ... with 2,101 more rows, and 2 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="left_joinでデータの結合" class="slide level2">
+<h2><strong>left_join</strong>でデータの結合</h2>
+<ul>
+<li>キーとするカラムは引数<strong>by</strong>で指定します</li>
+<li>ジョインしたデータをdata_1とします</li>
+</ul>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a>data_<span class="dv">1</span> &lt;-<span class="st"> </span></span>
+<span id="cb98-2"><a href="#cb98-2"></a><span class="st">  </span>df_<span class="dv">3</span>_distinct <span class="op">%&gt;%</span></span>
+<span id="cb98-3"><a href="#cb98-3"></a><span class="st">  </span><span class="kw">left_join</span>(c2_<span class="dv">201901</span>_selected, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb98-4"><a href="#cb98-4"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<pre><code>Rows: 887
+Columns: 7
+$ 企業コード                   &lt;chr&gt; &quot;J31299770&quot;, &quot;E32002046&quot;, &quot;D42585413&quot;, &quot;J39...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;13103_東京都港区&quot;, &quot;27123_大阪府大阪市淀川区&quot;, &quot;13103_東京都港区...
+$ 業種大分類                   &lt;chr&gt; &quot;I:不動産業&quot;, &quot;L:サービス業&quot;, &quot;J:運輸・通信業&quot;, &quot;L:サービス業&quot;,...
+$ `資本金(千円)`               &lt;dbl&gt; 931300, 1098300, 6120900, 15432800, 9904900...
+$ 従業員数                     &lt;dbl&gt; 64, 1120, 216, 31059, 314, 1167, 880, 1555...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 6555, 100, 31746, 334093, 69308, 54667, 107643, 6...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 910536, 1775694, 408523, 2544502, 763986, 31954410...</code></pre>
+</section>
+<section id="step5_sanko" class="slide level2">
+<h2>参考：right_join</h2>
+<ul>
+<li>引数に与えるデータの順番を変えれば、right_joinを使っても、先ほどと同様の結合をすることができます</li>
+<li>left_joinとright_joinは混在させないようにしましょう（混在すると可読性が下がってしまうため）</li>
+</ul>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a>c2_<span class="dv">201901</span>_selected <span class="op">%&gt;%</span></span>
+<span id="cb100-2"><a href="#cb100-2"></a><span class="st">  </span><span class="kw">right_join</span>(df_<span class="dv">3</span>_distinct, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb100-3"><a href="#cb100-3"></a><span class="st">  </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<pre><code>Rows: 887
+Columns: 7
+$ 企業コード                   &lt;chr&gt; &quot;G92155065&quot;, &quot;G92515950&quot;, &quot;G92543356&quot;, &quot;G92...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;13113_東京都渋谷区&quot;, &quot;01105_北海道札幌市豊平区&quot;, &quot;01101_北海道札...
+$ 業種大分類                   &lt;chr&gt; &quot;H:金融・保険業&quot;, &quot;F:製造業&quot;, &quot;E:建設業&quot;, &quot;F:製造業&quot;, &quot;G:卸...
+$ `資本金(千円)`               &lt;dbl&gt; 3997800, 399000, 252800, 16500900, 9316300,...
+$ 従業員数                     &lt;dbl&gt; 2270, 435, 903, 1278, 455, 2547, 606, 807,...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 127123, 18093, 16223, 112638, 361158, 116457, 127...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 4389077, 88283, 515387, 442755, 12313348, 5378462,...</code></pre>
+</section></section>
+<section>
+<section id="箸休めスライド" class="title-slide slide level1">
+<h1>箸休めスライド</h1>
+<ul>
+<li>relocate</li>
+<li>Tabキーで補完</li>
+</ul>
+</section>
+<section id="relocateでカラムを少しだけ並び替え" class="slide level2">
+<h2>relocateでカラムを少しだけ並び替え</h2>
+<ul>
+<li>relocateは選択したカラムを先頭に移動できる関数です</li>
+<li>data_1で従業員数カラムは4番目にありますが、従業員数カラムに注目したい場合1番目にあると嬉しいです</li>
+<li>本資料では見栄えのために今後使用していきます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span></span>
+<span id="cb102-2"><a href="#cb102-2"></a><span class="st">  </span><span class="kw">head</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code># A tibble: 3 x 7
+  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+  &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+1 J31299770  13103_東京都港区 I:不動産業         931300       64
+2 E32002046  27123_大阪府大阪市淀川区~ L:サービス業~        1098300     1120
+3 D42585413  13103_東京都港区 J:運輸・通信業~        6120900      216
+# ... with 2 more variables: `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb104-2"><a href="#cb104-2"></a><span class="st">  </span><span class="kw">relocate</span>(従業員数)</span></code></pre></div>
+<pre><code># A tibble: 3 x 7
+  従業員数 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
+     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
+1       64 J31299770  13103_東京都港区 I:不動産業         931300
+2     1120 E32002046  27123_大阪府大阪市淀川区~ L:サービス業~        1098300
+3      216 D42585413  13103_東京都港区 J:運輸・通信業~        6120900
+# ... with 2 more variables: `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="tabキーで補完入力" class="slide level2">
+<h2>Tabキーで補完入力</h2>
+<ul>
+<li>関数内でTabキー(またはctrl + space)を押すと、使用できる引数候補が表示され引数の説明も表示してくれます</li>
+</ul>
+<p><img data-src="../pictures/begginer/Tab_hokan_1.png" /></p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>データにあるカラム名もTabで参照できます</li>
+<li>またクォーテーション内でTABキーを押すと、作業ディレクトリのファイルやフォルダを参照できます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img data-src="../pictures/begginer/Tab_hokan_2.png" /></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p><img data-src="../pictures/begginer/Tab_hokan_3.png" /></p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="01_beginner_1st_half_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="01_beginner_1st_half_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '01_beginner_1st_half_files/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: '01_beginner_1st_half_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: '01_beginner_1st_half_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>動作環境 | データエンジニアリング人材養成演習補助教材</title>
+  <meta name="description" content="本ページは、滋賀大学の集中講義「データエンジニアリング人材養成演習」の補助教材です。" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="動作環境 | データエンジニアリング人材養成演習補助教材" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="本ページは、滋賀大学の集中講義「データエンジニアリング人材養成演習」の補助教材です。" />
+  <meta name="github-repo" content="DEMLC/pub_test" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="動作環境 | データエンジニアリング人材養成演習補助教材" />
+  
+  <meta name="twitter:description" content="本ページは、滋賀大学の集中講義「データエンジニアリング人材養成演習」の補助教材です。" />
+  
+
+<meta name="author" content="滋賀大学DEMLセンター" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="book_04_intermediate_2nd_half.html"/>
+
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="https://demlc.github.io/pub_test/">DE人材養成演習補助教材</a></strong></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>はじめに</a></li>
+<li class="chapter" data-level="1" data-path="book_00_introduction.html"><a href="book_00_introduction.html"><i class="fa fa-check"></i><b>1</b> 導入編</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#本資料について"><i class="fa fa-check"></i><b>1.1</b> 本資料について</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#対象読者"><i class="fa fa-check"></i><b>1.1.1</b> 対象読者</a></li>
+<li class="chapter" data-level="1.1.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#目的"><i class="fa fa-check"></i><b>1.1.2</b> 目的</a></li>
+<li class="chapter" data-level="1.1.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#構成"><i class="fa fa-check"></i><b>1.1.3</b> 構成</a></li>
+<li class="chapter" data-level="1.1.4" data-path="book_00_introduction.html"><a href="book_00_introduction.html#到達目標"><i class="fa fa-check"></i><b>1.1.4</b> 到達目標</a></li>
+<li class="chapter" data-level="1.1.5" data-path="book_00_introduction.html"><a href="book_00_introduction.html#導入編の内容"><i class="fa fa-check"></i><b>1.1.5</b> 導入編の内容</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#tidyverse"><i class="fa fa-check"></i><b>1.2</b> tidyverse</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#what_tidyverse"><i class="fa fa-check"></i><b>1.2.1</b> tidyverseとは</a></li>
+<li class="chapter" data-level="1.2.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#why_tidyverse"><i class="fa fa-check"></i><b>1.2.2</b> なぜtidyverseを使うのか</a></li>
+<li class="chapter" data-level="1.2.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#install_tidyverse"><i class="fa fa-check"></i><b>1.2.3</b> tidyverseのインストールと読込</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#tibble"><i class="fa fa-check"></i><b>1.3</b> tibble</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#about_tibble"><i class="fa fa-check"></i><b>1.3.1</b> tibbleとは</a></li>
+<li class="chapter" data-level="1.3.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#コンソール表示の比較"><i class="fa fa-check"></i><b>1.3.2</b> コンソール表示の比較</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="book_00_introduction.html"><a href="book_00_introduction.html#パイプ演算子"><i class="fa fa-check"></i><b>1.4</b> パイプ演算子 %&gt;%</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#what_pipe"><i class="fa fa-check"></i><b>1.4.1</b> パイプ演算子とは</a></li>
+<li class="chapter" data-level="1.4.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#pipemerit"><i class="fa fa-check"></i><b>1.4.2</b> パイプ演算子のメリット</a></li>
+<li class="chapter" data-level="1.4.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#pipe_sanko"><i class="fa fa-check"></i><b>1.4.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="book_00_introduction.html"><a href="book_00_introduction.html#プロジェクト"><i class="fa fa-check"></i><b>1.5</b> プロジェクト</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#プロジェクトとは"><i class="fa fa-check"></i><b>1.5.1</b> プロジェクトとは</a></li>
+<li class="chapter" data-level="1.5.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#Rproject"><i class="fa fa-check"></i><b>1.5.2</b> R project</a></li>
+<li class="chapter" data-level="1.5.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#Rproject_create"><i class="fa fa-check"></i><b>1.5.3</b> R projectの作成</a></li>
+<li class="chapter" data-level="1.5.4" data-path="book_00_introduction.html"><a href="book_00_introduction.html#Rproject_pros"><i class="fa fa-check"></i><b>1.5.4</b> R projectの利点</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="book_00_introduction.html"><a href="book_00_introduction.html#ディレクトリフォルダ構成"><i class="fa fa-check"></i><b>1.6</b> ディレクトリ(フォルダ)構成</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#ディレクトリ構成とは"><i class="fa fa-check"></i><b>1.6.1</b> ディレクトリ構成とは</a></li>
+<li class="chapter" data-level="1.6.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#demo_dirのディレクトリ構成詳細"><i class="fa fa-check"></i><b>1.6.2</b> <strong>demo_dir</strong>のディレクトリ構成詳細</a></li>
+<li class="chapter" data-level="1.6.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#ディレクトリ構成を定義するメリット"><i class="fa fa-check"></i><b>1.6.3</b> ディレクトリ構成を定義するメリット</a></li>
+<li class="chapter" data-level="1.6.4" data-path="book_00_introduction.html"><a href="book_00_introduction.html#ディレクトリ構成の事例"><i class="fa fa-check"></i><b>1.6.4</b> ディレクトリ構成の事例</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="book_00_introduction.html"><a href="book_00_introduction.html#here"><i class="fa fa-check"></i><b>1.7</b> here</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#whats_here"><i class="fa fa-check"></i><b>1.7.1</b> hereパッケージとは</a></li>
+<li class="chapter" data-level="1.7.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#path_problem"><i class="fa fa-check"></i><b>1.7.2</b> pathの悩みの具体例</a></li>
+<li class="chapter" data-level="1.7.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#solve_path_problem"><i class="fa fa-check"></i><b>1.7.3</b> hereによる悩みの解消</a></li>
+<li class="chapter" data-level="1.7.4" data-path="book_00_introduction.html"><a href="book_00_introduction.html#悩み事例の視覚的説明"><i class="fa fa-check"></i><b>1.7.4</b> 悩み事例の視覚的説明</a></li>
+<li class="chapter" data-level="1.7.5" data-path="book_00_introduction.html"><a href="book_00_introduction.html#OS_ploblem"><i class="fa fa-check"></i><b>1.7.5</b> 異なるOS/個人間によるpath相違の解消</a></li>
+<li class="chapter" data-level="1.7.6" data-path="book_00_introduction.html"><a href="book_00_introduction.html#solve_os_ploblem"><i class="fa fa-check"></i><b>1.7.6</b> hereを使ったpath</a></li>
+<li class="chapter" data-level="1.7.7" data-path="book_00_introduction.html"><a href="book_00_introduction.html#how_here"><i class="fa fa-check"></i><b>1.7.7</b> hereの使い方</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="book_00_introduction.html"><a href="book_00_introduction.html#helpファイルの開き方"><i class="fa fa-check"></i><b>1.8</b> helpファイルの開き方</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#コードが動かないときの対処法"><i class="fa fa-check"></i><b>1.8.1</b> コードが動かないときの対処法</a></li>
+<li class="chapter" data-level="1.8.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#help_open"><i class="fa fa-check"></i><b>1.8.2</b> “？関数名”でhelp</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="book_00_introduction.html"><a href="book_00_introduction.html#クォーテーションの使いわけ"><i class="fa fa-check"></i><b>1.9</b> クォーテーションの使いわけ</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="book_00_introduction.html"><a href="book_00_introduction.html#クォートを使うとき"><i class="fa fa-check"></i><b>1.9.1</b> クォートを使うとき</a></li>
+<li class="chapter" data-level="1.9.2" data-path="book_00_introduction.html"><a href="book_00_introduction.html#ダブルクォートシングルクォート"><i class="fa fa-check"></i><b>1.9.2</b> ダブルクォート・シングルクォート</a></li>
+<li class="chapter" data-level="1.9.3" data-path="book_00_introduction.html"><a href="book_00_introduction.html#バッククォート"><i class="fa fa-check"></i><b>1.9.3</b> バッククォート</a></li>
+<li class="chapter" data-level="1.9.4" data-path="book_00_introduction.html"><a href="book_00_introduction.html#括弧つきカラムの参照"><i class="fa fa-check"></i><b>1.9.4</b> 括弧つきカラムの参照</a></li>
+<li class="chapter" data-level="1.9.5" data-path="book_00_introduction.html"><a href="book_00_introduction.html#非標準文字列は必ずバッククォートを使用"><i class="fa fa-check"></i><b>1.9.5</b> 非標準文字列は必ずバッククォートを使用</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="book_00_introduction.html"><a href="book_00_introduction.html#おわり"><i class="fa fa-check"></i>おわり</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_00_introduction.html"><a href="book_00_introduction.html#著者"><i class="fa fa-check"></i>著者</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html"><i class="fa fa-check"></i><b>2</b> 初級編前半</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#はじめに-1"><i class="fa fa-check"></i>はじめに</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#研磨ストーリー"><i class="fa fa-check"></i>研磨ストーリー</a></li>
+<li class="chapter" data-level="" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#作業イメージ"><i class="fa fa-check"></i>作業イメージ</a></li>
+<li class="chapter" data-level="" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ディレクトリ構成"><i class="fa fa-check"></i>ディレクトリ構成</a></li>
+<li class="chapter" data-level="" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ライブラリを読み込む"><i class="fa fa-check"></i>ライブラリを読み込む</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ステップ１csvファイルの読み込み"><i class="fa fa-check"></i><b>2.1</b> ステップ１：CSVファイルの読み込み</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#sagyou_step1"><i class="fa fa-check"></i><b>2.1.1</b> 作業内容</a></li>
+<li class="chapter" data-level="2.1.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#read_csv"><i class="fa fa-check"></i><b>2.1.2</b> <strong>read_csv</strong>でcsvデータを読み込む</a></li>
+<li class="chapter" data-level="2.1.3" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#read_csv_args"><i class="fa fa-check"></i><b>2.1.3</b> read_csvの主要な引数</a></li>
+<li class="chapter" data-level="2.1.4" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#col_typesの書き方"><i class="fa fa-check"></i><b>2.1.4</b> col_typesの書き方</a></li>
+<li class="chapter" data-level="2.1.5" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#read_cosmos2"><i class="fa fa-check"></i><b>2.1.5</b> COSMOS2（c2）データの読み込み</a></li>
+<li class="chapter" data-level="2.1.6" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#glimpse"><i class="fa fa-check"></i><b>2.1.6</b> <strong>glimpse</strong>でデータを見る</a></li>
+<li class="chapter" data-level="2.1.7" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#読み込み時に注意すべき例０落ち"><i class="fa fa-check"></i><b>2.1.7</b> 読み込み時に注意すべき例：０落ち</a></li>
+<li class="chapter" data-level="2.1.8" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#生データの確認方法"><i class="fa fa-check"></i><b>2.1.8</b> 生データの確認方法</a></li>
+<li class="chapter" data-level="2.1.9" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step1_sanko1"><i class="fa fa-check"></i><b>2.1.9</b> 参考１：カラム型指定tips</a></li>
+<li class="chapter" data-level="2.1.10" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step1_sanko2"><i class="fa fa-check"></i><b>2.1.10</b> 参考２：()付きカラムの取り扱い</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ステップ２データの縦結合"><i class="fa fa-check"></i><b>2.2</b> ステップ２：データの縦結合</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#sagyou_step2"><i class="fa fa-check"></i><b>2.2.1</b> 作業内容</a></li>
+<li class="chapter" data-level="2.2.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#bind_rowsでデータの縦行結合"><i class="fa fa-check"></i><b>2.2.2</b> <strong>bind_rows</strong>でデータの縦(行)結合</a></li>
+<li class="chapter" data-level="2.2.3" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#参考１３つ以上のデータの縦結合"><i class="fa fa-check"></i><b>2.2.3</b> 参考１：３つ以上のデータの縦結合</a></li>
+<li class="chapter" data-level="2.2.4" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#参考２カラム名不一致データの縦結合"><i class="fa fa-check"></i><b>2.2.4</b> 参考２：カラム名不一致データの縦結合</a></li>
+<li class="chapter" data-level="2.2.5" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#参考３データの横列結合"><i class="fa fa-check"></i><b>2.2.5</b> 参考３：データの横（列）結合</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ステップ３レコードの重複消去"><i class="fa fa-check"></i><b>2.3</b> ステップ３：レコードの重複消去</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#sagyou_step3"><i class="fa fa-check"></i><b>2.3.1</b> 作業内容</a></li>
+<li class="chapter" data-level="2.3.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#n_distinct"><i class="fa fa-check"></i><b>2.3.2</b> <strong>n_distinct</strong>で重複があるか調べる</a></li>
+<li class="chapter" data-level="2.3.3" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#distinctで重複レコードの消去"><i class="fa fa-check"></i><b>2.3.3</b> <strong>distinct</strong>で重複レコードの消去</a></li>
+<li class="chapter" data-level="2.3.4" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#企業コードの重複確認と重複消去"><i class="fa fa-check"></i><b>2.3.4</b> 企業コードの重複確認と重複消去</a></li>
+<li class="chapter" data-level="2.3.5" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step3_sanko1"><i class="fa fa-check"></i><b>2.3.5</b> 参考１：複数カラムデータの重複消去</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ステップ４カラムの選択"><i class="fa fa-check"></i><b>2.4</b> ステップ４：カラムの選択</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#sagyou_step4"><i class="fa fa-check"></i><b>2.4.1</b> 作業内容</a></li>
+<li class="chapter" data-level="2.4.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#必要なカラム"><i class="fa fa-check"></i><b>2.4.2</b> 必要なカラム</a></li>
+<li class="chapter" data-level="2.4.3" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#selectでカラムの選択"><i class="fa fa-check"></i><b>2.4.3</b> <strong>select</strong>でカラムの選択</a></li>
+<li class="chapter" data-level="2.4.4" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step4_sanko1"><i class="fa fa-check"></i><b>2.4.4</b> 参考１：不要な読み込みはしない</a></li>
+<li class="chapter" data-level="2.4.5" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step4_sanko2"><i class="fa fa-check"></i><b>2.4.5</b> 参考２：ベクトルで変数の選択</a></li>
+<li class="chapter" data-level="2.4.6" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step4_sanko3"><i class="fa fa-check"></i><b>2.4.6</b> 参考３：変数消去</a></li>
+<li class="chapter" data-level="2.4.7" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step4_sanko4"><i class="fa fa-check"></i><b>2.4.7</b> 参考４：クォート</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#ステップ５データの横結合"><i class="fa fa-check"></i><b>2.5</b> ステップ５：データの横結合</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#sagyou_step5"><i class="fa fa-check"></i><b>2.5.1</b> 作業内容</a></li>
+<li class="chapter" data-level="2.5.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#いろいろな結合方法"><i class="fa fa-check"></i><b>2.5.2</b> いろいろな結合方法</a></li>
+<li class="chapter" data-level="2.5.3" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#left_join_image"><i class="fa fa-check"></i><b>2.5.3</b> left_joinのイメージ</a></li>
+<li class="chapter" data-level="2.5.4" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#結合する方法を決める"><i class="fa fa-check"></i><b>2.5.4</b> 結合する方法を決める</a></li>
+<li class="chapter" data-level="2.5.5" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#left_joinでデータの結合"><i class="fa fa-check"></i><b>2.5.5</b> <strong>left_join</strong>でデータの結合</a></li>
+<li class="chapter" data-level="2.5.6" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#step5_sanko"><i class="fa fa-check"></i><b>2.5.6</b> 参考：right_join</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#箸休めスライド"><i class="fa fa-check"></i><b>2.6</b> 箸休めスライド</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#relocateでカラムを少しだけ並び替え"><i class="fa fa-check"></i><b>2.6.1</b> relocateでカラムを少しだけ並び替え</a></li>
+<li class="chapter" data-level="2.6.2" data-path="book_01_beginner_1st_half.html"><a href="book_01_beginner_1st_half.html#tabキーで補完入力"><i class="fa fa-check"></i><b>2.6.2</b> Tabキーで補完入力</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html"><i class="fa fa-check"></i><b>3</b> 初級編後半</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#作業の確認"><i class="fa fa-check"></i>作業の確認</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#研磨ストーリー-1"><i class="fa fa-check"></i>研磨ストーリー</a></li>
+<li class="chapter" data-level="" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#作業イメージ-1"><i class="fa fa-check"></i>作業イメージ</a></li>
+<li class="chapter" data-level="" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#前半の成果物"><i class="fa fa-check"></i>前半の成果物</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ６カラム操作の基本"><i class="fa fa-check"></i><b>3.1</b> ステップ６：カラム操作の基本</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step6"><i class="fa fa-check"></i><b>3.1.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.1.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#mutateの基本"><i class="fa fa-check"></i><b>3.1.2</b> <strong>mutate</strong>の基本</a></li>
+<li class="chapter" data-level="3.1.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#mutate_example"><i class="fa fa-check"></i><b>3.1.3</b> mutateの使用例</a></li>
+<li class="chapter" data-level="3.1.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#hosoku_mutate"><i class="fa fa-check"></i><b>3.1.4</b> 補足</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ７カラムの新設"><i class="fa fa-check"></i><b>3.2</b> ステップ７：カラムの新設</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step7"><i class="fa fa-check"></i><b>3.2.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.2.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#substrで文字列の部分抽出"><i class="fa fa-check"></i><b>3.2.2</b> <strong>substr</strong>で文字列の部分抽出</a></li>
+<li class="chapter" data-level="3.2.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#都道府県コードカラムの新設"><i class="fa fa-check"></i><b>3.2.3</b> 都道府県コードカラムの新設</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ８マスタの結合"><i class="fa fa-check"></i><b>3.3</b> ステップ８：マスタの結合</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step8"><i class="fa fa-check"></i><b>3.3.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.3.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#read_ken_mst"><i class="fa fa-check"></i><b>3.3.2</b> 都道府県マスタの読み込み</a></li>
+<li class="chapter" data-level="3.3.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#join_failed"><i class="fa fa-check"></i><b>3.3.3</b> data_2にken_mstを結合（失敗）</a></li>
+<li class="chapter" data-level="3.3.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#renameでカラム名の変更"><i class="fa fa-check"></i><b>3.3.4</b> <strong>rename</strong>でカラム名の変更</a></li>
+<li class="chapter" data-level="3.3.5" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#join_success"><i class="fa fa-check"></i><b>3.3.5</b> data_2にken_mstをジョイン（成功）</a></li>
+<li class="chapter" data-level="3.3.6" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#不一致なカラム名をキーにする方法"><i class="fa fa-check"></i><b>3.3.6</b> 不一致なカラム名をキーにする方法</a></li>
+<li class="chapter" data-level="3.3.7" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#hosoku_join_mst"><i class="fa fa-check"></i><b>3.3.7</b> 補足</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ９文字列の結合"><i class="fa fa-check"></i><b>3.4</b> ステップ９：文字列の結合</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step9"><i class="fa fa-check"></i><b>3.4.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.4.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#pasteで文字列の結合"><i class="fa fa-check"></i><b>3.4.2</b> <strong>paste</strong>で文字列の結合</a></li>
+<li class="chapter" data-level="3.4.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#都道府県カラムの作成"><i class="fa fa-check"></i><b>3.4.3</b> 都道府県カラムの作成</a></li>
+<li class="chapter" data-level="3.4.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#step9_sanko"><i class="fa fa-check"></i><b>3.4.4</b> 参考：paste0</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ１０指標の作成"><i class="fa fa-check"></i><b>3.5</b> ステップ１０：指標の作成</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step10"><i class="fa fa-check"></i><b>3.5.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.5.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#売上高利益率カラムの作成"><i class="fa fa-check"></i><b>3.5.2</b> 売上高利益率カラムの作成</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ１１条件分岐処理"><i class="fa fa-check"></i><b>3.6</b> ステップ１１：条件分岐処理</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step11"><i class="fa fa-check"></i><b>3.6.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.6.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#if_else_ifelse_case_when"><i class="fa fa-check"></i><b>3.6.2</b> if_else, ifelse, case_when</a></li>
+<li class="chapter" data-level="3.6.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#example_if_else_ifelse"><i class="fa fa-check"></i><b>3.6.3</b> if_else, ifelseの使用例</a></li>
+<li class="chapter" data-level="3.6.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#if_else_isbetter"><i class="fa fa-check"></i><b>3.6.4</b> <strong>if_else</strong>はifelseより厳格</a></li>
+<li class="chapter" data-level="3.6.5" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#case_whenの使用例"><i class="fa fa-check"></i><b>3.6.5</b> case_whenの使用例</a></li>
+<li class="chapter" data-level="3.6.6" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#if_else_ver"><i class="fa fa-check"></i><b>3.6.6</b> 従業員数レンジカラム作成(if_else)</a></li>
+<li class="chapter" data-level="3.6.7" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#case_when_ver"><i class="fa fa-check"></i><b>3.6.7</b> 従業員数レンジカラム作成(case_when)</a></li>
+<li class="chapter" data-level="3.6.8" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#step11_sanko"><i class="fa fa-check"></i><b>3.6.8</b> 参考：条件式</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ１２ソート"><i class="fa fa-check"></i><b>3.7</b> ステップ１２：ソート</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step12"><i class="fa fa-check"></i><b>3.7.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.7.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#arrangeでソート"><i class="fa fa-check"></i><b>3.7.2</b> <strong>arrange</strong>でソート</a></li>
+<li class="chapter" data-level="3.7.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#複数カラムでソート"><i class="fa fa-check"></i><b>3.7.3</b> 複数カラムでソート</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ１３グループ集計"><i class="fa fa-check"></i><b>3.8</b> ステップ１３：グループ集計</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step13"><i class="fa fa-check"></i><b>3.8.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.8.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#how_group_summarise"><i class="fa fa-check"></i><b>3.8.2</b> <strong>group_by</strong>と<strong>summarise</strong>での集計方法</a></li>
+<li class="chapter" data-level="3.8.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#複数カラムでグループ集計"><i class="fa fa-check"></i><b>3.8.3</b> 複数カラムでグループ集計</a></li>
+<li class="chapter" data-level="3.8.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#step13_sanko1"><i class="fa fa-check"></i><b>3.8.4</b> 参考１：mutateとの違い</a></li>
+<li class="chapter" data-level="3.8.5" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#step13_sanko2"><i class="fa fa-check"></i><b>3.8.5</b> 参考２：グループごとのレコード数を集計</a></li>
+<li class="chapter" data-level="3.8.6" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#step13_sanko3"><i class="fa fa-check"></i><b>3.8.6</b> 参考３：ピボットテーブル</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ１４条件抽出"><i class="fa fa-check"></i><b>3.9</b> ステップ１４：条件抽出</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step14"><i class="fa fa-check"></i><b>3.9.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.9.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#filterで条件抽出"><i class="fa fa-check"></i><b>3.9.2</b> <strong>filter</strong>で条件抽出</a></li>
+<li class="chapter" data-level="3.9.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#複数条件で抽出"><i class="fa fa-check"></i><b>3.9.3</b> 複数条件で抽出</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#ステップ１５ファイル出力"><i class="fa fa-check"></i><b>3.10</b> ステップ１５：ファイル出力</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#sagyou_step15"><i class="fa fa-check"></i><b>3.10.1</b> 作業内容</a></li>
+<li class="chapter" data-level="3.10.2" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#不要な変数の消去"><i class="fa fa-check"></i><b>3.10.2</b> 不要な変数の消去</a></li>
+<li class="chapter" data-level="3.10.3" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#カラムの並び替え"><i class="fa fa-check"></i><b>3.10.3</b> カラムの並び替え</a></li>
+<li class="chapter" data-level="3.10.4" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#output_file"><i class="fa fa-check"></i><b>3.10.4</b> <strong>write_csv</strong>でcsvファイルの出力</a></li>
+<li class="chapter" data-level="3.10.5" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#step15_sanko"><i class="fa fa-check"></i><b>3.10.5</b> 参考：ファイル出力のencoding</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="book_02_beginner_2nd_half.html"><a href="book_02_beginner_2nd_half.html#おわり-1"><i class="fa fa-check"></i>おわり</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html"><i class="fa fa-check"></i><b>4</b> 中級編前半</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#はじめに-2"><i class="fa fa-check"></i>はじめに</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#中級の作業イメージ"><i class="fa fa-check"></i>中級の作業イメージ</a></li>
+<li class="chapter" data-level="" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#目次中級前半"><i class="fa fa-check"></i>目次（中級前半）</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#fukusuu_image"><i class="fa fa-check"></i><b>4.1</b> 複数ファイルの一括読み込み<br>(イメージ)</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#読み込むデータの確認"><i class="fa fa-check"></i><b>4.1.1</b> 読み込むデータの確認</a></li>
+<li class="chapter" data-level="4.1.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#単純な方法"><i class="fa fa-check"></i><b>4.1.2</b> 単純な方法</a></li>
+<li class="chapter" data-level="4.1.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for文を使用する方法"><i class="fa fa-check"></i><b>4.1.3</b> for文を使用する方法</a></li>
+<li class="chapter" data-level="4.1.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_image"><i class="fa fa-check"></i><b>4.1.4</b> for文5ステップのイメージ</a></li>
+<li class="chapter" data-level="4.1.5" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for文による繰り返し処理のススメ"><i class="fa fa-check"></i><b>4.1.5</b> for文による繰り返し処理のススメ</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#list"><i class="fa fa-check"></i><b>4.2</b> list</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#about_list"><i class="fa fa-check"></i><b>4.2.1</b> listとは</a></li>
+<li class="chapter" data-level="4.2.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#image_list"><i class="fa fa-check"></i><b>4.2.2</b> listのイメージ</a></li>
+<li class="chapter" data-level="4.2.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#make_list"><i class="fa fa-check"></i><b>4.2.3</b> listの作成</a></li>
+<li class="chapter" data-level="4.2.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#append_list"><i class="fa fa-check"></i><b>4.2.4</b> listに要素を追加する</a></li>
+<li class="chapter" data-level="4.2.5" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#access_list"><i class="fa fa-check"></i><b>4.2.5</b> listの要素にアクセス</a></li>
+<li class="chapter" data-level="4.2.6" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#list_access_image"><i class="fa fa-check"></i><b>4.2.6</b> listの要素アクセスイメージ</a></li>
+<li class="chapter" data-level="4.2.7" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#names_list"><i class="fa fa-check"></i><b>4.2.7</b> listの要素に名前をつける</a></li>
+<li class="chapter" data-level="4.2.8" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#list_access_name"><i class="fa fa-check"></i><b>4.2.8</b> listの要素に名前でアクセス</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_bun"><i class="fa fa-check"></i><b>4.3</b> for文(繰り返し処理)</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for文イントロダクション"><i class="fa fa-check"></i><b>4.3.1</b> for文イントロダクション</a></li>
+<li class="chapter" data-level="4.3.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for文の使い方"><i class="fa fa-check"></i><b>4.3.2</b> for文の使い方</a></li>
+<li class="chapter" data-level="4.3.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#適当な変数名を考える"><i class="fa fa-check"></i><b>4.3.3</b> 適当な変数名を考える</a></li>
+<li class="chapter" data-level="4.3.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#ex_listfor"><i class="fa fa-check"></i><b>4.3.4</b> listとfor文を用いた例</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#fukusu_jisso"><i class="fa fa-check"></i><b>4.4</b> 複数ファイルの一括読み込み<br>(実装)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_image_2"><i class="fa fa-check"></i><b>4.4.1</b> for文の5ステップのイメージ(再掲)</a></li>
+<li class="chapter" data-level="4.4.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_step1"><i class="fa fa-check"></i><b>4.4.2</b> for文：ステップ１</a></li>
+<li class="chapter" data-level="4.4.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_step2"><i class="fa fa-check"></i><b>4.4.3</b> for文：ステップ２</a></li>
+<li class="chapter" data-level="4.4.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_step345"><i class="fa fa-check"></i><b>4.4.4</b> for文：ステップ３,４,５</a></li>
+<li class="chapter" data-level="4.4.5" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#for_matome"><i class="fa fa-check"></i><b>4.4.5</b> 複数ファイル読み込みまとめ</a></li>
+<li class="chapter" data-level="4.4.6" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#複数ファイルの一括読み込み結果"><i class="fa fa-check"></i><b>4.4.6</b> 複数ファイルの一括読み込み結果</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#複数データの結合方法"><i class="fa fa-check"></i><b>4.5</b> 複数データの結合方法</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#タテ結合とヨコ結合"><i class="fa fa-check"></i><b>4.5.1</b> タテ結合とヨコ結合</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#複数データのタテ結合"><i class="fa fa-check"></i><b>4.6</b> 複数データのタテ結合</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#タテ結合結果"><i class="fa fa-check"></i><b>4.6.1</b> タテ結合結果</a></li>
+<li class="chapter" data-level="4.6.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#タテ結合の手順"><i class="fa fa-check"></i><b>4.6.2</b> タテ結合の手順</a></li>
+<li class="chapter" data-level="4.6.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#make_yearcol"><i class="fa fa-check"></i><b>4.6.3</b> 1. yearカラムの作成</a></li>
+<li class="chapter" data-level="4.6.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#bind_tateketu"><i class="fa fa-check"></i><b>4.6.4</b> 2. bind_rowsでタテ結合</a></li>
+<li class="chapter" data-level="4.6.5" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#tateketugou_hosoku"><i class="fa fa-check"></i><b>4.6.5</b> 補足</a></li>
+<li class="chapter" data-level="4.6.6" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#tateketugou_sanko"><i class="fa fa-check"></i><b>4.6.6</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#複数データのヨコ結合"><i class="fa fa-check"></i><b>4.7</b> 複数データのヨコ結合</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#ヨコ結合結果"><i class="fa fa-check"></i><b>4.7.1</b> ヨコ結合結果</a></li>
+<li class="chapter" data-level="4.7.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#ヨコ結合の手順"><i class="fa fa-check"></i><b>4.7.2</b> ヨコ結合の手順</a></li>
+<li class="chapter" data-level="4.7.3" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#rename_with"><i class="fa fa-check"></i><b>4.7.3</b> 1. rename_withでカラム名の変更</a></li>
+<li class="chapter" data-level="4.7.4" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#leftjoin_yokoketugo"><i class="fa fa-check"></i><b>4.7.4</b> 2. left_joinでヨコ結合</a></li>
+<li class="chapter" data-level="4.7.5" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#yokoketugou_hosoku"><i class="fa fa-check"></i><b>4.7.5</b> 補足</a></li>
+<li class="chapter" data-level="4.7.6" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#yokoketugou_sanko"><i class="fa fa-check"></i><b>4.7.6</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#rest_intermediate"><i class="fa fa-check"></i><b>4.8</b> 箸休めスライド</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#map関数"><i class="fa fa-check"></i><b>4.8.1</b> map関数</a></li>
+<li class="chapter" data-level="4.8.2" data-path="book_03_intermediate_1st_half.html"><a href="book_03_intermediate_1st_half.html#select_helper"><i class="fa fa-check"></i><b>4.8.2</b> selectのhelper関数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html"><i class="fa fa-check"></i><b>5</b> 中級編後半</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#作業の確認-1"><i class="fa fa-check"></i>作業の確認</a>
+<ul>
+<li class="chapter" data-level="" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#中級の作業イメージ-1"><i class="fa fa-check"></i>中級の作業イメージ</a></li>
+<li class="chapter" data-level="" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#目次中級後半"><i class="fa fa-check"></i>目次（中級後半）</a></li>
+</ul></li>
+<li class="chapter" data-level="5.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#前半の作業のおさらい"><i class="fa fa-check"></i><b>5.1</b> 前半の作業のおさらい</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#複数データの読み込み"><i class="fa fa-check"></i><b>5.1.1</b> 複数データの読み込み</a></li>
+<li class="chapter" data-level="5.1.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#タテ結合とヨコ結合-1"><i class="fa fa-check"></i><b>5.1.2</b> タテ結合とヨコ結合</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#widedata_longdata"><i class="fa fa-check"></i><b>5.2</b> タテ持ちデータ・ヨコ持ちデータ</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#what_widelong"><i class="fa fa-check"></i><b>5.2.1</b> タテ持ち・ヨコ持ちとは</a></li>
+<li class="chapter" data-level="5.2.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#tokutyo_widelong"><i class="fa fa-check"></i><b>5.2.2</b> タテ持ち・ヨコ持ちの特徴</a></li>
+<li class="chapter" data-level="5.2.3" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#タテヨコ変換"><i class="fa fa-check"></i><b>5.2.3</b> タテ⇔ヨコ変換</a></li>
+<li class="chapter" data-level="5.2.4" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#タテヨコ変換イメージ画像"><i class="fa fa-check"></i><b>5.2.4</b> タテヨコ変換イメージ画像</a></li>
+<li class="chapter" data-level="5.2.5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#image_wide_long_2"><i class="fa fa-check"></i><b>5.2.5</b> タテヨコ変換イメージgif</a></li>
+<li class="chapter" data-level="5.2.6" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#image_jisso"><i class="fa fa-check"></i><b>5.2.6</b> タテヨコ変換実装</a></li>
+<li class="chapter" data-level="5.2.7" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#wide_to_long"><i class="fa fa-check"></i><b>5.2.7</b> <strong>pivot_longer</strong>でヨコ → タテ変換</a></li>
+<li class="chapter" data-level="5.2.8" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#long_to_wide"><i class="fa fa-check"></i><b>5.2.8</b> <strong>pivot_wider</strong>でタテ → ヨコ変換</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#研磨データの比較検証"><i class="fa fa-check"></i><b>5.3</b> 研磨データの比較検証</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#比較検証をする理由"><i class="fa fa-check"></i><b>5.3.1</b> 比較検証をする理由</a></li>
+<li class="chapter" data-level="5.3.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#比較検証をする方法"><i class="fa fa-check"></i><b>5.3.2</b> 比較検証をする方法</a></li>
+<li class="chapter" data-level="5.3.3" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#検証データの作成long_data"><i class="fa fa-check"></i><b>5.3.3</b> 検証データの作成：long_data</a></li>
+<li class="chapter" data-level="5.3.4" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#wide_data2"><i class="fa fa-check"></i><b>5.3.4</b> 検証データの作成：wide_data</a></li>
+<li class="chapter" data-level="5.3.5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#diffdfで一致確認"><i class="fa fa-check"></i><b>5.3.5</b> diffdfで一致確認</a></li>
+<li class="chapter" data-level="5.3.6" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#不一致の原因"><i class="fa fa-check"></i><b>5.3.6</b> 不一致の原因</a></li>
+<li class="chapter" data-level="5.3.7" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#不一致の理由"><i class="fa fa-check"></i><b>5.3.7</b> 不一致の理由</a></li>
+<li class="chapter" data-level="5.3.8" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#条件を揃える準備"><i class="fa fa-check"></i><b>5.3.8</b> 条件を揃える準備</a></li>
+<li class="chapter" data-level="5.3.9" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#再度検証"><i class="fa fa-check"></i><b>5.3.9</b> 再度検証</a></li>
+<li class="chapter" data-level="5.3.10" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#hikaku_sanko"><i class="fa fa-check"></i><b>5.3.10</b> 参考：グループ解除</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#前年度比の算出"><i class="fa fa-check"></i><b>5.4</b> 前年度比の算出</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#hi_result"><i class="fa fa-check"></i><b>5.4.1</b> 結果の確認</a></li>
+<li class="chapter" data-level="5.4.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#前年度比算出の手順"><i class="fa fa-check"></i><b>5.4.2</b> 前年度比算出の手順</a></li>
+<li class="chapter" data-level="5.4.3" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#tejun_sort"><i class="fa fa-check"></i><b>5.4.3</b> 手順１：データのソート</a></li>
+<li class="chapter" data-level="5.4.4" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#tejun_zennenjuu"><i class="fa fa-check"></i><b>5.4.4</b> 手順２：前年従業員数の作成</a></li>
+<li class="chapter" data-level="5.4.5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#tejun_zennenhi"><i class="fa fa-check"></i><b>5.4.5</b> 手順３：前年度比算出</a></li>
+<li class="chapter" data-level="5.4.6" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#tejun_mibae"><i class="fa fa-check"></i><b>5.4.6</b> 手順４：見栄えを整える</a></li>
+<li class="chapter" data-level="5.4.7" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#hi_matome"><i class="fa fa-check"></i><b>5.4.7</b> 前年度比算出まとめ</a></li>
+<li class="chapter" data-level="5.4.8" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#zennenhi_sanko"><i class="fa fa-check"></i><b>5.4.8</b> 参考：横持ちで表示</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#データの可視化"><i class="fa fa-check"></i><b>5.5</b> データの可視化</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#なぜデータを可視化するのか"><i class="fa fa-check"></i><b>5.5.1</b> なぜデータを可視化するのか</a></li>
+<li class="chapter" data-level="5.5.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#どうやって可視化するのか"><i class="fa fa-check"></i><b>5.5.2</b> どうやって可視化するのか</a></li>
+<li class="chapter" data-level="5.5.3" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#layer_str"><i class="fa fa-check"></i><b>5.5.3</b> ggplotのレイヤー構造</a></li>
+<li class="chapter" data-level="5.5.4" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#dodai"><i class="fa fa-check"></i><b>5.5.4</b> <strong>ggplot</strong>：土台作成</a></li>
+<li class="chapter" data-level="5.5.5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#aesデータの情報を指定"><i class="fa fa-check"></i><b>5.5.5</b> <strong>aes</strong>：データの情報を指定</a></li>
+<li class="chapter" data-level="5.5.6" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#geom"><i class="fa fa-check"></i><b>5.5.6</b> <strong>geom_＊</strong>：描画</a></li>
+<li class="chapter" data-level="5.5.7" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#labs軸名やタイトル"><i class="fa fa-check"></i><b>5.5.7</b> <strong>labs</strong>：軸名やタイトル</a></li>
+<li class="chapter" data-level="5.5.8" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#before_facet"><i class="fa fa-check"></i><b>5.5.8</b> <strong>facet</strong>の前に</a></li>
+<li class="chapter" data-level="5.5.9" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#facet"><i class="fa fa-check"></i><b>5.5.9</b> <strong>facet</strong>：グループ比較</a></li>
+<li class="chapter" data-level="5.5.10" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#可視化のススメ"><i class="fa fa-check"></i><b>5.5.10</b> 可視化のススメ</a></li>
+<li class="chapter" data-level="5.5.11" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#kasika_sanko1"><i class="fa fa-check"></i><b>5.5.11</b> 参考１：データの整形</a></li>
+<li class="chapter" data-level="5.5.12" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#kasika_sanko2"><i class="fa fa-check"></i><b>5.5.12</b> 参考２：データの比較</a></li>
+<li class="chapter" data-level="5.5.13" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#kasika_sanko3"><i class="fa fa-check"></i><b>5.5.13</b> 参考３：適切な可視化</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#ランキングの作成"><i class="fa fa-check"></i><b>5.6</b> ランキングの作成</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#rank_result"><i class="fa fa-check"></i><b>5.6.1</b> 結果の確認</a></li>
+<li class="chapter" data-level="5.6.2" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#rank_tejun0"><i class="fa fa-check"></i><b>5.6.2</b> 内容と手順</a></li>
+<li class="chapter" data-level="5.6.3" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#ランキング関数"><i class="fa fa-check"></i><b>5.6.3</b> ランキング関数</a></li>
+<li class="chapter" data-level="5.6.4" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#rank_tejun1"><i class="fa fa-check"></i><b>5.6.4</b> 手順１：2017年の従業員数が100人以上</a></li>
+<li class="chapter" data-level="5.6.5" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#rank_tejun2"><i class="fa fa-check"></i><b>5.6.5</b> 手順２：業種大分類をjoin</a></li>
+<li class="chapter" data-level="5.6.6" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#rank_tejun3"><i class="fa fa-check"></i><b>5.6.6</b> 手順３：業種別ランキング作成</a></li>
+<li class="chapter" data-level="5.6.7" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#kekka_ranking"><i class="fa fa-check"></i><b>5.6.7</b> ランキングデータ完成</a></li>
+<li class="chapter" data-level="5.6.8" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#rank_tejun4"><i class="fa fa-check"></i><b>5.6.8</b> ランキング作成まとめ</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="book_04_intermediate_2nd_half.html"><a href="book_04_intermediate_2nd_half.html#おわり-2"><i class="fa fa-check"></i>おわり</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="environment.html"><a href="environment.html"><i class="fa fa-check"></i>動作環境</a></li>
+<li class="divider"></li>
+<li><strong><a href="https://www.ds.shiga-u.ac.jp/DEML/">滋賀大学DEMLセンター</a></strong></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">データエンジニアリング人材養成演習補助教材</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="動作環境" class="section level1 unnumbered" number="">
+<h1>動作環境</h1>
+<p>OSやパッケージのバージョン情報です。</p>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="environment.html#cb408-1"></a><span class="kw">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.0.3 (2020-10-10)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 18363)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=Japanese_Japan.932  LC_CTYPE=Japanese_Japan.932    LC_MONETARY=Japanese_Japan.932
+[4] LC_NUMERIC=C                   LC_TIME=Japanese_Japan.932    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] patchwork_1.0.1 diffdf_1.0.4    glue_1.4.2      gt_0.2.2        bookdown_0.21.4
+ [6] furrr_0.2.1     future_1.20.1   here_0.1        forcats_0.5.0   stringr_1.4.0  
+[11] dplyr_1.0.2     purrr_0.3.4     readr_1.4.0     tidyr_1.1.2     tibble_3.0.4   
+[16] ggplot2_3.3.2   tidyverse_1.3.0
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.5           lubridate_1.7.9      listenv_0.8.0        utf8_1.1.4          
+ [5] assertthat_0.2.1     rprojroot_1.3-2      digest_0.6.27        parallelly_1.21.0   
+ [9] R6_2.5.0             cellranger_1.1.0     backports_1.1.10     reprex_0.3.0        
+[13] visdat_0.5.3         evaluate_0.14        httr_1.4.2           pillar_1.4.6        
+[17] rlang_0.4.8          readxl_1.3.1         rstudioapi_0.11      checkmate_2.0.0     
+[21] rmarkdown_2.5        labeling_0.4.2       munsell_0.5.0        broom_0.7.2         
+[25] compiler_4.0.3       modelr_0.1.8         xfun_0.19            pkgconfig_2.0.3     
+[29] globals_0.13.1       htmltools_0.5.0.9002 tidyselect_1.1.0     codetools_0.2-18    
+[33] fansi_0.4.1          crayon_1.3.4         dbplyr_2.0.0         withr_2.3.0         
+[37] rappdirs_0.3.1       grid_4.0.3           jsonlite_1.7.1       gtable_0.3.0        
+[41] lifecycle_0.2.0      DBI_1.1.0            magrittr_1.5         scales_1.1.1        
+[45] cli_2.1.0            stringi_1.5.3        farver_2.0.3         fs_1.5.0            
+[49] xml2_1.3.2           naniar_0.6.0         ellipsis_0.3.1       generics_0.1.0      
+[53] vctrs_0.3.4          tools_4.0.3          hms_0.5.3            parallel_4.0.3      
+[57] yaml_2.2.1           colorspace_1.4-1     sessioninfo_1.1.1    rvest_0.3.6         
+[61] knitr_1.30           haven_2.3.1          sass_0.2.0.9005     </code></pre>
+<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb410-1"><a href="environment.html#cb410-1"></a>sessioninfo<span class="op">::</span><span class="kw">platform_info</span>()</span></code></pre></div>
+<pre><code> setting  value                       
+ version  R version 4.0.3 (2020-10-10)
+ os       Windows 10 x64              
+ system   x86_64, mingw32             
+ ui       RStudio                     
+ language en                          
+ collate  Japanese_Japan.932          
+ ctype    Japanese_Japan.932          
+ tz       Asia/Tokyo                  
+ date     2020-11-28                  </code></pre>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="book_04_intermediate_2nd_half.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 1
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

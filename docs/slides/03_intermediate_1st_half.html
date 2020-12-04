@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>データ研磨スキル [中級編前半]</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="03_intermediate_1st_half_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="03_intermediate_1st_half_files/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="for-revealjs.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="03_intermediate_1st_half_files/header-attrs-2.5/header-attrs.js"></script>
+    <link href="03_intermediate_1st_half_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="03_intermediate_1st_half_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">データ研磨スキル<br>[中級編前半]</h1>
+    <h3 class="date">2020/11/28</h3>
+</section>
+
+<section>
+<section id="はじめに" class="title-slide slide level1 unnumbered">
+<h1 class="unnumbered">はじめに</h1>
+
+</section>
+<section id="中級の作業イメージ" class="slide level2 unnumbered">
+<h2 class="unnumbered">中級の作業イメージ</h2>
+<p>左半分を前半、右半分を後半で進めていきます。</p>
+<p><img data-src="../pictures/intermediate/story_image.png" /></p>
+</section>
+<section id="目次中級前半" class="slide level2 unnumbered">
+<h2 class="unnumbered">目次（中級前半）</h2>
+<ul>
+<li>複数ファイルの一括読み込み(イメージ)</li>
+<li>listの説明</li>
+<li>for文の説明</li>
+<li>複数ファイルの一括読み込み(実装)</li>
+<li>複数データの結合方法</li>
+<li>複数データのタテ結合</li>
+<li>複数データのヨコ結合</li>
+<li>箸休め</li>
+</ul>
+</section></section>
+<section>
+<section id="fukusuu_image" class="title-slide slide level1">
+<h1>複数ファイルの一括読み込み<br>(イメージ)</h1>
+<ul>
+<li>複数ファイルを効率よく読み込む方法のイメージを掴んでもらいます</li>
+</ul>
+</section>
+<section id="読み込むデータの確認" class="slide level2">
+<h2>読み込むデータの確認</h2>
+<ul>
+<li>2012年から2018年の企業概要ファイルを読み込みます
+<ul>
+<li>企業概要データ_2012年1月時点.csv</li>
+<li>企業概要データ_2013年1月時点.csv</li>
+<li>企業概要データ_2014年1月時点.csv</li>
+<li>企業概要データ_2015年1月時点.csv</li>
+<li>企業概要データ_2016年1月時点.csv</li>
+<li>企業概要データ_2017年1月時点.csv</li>
+<li>企業概要データ_2018年1月時点.csv</li>
+</ul></li>
+</ul>
+</section>
+<section id="単純な方法" class="slide level2">
+<h2>単純な方法</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 読み込むカラム型を決める</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>data_cols &lt;-<span class="st"> </span><span class="kw">cols</span>(</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  企業コード =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  本社所在地市区郡 =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  業種大分類 =<span class="st"> </span><span class="kw">col_character</span>(),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="st">`</span><span class="dt">資本金(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  従業員数 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  最新期業績決算期年 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  最新期業績決算期月 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  創業年 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  設立年 =<span class="st"> </span><span class="kw">col_double</span>()</span>
+<span id="cb1-14"><a href="#cb1-14"></a>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co"># 2012年から2018年のデータを別々に読み込む</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>data_<span class="dv">2012</span> &lt;-</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2012年1月時点.csv&quot;</span>),</span>
+<span id="cb1-19"><a href="#cb1-19"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-20"><a href="#cb1-20"></a>                <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a>data_<span class="dv">2013</span> &lt;-<span class="st"> </span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2013年1月時点.csv&quot;</span>),</span>
+<span id="cb1-24"><a href="#cb1-24"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-25"><a href="#cb1-25"></a>                <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a>data_<span class="dv">2014</span> &lt;-<span class="st"> </span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2014年1月時点.csv&quot;</span>),</span>
+<span id="cb1-29"><a href="#cb1-29"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-30"><a href="#cb1-30"></a>                <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a>data_<span class="dv">2015</span> &lt;-<span class="st"> </span></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2015年1月時点.csv&quot;</span>),</span>
+<span id="cb1-34"><a href="#cb1-34"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-35"><a href="#cb1-35"></a>                <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb1-36"><a href="#cb1-36"></a></span>
+<span id="cb1-37"><a href="#cb1-37"></a>data_<span class="dv">2016</span> &lt;-<span class="st"> </span></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2016年1月時点.csv&quot;</span>),</span>
+<span id="cb1-39"><a href="#cb1-39"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-40"><a href="#cb1-40"></a>                <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb1-41"><a href="#cb1-41"></a></span>
+<span id="cb1-42"><a href="#cb1-42"></a>data_<span class="dv">2017</span> &lt;-</span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2017年1月時点.csv&quot;</span>),</span>
+<span id="cb1-44"><a href="#cb1-44"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-45"><a href="#cb1-45"></a>                <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a>data_<span class="dv">2018</span> &lt;-</span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2018年1月時点.csv&quot;</span>),</span>
+<span id="cb1-49"><a href="#cb1-49"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb1-50"><a href="#cb1-50"></a>                <span class="dt">col_types =</span> data_cols)</span></code></pre></div>
+<ul>
+<li>このコードでは、書くのが面倒・保守が面倒・変数が無駄に増えるなど、デメリットが多いです</li>
+</ul>
+</section>
+<section id="for文を使用する方法" class="slide level2">
+<h2>for文を使用する方法</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
+<span id="cb2-2"><a href="#cb2-2"></a>                   <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>, <span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb2-7"><a href="#cb2-7"></a>              <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
+<span id="cb2-9"><a href="#cb2-9"></a>}</span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+<ul>
+<li>for文とlistを使ったコードでは、書くのが楽・保守が楽・変数の節約などのメリットを享受できます</li>
+<li>上記コードのイメージが次頁にあります</li>
+</ul>
+</section>
+<section id="for_image" class="slide level2">
+<h2>for文5ステップのイメージ</h2>
+<p><img data-src="../pictures/intermediate/for_explain.png" /></p>
+</section>
+<section id="for文による繰り返し処理のススメ" class="slide level2">
+<h2>for文による繰り返し処理のススメ</h2>
+<ul>
+<li>一般的に、同様な処理を繰り返して行う際はfor文やmap（上級で解説）を使用してコーディングをします</li>
+<li>なぜなら、単純な方法で紹介したようなコードでも意図したプログラムを書けますが、コードが冗長になる・メンテナンスに労力がかかるなどのデメリットが多いからです</li>
+<li>複数ファイルを読み込むという処理を通して、for文による繰り返し処理を使えるようになりましょう</li>
+<li>次頁以降では、複数ファイルの一括読み込みで用いるlistとfor文の使用方法について先に説明した後に、for文を用いた複数ファイル一括読み込みを実装します</li>
+</ul>
+</section></section>
+<section>
+<section id="list" class="title-slide slide level1">
+<h1>list</h1>
+<ul>
+<li>listの使い方を勉強します</li>
+</ul>
+</section>
+<section id="about_list" class="slide level2">
+<h2>listとは</h2>
+<ul>
+<li>listは一言でいえば拡張されたベクトルで、代表的には次の3つのような利点をもちます
+<ul>
+<li>ベクトル、データフレームなどを要素にもつことができる</li>
+<li>listの階層構造を作ることができる</li>
+<li>要素の追加や取り出しが容易にできる</li>
+</ul></li>
+<li>listは、中級および上級で必須のツールになります</li>
+<li>listについては以下の要点だけを説明しますが、より詳細な説明は下記リンクなどを参照してください
+<ul>
+<li>listの作成</li>
+<li>listに要素を追加する</li>
+<li>listの要素にアクセス</li>
+<li>listの要素に名前をつける</li>
+</ul></li>
+</ul>
+<p>listの詳細(<a href="https://r4ds.had.co.nz/vectors.html#lists" class="uri">https://r4ds.had.co.nz/vectors.html#lists</a>)</p>
+</section>
+<section id="image_list" class="slide level2">
+<h2>listのイメージ</h2>
+<p><img data-src="../pictures/intermediate/list_explain.png" /></p>
+</section>
+<section id="make_list" class="slide level2">
+<h2>listの作成</h2>
+<ul>
+<li>listは通常のベクトルとは違い、ベクトルや文字列、データフレームなどを同時に要素に持つことができます</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tmp_vec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">8</span>), <span class="st">&quot;滋賀県&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>tmp_vec</span></code></pre></div>
+<pre><code>[1] &quot;2&quot;      &quot;0&quot;      &quot;1&quot;      &quot;8&quot;      &quot;滋賀県&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>tmp_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">8</span>), <span class="st">&quot;滋賀県&quot;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>tmp_list</span></code></pre></div>
+<pre><code>[[1]]
+[1] 2 0 1 8
+
+[[2]]
+[1] &quot;滋賀県&quot;</code></pre>
+</section>
+<section id="append_list" class="slide level2">
+<h2>listに要素を追加する</h2>
+<ul>
+<li><strong>append</strong>関数でlistに要素を追加できます</li>
+<li>第一引数に対象のlist、第二引数に追加要素を要求します</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>tmp_d &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="st">&quot;企業コード&quot;</span> =<span class="st"> </span><span class="dv">101</span>, <span class="st">&quot;従業員数&quot;</span> =<span class="st"> </span><span class="dv">50</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>tmp_list &lt;-<span class="st"> </span><span class="kw">append</span>(tmp_list, <span class="kw">list</span>(tmp_d))</span></code></pre></div>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>appendまえ</p>
+<pre><code>[[1]]
+[1] 2 0 1 8
+
+[[2]]
+[1] &quot;滋賀県&quot;</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p>appendあと</p>
+<pre><code>[[1]]
+[1] 2 0 1 8
+
+[[2]]
+[1] &quot;滋賀県&quot;
+
+[[3]]
+# A tibble: 1 x 2
+  企業コード 従業員数
+       &lt;dbl&gt;    &lt;dbl&gt;
+1        101       50</code></pre>
+</div>
+</div>
+</section>
+<section id="access_list" class="slide level2">
+<h2>listの要素にアクセス</h2>
+<ul>
+<li>listの第i番目の要素にアクセスするには、<strong>大かっこを2重にして[[i]]</strong>と書きます</li>
+<li>大かっこが一重だと<strong>スライスされたlist</strong>が返されます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>tmp_list</span></code></pre></div>
+<pre><code>[[1]]
+[1] 2 0 1 8
+
+[[2]]
+[1] &quot;滋賀県&quot;
+
+[[3]]
+# A tibble: 1 x 2
+  企業コード 従業員数
+       &lt;dbl&gt;    &lt;dbl&gt;
+1        101       50</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>tmp_list[[<span class="dv">2</span>]] <span class="co"># 2つ目の要素</span></span></code></pre></div>
+<pre><code>[1] &quot;滋賀県&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>tmp_list[<span class="dv">2</span>] <span class="co"># listをスライス</span></span></code></pre></div>
+<pre><code>[[1]]
+[1] &quot;滋賀県&quot;</code></pre>
+</div>
+</div>
+</section>
+<section id="list_access_image" class="slide level2">
+<h2>listの要素アクセスイメージ</h2>
+<p><img data-src="../pictures/intermediate/list_youso.png" /></p>
+<ul>
+<li>tmp_list[2]とスライスすると、“滋賀県”が一つ目の要素になるので、[[1]]“滋賀県”となってlistが返されます</li>
+</ul>
+</section>
+<section id="names_list" class="slide level2">
+<h2>listの要素に名前をつける</h2>
+<ul>
+<li>listの要素名の参照・命名には<strong>names</strong>関数を使用します</li>
+<li>名前はlistと同じ長さのベクトルで与えます</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">names</span>(tmp_list) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;数列&quot;</span>, <span class="st">&quot;都道府県&quot;</span>, <span class="st">&quot;データ&quot;</span>)</span></code></pre></div>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>命名まえ</p>
+<pre><code>[[1]]
+[1] 2 0 1 8
+
+[[2]]
+[1] &quot;滋賀県&quot;
+
+[[3]]
+# A tibble: 1 x 2
+  企業コード 従業員数
+       &lt;dbl&gt;    &lt;dbl&gt;
+1        101       50</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p>命名あと</p>
+<pre><code>$数列
+[1] 2 0 1 8
+
+$都道府県
+[1] &quot;滋賀県&quot;
+
+$データ
+# A tibble: 1 x 2
+  企業コード 従業員数
+       &lt;dbl&gt;    &lt;dbl&gt;
+1        101       50</code></pre>
+</div>
+</div>
+</section>
+<section id="list_access_name" class="slide level2">
+<h2>listの要素に名前でアクセス</h2>
+<ul>
+<li>listの要素に名前をつけると、以下の2種類の方法で要素名を用いてlistの要素へアクセスできるようになります</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>tmp_list[[<span class="st">&quot;データ&quot;</span>]]</span></code></pre></div>
+<pre><code># A tibble: 1 x 2
+  企業コード 従業員数
+       &lt;dbl&gt;    &lt;dbl&gt;
+1        101       50</code></pre>
+<ul>
+<li>listの要素に名前をつけておくことで、右のように補完入力なども使えるようになります</li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>tmp_list<span class="op">$</span>データ</span></code></pre></div>
+<pre><code># A tibble: 1 x 2
+  企業コード 従業員数
+       &lt;dbl&gt;    &lt;dbl&gt;
+1        101       50</code></pre>
+<p><img data-src="../pictures/intermediate/read_result.png" /></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="for_bun" class="title-slide slide level1">
+<h1>for文(繰り返し処理)</h1>
+<ul>
+<li>for文の使い方を勉強します</li>
+</ul>
+</section>
+<section id="for文イントロダクション" class="slide level2">
+<h2>for文イントロダクション</h2>
+<ul>
+<li>以下は1から3までの数字を順に表示するコードです</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">print</span>(<span class="dv">1</span>)</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="kw">print</span>(<span class="dv">2</span>)</span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="kw">print</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>[1] 1
+[1] 2
+[1] 3</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>){</span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="kw">print</span>(i)</span>
+<span id="cb25-3"><a href="#cb25-3"></a>}</span></code></pre></div>
+<pre><code>[1] 1
+[1] 2
+[1] 3</code></pre>
+</div>
+</div>
+<ul>
+<li>どちらのコードを書くほうが楽でしょうか？</li>
+<li>数字が1から1000までならどうでしょうか？</li>
+<li>このように同様な処理を繰り返し行うときにfor文を使用すると、とても効率的にコーディングができます</li>
+</ul>
+</section>
+<section id="for文の使い方" class="slide level2">
+<h2>for文の使い方</h2>
+<ul>
+<li><strong>繰り返し範囲</strong>に指定したベクトル（リストでも可）の要素が順番に<strong>変数</strong>に代入されます</li>
+<li>各ループにおける処理を、中かっこ{}の中に書きます</li>
+<li>かっこ()と中かっこ{}を忘れないように注意しましょう</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img data-src="../pictures/intermediate/for_explain_2.png" /></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>){</span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="kw">print</span>(i)</span>
+<span id="cb27-3"><a href="#cb27-3"></a>}</span></code></pre></div>
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5</code></pre>
+</div>
+</div>
+</section>
+<section id="適当な変数名を考える" class="slide level2">
+<h2>適当な変数名を考える</h2>
+<ul>
+<li>for文で使用する変数には適当な名前をつけましょう</li>
+<li>単なる序数の場合などはiやnを使用することが多いです</li>
+<li>たとえば2012年から2018年までの各年での繰り返し処理を行いたいときは、変数名をyearとするといいでしょう</li>
+</ul>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="cf">for</span> (year <span class="cf">in</span> <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>){</span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="kw">print</span>(<span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,year,<span class="st">&quot;年1月時点.csv&quot;</span>))</span>
+<span id="cb29-3"><a href="#cb29-3"></a>}</span></code></pre></div>
+<pre><code>[1] &quot;input/企業概要データ_2012年1月時点.csv&quot;
+[1] &quot;input/企業概要データ_2013年1月時点.csv&quot;
+[1] &quot;input/企業概要データ_2014年1月時点.csv&quot;
+[1] &quot;input/企業概要データ_2015年1月時点.csv&quot;
+[1] &quot;input/企業概要データ_2016年1月時点.csv&quot;
+[1] &quot;input/企業概要データ_2017年1月時点.csv&quot;
+[1] &quot;input/企業概要データ_2018年1月時点.csv&quot;</code></pre>
+</section>
+<section id="ex_listfor" class="slide level2">
+<h2>listとfor文を用いた例</h2>
+<ul>
+<li>以下のようにしてlistとfor文を共に使うことが多いです</li>
+</ul>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>items &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ecnomics&quot;</span>, <span class="st">&quot;data science&quot;</span>) <span class="co"># ベクトルを作成</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>my_list &lt;-<span class="st"> </span><span class="kw">list</span>()                      <span class="co"># 空のlistを作成</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="cf">for</span>(item <span class="cf">in</span> items){   </span>
+<span id="cb31-4"><a href="#cb31-4"></a>  my_list &lt;-<span class="st"> </span><span class="kw">append</span>(my_list, <span class="kw">list</span>(item)) <span class="co"># 要素を追加</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a>}                     </span>
+<span id="cb31-6"><a href="#cb31-6"></a><span class="kw">names</span>(my_list) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;経済&quot;</span>, <span class="st">&quot;データサイエンス&quot;</span>) <span class="co"># 要素に命名</span></span>
+<span id="cb31-7"><a href="#cb31-7"></a>my_list</span></code></pre></div>
+<pre><code>$経済
+[1] &quot;ecnomics&quot;
+
+$データサイエンス
+[1] &quot;data science&quot;</code></pre>
+<p>上記のコードと同様にして、複数ファイルの一括読み込みも処理できそうです。実際にやってみましょう。</p>
+</section></section>
+<section>
+<section id="fukusu_jisso" class="title-slide slide level1">
+<h1>複数ファイルの一括読み込み<br>(実装)</h1>
+<ul>
+<li>複数ファイルを効率よく読み込む方法を実装します</li>
+</ul>
+</section>
+<section id="for_image_2" class="slide level2">
+<h2>for文の5ステップのイメージ(再掲)</h2>
+<p><img data-src="../pictures/intermediate/for_explain.png" /></p>
+<p>では5つのステップを順番に実装していきましょう。</p>
+</section>
+<section id="for_step1" class="slide level2">
+<h2>for文：ステップ１</h2>
+<ul>
+<li>はじめに、ファイルのpathベクトルを作成します</li>
+<li>paste0（paste）関数は数値を入れると文字列に変換されます</li>
+<li>ベクトルを入れると同じ長さのベクトルで返されます</li>
+<li>このpathベクトルを繰り返し範囲としてfor文を使います</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
+<span id="cb33-2"><a href="#cb33-2"></a>                   <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>, <span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb33-3"><a href="#cb33-3"></a>file_vec</span></code></pre></div>
+<pre><code>[1] &quot;input/企業概要データ_2012年1月時点.csv&quot;
+[2] &quot;input/企業概要データ_2013年1月時点.csv&quot;
+[3] &quot;input/企業概要データ_2014年1月時点.csv&quot;
+[4] &quot;input/企業概要データ_2015年1月時点.csv&quot;
+[5] &quot;input/企業概要データ_2016年1月時点.csv&quot;
+[6] &quot;input/企業概要データ_2017年1月時点.csv&quot;
+[7] &quot;input/企業概要データ_2018年1月時点.csv&quot;</code></pre>
+</section>
+<section id="for_step2" class="slide level2">
+<h2>for文：ステップ２</h2>
+<ul>
+<li>つぎに、読み込んだデータを格納するための空の箱、すなわち空のリストを作成します</li>
+<li>空箱の名前はdata_listとします</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb35-2"><a href="#cb35-2"></a>data_list</span></code></pre></div>
+<pre><code>list()</code></pre>
+</section>
+<section id="for_step345" class="slide level2">
+<h2>for文：ステップ３,４,５</h2>
+<ul>
+<li>先ほど用意したpathベクトルを繰り返し範囲として、読み込むデータのpathを順番に変数へと与えていきます
+<ul>
+<li>fileという変数に、file_vecの要素が順番に与えらます</li>
+<li>各ループで読み込んだデータをtmp_d（仮データ）とします</li>
+<li>読み込んだtmp_dをdata_listに追加します</li>
+<li>一度listに追加したtmp_dは不要（上書きok）です</li>
+</ul></li>
+<li>for文終了後に、listの要素に名前をつけます</li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb37-2"><a href="#cb37-2"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
+<span id="cb37-3"><a href="#cb37-3"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb37-4"><a href="#cb37-4"></a>              <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb37-5"><a href="#cb37-5"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
+<span id="cb37-6"><a href="#cb37-6"></a>}</span>
+<span id="cb37-7"><a href="#cb37-7"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+</section>
+<section id="for_matome" class="slide level2">
+<h2>複数ファイル読み込みまとめ</h2>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="co"># ステップ１：pathベクトルを作成する</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>                   <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>,<span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb38-4"><a href="#cb38-4"></a><span class="co"># ステップ２：空のlistを作る</span></span>
+<span id="cb38-5"><a href="#cb38-5"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb38-6"><a href="#cb38-6"></a></span>
+<span id="cb38-7"><a href="#cb38-7"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb38-8"><a href="#cb38-8"></a><span class="co"># ステップ３：データを読み込む</span></span>
+<span id="cb38-9"><a href="#cb38-9"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
+<span id="cb38-10"><a href="#cb38-10"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb38-11"><a href="#cb38-11"></a>              <span class="dt">col_types =</span> data_cols)</span>
+<span id="cb38-12"><a href="#cb38-12"></a><span class="co"># ステップ４：データをlistに格納する</span></span>
+<span id="cb38-13"><a href="#cb38-13"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
+<span id="cb38-14"><a href="#cb38-14"></a>}</span>
+<span id="cb38-15"><a href="#cb38-15"></a><span class="co"># ステップ５：listの要素に名前を付ける</span></span>
+<span id="cb38-16"><a href="#cb38-16"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+</section>
+<section id="複数ファイルの一括読み込み結果" class="slide level2">
+<h2>複数ファイルの一括読み込み結果</h2>
+<ul>
+<li>データ数が多いので表示はしませんが、コンソールにdata_listと入力すると結果を確認することができます</li>
+<li>結果の確認にはglimpse関数やstr関数なども便利です</li>
+<li>listの要素に命名したので、下図のようにしてもdata_listに2012年から2018年までのデータが格納されていることが確認できます</li>
+</ul>
+<p><img data-src="../pictures/intermediate/read_result.png" /></p>
+</section></section>
+<section>
+<section id="複数データの結合方法" class="title-slide slide level1">
+<h1>複数データの結合方法</h1>
+<ul>
+<li>タテとヨコ、2種類の結合方法の紹介をします</li>
+</ul>
+</section>
+<section id="タテ結合とヨコ結合" class="slide level2">
+<h2>タテ結合とヨコ結合</h2>
+<ul>
+<li>複数データの結合には以下の2通りの方法があります</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>bind_rows</strong>でタテに結合<br />
+（タテ持ちデータ）</p>
+<p><img data-src="../pictures/intermediate/bind_ver.png" /></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>joinでヨコに結合</strong><br />
+（ヨコ持ちデータ）</p>
+<p><img data-src="../pictures/intermediate/join_ver.png" /></p>
+</div>
+</div>
+<ul>
+<li>先にタテ結合、次にヨコ結合の説明をします</li>
+</ul>
+</section></section>
+<section>
+<section id="複数データのタテ結合" class="title-slide slide level1">
+<h1>複数データのタテ結合</h1>
+<ul>
+<li>タテ結合を実装します</li>
+</ul>
+</section>
+<section id="タテ結合結果" class="slide level2">
+<h2>タテ結合結果</h2>
+<ul>
+<li>結合の際にyearカラムを新設することがポイントです</li>
+<li>企業コード, yearの順でソートして表示しています</li>
+</ul>
+<pre><code># A tibble: 14,972 x 12
+   企業コード  year 従業員数 本社所在地市区郡 業種大分類 `資本金(千円)`
+   &lt;chr&gt;      &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
+ 1 B02111302   2012     1254 34208_広島県府中市~ F:製造業         11722300
+ 2 B02111302   2013      768 34208_広島県府中市~ F:製造業          9907700
+ 3 B02111302   2014     1242 34208_広島県府中市~ F:製造業          6616800
+ 4 B02111302   2015     1409 34208_広島県府中市~ F:製造業          7218100
+ 5 B02111302   2016      728 34208_広島県府中市~ F:製造業         17733300
+ 6 B02111302   2017     1401 34208_広島県府中市~ F:製造業          7440100
+ 7 B02111302   2018     1096 34208_広島県府中市~ F:製造業          6818500
+ 8 B02117802   2012       82 34207_広島県福山市~ G:卸売・小売業，~        3556300
+ 9 B02117802   2013      376 34207_広島県福山市~ G:卸売・小売業，~        1777200
+10 B02117802   2014      374 34207_広島県福山市~ G:卸売・小売業，~        3568300
+# ... with 14,962 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
+#   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
+</section>
+<section id="タテ結合の手順" class="slide level2">
+<h2>タテ結合の手順</h2>
+<ol type="1">
+<li>for文とmutateを使って、data_listの全てのデータにyearカラムを作成する</li>
+<li>bind_rowsを使って、data_listのデータをタテ結合する</li>
+</ol>
+<p><img src="../pictures/intermediate/bind_ver.png" width="60%"></p>
+</section>
+<section id="make_yearcol" class="slide level2">
+<h2>1. yearカラムの作成</h2>
+<p><strong>yearカラムを作る理由</strong></p>
+<p>data_listの要素名にはyearの情報がありますが、個々のデータにはyearの情報がありません。そのため、このまま縦結合するとyearの情報が抜け落ちたデータになります。</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>data_listの要素名</p>
+<pre><code>[1] &quot;data_2012&quot; &quot;data_2013&quot; &quot;data_2014&quot; &quot;data_2015&quot; &quot;data_2016&quot; &quot;data_2017&quot;
+[7] &quot;data_2018&quot;</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p>2012年のデータのカラム</p>
+<pre><code> [1] &quot;企業コード&quot;                 &quot;本社所在地市区郡&quot;          
+ [3] &quot;業種大分類&quot;                 &quot;資本金(千円)&quot;              
+ [5] &quot;従業員数&quot;                   &quot;最新期業績決算期年&quot;        
+ [7] &quot;最新期業績決算期月&quot;         &quot;最新期業績売上高(百万円)&quot;  
+ [9] &quot;最新期業績税引後利益(千円)&quot; &quot;創業年&quot;                    
+[11] &quot;設立年&quot;                    </code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>yearカラムの作成実装（１つ）</strong></p>
+<ul>
+<li>まずは2012年のデータのみで実装してみましょう</li>
+<li>コードの汎用性を高めるために、yearカラムの値はdata_listの要素名からとってきます</li>
+</ul>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>data_year &lt;-<span class="st"> </span><span class="kw">names</span>(data_list)[<span class="dv">1</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb42-2"><a href="#cb42-2"></a>data_list[[<span class="st">&quot;data_2012&quot;</span>]] &lt;-</span>
+<span id="cb42-3"><a href="#cb42-3"></a><span class="st">  </span>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">year =</span> data_year) </span>
+<span id="cb42-4"><a href="#cb42-4"></a>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(year) <span class="co"># データ確認</span></span></code></pre></div>
+<pre><code># A tibble: 2,176 x 12
+   year  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 2012  G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~        1419800      197
+ 2 2012  G92155065  13113_東京都渋谷区~ H:金融・保険業~        8462000     1418
+ 3 2012  G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~         370700      535
+ 4 2012  G92190707  01101_北海道札幌市中央区~ G:卸売・小売業，~         639200      694
+ 5 2012  G92515950  01105_北海道札幌市豊平区~ F:製造業          1958700      840
+ 6 2012  G92508571  27128_大阪府大阪市中央区~ F:製造業         30041600     1436
+ 7 2012  G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~       83595900     2814
+ 8 2012  G92552130  01104_北海道札幌市白石区~ E:建設業          2577500     2145
+ 9 2012  G92557890  01110_北海道札幌市清田区~ F:製造業          4217000      461
+10 2012  G92556303  01101_北海道札幌市中央区~ K:電気・ガス・水~        3913100      769
+# ... with 2,166 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
+#   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
+</section>
+<section class="slide level2">
+
+<p><strong>yearカラムの作成実装（すべて）</strong></p>
+<ul>
+<li>次は全てのデータに対してyearカラムを作成します
+<ul>
+<li>繰返し範囲は、1からdata_listの要素の長さです</li>
+<li>毎ループごとにyearの情報を要素名から抜き出し、抜き出したyear情報をdataに付与しています</li>
+<li>year情報の抜き出しでは、listをスライスしているところに注意してください</li>
+</ul></li>
+<li>前頁との違いは、for文と、要素名がdl_nameになっている部分のみです。結果は省略します</li>
+</ul>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="kw">names</span>(data_list)){</span>
+<span id="cb44-2"><a href="#cb44-2"></a>  data_year &lt;-<span class="st"> </span>dl_name <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb44-3"><a href="#cb44-3"></a>  data_list[[dl_name]] &lt;-</span>
+<span id="cb44-4"><a href="#cb44-4"></a><span class="st">    </span>data_list[[dl_name]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">year =</span> data_year)</span>
+<span id="cb44-5"><a href="#cb44-5"></a>}</span></code></pre></div>
+</section>
+<section id="bind_tateketu" class="slide level2">
+<h2>2. bind_rowsでタテ結合</h2>
+<ul>
+<li>data_listを直接bind_rows関数にかけるだけで、listに入っているデータをすべてタテ結合することができます<br />
+</li>
+<li>タテ結合したデータをlong_dataとします</li>
+</ul>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>long_data &lt;-<span class="st"> </span>data_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">bind_rows</span>()</span>
+<span id="cb45-2"><a href="#cb45-2"></a>long_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(year) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(企業コード, year)</span></code></pre></div>
+<pre><code># A tibble: 14,972 x 12
+   year  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 2012  B02111302  34208_広島県府中市~ F:製造業         11722300     1254
+ 2 2013  B02111302  34208_広島県府中市~ F:製造業          9907700      768
+ 3 2014  B02111302  34208_広島県府中市~ F:製造業          6616800     1242
+ 4 2015  B02111302  34208_広島県府中市~ F:製造業          7218100     1409
+ 5 2016  B02111302  34208_広島県府中市~ F:製造業         17733300      728
+ 6 2017  B02111302  34208_広島県府中市~ F:製造業          7440100     1401
+ 7 2018  B02111302  34208_広島県府中市~ F:製造業          6818500     1096
+ 8 2012  B02117802  34207_広島県福山市~ G:卸売・小売業，~        3556300       82
+ 9 2013  B02117802  34207_広島県福山市~ G:卸売・小売業，~        1777200      376
+10 2014  B02117802  34207_広島県福山市~ G:卸売・小売業，~        3568300      374
+# ... with 14,962 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
+#   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
+</section>
+<section id="tateketugou_hosoku" class="slide level2">
+<h2>補足</h2>
+<ul>
+<li>初級編の参考で解説しましたが、bind_rowsでの結合は、カラム名が一致するものはカラム名で紐づきます</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>d1</p>
+<pre><code># A tibble: 1 x 2
+  col_1 col_2
+  &lt;dbl&gt; &lt;dbl&gt;
+1     1     1</code></pre>
+<p>d2</p>
+<pre><code># A tibble: 1 x 2
+  col_2 col_3
+  &lt;dbl&gt; &lt;dbl&gt;
+1     2     2</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="kw">bind_rows</span>(d1, d2)</span></code></pre></div>
+<pre><code># A tibble: 2 x 3
+  col_1 col_2 col_3
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     1    NA
+2    NA     2     2</code></pre>
+</div>
+</div>
+</section>
+<section id="tateketugou_sanko" class="slide level2">
+<h2>参考</h2>
+<ul>
+<li>今回のケースでは、データ読み込みの時点で個々のデータにyear情報を付与すると、より効率的になります</li>
+</ul>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>,<span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb51-2"><a href="#cb51-2"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb51-3"><a href="#cb51-3"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb51-4"><a href="#cb51-4"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
+<span id="cb51-5"><a href="#cb51-5"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb51-6"><a href="#cb51-6"></a>              <span class="dt">col_types =</span> data_cols) </span>
+<span id="cb51-7"><a href="#cb51-7"></a>  tmp_d &lt;-<span class="st"> </span>tmp_d <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># ここで読み込んだデータにyear付与</span></span>
+<span id="cb51-8"><a href="#cb51-8"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">substr</span>(file, <span class="dv">15</span>, <span class="dv">18</span>))</span>
+<span id="cb51-9"><a href="#cb51-9"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
+<span id="cb51-10"><a href="#cb51-10"></a>}</span>
+<span id="cb51-11"><a href="#cb51-11"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+</section></section>
+<section>
+<section id="複数データのヨコ結合" class="title-slide slide level1">
+<h1>複数データのヨコ結合</h1>
+<ul>
+<li>ヨコ結合を実装します</li>
+</ul>
+</section>
+<section id="ヨコ結合結果" class="slide level2">
+<h2>ヨコ結合結果</h2>
+<ul>
+<li>カラム名の重複を避けるためとyear情報を保持するために、カラム名にyear情報を付与する部分がポイントです</li>
+</ul>
+<pre><code># A tibble: 2,176 x 71
+   企業コード 業種大分類_2012 業種大分類_2013 業種大分類_2014 業種大分類_2015
+   &lt;chr&gt;      &lt;chr&gt;           &lt;chr&gt;           &lt;chr&gt;           &lt;chr&gt;          
+ 1 G92155635  G:卸売・小売業，飲食~ G:卸売・小売業，飲食~ G:卸売・小売業，飲食~ G:卸売・小売業，飲食~
+ 2 G92155065  H:金融・保険業  H:金融・保険業  H:金融・保険業  H:金融・保険業 
+ 3 G92143569  G:卸売・小売業，飲食~ G:卸売・小売業，飲食~ G:卸売・小売業，飲食~ G:卸売・小売業，飲食~
+ 4 G92190707  G:卸売・小売業，飲食~ G:卸売・小売業，飲食~ G:卸売・小売業，飲食~ G:卸売・小売業，飲食~
+ 5 G92515950  F:製造業        F:製造業        F:製造業        F:製造業       
+ 6 G92508571  F:製造業        F:製造業        F:製造業        F:製造業       
+ 7 G92559088  K:電気・ガス・水道・~ K:電気・ガス・水道・~ K:電気・ガス・水道・~ K:電気・ガス・水道・~
+ 8 G92552130  E:建設業        E:建設業        E:建設業        E:建設業       
+ 9 G92557890  F:製造業        F:製造業        F:製造業        F:製造業       
+10 G92556303  K:電気・ガス・水道・~ K:電気・ガス・水道・~ K:電気・ガス・水道・~ K:電気・ガス・水道・~
+# ... with 2,166 more rows, and 66 more variables: 業種大分類_2016 &lt;chr&gt;,
+#   業種大分類_2017 &lt;chr&gt;, 業種大分類_2018 &lt;chr&gt;,
+#   最新期業績決算期月_2012 &lt;dbl&gt;, 最新期業績決算期月_2013 &lt;dbl&gt;,
+#   最新期業績決算期月_2014 &lt;dbl&gt;, 最新期業績決算期月_2015 &lt;dbl&gt;,
+#   最新期業績決算期月_2016 &lt;dbl&gt;, 最新期業績決算期月_2017 &lt;dbl&gt;,
+#   最新期業績決算期月_2018 &lt;dbl&gt;, 最新期業績決算期年_2012 &lt;dbl&gt;,
+#   最新期業績決算期年_2013 &lt;dbl&gt;, 最新期業績決算期年_2014 &lt;dbl&gt;,
+#   最新期業績決算期年_2015 &lt;dbl&gt;, 最新期業績決算期年_2016 &lt;dbl&gt;,
+#   最新期業績決算期年_2017 &lt;dbl&gt;, 最新期業績決算期年_2018 &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2012` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2013` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2014` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2015` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2016` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2017` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2018` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2012` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2013` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2014` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2015` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2016` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2017` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2018` &lt;dbl&gt;, `資本金(千円)_2012` &lt;dbl&gt;,
+#   `資本金(千円)_2013` &lt;dbl&gt;, `資本金(千円)_2014` &lt;dbl&gt;,
+#   `資本金(千円)_2015` &lt;dbl&gt;, `資本金(千円)_2016` &lt;dbl&gt;,
+#   `資本金(千円)_2017` &lt;dbl&gt;, `資本金(千円)_2018` &lt;dbl&gt;, 従業員数_2012 &lt;dbl&gt;,
+#   従業員数_2013 &lt;dbl&gt;, 従業員数_2014 &lt;dbl&gt;, 従業員数_2015 &lt;dbl&gt;,
+#   従業員数_2016 &lt;dbl&gt;, 従業員数_2017 &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;,
+#   設立年_2012 &lt;dbl&gt;, 設立年_2013 &lt;dbl&gt;, 設立年_2014 &lt;dbl&gt;, 設立年_2015 &lt;dbl&gt;,
+#   設立年_2016 &lt;dbl&gt;, 設立年_2017 &lt;dbl&gt;, 設立年_2018 &lt;dbl&gt;, 創業年_2012 &lt;dbl&gt;,
+#   創業年_2013 &lt;dbl&gt;, 創業年_2014 &lt;dbl&gt;, 創業年_2015 &lt;dbl&gt;, 創業年_2016 &lt;dbl&gt;,
+#   創業年_2017 &lt;dbl&gt;, 創業年_2018 &lt;dbl&gt;, 本社所在地市区郡_2012 &lt;chr&gt;,
+#   本社所在地市区郡_2013 &lt;chr&gt;, 本社所在地市区郡_2014 &lt;chr&gt;,
+#   本社所在地市区郡_2015 &lt;chr&gt;, 本社所在地市区郡_2016 &lt;chr&gt;,
+#   本社所在地市区郡_2017 &lt;chr&gt;, 本社所在地市区郡_2018 &lt;chr&gt;</code></pre>
+</section>
+<section id="ヨコ結合の手順" class="slide level2">
+<h2>ヨコ結合の手順</h2>
+<ol type="1">
+<li>for文とrename_withを使って、data_listの各データのカラム名を適当に変更する</li>
+<li>for文と*_joinを使って、data_listの全てのデータをヨコ結合する</li>
+</ol>
+<p><img src="../pictures/intermediate/join_ver.png" width="60%"></p>
+</section>
+<section id="rename_with" class="slide level2">
+<h2>1. rename_withでカラム名の変更</h2>
+<ul>
+<li>rename_withは、指定したカラムに対してカラム名変更の処理を一括で行うことができる関数です</li>
+<li>企業コードはjoinのキーなので変更しません</li>
+<li>例としてdata_2012のカラム名を一括変更します</li>
+</ul>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>data_list<span class="op">$</span>data_<span class="dv">2012</span> <span class="op">%&gt;%</span></span>
+<span id="cb53-2"><a href="#cb53-2"></a><span class="st">  </span><span class="kw">rename_with</span>(<span class="dt">.fn =</span> paste0,         <span class="co"># renameに使用する関数</span></span>
+<span id="cb53-3"><a href="#cb53-3"></a>              <span class="dt">.cols =</span> <span class="op">-</span>企業コード,  <span class="co"># 対称のカラムを指定</span></span>
+<span id="cb53-4"><a href="#cb53-4"></a>              <span class="st">&quot;_&quot;</span>, <span class="st">&quot;2012&quot;</span>) <span class="op">%&gt;%</span><span class="st">      </span><span class="co"># 上記関数の引数</span></span>
+<span id="cb53-5"><a href="#cb53-5"></a><span class="st">  </span><span class="kw">colnames</span>()</span></code></pre></div>
+<pre><code> [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2012&quot;          
+ [3] &quot;業種大分類_2012&quot;                 &quot;資本金(千円)_2012&quot;              
+ [5] &quot;従業員数_2012&quot;                   &quot;最新期業績決算期年_2012&quot;        
+ [7] &quot;最新期業績決算期月_2012&quot;         &quot;最新期業績売上高(百万円)_2012&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2012&quot; &quot;創業年_2012&quot;                    
+[11] &quot;設立年_2012&quot;                    </code></pre>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>ではfor文とrename_withを使って、data_listの各データの変数名を一括変更しましょう</li>
+</ul>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="kw">names</span>(data_list)) {</span>
+<span id="cb55-2"><a href="#cb55-2"></a>  data_year &lt;-<span class="st"> </span>dl_name <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb55-3"><a href="#cb55-3"></a>  data_list[[dl_name]] &lt;-<span class="st"> </span>data_list[[dl_name]] <span class="op">%&gt;%</span></span>
+<span id="cb55-4"><a href="#cb55-4"></a><span class="st">    </span><span class="kw">rename_with</span>(paste0, <span class="op">-</span>企業コード, <span class="st">&quot;_&quot;</span>, data_year)</span>
+<span id="cb55-5"><a href="#cb55-5"></a>}</span>
+<span id="cb55-6"><a href="#cb55-6"></a>data_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(colnames) <span class="co"># map関数の説明は後ほど</span></span></code></pre></div>
+<pre><code>$data_2012
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2012&quot;          
+ [3] &quot;業種大分類_2012&quot;                 &quot;資本金(千円)_2012&quot;              
+ [5] &quot;従業員数_2012&quot;                   &quot;最新期業績決算期年_2012&quot;        
+ [7] &quot;最新期業績決算期月_2012&quot;         &quot;最新期業績売上高(百万円)_2012&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2012&quot; &quot;創業年_2012&quot;                    
+[11] &quot;設立年_2012&quot;                    
+
+$data_2013
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2013&quot;          
+ [3] &quot;業種大分類_2013&quot;                 &quot;資本金(千円)_2013&quot;              
+ [5] &quot;従業員数_2013&quot;                   &quot;最新期業績決算期年_2013&quot;        
+ [7] &quot;最新期業績決算期月_2013&quot;         &quot;最新期業績売上高(百万円)_2013&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2013&quot; &quot;創業年_2013&quot;                    
+[11] &quot;設立年_2013&quot;                    
+
+$data_2014
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2014&quot;          
+ [3] &quot;業種大分類_2014&quot;                 &quot;資本金(千円)_2014&quot;              
+ [5] &quot;従業員数_2014&quot;                   &quot;最新期業績決算期年_2014&quot;        
+ [7] &quot;最新期業績決算期月_2014&quot;         &quot;最新期業績売上高(百万円)_2014&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2014&quot; &quot;創業年_2014&quot;                    
+[11] &quot;設立年_2014&quot;                    
+
+$data_2015
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2015&quot;          
+ [3] &quot;業種大分類_2015&quot;                 &quot;資本金(千円)_2015&quot;              
+ [5] &quot;従業員数_2015&quot;                   &quot;最新期業績決算期年_2015&quot;        
+ [7] &quot;最新期業績決算期月_2015&quot;         &quot;最新期業績売上高(百万円)_2015&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2015&quot; &quot;創業年_2015&quot;                    
+[11] &quot;設立年_2015&quot;                    
+
+$data_2016
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2016&quot;          
+ [3] &quot;業種大分類_2016&quot;                 &quot;資本金(千円)_2016&quot;              
+ [5] &quot;従業員数_2016&quot;                   &quot;最新期業績決算期年_2016&quot;        
+ [7] &quot;最新期業績決算期月_2016&quot;         &quot;最新期業績売上高(百万円)_2016&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2016&quot; &quot;創業年_2016&quot;                    
+[11] &quot;設立年_2016&quot;                    
+
+$data_2017
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2017&quot;          
+ [3] &quot;業種大分類_2017&quot;                 &quot;資本金(千円)_2017&quot;              
+ [5] &quot;従業員数_2017&quot;                   &quot;最新期業績決算期年_2017&quot;        
+ [7] &quot;最新期業績決算期月_2017&quot;         &quot;最新期業績売上高(百万円)_2017&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2017&quot; &quot;創業年_2017&quot;                    
+[11] &quot;設立年_2017&quot;                    
+
+$data_2018
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2018&quot;          
+ [3] &quot;業種大分類_2018&quot;                 &quot;資本金(千円)_2018&quot;              
+ [5] &quot;従業員数_2018&quot;                   &quot;最新期業績決算期年_2018&quot;        
+ [7] &quot;最新期業績決算期月_2018&quot;         &quot;最新期業績売上高(百万円)_2018&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2018&quot; &quot;創業年_2018&quot;                    
+[11] &quot;設立年_2018&quot;                    </code></pre>
+</section>
+<section id="leftjoin_yokoketugo" class="slide level2">
+<h2>2. left_joinでヨコ結合</h2>
+<ul>
+<li>for文を用い、data_2012の企業コードをおおもとのキーとして、すべてのデータを企業コードでleft_joinします</li>
+<li>最初はdata_2012自身とleft_joinし、次に2013, 2014,…,2018とleft_joinしていきます</li>
+</ul>
+<p><img data-src="../pictures/intermediate/join_alldata_1.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><strong>注意点</strong></p>
+<ul>
+<li>2012年の企業コードに含まれない企業コードがあるデータ、あるいは2012年の企業コードが存在しないデータは、次のようになります
+<ul>
+<li>2012年の企業コードと一致しないデータは<strong>joinされない</strong></li>
+<li>2012年の企業コードが無い年ではデータが欠損(<strong>NA</strong>)となる</li>
+</ul></li>
+</ul>
+<p><img data-src="../pictures/intermediate/join_alldata_2.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><strong>実装と確認</strong></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>wide_data &lt;-<span class="st"> </span>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(企業コード)</span>
+<span id="cb57-2"><a href="#cb57-2"></a><span class="cf">for</span> (data <span class="cf">in</span> data_list) {</span>
+<span id="cb57-3"><a href="#cb57-3"></a>  wide_data &lt;-<span class="st"> </span>wide_data <span class="op">%&gt;%</span></span>
+<span id="cb57-4"><a href="#cb57-4"></a><span class="st">    </span><span class="kw">left_join</span>(data, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb57-5"><a href="#cb57-5"></a>}</span>
+<span id="cb57-6"><a href="#cb57-6"></a>wide_data</span></code></pre></div>
+<pre><code># A tibble: 2,176 x 71
+   企業コード 本社所在地市区郡_2012~ 業種大分類_2012 `資本金(千円)_2012`~ 従業員数_2012
+   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;                      &lt;dbl&gt;         &lt;dbl&gt;
+ 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，飲食~          1419800           197
+ 2 G92155065  13113_東京都渋谷区~ H:金融・保険業           8462000          1418
+ 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，飲食~           370700           535
+ 4 G92190707  01101_北海道札幌市中央区~ G:卸売・小売業，飲食~           639200           694
+ 5 G92515950  01105_北海道札幌市豊平区~ F:製造業                 1958700           840
+ 6 G92508571  27128_大阪府大阪市中央区~ F:製造業                30041600          1436
+ 7 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水道・~         83595900          2814
+ 8 G92552130  01104_北海道札幌市白石区~ E:建設業                 2577500          2145
+ 9 G92557890  01110_北海道札幌市清田区~ F:製造業                 4217000           461
+10 G92556303  01101_北海道札幌市中央区~ K:電気・ガス・水道・~          3913100           769
+# ... with 2,166 more rows, and 66 more variables:
+#   最新期業績決算期年_2012 &lt;dbl&gt;, 最新期業績決算期月_2012 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2012` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2012` &lt;dbl&gt;, 創業年_2012 &lt;dbl&gt;,
+#   設立年_2012 &lt;dbl&gt;, 本社所在地市区郡_2013 &lt;chr&gt;, 業種大分類_2013 &lt;chr&gt;,
+#   `資本金(千円)_2013` &lt;dbl&gt;, 従業員数_2013 &lt;dbl&gt;,
+#   最新期業績決算期年_2013 &lt;dbl&gt;, 最新期業績決算期月_2013 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2013` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2013` &lt;dbl&gt;, 創業年_2013 &lt;dbl&gt;,
+#   設立年_2013 &lt;dbl&gt;, 本社所在地市区郡_2014 &lt;chr&gt;, 業種大分類_2014 &lt;chr&gt;,
+#   `資本金(千円)_2014` &lt;dbl&gt;, 従業員数_2014 &lt;dbl&gt;,
+#   最新期業績決算期年_2014 &lt;dbl&gt;, 最新期業績決算期月_2014 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2014` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2014` &lt;dbl&gt;, 創業年_2014 &lt;dbl&gt;,
+#   設立年_2014 &lt;dbl&gt;, 本社所在地市区郡_2015 &lt;chr&gt;, 業種大分類_2015 &lt;chr&gt;,
+#   `資本金(千円)_2015` &lt;dbl&gt;, 従業員数_2015 &lt;dbl&gt;,
+#   最新期業績決算期年_2015 &lt;dbl&gt;, 最新期業績決算期月_2015 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2015` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2015` &lt;dbl&gt;, 創業年_2015 &lt;dbl&gt;,
+#   設立年_2015 &lt;dbl&gt;, 本社所在地市区郡_2016 &lt;chr&gt;, 業種大分類_2016 &lt;chr&gt;,
+#   `資本金(千円)_2016` &lt;dbl&gt;, 従業員数_2016 &lt;dbl&gt;,
+#   最新期業績決算期年_2016 &lt;dbl&gt;, 最新期業績決算期月_2016 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2016` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2016` &lt;dbl&gt;, 創業年_2016 &lt;dbl&gt;,
+#   設立年_2016 &lt;dbl&gt;, 本社所在地市区郡_2017 &lt;chr&gt;, 業種大分類_2017 &lt;chr&gt;,
+#   `資本金(千円)_2017` &lt;dbl&gt;, 従業員数_2017 &lt;dbl&gt;,
+#   最新期業績決算期年_2017 &lt;dbl&gt;, 最新期業績決算期月_2017 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2017` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2017` &lt;dbl&gt;, 創業年_2017 &lt;dbl&gt;,
+#   設立年_2017 &lt;dbl&gt;, 本社所在地市区郡_2018 &lt;chr&gt;, 業種大分類_2018 &lt;chr&gt;,
+#   `資本金(千円)_2018` &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;,
+#   最新期業績決算期年_2018 &lt;dbl&gt;, 最新期業績決算期月_2018 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)_2018` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)_2018` &lt;dbl&gt;, 創業年_2018 &lt;dbl&gt;,
+#   設立年_2018 &lt;dbl&gt;</code></pre>
+</section>
+<section class="slide level2">
+
+<p><strong>建設的な方法</strong></p>
+<ul>
+<li>必要なデータが決まっている場合は、以下のようにして結合する変数を選択してjoinをすると建設的です</li>
+</ul>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>wide_emp &lt;-<span class="st"> </span>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(企業コード)</span>
+<span id="cb59-2"><a href="#cb59-2"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="kw">names</span>(data_list)) {</span>
+<span id="cb59-3"><a href="#cb59-3"></a>  wide_emp &lt;-<span class="st"> </span>wide_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-4"><a href="#cb59-4"></a><span class="st">    </span><span class="kw">left_join</span>(</span>
+<span id="cb59-5"><a href="#cb59-5"></a>      data_list[[dl_name]] <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># containsは後ほど解説</span></span>
+<span id="cb59-6"><a href="#cb59-6"></a><span class="st">        </span><span class="kw">select</span>(企業コード, <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)),</span>
+<span id="cb59-7"><a href="#cb59-7"></a>      <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb59-8"><a href="#cb59-8"></a>}</span>
+<span id="cb59-9"><a href="#cb59-9"></a>wide_emp</span></code></pre></div>
+<pre><code># A tibble: 2,176 x 8
+   企業コード 従業員数_2012 従業員数_2013 従業員数_2014 従業員数_2015
+   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;
+ 1 G92155635            197            45           241           194
+ 2 G92155065           1418          2049          3632          2615
+ 3 G92143569            535            13           611           471
+ 4 G92190707            694           960           778           566
+ 5 G92515950            840           722           783           794
+ 6 G92508571           1436           737          1472          1062
+ 7 G92559088           2814         10884          3735          7194
+ 8 G92552130           2145          2772          1568          1465
+ 9 G92557890            461           556           555           674
+10 G92556303            769           201           770           413
+# ... with 2,166 more rows, and 3 more variables: 従業員数_2016 &lt;dbl&gt;,
+#   従業員数_2017 &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;</code></pre>
+</section>
+<section id="yokoketugou_hosoku" class="slide level2">
+<h2>補足</h2>
+<ul>
+<li>2012年のデータのレコード数と、すべてのデータをヨコ結合したデータのレコード数が同数であることが確認できます</li>
+</ul>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="kw">nrow</span>(data_list[[<span class="st">&quot;data_2012&quot;</span>]])</span></code></pre></div>
+<pre><code>[1] 2176</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="kw">nrow</span>(wide_data)</span></code></pre></div>
+<pre><code>[1] 2176</code></pre>
+</section>
+<section id="yokoketugou_sanko" class="slide level2">
+<h2>参考</h2>
+<ul>
+<li>欠損値の可視化をする便利なパッケージもあります</li>
+<li>パッケージ名::関数()と書くことで、どのパッケージの関数を使うか明示することができます</li>
+</ul>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(企業コード, <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb65-2"><a href="#cb65-2"></a><span class="st">  </span>naniar<span class="op">::</span><span class="kw">vis_miss</span>()</span></code></pre></div>
+<p><img src="03_intermediate_1st_half_files/figure-revealjs/sanko_kesson-1.png" width="768" /></p>
+</section></section>
+<section>
+<section id="rest_intermediate" class="title-slide slide level1">
+<h1>箸休めスライド</h1>
+<ul>
+<li>map関数</li>
+<li>selectのhelper関数</li>
+</ul>
+</section>
+<section id="map関数" class="slide level2">
+<h2>map関数</h2>
+<ul>
+<li>mapとは、ベクトルを関数にかける関数の1つで、高階関数とも呼ばれます</li>
+<li>返り値はベクトルと同じ長さのlistです</li>
+<li>ポイントは、引数を関数の後ろに続けて書くことです</li>
+<li>詳細は上級編で解説します</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="dv">1</span><span class="op">:</span><span class="dv">3</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(log)</span></code></pre></div>
+<pre><code>[[1]]
+[1] 0
+
+[[2]]
+[1] 0.6931472
+
+[[3]]
+[1] 1.098612</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="kw">c</span>(<span class="st">&quot;東京都&quot;</span>,<span class="st">&quot;滋賀県&quot;</span>)<span class="op">%&gt;%</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a><span class="st">  </span><span class="kw">map</span>(substr, <span class="dv">1</span>, <span class="dv">2</span>) </span></code></pre></div>
+<pre><code>[[1]]
+[1] &quot;東京&quot;
+
+[[2]]
+[1] &quot;滋賀&quot;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>rename_withのところで使ったmapは、data_listの2012年から2018年の7つのデータに対して、colnames関数をかけた結果が、listとして返ってきていました</li>
+</ul>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>data_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(colnames)</span></code></pre></div>
+<pre><code>$data_2012
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2012&quot;          
+ [3] &quot;業種大分類_2012&quot;                 &quot;資本金(千円)_2012&quot;              
+ [5] &quot;従業員数_2012&quot;                   &quot;最新期業績決算期年_2012&quot;        
+ [7] &quot;最新期業績決算期月_2012&quot;         &quot;最新期業績売上高(百万円)_2012&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2012&quot; &quot;創業年_2012&quot;                    
+[11] &quot;設立年_2012&quot;                    
+
+$data_2013
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2013&quot;          
+ [3] &quot;業種大分類_2013&quot;                 &quot;資本金(千円)_2013&quot;              
+ [5] &quot;従業員数_2013&quot;                   &quot;最新期業績決算期年_2013&quot;        
+ [7] &quot;最新期業績決算期月_2013&quot;         &quot;最新期業績売上高(百万円)_2013&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2013&quot; &quot;創業年_2013&quot;                    
+[11] &quot;設立年_2013&quot;                    
+
+$data_2014
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2014&quot;          
+ [3] &quot;業種大分類_2014&quot;                 &quot;資本金(千円)_2014&quot;              
+ [5] &quot;従業員数_2014&quot;                   &quot;最新期業績決算期年_2014&quot;        
+ [7] &quot;最新期業績決算期月_2014&quot;         &quot;最新期業績売上高(百万円)_2014&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2014&quot; &quot;創業年_2014&quot;                    
+[11] &quot;設立年_2014&quot;                    
+
+$data_2015
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2015&quot;          
+ [3] &quot;業種大分類_2015&quot;                 &quot;資本金(千円)_2015&quot;              
+ [5] &quot;従業員数_2015&quot;                   &quot;最新期業績決算期年_2015&quot;        
+ [7] &quot;最新期業績決算期月_2015&quot;         &quot;最新期業績売上高(百万円)_2015&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2015&quot; &quot;創業年_2015&quot;                    
+[11] &quot;設立年_2015&quot;                    
+
+$data_2016
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2016&quot;          
+ [3] &quot;業種大分類_2016&quot;                 &quot;資本金(千円)_2016&quot;              
+ [5] &quot;従業員数_2016&quot;                   &quot;最新期業績決算期年_2016&quot;        
+ [7] &quot;最新期業績決算期月_2016&quot;         &quot;最新期業績売上高(百万円)_2016&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2016&quot; &quot;創業年_2016&quot;                    
+[11] &quot;設立年_2016&quot;                    
+
+$data_2017
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2017&quot;          
+ [3] &quot;業種大分類_2017&quot;                 &quot;資本金(千円)_2017&quot;              
+ [5] &quot;従業員数_2017&quot;                   &quot;最新期業績決算期年_2017&quot;        
+ [7] &quot;最新期業績決算期月_2017&quot;         &quot;最新期業績売上高(百万円)_2017&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2017&quot; &quot;創業年_2017&quot;                    
+[11] &quot;設立年_2017&quot;                    
+
+$data_2018
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2018&quot;          
+ [3] &quot;業種大分類_2018&quot;                 &quot;資本金(千円)_2018&quot;              
+ [5] &quot;従業員数_2018&quot;                   &quot;最新期業績決算期年_2018&quot;        
+ [7] &quot;最新期業績決算期月_2018&quot;         &quot;最新期業績売上高(百万円)_2018&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2018&quot; &quot;創業年_2018&quot;                    
+[11] &quot;設立年_2018&quot;                    </code></pre>
+</section>
+<section id="select_helper" class="slide level2">
+<h2>selectのhelper関数</h2>
+<ul>
+<li>selectで使用できるhelper関数というのがあります</li>
+<li>これらは特定のカラム抽出に便利なので、覚えましょう
+<ul>
+<li>starts_with
+<ul>
+<li>特定の文字列から始まるカラムを選択</li>
+</ul></li>
+<li>ends_with
+<ul>
+<li>特定の文字列で終わるカラムを選択</li>
+</ul></li>
+<li>contains
+<ul>
+<li>特定の文字列を含むカラムを選択</li>
+</ul></li>
+</ul></li>
+<li>下記コードでは、「従業員数」という文字列を含むカラムと企業コードをselectしています</li>
+</ul>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb72-2"><a href="#cb72-2"></a><span class="st">  </span><span class="kw">select</span>(企業コード, <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>))</span></code></pre></div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="03_intermediate_1st_half_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="03_intermediate_1st_half_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '03_intermediate_1st_half_files/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: '03_intermediate_1st_half_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: '03_intermediate_1st_half_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
