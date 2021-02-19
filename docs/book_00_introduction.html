@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 導入編 | データエンジニアリング人材養成演習補助教材</title>
   <meta name="description" content="本ページは、滋賀大学の集中講義「データエンジニアリング人材養成演習」の補助教材です。" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 導入編 | データエンジニアリング人材養成演習補助教材" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="book_01_beginner_1st_half.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,15 +50,15 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -118,7 +118,6 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -569,7 +568,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>データの読込から結合、集計などのデータ研磨を行い、データの出力までを自由にできるようになる</li>
 </ul>
-<p><img src="../pictures/begginer/story-image-beg.png" width="55%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/begginer/story_image.png" width="55%"></p>
 <hr />
 <p><strong>中級編</strong></p>
 <ul>
@@ -579,12 +578,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:59%;">
-<p><img src="../pictures/intermediate/for-explain.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/intermediate/for_explain.png" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:40%;">
-<p><img src="../pictures/introduction/logic.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="../pictures/introduction/plot-example.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/logic.png" /></p>
+<p><img src="pictures/introduction/plot_example.png" /></p>
 </div>
 </div>
 <hr />
@@ -662,8 +661,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>R（Rstudio）を起動するたびに実行する必要があります</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="book_00_introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># インストール</span></span>
-<span id="cb1-2"><a href="book_00_introduction.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)            <span class="co"># 読み込み</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="book_00_introduction.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># インストール</span></span>
+<span id="cb1-2"><a href="book_00_introduction.html#cb1-2"></a><span class="kw">library</span>(tidyverse)            <span class="co"># 読み込み</span></span></code></pre></div>
 </div>
 </div>
 <div id="tibble" class="section level2" number="1.3">
@@ -687,16 +686,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="columns">
 <div class="column" style="width:48%;">
 <p><strong>dat_df</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="book_00_introduction.html#cb2-1" aria-hidden="true" tabindex="-1"></a>dat_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb2-2"><a href="book_00_introduction.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span></span>
-<span id="cb2-3"><a href="book_00_introduction.html#cb2-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="book_00_introduction.html#cb2-1"></a>dat_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb2-2"><a href="book_00_introduction.html#cb2-2"></a>  <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">50</span></span>
+<span id="cb2-3"><a href="book_00_introduction.html#cb2-3"></a>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <p><strong>dat_tb</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="book_00_introduction.html#cb3-1" aria-hidden="true" tabindex="-1"></a>dat_tb <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb3-2"><a href="book_00_introduction.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span></span>
-<span id="cb3-3"><a href="book_00_introduction.html#cb3-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="book_00_introduction.html#cb3-1"></a>dat_tb &lt;-<span class="st"> </span><span class="kw">tibble</span>(</span>
+<span id="cb3-2"><a href="book_00_introduction.html#cb3-2"></a>  <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">50</span></span>
+<span id="cb3-3"><a href="book_00_introduction.html#cb3-3"></a>)</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -705,7 +704,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>tibbleではデータの次元数とカラム型が表示され、表示件数が10行までになります。<strong>見やすいです！</strong></p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="book_00_introduction.html#cb4-1" aria-hidden="true" tabindex="-1"></a>dat_df</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="book_00_introduction.html#cb4-1"></a>dat_df</span></code></pre></div>
 <pre><code>    x
 1   1
 2   2
@@ -760,7 +759,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="book_00_introduction.html#cb6-1" aria-hidden="true" tabindex="-1"></a>dat_tb</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="book_00_introduction.html#cb6-1"></a>dat_tb</span></code></pre></div>
 <pre><code># A tibble: 50 x 1
        x
    &lt;int&gt;
@@ -795,7 +794,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="book_00_introduction.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="at">x =</span> dat_tb, <span class="at">n =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="book_00_introduction.html#cb8-1"></a><span class="kw">head</span>(<span class="dt">x =</span> dat_tb, <span class="dt">n =</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 1
       x
   &lt;int&gt;
@@ -805,7 +804,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="book_00_introduction.html#cb10-1" aria-hidden="true" tabindex="-1"></a>dat_tb <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="book_00_introduction.html#cb10-1"></a>dat_tb <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 1
       x
   &lt;int&gt;
@@ -842,19 +841,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="columns">
 <div class="column" style="width:45%;">
 <p>変数に代入</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="book_00_introduction.html#cb13-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">head</span>(dat_tb, <span class="dv">5</span>)</span>
-<span id="cb13-2"><a href="book_00_introduction.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(tmp)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="book_00_introduction.html#cb13-1"></a>tmp &lt;-<span class="st"> </span><span class="kw">head</span>(dat_tb, <span class="dv">5</span>)</span>
+<span id="cb13-2"><a href="book_00_introduction.html#cb13-2"></a><span class="kw">sum</span>(tmp)</span></code></pre></div>
 <pre><code>[1] 15</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:52%;">
 <p>関数の入れ子</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="book_00_introduction.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">head</span>(dat_tb, <span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="book_00_introduction.html#cb15-1"></a><span class="kw">sum</span>(<span class="kw">head</span>(dat_tb, <span class="dv">5</span>))</span></code></pre></div>
 <pre><code>[1] 15</code></pre>
 </div>
 </div>
 <p><strong>パイプを使う方法</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="book_00_introduction.html#cb17-1" aria-hidden="true" tabindex="-1"></a>dat_tb <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">sum</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="book_00_introduction.html#cb17-1"></a>dat_tb <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sum</span>()</span></code></pre></div>
 <pre><code>[1] 15</code></pre>
 <hr />
 <p><strong>パイプのコツ</strong></p>
@@ -862,15 +861,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>%&gt;%が長く連続するときは、%&gt;%の後ろで改行を挟むと可読性が高くなります</li>
 <li>また、%&gt;%で流れてきた前のデータは「<strong>.</strong>」で表現できるので、引数を明示して書くことも可能です。パイプ前を第一引数以外に渡したいときに有効です</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="book_00_introduction.html#cb19-1" aria-hidden="true" tabindex="-1"></a>dat_tb <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a href="book_00_introduction.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">x =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-3"><a href="book_00_introduction.html#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb19-4"><a href="book_00_introduction.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">exp</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb19-5"><a href="book_00_introduction.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">log</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="book_00_introduction.html#cb19-1"></a>dat_tb <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb19-2"><a href="book_00_introduction.html#cb19-2"></a><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">5</span>, <span class="dt">x =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb19-3"><a href="book_00_introduction.html#cb19-3"></a><span class="st">  </span><span class="kw">sum</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb19-4"><a href="book_00_introduction.html#cb19-4"></a><span class="st">  </span><span class="kw">exp</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb19-5"><a href="book_00_introduction.html#cb19-5"></a><span class="st">  </span><span class="kw">log</span>()</span></code></pre></div>
 <pre><code>[1] 15</code></pre>
 <hr />
 <p><strong>パイプを使わないと…</strong></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="book_00_introduction.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="fu">exp</span>(<span class="fu">sum</span>(<span class="fu">head</span>(dat_tb, <span class="dv">5</span>)))) <span class="co"># ﾁｮｯﾄﾂﾗｲ</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="book_00_introduction.html#cb21-1"></a><span class="kw">log</span>(<span class="kw">exp</span>(<span class="kw">sum</span>(<span class="kw">head</span>(dat_tb, <span class="dv">5</span>)))) <span class="co"># ﾁｮｯﾄﾂﾗｲ</span></span></code></pre></div>
 <pre><code>[1] 15</code></pre>
 <ul>
 <li>このようなコードがたくさん書かれていると、コードを読み解いていくのに労力がかかります</li>
@@ -934,15 +933,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:47%;">
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="book_00_introduction.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 例(このcodeは動きません)</span></span>
-<span id="cb23-2"><a href="book_00_introduction.html#cb23-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb23-3"><a href="book_00_introduction.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(data_2) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-4"><a href="book_00_introduction.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb23-5"><a href="book_00_introduction.html#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(col_1, col_2) <span class="sc">%&gt;%</span></span>
-<span id="cb23-6"><a href="book_00_introduction.html#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(data_3) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-7"><a href="book_00_introduction.html#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(col_3 <span class="sc">&lt;</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-8"><a href="book_00_introduction.html#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(col_3) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-9"><a href="book_00_introduction.html#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">col_4 =</span> col_3<span class="sc">*</span><span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="book_00_introduction.html#cb23-1"></a><span class="co"># 例(このcodeは動きません)</span></span>
+<span id="cb23-2"><a href="book_00_introduction.html#cb23-2"></a>data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-3"><a href="book_00_introduction.html#cb23-3"></a><span class="st">  </span><span class="kw">bind_rows</span>(data_<span class="dv">2</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-4"><a href="book_00_introduction.html#cb23-4"></a><span class="st">  </span><span class="kw">distinct</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-5"><a href="book_00_introduction.html#cb23-5"></a><span class="st">  </span><span class="kw">select</span>(col_<span class="dv">1</span>, col_<span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb23-6"><a href="book_00_introduction.html#cb23-6"></a><span class="st">  </span><span class="kw">left_join</span>(data_<span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-7"><a href="book_00_introduction.html#cb23-7"></a><span class="st">  </span><span class="kw">filter</span>(col_<span class="dv">3</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-8"><a href="book_00_introduction.html#cb23-8"></a><span class="st">  </span><span class="kw">arrange</span>(col_<span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-9"><a href="book_00_introduction.html#cb23-9"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">col_4 =</span> col_<span class="dv">3</span><span class="op">*</span><span class="dv">5</span>)</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -964,7 +963,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<p><img src="../pictures/introduction/directory.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/directory.png" /></p>
 </div>
 </div>
 </div>
@@ -983,21 +982,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>①から④の手順に従ってR Projectを作成します。</p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><img src="../pictures/introduction/create-proj-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="../pictures/introduction/create-proj-3.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/create_proj_1.png" /></p>
+<p><img src="pictures/introduction/create_proj_3.png" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<p><img src="../pictures/introduction/create-proj-2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="../pictures/introduction/create-proj-4.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/create_proj_2.png" /></p>
+<p><img src="pictures/introduction/create_proj_4.png" /></p>
 </div>
 </div>
 <hr />
 <p>R projectが作成されると次のような画面が開きます。</p>
-<p><img src="../pictures/introduction/create-proj-5.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/create_proj_5.png" /></p>
 <hr />
 <p>ExplorerからR projectを起動することもできます。</p>
-<p><img src="../pictures/introduction/create-proj-6.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/create_proj_6.png" /></p>
 </div>
 <div id="Rproject_pros" class="section level3" number="1.5.4">
 <h3><span class="header-section-number">1.5.4</span> R projectの利点</h3>
@@ -1022,11 +1021,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><img src="../pictures/introduction/directory.png" width="90%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/directory.png" width="90%"></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:56%;">
-<p><img src="../pictures/introduction/demo-dir-exp.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/demo_dir_exp.png" /></p>
 </div>
 </div>
 </div>
@@ -1035,7 +1034,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="columns">
 <div class="column" style="width:38%;">
 <p><font color="blue"><strong>青字</strong></font>はフォルダです</p>
-<p><img src="../pictures/introduction/demo-dir-bash.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/demo_dir_bash.png" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:60%;">
@@ -1044,7 +1043,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#adzwddpssi .gt_table {
+#cdhfebltqh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1069,7 +1068,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_heading {
+#cdhfebltqh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1081,7 +1080,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_title {
+#cdhfebltqh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1091,7 +1090,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#adzwddpssi .gt_subtitle {
+#cdhfebltqh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1101,13 +1100,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#adzwddpssi .gt_bottom_border {
+#cdhfebltqh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_col_headings {
+#cdhfebltqh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1122,7 +1121,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_col_heading {
+#cdhfebltqh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1142,7 +1141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#adzwddpssi .gt_column_spanner_outer {
+#cdhfebltqh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1154,15 +1153,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#adzwddpssi .gt_column_spanner_outer:first-child {
+#cdhfebltqh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#adzwddpssi .gt_column_spanner_outer:last-child {
+#cdhfebltqh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#adzwddpssi .gt_column_spanner {
+#cdhfebltqh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1174,7 +1173,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#adzwddpssi .gt_group_heading {
+#cdhfebltqh .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1196,7 +1195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#adzwddpssi .gt_empty_group_heading {
+#cdhfebltqh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1211,15 +1210,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#adzwddpssi .gt_from_md > :first-child {
+#cdhfebltqh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#adzwddpssi .gt_from_md > :last-child {
+#cdhfebltqh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#adzwddpssi .gt_row {
+#cdhfebltqh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1238,7 +1237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#adzwddpssi .gt_stub {
+#cdhfebltqh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1250,7 +1249,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-left: 12px;
 }
 
-#adzwddpssi .gt_summary_row {
+#cdhfebltqh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1260,7 +1259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#adzwddpssi .gt_first_summary_row {
+#cdhfebltqh .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1270,7 +1269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_grand_summary_row {
+#cdhfebltqh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1280,7 +1279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#adzwddpssi .gt_first_grand_summary_row {
+#cdhfebltqh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1290,11 +1289,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_striped {
+#cdhfebltqh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#adzwddpssi .gt_table_body {
+#cdhfebltqh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1303,7 +1302,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_footnotes {
+#cdhfebltqh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1317,13 +1316,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_footnote {
+#cdhfebltqh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#adzwddpssi .gt_sourcenotes {
+#cdhfebltqh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1337,46 +1336,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#adzwddpssi .gt_sourcenote {
+#cdhfebltqh .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#adzwddpssi .gt_left {
+#cdhfebltqh .gt_left {
   text-align: left;
 }
 
-#adzwddpssi .gt_center {
+#cdhfebltqh .gt_center {
   text-align: center;
 }
 
-#adzwddpssi .gt_right {
+#cdhfebltqh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#adzwddpssi .gt_font_normal {
+#cdhfebltqh .gt_font_normal {
   font-weight: normal;
 }
 
-#adzwddpssi .gt_font_bold {
+#cdhfebltqh .gt_font_bold {
   font-weight: bold;
 }
 
-#adzwddpssi .gt_font_italic {
+#cdhfebltqh .gt_font_italic {
   font-style: italic;
 }
 
-#adzwddpssi .gt_super {
+#cdhfebltqh .gt_super {
   font-size: 65%;
 }
 
-#adzwddpssi .gt_footnote_marks {
+#cdhfebltqh .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="adzwddpssi" style="overflow-x:auto;overflow-y:auto;width:500px;height:auto;"><table class="gt_table">
+<div id="cdhfebltqh" style="overflow-x:auto;overflow-y:auto;width:500px;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1413,7 +1412,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#onhitutult .gt_table {
+#hpdaqbxnnn .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1438,7 +1437,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#onhitutult .gt_heading {
+#hpdaqbxnnn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1450,7 +1449,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#onhitutult .gt_title {
+#hpdaqbxnnn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1460,7 +1459,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#onhitutult .gt_subtitle {
+#hpdaqbxnnn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1470,13 +1469,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#onhitutult .gt_bottom_border {
+#hpdaqbxnnn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#onhitutult .gt_col_headings {
+#hpdaqbxnnn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1491,7 +1490,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#onhitutult .gt_col_heading {
+#hpdaqbxnnn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1511,7 +1510,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#onhitutult .gt_column_spanner_outer {
+#hpdaqbxnnn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1523,15 +1522,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#onhitutult .gt_column_spanner_outer:first-child {
+#hpdaqbxnnn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#onhitutult .gt_column_spanner_outer:last-child {
+#hpdaqbxnnn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#onhitutult .gt_column_spanner {
+#hpdaqbxnnn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1543,7 +1542,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#onhitutult .gt_group_heading {
+#hpdaqbxnnn .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1565,7 +1564,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#onhitutult .gt_empty_group_heading {
+#hpdaqbxnnn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1580,15 +1579,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#onhitutult .gt_from_md > :first-child {
+#hpdaqbxnnn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#onhitutult .gt_from_md > :last-child {
+#hpdaqbxnnn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#onhitutult .gt_row {
+#hpdaqbxnnn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1607,7 +1606,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#onhitutult .gt_stub {
+#hpdaqbxnnn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1619,7 +1618,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-left: 12px;
 }
 
-#onhitutult .gt_summary_row {
+#hpdaqbxnnn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1629,7 +1628,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#onhitutult .gt_first_summary_row {
+#hpdaqbxnnn .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1639,7 +1638,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#onhitutult .gt_grand_summary_row {
+#hpdaqbxnnn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1649,7 +1648,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#onhitutult .gt_first_grand_summary_row {
+#hpdaqbxnnn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1659,11 +1658,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#onhitutult .gt_striped {
+#hpdaqbxnnn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#onhitutult .gt_table_body {
+#hpdaqbxnnn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1672,7 +1671,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#onhitutult .gt_footnotes {
+#hpdaqbxnnn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1686,13 +1685,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#onhitutult .gt_footnote {
+#hpdaqbxnnn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#onhitutult .gt_sourcenotes {
+#hpdaqbxnnn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1706,46 +1705,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#onhitutult .gt_sourcenote {
+#hpdaqbxnnn .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#onhitutult .gt_left {
+#hpdaqbxnnn .gt_left {
   text-align: left;
 }
 
-#onhitutult .gt_center {
+#hpdaqbxnnn .gt_center {
   text-align: center;
 }
 
-#onhitutult .gt_right {
+#hpdaqbxnnn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#onhitutult .gt_font_normal {
+#hpdaqbxnnn .gt_font_normal {
   font-weight: normal;
 }
 
-#onhitutult .gt_font_bold {
+#hpdaqbxnnn .gt_font_bold {
   font-weight: bold;
 }
 
-#onhitutult .gt_font_italic {
+#hpdaqbxnnn .gt_font_italic {
   font-style: italic;
 }
 
-#onhitutult .gt_super {
+#hpdaqbxnnn .gt_super {
   font-size: 65%;
 }
 
-#onhitutult .gt_footnote_marks {
+#hpdaqbxnnn .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="onhitutult" style="overflow-x:auto;overflow-y:auto;width:480px;height:auto;"><table class="gt_table">
+<div id="hpdaqbxnnn" style="overflow-x:auto;overflow-y:auto;width:480px;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1785,13 +1784,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">1.6.4</span> ディレクトリ構成の事例</h3>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><strong>folder_A</strong></p>
-<p><img src="../pictures/introduction/folder-A.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><strong>folder_A</strong>
+<img src="pictures/introduction/folder_A.png" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<p><strong>folder_B</strong></p>
-<p><img src="../pictures/introduction/folder-B.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><strong>folder_B</strong>
+<img src="pictures/introduction/folder_B.png" /></p>
 </div>
 </div>
 <p>両フォルダとも中身は同じですがフォルダ名が少し異なります。
@@ -1868,7 +1867,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>このとき、読み込みたいデータ<strong>data.csv</strong>までの絶対pathは以下のようになります</li>
 </ul>
 <pre><code>C:/Users/Suzuki/Desktop/Project_A/input/data.csv</code></pre>
-<p><img src="../pictures/introduction/here-example-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/here_example_1.png" width="80%"></p>
 </div>
 <div id="OS_ploblem" class="section level3" number="1.7.5">
 <h3><span class="header-section-number">1.7.5</span> 異なるOS/個人間によるpath相違の解消</h3>
@@ -1879,7 +1878,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <pre><code>変更前  C:/Users/Suzuki/Desktop/Project_A/input/data.csv
 変更後  /Users/Tanaka/Documents/Project_A/input/data.csv</code></pre>
-<p><img src="../pictures/introduction/here-example-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/here_example_1.png" width="80%"></p>
 </div>
 <div id="solve_os_ploblem" class="section level3" number="1.7.6">
 <h3><span class="header-section-number">1.7.6</span> hereを使ったpath</h3>
@@ -1888,19 +1887,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>つまり、Project_Aがルートディレクトリになってくれるとpathの変更が必要なくなるということです</li>
 <li>これを実現してくれるのが<strong>here</strong>です</li>
 </ul>
-<p><img src="../pictures/introduction/here-example-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/here_example_1.png" width="80%"></p>
 </div>
 <div id="how_here" class="section level3" number="1.7.7">
 <h3><span class="header-section-number">1.7.7</span> hereの使い方</h3>
 <ul>
 <li>hereを読み込むと、ルートディレクトリが設定された場所(.Rprojがある場所)がメッセージで表示されます</li>
 </ul>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="book_00_introduction.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="book_00_introduction.html#cb26-1"></a><span class="kw">library</span>(here)</span></code></pre></div>
 <pre><code>here() starts at C:/Users/ユーザー名/Desktop/Project_A</code></pre>
 <ul>
 <li>以下のようにしてhereを使うことで、.Rprojがある場所を起点にしてpathを書くことができます</li>
 </ul>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="book_00_introduction.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>(<span class="st">&quot;input/data.csv&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="book_00_introduction.html#cb28-1"></a><span class="kw">here</span>(<span class="st">&quot;input/data.csv&quot;</span>) </span></code></pre></div>
 <pre><code>C:/Users/ユーザー名/Desktop/Project_A/input/data.csv</code></pre>
 <hr />
 <ul>
@@ -1908,9 +1907,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>異なるOS間でのpathの齟齬も解消されます</li>
 <li>以上の理由から、本資料では<strong>here</strong>を使用しています</li>
 </ul>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="book_00_introduction.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>(<span class="st">&quot;input/data.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="book_00_introduction.html#cb30-1"></a><span class="kw">here</span>(<span class="st">&quot;input/data.csv&quot;</span>)</span></code></pre></div>
 <pre><code>&quot;C:/Users/ユーザー名/Desktop/Project_A/input/data.csv&quot;</code></pre>
-<p><img src="../pictures/introduction/here-example-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/here_example_1.png" width="70%"></p>
 </div>
 </div>
 <div id="helpファイルの開き方" class="section level2" number="1.8">
@@ -1944,13 +1943,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:30%;">
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="book_00_introduction.html#cb32-1" aria-hidden="true" tabindex="-1"></a>?here</span>
-<span id="cb32-2"><a href="book_00_introduction.html#cb32-2" aria-hidden="true" tabindex="-1"></a>?<span class="fu">here</span>()</span>
-<span id="cb32-3"><a href="book_00_introduction.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(here)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="book_00_introduction.html#cb32-1"></a>?here</span>
+<span id="cb32-2"><a href="book_00_introduction.html#cb32-2"></a>?<span class="kw">here</span>()</span>
+<span id="cb32-3"><a href="book_00_introduction.html#cb32-3"></a><span class="kw">help</span>(here)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:68%;">
-<p><img src="../pictures/introduction/help.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="pictures/introduction/help.png" /></p>
 </div>
 </div>
 </div>
@@ -1971,14 +1970,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="book_00_introduction.html#cb33-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb33-2"><a href="book_00_introduction.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(n)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="book_00_introduction.html#cb33-1"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb33-2"><a href="book_00_introduction.html#cb33-2"></a><span class="kw">cat</span>(n)</span></code></pre></div>
 <pre><code>100</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="book_00_introduction.html#cb35-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb35-2"><a href="book_00_introduction.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;n&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="book_00_introduction.html#cb35-1"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb35-2"><a href="book_00_introduction.html#cb35-2"></a><span class="kw">cat</span>(<span class="st">&quot;n&quot;</span>)</span></code></pre></div>
 <pre><code>n</code></pre>
 </div>
 </div>
@@ -1992,14 +1991,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="book_00_introduction.html#cb37-1" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> <span class="st">&quot;print(&#39;n&#39;)&quot;</span> </span>
-<span id="cb37-2"><a href="book_00_introduction.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(words)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="book_00_introduction.html#cb37-1"></a>words &lt;-<span class="st"> &quot;print(&#39;n&#39;)&quot;</span> </span>
+<span id="cb37-2"><a href="book_00_introduction.html#cb37-2"></a><span class="kw">cat</span>(words)</span></code></pre></div>
 <pre><code>print(&#39;n&#39;)</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="book_00_introduction.html#cb39-1" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> <span class="st">&#39;print(&quot;n&quot;)&#39;</span></span>
-<span id="cb39-2"><a href="book_00_introduction.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(words)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="book_00_introduction.html#cb39-1"></a>words &lt;-<span class="st"> &#39;print(&quot;n&quot;)&#39;</span></span>
+<span id="cb39-2"><a href="book_00_introduction.html#cb39-2"></a><span class="kw">cat</span>(words)</span></code></pre></div>
 <pre><code>print(&quot;n&quot;)</code></pre>
 </div>
 </div>
@@ -2028,14 +2027,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="book_00_introduction.html#cb42-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>売上</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="book_00_introduction.html#cb42-1"></a>df<span class="op">$</span>売上</span></code></pre></div>
 <pre><code>[1] 4 5 6</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="book_00_introduction.html#cb44-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>売上(千円)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="book_00_introduction.html#cb44-1"></a>df<span class="op">$</span>売上(千円)</span></code></pre></div>
 <pre><code>Error in eval(expr, envir, enclos): attempt to apply non-function</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="book_00_introduction.html#cb46-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span><span class="st">`</span><span class="at">売上(千円)</span><span class="st">`</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="book_00_introduction.html#cb46-1"></a>df<span class="op">$</span><span class="st">`</span><span class="dt">売上(千円)</span><span class="st">`</span></span></code></pre></div>
 <pre><code>[1] 7 8 9</code></pre>
 </div>
 </div>
@@ -2049,9 +2048,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>例)col_3に、(col_1)の値でなく文字列“(col_1)”が代入された</p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="book_00_introduction.html#cb48-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb48-2"><a href="book_00_introduction.html#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">(col_1)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb48-3"><a href="book_00_introduction.html#cb48-3" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="book_00_introduction.html#cb48-1"></a>d &lt;-<span class="st"> </span><span class="kw">tibble</span>(</span>
+<span id="cb48-2"><a href="book_00_introduction.html#cb48-2"></a>  <span class="st">`</span><span class="dt">(col_1)</span><span class="st">`</span> =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
+<span id="cb48-3"><a href="book_00_introduction.html#cb48-3"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 1
   `(col_1)`
       &lt;int&gt;
@@ -2061,9 +2060,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="book_00_introduction.html#cb50-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
-<span id="cb50-2"><a href="book_00_introduction.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_2 =</span> <span class="st">`</span><span class="at">(col_1)</span><span class="st">`</span><span class="sc">*</span><span class="dv">10</span>,</span>
-<span id="cb50-3"><a href="book_00_introduction.html#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_3 =</span> <span class="st">&quot;(col_1)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="book_00_introduction.html#cb50-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(</span>
+<span id="cb50-2"><a href="book_00_introduction.html#cb50-2"></a>  <span class="dt">col_2 =</span> <span class="st">`</span><span class="dt">(col_1)</span><span class="st">`</span><span class="op">*</span><span class="dv">10</span>,</span>
+<span id="cb50-3"><a href="book_00_introduction.html#cb50-3"></a>  <span class="dt">col_3 =</span> <span class="st">&quot;(col_1)&quot;</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
   `(col_1)` col_2 col_3  
       &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;  
@@ -2074,10 +2073,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div id="おわり" class="section level2 unnumbered">
+<div id="おわり" class="section level2 unnumbered" number="">
 <h2>おわり</h2>
 <p>導入編は以上になります。</p>
-<div id="著者" class="section level3 unnumbered">
+<div id="著者" class="section level3 unnumbered" number="">
 <h3>著者</h3>
 <ul>
 <li><strong>秋山浩希</strong>

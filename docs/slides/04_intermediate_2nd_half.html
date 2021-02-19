@@ -14,7 +14,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -46,7 +45,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span { color: #1f1c1b; } /* Normal */
+code span. { color: #1f1c1b; } /* Normal */
 code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
 code span.an { color: #ca60ca; } /* Annotation */
 code span.at { color: #0057ae; } /* Attribute */
@@ -514,7 +513,7 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="04_intermediate_2nd_half_files/header-attrs-2.6/header-attrs.js"></script>
+    <script src="04_intermediate_2nd_half_files/header-attrs-2.5/header-attrs.js"></script>
     <link href="04_intermediate_2nd_half_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
     <link href="04_intermediate_2nd_half_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 </head>
@@ -524,7 +523,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section>
     <h1 class="title">データ研磨スキル<br>[中級編後半]</h1>
-    <h3 class="date">2021/02/19</h3>
+    <h3 class="date">2020/11/28</h3>
 </section>
 
 <section>
@@ -535,7 +534,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="中級の作業イメージ" class="slide level2 unnumbered">
 <h2 class="unnumbered">中級の作業イメージ</h2>
 <p>左半分を終えたので、右半分を後半で進めていきます。</p>
-<p><img src="../pictures/intermediate/story-image-intmed.png" width="65%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/story_image.png" /></p>
 </section>
 <section id="目次中級後半" class="slide level2 unnumbered">
 <h2 class="unnumbered">目次（中級後半）</h2>
@@ -557,7 +556,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="複数データの読み込み" class="slide level2">
 <h2>複数データの読み込み</h2>
 <p>listとfor文を使って複数データを一括で読み込みました。</p>
-<p><img src="../pictures/intermediate/for-explain.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/for_explain.png" /></p>
 </section>
 <section id="タテ結合とヨコ結合" class="slide level2">
 <h2>タテ結合とヨコ結合</h2>
@@ -565,12 +564,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <div class="columns">
 <div class="column" style="width:48%;">
 <p>bind_rowsでタテに結合 （long_data）</p>
-<p><img src="../pictures/intermediate/bind-ver.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/bind_ver.png" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <p>left_joinでヨコに結合 （wide_data）</p>
-<p><img src="../pictures/intermediate/join-ver.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/join_ver.png" /></p>
 </div>
 </div>
 </section></section>
@@ -596,7 +595,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#acyunimrrg .gt_table {
+#usgcwftxmh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -621,7 +620,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_heading {
+#usgcwftxmh .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -633,7 +632,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_title {
+#usgcwftxmh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -643,7 +642,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#acyunimrrg .gt_subtitle {
+#usgcwftxmh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -653,13 +652,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#acyunimrrg .gt_bottom_border {
+#usgcwftxmh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_col_headings {
+#usgcwftxmh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -674,7 +673,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_col_heading {
+#usgcwftxmh .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -694,7 +693,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#acyunimrrg .gt_column_spanner_outer {
+#usgcwftxmh .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -706,15 +705,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#acyunimrrg .gt_column_spanner_outer:first-child {
+#usgcwftxmh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#acyunimrrg .gt_column_spanner_outer:last-child {
+#usgcwftxmh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#acyunimrrg .gt_column_spanner {
+#usgcwftxmh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -726,7 +725,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#acyunimrrg .gt_group_heading {
+#usgcwftxmh .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -748,7 +747,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#acyunimrrg .gt_empty_group_heading {
+#usgcwftxmh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -763,15 +762,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#acyunimrrg .gt_from_md > :first-child {
+#usgcwftxmh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#acyunimrrg .gt_from_md > :last-child {
+#usgcwftxmh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#acyunimrrg .gt_row {
+#usgcwftxmh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -790,7 +789,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#acyunimrrg .gt_stub {
+#usgcwftxmh .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -802,7 +801,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#acyunimrrg .gt_summary_row {
+#usgcwftxmh .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -812,7 +811,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#acyunimrrg .gt_first_summary_row {
+#usgcwftxmh .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -822,7 +821,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_grand_summary_row {
+#usgcwftxmh .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -832,7 +831,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#acyunimrrg .gt_first_grand_summary_row {
+#usgcwftxmh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -842,11 +841,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_striped {
+#usgcwftxmh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#acyunimrrg .gt_table_body {
+#usgcwftxmh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -855,7 +854,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_footnotes {
+#usgcwftxmh .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -869,13 +868,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_footnote {
+#usgcwftxmh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#acyunimrrg .gt_sourcenotes {
+#usgcwftxmh .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -889,46 +888,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#acyunimrrg .gt_sourcenote {
+#usgcwftxmh .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#acyunimrrg .gt_left {
+#usgcwftxmh .gt_left {
   text-align: left;
 }
 
-#acyunimrrg .gt_center {
+#usgcwftxmh .gt_center {
   text-align: center;
 }
 
-#acyunimrrg .gt_right {
+#usgcwftxmh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#acyunimrrg .gt_font_normal {
+#usgcwftxmh .gt_font_normal {
   font-weight: normal;
 }
 
-#acyunimrrg .gt_font_bold {
+#usgcwftxmh .gt_font_bold {
   font-weight: bold;
 }
 
-#acyunimrrg .gt_font_italic {
+#usgcwftxmh .gt_font_italic {
   font-style: italic;
 }
 
-#acyunimrrg .gt_super {
+#usgcwftxmh .gt_super {
   font-size: 65%;
 }
 
-#acyunimrrg .gt_footnote_marks {
+#usgcwftxmh .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="acyunimrrg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="usgcwftxmh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>long_data</th>
@@ -986,7 +985,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#mrsxgaetnc .gt_table {
+#phkcejhlks .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1011,7 +1010,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_heading {
+#phkcejhlks .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -1023,7 +1022,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_title {
+#phkcejhlks .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1033,7 +1032,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#mrsxgaetnc .gt_subtitle {
+#phkcejhlks .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1043,13 +1042,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#mrsxgaetnc .gt_bottom_border {
+#phkcejhlks .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_col_headings {
+#phkcejhlks .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1064,7 +1063,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_col_heading {
+#phkcejhlks .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1084,7 +1083,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#mrsxgaetnc .gt_column_spanner_outer {
+#phkcejhlks .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1096,15 +1095,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#mrsxgaetnc .gt_column_spanner_outer:first-child {
+#phkcejhlks .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mrsxgaetnc .gt_column_spanner_outer:last-child {
+#phkcejhlks .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mrsxgaetnc .gt_column_spanner {
+#phkcejhlks .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1116,7 +1115,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#mrsxgaetnc .gt_group_heading {
+#phkcejhlks .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -1138,7 +1137,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#mrsxgaetnc .gt_empty_group_heading {
+#phkcejhlks .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -1153,15 +1152,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#mrsxgaetnc .gt_from_md > :first-child {
+#phkcejhlks .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mrsxgaetnc .gt_from_md > :last-child {
+#phkcejhlks .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mrsxgaetnc .gt_row {
+#phkcejhlks .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1180,7 +1179,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#mrsxgaetnc .gt_stub {
+#phkcejhlks .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1192,7 +1191,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#mrsxgaetnc .gt_summary_row {
+#phkcejhlks .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -1202,7 +1201,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#mrsxgaetnc .gt_first_summary_row {
+#phkcejhlks .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1212,7 +1211,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_grand_summary_row {
+#phkcejhlks .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -1222,7 +1221,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#mrsxgaetnc .gt_first_grand_summary_row {
+#phkcejhlks .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1232,11 +1231,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_striped {
+#phkcejhlks .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mrsxgaetnc .gt_table_body {
+#phkcejhlks .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1245,7 +1244,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_footnotes {
+#phkcejhlks .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -1259,13 +1258,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_footnote {
+#phkcejhlks .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#mrsxgaetnc .gt_sourcenotes {
+#phkcejhlks .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -1279,46 +1278,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#mrsxgaetnc .gt_sourcenote {
+#phkcejhlks .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#mrsxgaetnc .gt_left {
+#phkcejhlks .gt_left {
   text-align: left;
 }
 
-#mrsxgaetnc .gt_center {
+#phkcejhlks .gt_center {
   text-align: center;
 }
 
-#mrsxgaetnc .gt_right {
+#phkcejhlks .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mrsxgaetnc .gt_font_normal {
+#phkcejhlks .gt_font_normal {
   font-weight: normal;
 }
 
-#mrsxgaetnc .gt_font_bold {
+#phkcejhlks .gt_font_bold {
   font-weight: bold;
 }
 
-#mrsxgaetnc .gt_font_italic {
+#phkcejhlks .gt_font_italic {
   font-style: italic;
 }
 
-#mrsxgaetnc .gt_super {
+#phkcejhlks .gt_super {
   font-size: 65%;
 }
 
-#mrsxgaetnc .gt_footnote_marks {
+#phkcejhlks .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="mrsxgaetnc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="phkcejhlks" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="4" class="gt_heading gt_title gt_font_normal" style>wide_data</th>
@@ -1406,7 +1405,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#pwphxwokbs .gt_table {
+#qwpuhebclq .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1431,7 +1430,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_heading {
+#qwpuhebclq .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -1443,7 +1442,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_title {
+#qwpuhebclq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1453,7 +1452,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#pwphxwokbs .gt_subtitle {
+#qwpuhebclq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1463,13 +1462,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#pwphxwokbs .gt_bottom_border {
+#qwpuhebclq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_col_headings {
+#qwpuhebclq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1484,7 +1483,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_col_heading {
+#qwpuhebclq .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1504,7 +1503,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#pwphxwokbs .gt_column_spanner_outer {
+#qwpuhebclq .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1516,15 +1515,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#pwphxwokbs .gt_column_spanner_outer:first-child {
+#qwpuhebclq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pwphxwokbs .gt_column_spanner_outer:last-child {
+#qwpuhebclq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pwphxwokbs .gt_column_spanner {
+#qwpuhebclq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1536,7 +1535,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#pwphxwokbs .gt_group_heading {
+#qwpuhebclq .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -1558,7 +1557,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#pwphxwokbs .gt_empty_group_heading {
+#qwpuhebclq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -1573,15 +1572,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#pwphxwokbs .gt_from_md > :first-child {
+#qwpuhebclq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pwphxwokbs .gt_from_md > :last-child {
+#qwpuhebclq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pwphxwokbs .gt_row {
+#qwpuhebclq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1600,7 +1599,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#pwphxwokbs .gt_stub {
+#qwpuhebclq .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1612,7 +1611,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#pwphxwokbs .gt_summary_row {
+#qwpuhebclq .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -1622,7 +1621,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#pwphxwokbs .gt_first_summary_row {
+#qwpuhebclq .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1632,7 +1631,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_grand_summary_row {
+#qwpuhebclq .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -1642,7 +1641,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#pwphxwokbs .gt_first_grand_summary_row {
+#qwpuhebclq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1652,11 +1651,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_striped {
+#qwpuhebclq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pwphxwokbs .gt_table_body {
+#qwpuhebclq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1665,7 +1664,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_footnotes {
+#qwpuhebclq .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -1679,13 +1678,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_footnote {
+#qwpuhebclq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#pwphxwokbs .gt_sourcenotes {
+#qwpuhebclq .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -1699,46 +1698,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#pwphxwokbs .gt_sourcenote {
+#qwpuhebclq .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#pwphxwokbs .gt_left {
+#qwpuhebclq .gt_left {
   text-align: left;
 }
 
-#pwphxwokbs .gt_center {
+#qwpuhebclq .gt_center {
   text-align: center;
 }
 
-#pwphxwokbs .gt_right {
+#qwpuhebclq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pwphxwokbs .gt_font_normal {
+#qwpuhebclq .gt_font_normal {
   font-weight: normal;
 }
 
-#pwphxwokbs .gt_font_bold {
+#qwpuhebclq .gt_font_bold {
   font-weight: bold;
 }
 
-#pwphxwokbs .gt_font_italic {
+#qwpuhebclq .gt_font_italic {
   font-style: italic;
 }
 
-#pwphxwokbs .gt_super {
+#qwpuhebclq .gt_super {
   font-size: 65%;
 }
 
-#pwphxwokbs .gt_footnote_marks {
+#qwpuhebclq .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="pwphxwokbs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="qwpuhebclq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>long_data</th>
@@ -1794,7 +1793,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zwjinexyql .gt_table {
+#cgbgklqirk .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1819,7 +1818,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_heading {
+#cgbgklqirk .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -1831,7 +1830,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_title {
+#cgbgklqirk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1841,7 +1840,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#zwjinexyql .gt_subtitle {
+#cgbgklqirk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1851,13 +1850,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#zwjinexyql .gt_bottom_border {
+#cgbgklqirk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_col_headings {
+#cgbgklqirk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1872,7 +1871,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_col_heading {
+#cgbgklqirk .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1892,7 +1891,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#zwjinexyql .gt_column_spanner_outer {
+#cgbgklqirk .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -1904,15 +1903,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#zwjinexyql .gt_column_spanner_outer:first-child {
+#cgbgklqirk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zwjinexyql .gt_column_spanner_outer:last-child {
+#cgbgklqirk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zwjinexyql .gt_column_spanner {
+#cgbgklqirk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1924,7 +1923,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#zwjinexyql .gt_group_heading {
+#cgbgklqirk .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -1946,7 +1945,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#zwjinexyql .gt_empty_group_heading {
+#cgbgklqirk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -1961,15 +1960,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#zwjinexyql .gt_from_md > :first-child {
+#cgbgklqirk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zwjinexyql .gt_from_md > :last-child {
+#cgbgklqirk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zwjinexyql .gt_row {
+#cgbgklqirk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1988,7 +1987,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#zwjinexyql .gt_stub {
+#cgbgklqirk .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2000,7 +1999,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#zwjinexyql .gt_summary_row {
+#cgbgklqirk .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -2010,7 +2009,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#zwjinexyql .gt_first_summary_row {
+#cgbgklqirk .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2020,7 +2019,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_grand_summary_row {
+#cgbgklqirk .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -2030,7 +2029,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#zwjinexyql .gt_first_grand_summary_row {
+#cgbgklqirk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2040,11 +2039,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_striped {
+#cgbgklqirk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zwjinexyql .gt_table_body {
+#cgbgklqirk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2053,7 +2052,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_footnotes {
+#cgbgklqirk .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -2067,13 +2066,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_footnote {
+#cgbgklqirk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zwjinexyql .gt_sourcenotes {
+#cgbgklqirk .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -2087,46 +2086,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#zwjinexyql .gt_sourcenote {
+#cgbgklqirk .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zwjinexyql .gt_left {
+#cgbgklqirk .gt_left {
   text-align: left;
 }
 
-#zwjinexyql .gt_center {
+#cgbgklqirk .gt_center {
   text-align: center;
 }
 
-#zwjinexyql .gt_right {
+#cgbgklqirk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zwjinexyql .gt_font_normal {
+#cgbgklqirk .gt_font_normal {
   font-weight: normal;
 }
 
-#zwjinexyql .gt_font_bold {
+#cgbgklqirk .gt_font_bold {
   font-weight: bold;
 }
 
-#zwjinexyql .gt_font_italic {
+#cgbgklqirk .gt_font_italic {
   font-style: italic;
 }
 
-#zwjinexyql .gt_super {
+#cgbgklqirk .gt_super {
   font-size: 65%;
 }
 
-#zwjinexyql .gt_footnote_marks {
+#cgbgklqirk .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="zwjinexyql" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="cgbgklqirk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="4" class="gt_heading gt_title gt_font_normal" style>wide_data</th>
@@ -2180,11 +2179,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>次頁にgifのモーション画像があります。</p>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><img src="../pictures/intermediate/long-data.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/long_data.png" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<p><img src="../pictures/intermediate/wide-data.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/wide_data.png" /></p>
 </div>
 </div>
 </section>
@@ -2192,7 +2191,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>タテヨコ変換イメージgif</h2>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><img src="../pictures/intermediate/tidyr-spread-gather.gif" width="100%" style="display: block; margin: auto;" /></p>
+<p><img data-src="../pictures/intermediate/tidyr-spread-gather.gif" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
@@ -2207,21 +2206,21 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>タテヨコ変換実装</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>wide_data <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="st">&quot;企業コード&quot;</span>, </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;従業員数&quot;</span>) </span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>long_data <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;year&quot;</span>,<span class="st">&quot;従業員数&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from=</span><span class="st">&quot;year&quot;</span>, </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from=</span><span class="st">&quot;従業員数&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">select</span>(企業コード,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>      <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">cols =</span> <span class="op">-</span><span class="st">&quot;企業コード&quot;</span>, </span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;year&quot;</span>, </span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="dt">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="dt">values_to =</span> <span class="st">&quot;従業員数&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>long_data <span class="op">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>,</span>
+<span id="cb2-3"><a href="#cb2-3"></a>         <span class="st">&quot;year&quot;</span>,<span class="st">&quot;従業員数&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="st">  </span><span class="kw">pivot_wider</span>(</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="dt">names_from=</span><span class="st">&quot;year&quot;</span>, </span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="dt">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="dt">values_from=</span><span class="st">&quot;従業員数&quot;</span>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:43%;">
@@ -2230,7 +2229,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#alpmgiosih .gt_table {
+#qwqhullftw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2255,7 +2254,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_heading {
+#qwqhullftw .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -2267,7 +2266,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_title {
+#qwqhullftw .gt_title {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -2277,7 +2276,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#alpmgiosih .gt_subtitle {
+#qwqhullftw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2287,13 +2286,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#alpmgiosih .gt_bottom_border {
+#qwqhullftw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_col_headings {
+#qwqhullftw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2308,7 +2307,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_col_heading {
+#qwqhullftw .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2328,7 +2327,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#alpmgiosih .gt_column_spanner_outer {
+#qwqhullftw .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2340,15 +2339,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#alpmgiosih .gt_column_spanner_outer:first-child {
+#qwqhullftw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#alpmgiosih .gt_column_spanner_outer:last-child {
+#qwqhullftw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#alpmgiosih .gt_column_spanner {
+#qwqhullftw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2360,7 +2359,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#alpmgiosih .gt_group_heading {
+#qwqhullftw .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -2382,7 +2381,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#alpmgiosih .gt_empty_group_heading {
+#qwqhullftw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -2397,15 +2396,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#alpmgiosih .gt_from_md > :first-child {
+#qwqhullftw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#alpmgiosih .gt_from_md > :last-child {
+#qwqhullftw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#alpmgiosih .gt_row {
+#qwqhullftw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2424,7 +2423,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#alpmgiosih .gt_stub {
+#qwqhullftw .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2436,7 +2435,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#alpmgiosih .gt_summary_row {
+#qwqhullftw .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -2446,7 +2445,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#alpmgiosih .gt_first_summary_row {
+#qwqhullftw .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2456,7 +2455,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_grand_summary_row {
+#qwqhullftw .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -2466,7 +2465,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#alpmgiosih .gt_first_grand_summary_row {
+#qwqhullftw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2476,11 +2475,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_striped {
+#qwqhullftw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#alpmgiosih .gt_table_body {
+#qwqhullftw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2489,7 +2488,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_footnotes {
+#qwqhullftw .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -2503,13 +2502,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_footnote {
+#qwqhullftw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#alpmgiosih .gt_sourcenotes {
+#qwqhullftw .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -2523,46 +2522,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#alpmgiosih .gt_sourcenote {
+#qwqhullftw .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#alpmgiosih .gt_left {
+#qwqhullftw .gt_left {
   text-align: left;
 }
 
-#alpmgiosih .gt_center {
+#qwqhullftw .gt_center {
   text-align: center;
 }
 
-#alpmgiosih .gt_right {
+#qwqhullftw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#alpmgiosih .gt_font_normal {
+#qwqhullftw .gt_font_normal {
   font-weight: normal;
 }
 
-#alpmgiosih .gt_font_bold {
+#qwqhullftw .gt_font_bold {
   font-weight: bold;
 }
 
-#alpmgiosih .gt_font_italic {
+#qwqhullftw .gt_font_italic {
   font-style: italic;
 }
 
-#alpmgiosih .gt_super {
+#qwqhullftw .gt_super {
   font-size: 65%;
 }
 
-#alpmgiosih .gt_footnote_marks {
+#qwqhullftw .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="alpmgiosih" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="qwqhullftw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>long_data</th>
@@ -2617,7 +2616,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#uvmkhzmbau .gt_table {
+#uaggynrshg .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2642,7 +2641,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_heading {
+#uaggynrshg .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -2654,7 +2653,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_title {
+#uaggynrshg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2664,7 +2663,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#uvmkhzmbau .gt_subtitle {
+#uaggynrshg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2674,13 +2673,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#uvmkhzmbau .gt_bottom_border {
+#uaggynrshg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_col_headings {
+#uaggynrshg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2695,7 +2694,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_col_heading {
+#uaggynrshg .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2715,7 +2714,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#uvmkhzmbau .gt_column_spanner_outer {
+#uaggynrshg .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2727,15 +2726,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#uvmkhzmbau .gt_column_spanner_outer:first-child {
+#uaggynrshg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uvmkhzmbau .gt_column_spanner_outer:last-child {
+#uaggynrshg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uvmkhzmbau .gt_column_spanner {
+#uaggynrshg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2747,7 +2746,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#uvmkhzmbau .gt_group_heading {
+#uaggynrshg .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -2769,7 +2768,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#uvmkhzmbau .gt_empty_group_heading {
+#uaggynrshg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -2784,15 +2783,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#uvmkhzmbau .gt_from_md > :first-child {
+#uaggynrshg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uvmkhzmbau .gt_from_md > :last-child {
+#uaggynrshg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uvmkhzmbau .gt_row {
+#uaggynrshg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2811,7 +2810,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#uvmkhzmbau .gt_stub {
+#uaggynrshg .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -2823,7 +2822,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#uvmkhzmbau .gt_summary_row {
+#uaggynrshg .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -2833,7 +2832,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#uvmkhzmbau .gt_first_summary_row {
+#uaggynrshg .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2843,7 +2842,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_grand_summary_row {
+#uaggynrshg .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -2853,7 +2852,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#uvmkhzmbau .gt_first_grand_summary_row {
+#uaggynrshg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2863,11 +2862,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_striped {
+#uaggynrshg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uvmkhzmbau .gt_table_body {
+#uaggynrshg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2876,7 +2875,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_footnotes {
+#uaggynrshg .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -2890,13 +2889,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_footnote {
+#uaggynrshg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#uvmkhzmbau .gt_sourcenotes {
+#uaggynrshg .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -2910,46 +2909,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#uvmkhzmbau .gt_sourcenote {
+#uaggynrshg .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#uvmkhzmbau .gt_left {
+#uaggynrshg .gt_left {
   text-align: left;
 }
 
-#uvmkhzmbau .gt_center {
+#uaggynrshg .gt_center {
   text-align: center;
 }
 
-#uvmkhzmbau .gt_right {
+#uaggynrshg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uvmkhzmbau .gt_font_normal {
+#uaggynrshg .gt_font_normal {
   font-weight: normal;
 }
 
-#uvmkhzmbau .gt_font_bold {
+#uaggynrshg .gt_font_bold {
   font-weight: bold;
 }
 
-#uvmkhzmbau .gt_font_italic {
+#uaggynrshg .gt_font_italic {
   font-style: italic;
 }
 
-#uvmkhzmbau .gt_super {
+#uaggynrshg .gt_super {
   font-size: 65%;
 }
 
-#uvmkhzmbau .gt_footnote_marks {
+#uaggynrshg .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="uvmkhzmbau" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="uaggynrshg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="4" class="gt_heading gt_title gt_font_normal" style>wide_data</th>
@@ -3017,14 +3016,14 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><br></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>wide_data <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="st">&quot;企業コード&quot;</span>, </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;従業員数&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">select</span>(企業コード,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>      <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="dt">cols =</span> <span class="op">-</span><span class="st">&quot;企業コード&quot;</span>, </span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;year&quot;</span>, </span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="dt">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
+<span id="cb3-8"><a href="#cb3-8"></a>    <span class="dt">values_to =</span> <span class="st">&quot;従業員数&quot;</span>) </span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:35%;">
@@ -3033,7 +3032,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tcgldrcubd .gt_table {
+#sjjrlqtyjo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3058,7 +3057,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_heading {
+#sjjrlqtyjo .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -3070,7 +3069,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_title {
+#sjjrlqtyjo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3080,7 +3079,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#tcgldrcubd .gt_subtitle {
+#sjjrlqtyjo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3090,13 +3089,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#tcgldrcubd .gt_bottom_border {
+#sjjrlqtyjo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_col_headings {
+#sjjrlqtyjo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3111,7 +3110,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_col_heading {
+#sjjrlqtyjo .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -3131,7 +3130,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#tcgldrcubd .gt_column_spanner_outer {
+#sjjrlqtyjo .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -3143,15 +3142,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#tcgldrcubd .gt_column_spanner_outer:first-child {
+#sjjrlqtyjo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tcgldrcubd .gt_column_spanner_outer:last-child {
+#sjjrlqtyjo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tcgldrcubd .gt_column_spanner {
+#sjjrlqtyjo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3163,7 +3162,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#tcgldrcubd .gt_group_heading {
+#sjjrlqtyjo .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -3185,7 +3184,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#tcgldrcubd .gt_empty_group_heading {
+#sjjrlqtyjo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -3200,15 +3199,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#tcgldrcubd .gt_from_md > :first-child {
+#sjjrlqtyjo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tcgldrcubd .gt_from_md > :last-child {
+#sjjrlqtyjo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tcgldrcubd .gt_row {
+#sjjrlqtyjo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3227,7 +3226,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#tcgldrcubd .gt_stub {
+#sjjrlqtyjo .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -3239,7 +3238,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#tcgldrcubd .gt_summary_row {
+#sjjrlqtyjo .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -3249,7 +3248,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#tcgldrcubd .gt_first_summary_row {
+#sjjrlqtyjo .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3259,7 +3258,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_grand_summary_row {
+#sjjrlqtyjo .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -3269,7 +3268,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#tcgldrcubd .gt_first_grand_summary_row {
+#sjjrlqtyjo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3279,11 +3278,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_striped {
+#sjjrlqtyjo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tcgldrcubd .gt_table_body {
+#sjjrlqtyjo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3292,7 +3291,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_footnotes {
+#sjjrlqtyjo .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -3306,13 +3305,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_footnote {
+#sjjrlqtyjo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#tcgldrcubd .gt_sourcenotes {
+#sjjrlqtyjo .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -3326,46 +3325,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#tcgldrcubd .gt_sourcenote {
+#sjjrlqtyjo .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#tcgldrcubd .gt_left {
+#sjjrlqtyjo .gt_left {
   text-align: left;
 }
 
-#tcgldrcubd .gt_center {
+#sjjrlqtyjo .gt_center {
   text-align: center;
 }
 
-#tcgldrcubd .gt_right {
+#sjjrlqtyjo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tcgldrcubd .gt_font_normal {
+#sjjrlqtyjo .gt_font_normal {
   font-weight: normal;
 }
 
-#tcgldrcubd .gt_font_bold {
+#sjjrlqtyjo .gt_font_bold {
   font-weight: bold;
 }
 
-#tcgldrcubd .gt_font_italic {
+#sjjrlqtyjo .gt_font_italic {
   font-style: italic;
 }
 
-#tcgldrcubd .gt_super {
+#sjjrlqtyjo .gt_super {
   font-size: 65%;
 }
 
-#tcgldrcubd .gt_footnote_marks {
+#sjjrlqtyjo .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="tcgldrcubd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="sjjrlqtyjo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>long_data</th>
@@ -3443,15 +3442,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>long_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;year&quot;</span>, <span class="st">&quot;従業員数&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from=</span><span class="st">&quot;year&quot;</span>, </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from=</span><span class="st">&quot;従業員数&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>long_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;year&quot;</span>, <span class="st">&quot;従業員数&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from=</span><span class="st">&quot;year&quot;</span>, </span>
+<span id="cb4-3"><a href="#cb4-3"></a>              <span class="dt">names_prefix =</span> <span class="st">&quot;従業員数_&quot;</span>,</span>
+<span id="cb4-4"><a href="#cb4-4"></a>              <span class="dt">values_from=</span><span class="st">&quot;従業員数&quot;</span>)</span></code></pre></div>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#dgipbcomih .gt_table {
+#nfdvoyosgx .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3476,7 +3475,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_heading {
+#nfdvoyosgx .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -3488,7 +3487,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_title {
+#nfdvoyosgx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3498,7 +3497,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#dgipbcomih .gt_subtitle {
+#nfdvoyosgx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3508,13 +3507,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#dgipbcomih .gt_bottom_border {
+#nfdvoyosgx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_col_headings {
+#nfdvoyosgx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3529,7 +3528,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_col_heading {
+#nfdvoyosgx .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -3549,7 +3548,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#dgipbcomih .gt_column_spanner_outer {
+#nfdvoyosgx .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -3561,15 +3560,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#dgipbcomih .gt_column_spanner_outer:first-child {
+#nfdvoyosgx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dgipbcomih .gt_column_spanner_outer:last-child {
+#nfdvoyosgx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dgipbcomih .gt_column_spanner {
+#nfdvoyosgx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3581,7 +3580,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#dgipbcomih .gt_group_heading {
+#nfdvoyosgx .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -3603,7 +3602,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#dgipbcomih .gt_empty_group_heading {
+#nfdvoyosgx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -3618,15 +3617,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#dgipbcomih .gt_from_md > :first-child {
+#nfdvoyosgx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dgipbcomih .gt_from_md > :last-child {
+#nfdvoyosgx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dgipbcomih .gt_row {
+#nfdvoyosgx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3645,7 +3644,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#dgipbcomih .gt_stub {
+#nfdvoyosgx .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -3657,7 +3656,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#dgipbcomih .gt_summary_row {
+#nfdvoyosgx .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -3667,7 +3666,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#dgipbcomih .gt_first_summary_row {
+#nfdvoyosgx .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3677,7 +3676,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_grand_summary_row {
+#nfdvoyosgx .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -3687,7 +3686,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#dgipbcomih .gt_first_grand_summary_row {
+#nfdvoyosgx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3697,11 +3696,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_striped {
+#nfdvoyosgx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dgipbcomih .gt_table_body {
+#nfdvoyosgx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3710,7 +3709,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_footnotes {
+#nfdvoyosgx .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -3724,13 +3723,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_footnote {
+#nfdvoyosgx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#dgipbcomih .gt_sourcenotes {
+#nfdvoyosgx .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -3744,46 +3743,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#dgipbcomih .gt_sourcenote {
+#nfdvoyosgx .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#dgipbcomih .gt_left {
+#nfdvoyosgx .gt_left {
   text-align: left;
 }
 
-#dgipbcomih .gt_center {
+#nfdvoyosgx .gt_center {
   text-align: center;
 }
 
-#dgipbcomih .gt_right {
+#nfdvoyosgx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dgipbcomih .gt_font_normal {
+#nfdvoyosgx .gt_font_normal {
   font-weight: normal;
 }
 
-#dgipbcomih .gt_font_bold {
+#nfdvoyosgx .gt_font_bold {
   font-weight: bold;
 }
 
-#dgipbcomih .gt_font_italic {
+#nfdvoyosgx .gt_font_italic {
   font-style: italic;
 }
 
-#dgipbcomih .gt_super {
+#nfdvoyosgx .gt_super {
   font-size: 65%;
 }
 
-#dgipbcomih .gt_footnote_marks {
+#nfdvoyosgx .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="dgipbcomih" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="nfdvoyosgx" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="4" class="gt_heading gt_title gt_font_normal" style>wide_data</th>
@@ -3843,8 +3842,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul></li>
 <li>ここでは<strong>diffdf</strong>パッケージを用いてデータの比較検証をおこなうので、diffdfのインストールと読み込みをします</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;diffdf&quot;) # diffdfのインストール</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(diffdf) <span class="co"># diffdfの読み込み</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># install.packages(&quot;diffdf&quot;) # diffdfのインストール</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">library</span>(diffdf) <span class="co"># diffdfの読み込み</span></span></code></pre></div>
 </section>
 <section id="検証データの作成long_data" class="slide level2">
 <h2>検証データの作成：long_data</h2>
@@ -3859,12 +3858,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 <div class="columns">
 <div class="column" style="width:46%;">
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>long_emp_l <span class="ot">&lt;-</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  long_data <span class="sc">%&gt;%</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード, </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>         year,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>         従業員数) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(企業コード, year)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>long_emp_l &lt;-</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="st">  </span>long_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="st">  </span><span class="kw">select</span>(企業コード, </span>
+<span id="cb6-4"><a href="#cb6-4"></a>         year,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>         従業員数) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="st">  </span><span class="kw">arrange</span>(企業コード, year)</span></code></pre></div>
 </div><div class="column" style="width:1%;">
 
 </div><div class="column" style="width:53%;">
@@ -3894,16 +3893,16 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 <div class="columns">
 <div class="column" style="width:48;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>long_emp_w <span class="ot">&lt;-</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  wide_data <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>企業コード,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;従業員数&quot;</span>,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix=</span><span class="st">&quot;従業員数_&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(企業コード, year)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>long_emp_w &lt;-</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="st">  </span>wide_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="st">  </span><span class="kw">select</span>(企業コード,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>      <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="dt">cols =</span> <span class="op">-</span>企業コード,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="dt">names_to =</span> <span class="st">&quot;year&quot;</span>, </span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="dt">values_to =</span> <span class="st">&quot;従業員数&quot;</span>,</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="dt">names_prefix=</span><span class="st">&quot;従業員数_&quot;</span>)<span class="op">%&gt;%</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="st">  </span><span class="kw">arrange</span>(企業コード, year)</span></code></pre></div>
 </div><div class="column" style="width:1%;">
 
 </div><div class="column" style="width:50%;">
@@ -3931,8 +3930,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>long_dataと、wide_dataをタテ持ちデータにしたものを比較検証すると、一致しなかったデータに関するメッセージがたくさん出てきました</li>
 <li>なぜ一致しないのか確認していきましょう</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(diffdf)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">diffdf</span>(long_emp_l, long_emp_w)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">library</span>(diffdf)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="kw">diffdf</span>(long_emp_l, long_emp_w)</span></code></pre></div>
 <pre><code>Differences found between the objects!
 
 A summary is given below.
@@ -4028,20 +4027,20 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>long_data <span class="sc">%&gt;%</span> </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    企業コード<span class="sc">==</span><span class="st">&quot;B02119859&quot;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>long_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="st">  </span><span class="kw">filter</span>(</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    企業コード<span class="op">==</span><span class="st">&quot;B02119859&quot;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>    ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="st">  </span><span class="kw">nrow</span>()</span></code></pre></div>
 <pre><code>[1] 1</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>wide_data <span class="sc">%&gt;%</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    企業コード<span class="sc">==</span><span class="st">&quot;B02119859&quot;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="st">  </span><span class="kw">filter</span>(</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    企業コード<span class="op">==</span><span class="st">&quot;B02119859&quot;</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>    ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="st">  </span><span class="kw">nrow</span>()</span></code></pre></div>
 <pre><code>[1] 0</code></pre>
 </div>
 </div>
@@ -4061,13 +4060,13 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:44%;">
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>code_7year <span class="ot">&lt;-</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  long_emp_l <span class="sc">%&gt;%</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(企業コード) <span class="sc">%&gt;%</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">==</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() </span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># グループ解除(参考参照)</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>code_7year &lt;-</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="st">  </span>long_emp_l <span class="op">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="st">  </span><span class="kw">group_by</span>(企業コード) <span class="op">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">7</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="st">  </span><span class="kw">ungroup</span>() </span>
+<span id="cb16-7"><a href="#cb16-7"></a><span class="co"># グループ解除(参考参照)</span></span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:54%;">
@@ -4087,8 +4086,8 @@ First 10 of 14911 rows are shown in table below
 # ... with 1,778 more rows</code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nは不要なので消しておきます</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>code_7year <span class="ot">&lt;-</span> code_7year <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>n)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># nは不要なので消しておきます</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>code_7year &lt;-<span class="st"> </span>code_7year <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>n)</span></code></pre></div>
 </section>
 <section id="再度検証" class="slide level2">
 <h2>再度検証</h2>
@@ -4096,9 +4095,9 @@ First 10 of 14911 rows are shown in table below
 <li>7年ぶん揃っている企業コードのcode_7yearに対して、“企業コード”をキーにlong_emp_lとlong_emp_wをそれぞれleft_joinすることで、条件を満たすデータを抽出します</li>
 <li>条件を合わせたデータで再度検証したところ、データが一致したことが確認できました</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>long_emp_l <span class="ot">&lt;-</span> code_7year <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(long_emp_l, <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>long_emp_w <span class="ot">&lt;-</span> code_7year <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(long_emp_w, <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">diffdf</span>(long_emp_l, long_emp_w)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>long_emp_l &lt;-<span class="st"> </span>code_7year <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(long_emp_l, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb19-2"><a href="#cb19-2"></a>long_emp_w &lt;-<span class="st"> </span>code_7year <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(long_emp_w, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="kw">diffdf</span>(long_emp_l, long_emp_w)</span></code></pre></div>
 <pre><code>No issues were found!</code></pre>
 </section>
 <section id="hikaku_sanko" class="slide level2">
@@ -4108,12 +4107,12 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>code_7year_g <span class="ot">&lt;-</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  long_emp_l <span class="sc">%&gt;%</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(企業コード) <span class="sc">%&gt;%</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">==</span> <span class="dv">7</span>) </span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>code_7year_g</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>code_7year_g &lt;-</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="st">  </span>long_emp_l <span class="op">%&gt;%</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="st">  </span><span class="kw">group_by</span>(企業コード) <span class="op">%&gt;%</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">7</span>) </span>
+<span id="cb21-6"><a href="#cb21-6"></a>code_7year_g</span></code></pre></div>
 <pre><code># A tibble: 1,788 x 2
 # Groups:   企業コード [1,788]
    企業コード     n
@@ -4132,13 +4131,13 @@ First 10 of 14911 rows are shown in table below
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>code_7year_ug <span class="ot">&lt;-</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  long_emp_l <span class="sc">%&gt;%</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(企業コード) <span class="sc">%&gt;%</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">==</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>code_7year_ug</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>code_7year_ug &lt;-</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="st">  </span>long_emp_l <span class="op">%&gt;%</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="st">  </span><span class="kw">group_by</span>(企業コード) <span class="op">%&gt;%</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">7</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-6"><a href="#cb23-6"></a><span class="st">  </span><span class="kw">ungroup</span>()</span>
+<span id="cb23-7"><a href="#cb23-7"></a>code_7year_ug</span></code></pre></div>
 <pre><code># A tibble: 1,788 x 2
    企業コード     n
    &lt;chr&gt;      &lt;int&gt;
@@ -4164,9 +4163,9 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>code_7year_g <span class="sc">%&gt;%</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(long_emp_l,</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">by=</span><span class="st">&quot;企業コード&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>code_7year_g <span class="op">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="st">  </span><span class="kw">left_join</span>(long_emp_l,</span>
+<span id="cb25-3"><a href="#cb25-3"></a>            <span class="dt">by=</span><span class="st">&quot;企業コード&quot;</span>)</span></code></pre></div>
 <pre><code># A tibble: 12,516 x 4
 # Groups:   企業コード [1,788]
    企業コード     n year  従業員数
@@ -4185,9 +4184,9 @@ First 10 of 14911 rows are shown in table below
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>code_7year_ug <span class="sc">%&gt;%</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(long_emp_l,</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">by=</span><span class="st">&quot;企業コード&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>code_7year_ug <span class="op">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="st">  </span><span class="kw">left_join</span>(long_emp_l,</span>
+<span id="cb27-3"><a href="#cb27-3"></a>            <span class="dt">by=</span><span class="st">&quot;企業コード&quot;</span>)</span></code></pre></div>
 <pre><code># A tibble: 12,516 x 4
    企業コード     n year  従業員数
    &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;    &lt;dbl&gt;
@@ -4227,7 +4226,7 @@ First 10 of 14911 rows are shown in table below
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bwppycpskt .gt_table {
+#itbfvrmqlm .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -4252,7 +4251,7 @@ First 10 of 14911 rows are shown in table below
   border-left-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_heading {
+#itbfvrmqlm .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -4264,7 +4263,7 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_title {
+#itbfvrmqlm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4274,7 +4273,7 @@ First 10 of 14911 rows are shown in table below
   border-bottom-width: 0;
 }
 
-#bwppycpskt .gt_subtitle {
+#itbfvrmqlm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4284,13 +4283,13 @@ First 10 of 14911 rows are shown in table below
   border-top-width: 0;
 }
 
-#bwppycpskt .gt_bottom_border {
+#itbfvrmqlm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_col_headings {
+#itbfvrmqlm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4305,7 +4304,7 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_col_heading {
+#itbfvrmqlm .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 26px;
@@ -4325,7 +4324,7 @@ First 10 of 14911 rows are shown in table below
   overflow-x: hidden;
 }
 
-#bwppycpskt .gt_column_spanner_outer {
+#itbfvrmqlm .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 26px;
@@ -4337,15 +4336,15 @@ First 10 of 14911 rows are shown in table below
   padding-right: 4px;
 }
 
-#bwppycpskt .gt_column_spanner_outer:first-child {
+#itbfvrmqlm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bwppycpskt .gt_column_spanner_outer:last-child {
+#itbfvrmqlm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bwppycpskt .gt_column_spanner {
+#itbfvrmqlm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4357,7 +4356,7 @@ First 10 of 14911 rows are shown in table below
   width: 100%;
 }
 
-#bwppycpskt .gt_group_heading {
+#itbfvrmqlm .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -4379,7 +4378,7 @@ First 10 of 14911 rows are shown in table below
   vertical-align: middle;
 }
 
-#bwppycpskt .gt_empty_group_heading {
+#itbfvrmqlm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -4394,15 +4393,15 @@ First 10 of 14911 rows are shown in table below
   vertical-align: middle;
 }
 
-#bwppycpskt .gt_from_md > :first-child {
+#itbfvrmqlm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bwppycpskt .gt_from_md > :last-child {
+#itbfvrmqlm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bwppycpskt .gt_row {
+#itbfvrmqlm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4421,7 +4420,7 @@ First 10 of 14911 rows are shown in table below
   overflow-x: hidden;
 }
 
-#bwppycpskt .gt_stub {
+#itbfvrmqlm .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -4433,7 +4432,7 @@ First 10 of 14911 rows are shown in table below
   padding-left: 12px;
 }
 
-#bwppycpskt .gt_summary_row {
+#itbfvrmqlm .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -4443,7 +4442,7 @@ First 10 of 14911 rows are shown in table below
   padding-right: 5px;
 }
 
-#bwppycpskt .gt_first_summary_row {
+#itbfvrmqlm .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4453,7 +4452,7 @@ First 10 of 14911 rows are shown in table below
   border-top-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_grand_summary_row {
+#itbfvrmqlm .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -4463,7 +4462,7 @@ First 10 of 14911 rows are shown in table below
   padding-right: 5px;
 }
 
-#bwppycpskt .gt_first_grand_summary_row {
+#itbfvrmqlm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4473,11 +4472,11 @@ First 10 of 14911 rows are shown in table below
   border-top-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_striped {
+#itbfvrmqlm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bwppycpskt .gt_table_body {
+#itbfvrmqlm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4486,7 +4485,7 @@ First 10 of 14911 rows are shown in table below
   border-bottom-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_footnotes {
+#itbfvrmqlm .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -4500,13 +4499,13 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_footnote {
+#itbfvrmqlm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#bwppycpskt .gt_sourcenotes {
+#itbfvrmqlm .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -4520,46 +4519,46 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#bwppycpskt .gt_sourcenote {
+#itbfvrmqlm .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#bwppycpskt .gt_left {
+#itbfvrmqlm .gt_left {
   text-align: left;
 }
 
-#bwppycpskt .gt_center {
+#itbfvrmqlm .gt_center {
   text-align: center;
 }
 
-#bwppycpskt .gt_right {
+#itbfvrmqlm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bwppycpskt .gt_font_normal {
+#itbfvrmqlm .gt_font_normal {
   font-weight: normal;
 }
 
-#bwppycpskt .gt_font_bold {
+#itbfvrmqlm .gt_font_bold {
   font-weight: bold;
 }
 
-#bwppycpskt .gt_font_italic {
+#itbfvrmqlm .gt_font_italic {
   font-style: italic;
 }
 
-#bwppycpskt .gt_super {
+#itbfvrmqlm .gt_super {
   font-size: 65%;
 }
 
-#bwppycpskt .gt_footnote_marks {
+#itbfvrmqlm .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="bwppycpskt" style="overflow-x:auto;overflow-y:auto;width:auto;height:500px;"><table class="gt_table">
+<div id="itbfvrmqlm" style="overflow-x:auto;overflow-y:auto;width:auto;height:500px;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="4" class="gt_heading gt_title gt_font_normal" style>long_emp</th>
@@ -5205,7 +5204,7 @@ First 10 of 14911 rows are shown in table below
 </ol></li>
 </ul>
 <p>従業員数に注目したタテ持ちデータのlong_emp_lをlong_empとして使用します。</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="ot">&lt;-</span> long_emp_l</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>long_emp &lt;-<span class="st"> </span>long_emp_l</span></code></pre></div>
 </section>
 <section id="tejun_sort" class="slide level2">
 <h2>手順１：データのソート</h2>
@@ -5213,9 +5212,9 @@ First 10 of 14911 rows are shown in table below
 <li>前年比算出準備として企業コードとyearでソートします</li>
 <li>ソートすることでカラム間の差分が計算できるからです</li>
 </ul>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(企業コード, year)</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>long_emp</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>long_emp &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="st">  </span><span class="kw">arrange</span>(企業コード, year)</span>
+<span id="cb30-3"><a href="#cb30-3"></a>long_emp</span></code></pre></div>
 <pre><code># A tibble: 12,516 x 3
    企業コード year  従業員数
    &lt;chr&gt;      &lt;chr&gt;    &lt;dbl&gt;
@@ -5237,10 +5236,10 @@ First 10 of 14911 rows are shown in table below
 <li>企業コードごとに前年従業員数カラムを作成します</li>
 <li>lag関数は指定したベクトルを前にnずらす関数です</li>
 </ul>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(企業コード) <span class="sc">%&gt;%</span> </span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(前年従業員数 <span class="ot">=</span> <span class="fu">lag</span>(従業員数, <span class="at">n =</span> <span class="dv">1</span>))</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>long_emp</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>long_emp &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a><span class="st">  </span><span class="kw">group_by</span>(企業コード) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb32-3"><a href="#cb32-3"></a><span class="st">  </span><span class="kw">mutate</span>(前年従業員数 =<span class="st"> </span><span class="kw">lag</span>(従業員数, <span class="dt">n =</span> <span class="dv">1</span>))</span>
+<span id="cb32-4"><a href="#cb32-4"></a>long_emp</span></code></pre></div>
 <pre><code># A tibble: 12,516 x 4
 # Groups:   企業コード [1,788]
    企業コード year  従業員数 前年従業員数
@@ -5262,11 +5261,11 @@ First 10 of 14911 rows are shown in table below
 <ul>
 <li>従業員数伸び率カラムを作成します</li>
 </ul>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数伸び率 <span class="ot">=</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">if_else</span>(前年従業員数 <span class="sc">&lt;=</span> <span class="dv">0</span> <span class="sc">|</span> 従業員数 <span class="sc">&lt;=</span> <span class="dv">0</span>,</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">as.double</span>(<span class="cn">NA</span>), 従業員数 <span class="sc">/</span> 前年従業員数))</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>long_emp</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>long_emp &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数伸び率 =</span>
+<span id="cb34-3"><a href="#cb34-3"></a><span class="st">      </span><span class="kw">if_else</span>(前年従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">0</span> <span class="op">|</span><span class="st"> </span>従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">0</span>,</span>
+<span id="cb34-4"><a href="#cb34-4"></a>              <span class="kw">as.double</span>(<span class="ot">NA</span>), 従業員数 <span class="op">/</span><span class="st"> </span>前年従業員数))</span>
+<span id="cb34-5"><a href="#cb34-5"></a>long_emp</span></code></pre></div>
 <pre><code># A tibble: 12,516 x 5
 # Groups:   企業コード [1,788]
    企業コード year  従業員数 前年従業員数 従業員数伸び率
@@ -5288,11 +5287,11 @@ First 10 of 14911 rows are shown in table below
 <ul>
 <li>従業員数伸び率を小数点以下3桁にまるめ、中間変数である前年従業員数を消去します</li>
 </ul>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="co"># group化はもう不要なのでgroupを解除します</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数伸び率 <span class="ot">=</span> <span class="fu">round</span>(従業員数伸び率, <span class="dv">3</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>前年従業員数) </span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>long_emp</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>long_emp &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb36-2"><a href="#cb36-2"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># group化はもう不要なのでgroupを解除します</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数伸び率 =<span class="st"> </span><span class="kw">round</span>(従業員数伸び率, <span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb36-4"><a href="#cb36-4"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>前年従業員数) </span>
+<span id="cb36-5"><a href="#cb36-5"></a>long_emp</span></code></pre></div>
 <pre><code># A tibble: 12,516 x 4
    企業コード year  従業員数 従業員数伸び率
    &lt;chr&gt;      &lt;chr&gt;    &lt;dbl&gt;          &lt;dbl&gt;
@@ -5314,31 +5313,31 @@ First 10 of 14911 rows are shown in table below
 <li>スライドの都合上、逐一代入をしましたが、最終的には以下のようにパイプを繋げて書きましょう</li>
 <li>これ以上パイプが長くなるようなときは、適宜中間変数などを作成しましょう</li>
 </ul>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(企業コード, year) <span class="sc">%&gt;%</span> </span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(企業コード) <span class="sc">%&gt;%</span> </span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(前年従業員数 <span class="ot">=</span> <span class="fu">lag</span>(従業員数, <span class="at">n =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数伸び率 <span class="ot">=</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">if_else</span>(前年従業員数 <span class="sc">&lt;=</span> <span class="dv">0</span> <span class="sc">|</span> 従業員数 <span class="sc">&lt;=</span> <span class="dv">0</span>,</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>             <span class="fu">as.double</span>(<span class="cn">NA</span>), 従業員数 <span class="sc">/</span> 前年従業員数)) <span class="sc">%&gt;%</span> </span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数伸び率 <span class="ot">=</span> <span class="fu">round</span>(従業員数伸び率, <span class="dv">3</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>前年従業員数) </span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>long_emp &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a><span class="st">  </span><span class="kw">arrange</span>(企業コード, year) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb38-3"><a href="#cb38-3"></a><span class="st">  </span><span class="kw">group_by</span>(企業コード) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb38-4"><a href="#cb38-4"></a><span class="st">  </span><span class="kw">mutate</span>(前年従業員数 =<span class="st"> </span><span class="kw">lag</span>(従業員数, <span class="dt">n =</span> <span class="dv">1</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb38-5"><a href="#cb38-5"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数伸び率 =</span>
+<span id="cb38-6"><a href="#cb38-6"></a><span class="st">      </span><span class="kw">if_else</span>(前年従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">0</span> <span class="op">|</span><span class="st"> </span>従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">0</span>,</span>
+<span id="cb38-7"><a href="#cb38-7"></a>             <span class="kw">as.double</span>(<span class="ot">NA</span>), 従業員数 <span class="op">/</span><span class="st"> </span>前年従業員数)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb38-8"><a href="#cb38-8"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb38-9"><a href="#cb38-9"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数伸び率 =<span class="st"> </span><span class="kw">round</span>(従業員数伸び率, <span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb38-10"><a href="#cb38-10"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>前年従業員数) </span></code></pre></div>
 </section>
 <section id="zennenhi_sanko" class="slide level2">
 <h2>参考：横持ちで表示</h2>
 <ul>
 <li>従業員数伸び率をタテ持ちデータで算出しました。これは以下のようにしてヨコ持ちデータに変換できます</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>従業員数) <span class="sc">%&gt;%</span> </span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> year,</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> 従業員数伸び率,</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">names_prefix =</span> <span class="st">&quot;従業員数_伸び率&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>従業員数) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from =</span> year,</span>
+<span id="cb39-3"><a href="#cb39-3"></a>              <span class="dt">values_from =</span> 従業員数伸び率,</span>
+<span id="cb39-4"><a href="#cb39-4"></a>              <span class="dt">names_prefix =</span> <span class="st">&quot;従業員数_伸び率&quot;</span>)</span></code></pre></div>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#cqfxmnvtcy .gt_table {
+#ueulvfwkuz .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -5363,7 +5362,7 @@ First 10 of 14911 rows are shown in table below
   border-left-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_heading {
+#ueulvfwkuz .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -5375,7 +5374,7 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_title {
+#ueulvfwkuz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5385,7 +5384,7 @@ First 10 of 14911 rows are shown in table below
   border-bottom-width: 0;
 }
 
-#cqfxmnvtcy .gt_subtitle {
+#ueulvfwkuz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5395,13 +5394,13 @@ First 10 of 14911 rows are shown in table below
   border-top-width: 0;
 }
 
-#cqfxmnvtcy .gt_bottom_border {
+#ueulvfwkuz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_col_headings {
+#ueulvfwkuz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5416,7 +5415,7 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_col_heading {
+#ueulvfwkuz .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 22px;
@@ -5436,7 +5435,7 @@ First 10 of 14911 rows are shown in table below
   overflow-x: hidden;
 }
 
-#cqfxmnvtcy .gt_column_spanner_outer {
+#ueulvfwkuz .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 22px;
@@ -5448,15 +5447,15 @@ First 10 of 14911 rows are shown in table below
   padding-right: 4px;
 }
 
-#cqfxmnvtcy .gt_column_spanner_outer:first-child {
+#ueulvfwkuz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cqfxmnvtcy .gt_column_spanner_outer:last-child {
+#ueulvfwkuz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cqfxmnvtcy .gt_column_spanner {
+#ueulvfwkuz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5468,7 +5467,7 @@ First 10 of 14911 rows are shown in table below
   width: 100%;
 }
 
-#cqfxmnvtcy .gt_group_heading {
+#ueulvfwkuz .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -5490,7 +5489,7 @@ First 10 of 14911 rows are shown in table below
   vertical-align: middle;
 }
 
-#cqfxmnvtcy .gt_empty_group_heading {
+#ueulvfwkuz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -5505,15 +5504,15 @@ First 10 of 14911 rows are shown in table below
   vertical-align: middle;
 }
 
-#cqfxmnvtcy .gt_from_md > :first-child {
+#ueulvfwkuz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cqfxmnvtcy .gt_from_md > :last-child {
+#ueulvfwkuz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cqfxmnvtcy .gt_row {
+#ueulvfwkuz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5532,7 +5531,7 @@ First 10 of 14911 rows are shown in table below
   overflow-x: hidden;
 }
 
-#cqfxmnvtcy .gt_stub {
+#ueulvfwkuz .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -5544,7 +5543,7 @@ First 10 of 14911 rows are shown in table below
   padding-left: 12px;
 }
 
-#cqfxmnvtcy .gt_summary_row {
+#ueulvfwkuz .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -5554,7 +5553,7 @@ First 10 of 14911 rows are shown in table below
   padding-right: 5px;
 }
 
-#cqfxmnvtcy .gt_first_summary_row {
+#ueulvfwkuz .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5564,7 +5563,7 @@ First 10 of 14911 rows are shown in table below
   border-top-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_grand_summary_row {
+#ueulvfwkuz .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -5574,7 +5573,7 @@ First 10 of 14911 rows are shown in table below
   padding-right: 5px;
 }
 
-#cqfxmnvtcy .gt_first_grand_summary_row {
+#ueulvfwkuz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5584,11 +5583,11 @@ First 10 of 14911 rows are shown in table below
   border-top-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_striped {
+#ueulvfwkuz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cqfxmnvtcy .gt_table_body {
+#ueulvfwkuz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5597,7 +5596,7 @@ First 10 of 14911 rows are shown in table below
   border-bottom-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_footnotes {
+#ueulvfwkuz .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -5611,13 +5610,13 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_footnote {
+#ueulvfwkuz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#cqfxmnvtcy .gt_sourcenotes {
+#ueulvfwkuz .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -5631,46 +5630,46 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#cqfxmnvtcy .gt_sourcenote {
+#ueulvfwkuz .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#cqfxmnvtcy .gt_left {
+#ueulvfwkuz .gt_left {
   text-align: left;
 }
 
-#cqfxmnvtcy .gt_center {
+#ueulvfwkuz .gt_center {
   text-align: center;
 }
 
-#cqfxmnvtcy .gt_right {
+#ueulvfwkuz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cqfxmnvtcy .gt_font_normal {
+#ueulvfwkuz .gt_font_normal {
   font-weight: normal;
 }
 
-#cqfxmnvtcy .gt_font_bold {
+#ueulvfwkuz .gt_font_bold {
   font-weight: bold;
 }
 
-#cqfxmnvtcy .gt_font_italic {
+#ueulvfwkuz .gt_font_italic {
   font-style: italic;
 }
 
-#cqfxmnvtcy .gt_super {
+#ueulvfwkuz .gt_super {
   font-size: 65%;
 }
 
-#cqfxmnvtcy .gt_footnote_marks {
+#ueulvfwkuz .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="cqfxmnvtcy" style="overflow-x:auto;overflow-y:auto;width:auto;height:270px;"><table class="gt_table">
+<div id="ueulvfwkuz" style="overflow-x:auto;overflow-y:auto;width:auto;height:270px;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -6732,7 +6731,7 @@ First 10 of 14911 rows are shown in table below
  3rd Qu.: 1488.8   3rd Qu.:  1.607  
  Max.   :90164.0   Max.   :358.000  
                    NA&#39;s   :1        </code></pre>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-22-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-18-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6785,18 +6784,18 @@ First 10 of 14911 rows are shown in table below
 <div class="columns">
 <div class="column" style="width:55%;">
 <p>レイヤーは+で追加します</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(long_emp) <span class="sc">+</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率) <span class="sc">+</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;年別の従業員数伸び率&quot;</span></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(year))</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="kw">ggplot</span>(long_emp) <span class="op">+</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a><span class="st">  </span><span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率) <span class="op">+</span></span>
+<span id="cb42-3"><a href="#cb42-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>() <span class="op">+</span></span>
+<span id="cb42-4"><a href="#cb42-4"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb42-5"><a href="#cb42-5"></a>    <span class="dt">title =</span> <span class="st">&quot;年別の従業員数伸び率&quot;</span></span>
+<span id="cb42-6"><a href="#cb42-6"></a>    ) <span class="op">+</span></span>
+<span id="cb42-7"><a href="#cb42-7"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="kw">vars</span>(year))</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
 <p><br></p>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-23-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-19-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6808,14 +6807,14 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()</span></code></pre></div>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/ggplot-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="kw">ggplot</span>()</span></code></pre></div>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/ggplot-1.png" width="768" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()</span></code></pre></div>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-24-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb44-2"><a href="#cb44-2"></a><span class="st">  </span><span class="kw">ggplot</span>()</span></code></pre></div>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-20-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6827,16 +6826,16 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率)</span></code></pre></div>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/aes-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb45-2"><a href="#cb45-2"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="st">  </span><span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率)</span></code></pre></div>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/aes-1.png" width="768" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率))</span></code></pre></div>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-25-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb46-2"><a href="#cb46-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率))</span></code></pre></div>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-21-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6853,13 +6852,13 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率)) <span class="sc">+</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb47-2"><a href="#cb47-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率)) <span class="op">+</span></span>
+<span id="cb47-3"><a href="#cb47-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>()</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-26-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-22-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6877,16 +6876,16 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率)) <span class="sc">+</span></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;従業員数伸び率のヒストグラム&quot;</span></span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb48-2"><a href="#cb48-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率)) <span class="op">+</span></span>
+<span id="cb48-3"><a href="#cb48-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>() <span class="op">+</span></span>
+<span id="cb48-4"><a href="#cb48-4"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb48-5"><a href="#cb48-5"></a>    <span class="dt">title =</span> <span class="st">&quot;従業員数伸び率のヒストグラム&quot;</span></span>
+<span id="cb48-6"><a href="#cb48-6"></a>  )</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-27-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-23-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6917,7 +6916,7 @@ First 10 of 14911 rows are shown in table below
 
 </div><div class="column" style="width:48%;">
 <p><br></p>
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-28-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-24-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6931,15 +6930,15 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率)) <span class="sc">+</span></span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年別での従業員数伸び率&quot;</span>) <span class="sc">+</span></span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(year))</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb50-2"><a href="#cb50-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率)) <span class="op">+</span></span>
+<span id="cb50-3"><a href="#cb50-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>() <span class="op">+</span></span>
+<span id="cb50-4"><a href="#cb50-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;年別での従業員数伸び率&quot;</span>) <span class="op">+</span></span>
+<span id="cb50-5"><a href="#cb50-5"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="kw">vars</span>(year))</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-29-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-25-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6968,16 +6967,16 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(従業員数伸び率 <span class="sc">&lt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率)) <span class="sc">+</span></span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(year))</span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年別での従業員数伸び率&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>p &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb51-2"><a href="#cb51-2"></a><span class="st">  </span><span class="kw">filter</span>(従業員数伸び率 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb51-3"><a href="#cb51-3"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率)) <span class="op">+</span></span>
+<span id="cb51-4"><a href="#cb51-4"></a><span class="st">  </span><span class="kw">geom_histogram</span>() <span class="op">+</span></span>
+<span id="cb51-5"><a href="#cb51-5"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="kw">vars</span>(year))</span>
+<span id="cb51-6"><a href="#cb51-6"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;年別での従業員数伸び率&quot;</span>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-30-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-26-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -6993,18 +6992,18 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(従業員数伸び率 <span class="sc">&lt;</span> <span class="dv">3</span>,</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>         year <span class="sc">==</span> <span class="st">&quot;2013&quot;</span> <span class="sc">|</span></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>         year <span class="sc">==</span> <span class="st">&quot;2018&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 従業員数伸び率,</span>
-<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> year)) <span class="sc">+</span></span>
-<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;2013年と2018年の従業員数伸び率比較&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb52-2"><a href="#cb52-2"></a><span class="st">  </span><span class="kw">filter</span>(従業員数伸び率 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>,</span>
+<span id="cb52-3"><a href="#cb52-3"></a>         year <span class="op">==</span><span class="st"> &quot;2013&quot;</span> <span class="op">|</span></span>
+<span id="cb52-4"><a href="#cb52-4"></a><span class="st">         </span>year <span class="op">==</span><span class="st"> &quot;2018&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb52-5"><a href="#cb52-5"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> 従業員数伸び率,</span>
+<span id="cb52-6"><a href="#cb52-6"></a>             <span class="dt">fill =</span> year)) <span class="op">+</span></span>
+<span id="cb52-7"><a href="#cb52-7"></a><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.4</span>) <span class="op">+</span></span>
+<span id="cb52-8"><a href="#cb52-8"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;2013年と2018年の従業員数伸び率比較&quot;</span>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-31-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-27-1.png" width="768" /></p>
 </div>
 </div>
 </section>
@@ -7015,20 +7014,20 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(従業員数伸び率 <span class="sc">&lt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, </span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> 従業員数伸び率)) <span class="sc">+</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;従業員数伸び率比較&quot;</span>)</span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>P <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_violin</span>()</span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> </span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>p &lt;-<span class="st"> </span>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb53-2"><a href="#cb53-2"></a><span class="st">  </span><span class="kw">filter</span>(従業員数伸び率 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb53-3"><a href="#cb53-3"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, </span>
+<span id="cb53-4"><a href="#cb53-4"></a>             <span class="dt">y =</span> 従業員数伸び率)) <span class="op">+</span></span>
+<span id="cb53-5"><a href="#cb53-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;従業員数伸び率比較&quot;</span>)</span>
+<span id="cb53-6"><a href="#cb53-6"></a>P <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</span>
+<span id="cb53-7"><a href="#cb53-7"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_violin</span>()</span>
+<span id="cb53-8"><a href="#cb53-8"></a>p <span class="op">+</span><span class="st"> </span></span>
+<span id="cb53-9"><a href="#cb53-9"></a><span class="st">  </span><span class="kw">geom_violin</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb53-10"><a href="#cb53-10"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">alpha =</span> <span class="fl">0.1</span>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:42%;">
-<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-32-1.png" width="100%" style="display: block; margin: auto;" /><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-32-2.png" width="100%" style="display: block; margin: auto;" /><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-32-3.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-28-1.png" width="768" /><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-28-2.png" width="768" /><img src="04_intermediate_2nd_half_files/figure-revealjs/unnamed-chunk-28-3.png" width="768" /></p>
 </div>
 </div>
 </section></section>
@@ -7121,7 +7120,7 @@ First 10 of 14911 rows are shown in table below
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#pwdbjxzlbq .gt_table {
+#ziahvxhpsx .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -7146,7 +7145,7 @@ First 10 of 14911 rows are shown in table below
   border-left-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_heading {
+#ziahvxhpsx .gt_heading {
   background-color: #F4F7E2;
   text-align: center;
   border-bottom-color: #F4F7E2;
@@ -7158,7 +7157,7 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_title {
+#ziahvxhpsx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -7168,7 +7167,7 @@ First 10 of 14911 rows are shown in table below
   border-bottom-width: 0;
 }
 
-#pwdbjxzlbq .gt_subtitle {
+#ziahvxhpsx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -7178,13 +7177,13 @@ First 10 of 14911 rows are shown in table below
   border-top-width: 0;
 }
 
-#pwdbjxzlbq .gt_bottom_border {
+#ziahvxhpsx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_col_headings {
+#ziahvxhpsx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7199,7 +7198,7 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_col_heading {
+#ziahvxhpsx .gt_col_heading {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 22px;
@@ -7219,7 +7218,7 @@ First 10 of 14911 rows are shown in table below
   overflow-x: hidden;
 }
 
-#pwdbjxzlbq .gt_column_spanner_outer {
+#ziahvxhpsx .gt_column_spanner_outer {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 22px;
@@ -7231,15 +7230,15 @@ First 10 of 14911 rows are shown in table below
   padding-right: 4px;
 }
 
-#pwdbjxzlbq .gt_column_spanner_outer:first-child {
+#ziahvxhpsx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pwdbjxzlbq .gt_column_spanner_outer:last-child {
+#ziahvxhpsx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pwdbjxzlbq .gt_column_spanner {
+#ziahvxhpsx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -7251,7 +7250,7 @@ First 10 of 14911 rows are shown in table below
   width: 100%;
 }
 
-#pwdbjxzlbq .gt_group_heading {
+#ziahvxhpsx .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #F4F7E2;
@@ -7273,7 +7272,7 @@ First 10 of 14911 rows are shown in table below
   vertical-align: middle;
 }
 
-#pwdbjxzlbq .gt_empty_group_heading {
+#ziahvxhpsx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F4F7E2;
@@ -7288,15 +7287,15 @@ First 10 of 14911 rows are shown in table below
   vertical-align: middle;
 }
 
-#pwdbjxzlbq .gt_from_md > :first-child {
+#ziahvxhpsx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pwdbjxzlbq .gt_from_md > :last-child {
+#ziahvxhpsx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pwdbjxzlbq .gt_row {
+#ziahvxhpsx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7315,7 +7314,7 @@ First 10 of 14911 rows are shown in table below
   overflow-x: hidden;
 }
 
-#pwdbjxzlbq .gt_stub {
+#ziahvxhpsx .gt_stub {
   color: #333333;
   background-color: #F4F7E2;
   font-size: 100%;
@@ -7327,7 +7326,7 @@ First 10 of 14911 rows are shown in table below
   padding-left: 12px;
 }
 
-#pwdbjxzlbq .gt_summary_row {
+#ziahvxhpsx .gt_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -7337,7 +7336,7 @@ First 10 of 14911 rows are shown in table below
   padding-right: 5px;
 }
 
-#pwdbjxzlbq .gt_first_summary_row {
+#ziahvxhpsx .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7347,7 +7346,7 @@ First 10 of 14911 rows are shown in table below
   border-top-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_grand_summary_row {
+#ziahvxhpsx .gt_grand_summary_row {
   color: #333333;
   background-color: #F4F7E2;
   text-transform: inherit;
@@ -7357,7 +7356,7 @@ First 10 of 14911 rows are shown in table below
   padding-right: 5px;
 }
 
-#pwdbjxzlbq .gt_first_grand_summary_row {
+#ziahvxhpsx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7367,11 +7366,11 @@ First 10 of 14911 rows are shown in table below
   border-top-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_striped {
+#ziahvxhpsx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pwdbjxzlbq .gt_table_body {
+#ziahvxhpsx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7380,7 +7379,7 @@ First 10 of 14911 rows are shown in table below
   border-bottom-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_footnotes {
+#ziahvxhpsx .gt_footnotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -7394,13 +7393,13 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_footnote {
+#ziahvxhpsx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#pwdbjxzlbq .gt_sourcenotes {
+#ziahvxhpsx .gt_sourcenotes {
   color: #333333;
   background-color: #F4F7E2;
   border-bottom-style: none;
@@ -7414,46 +7413,46 @@ First 10 of 14911 rows are shown in table below
   border-right-color: #D3D3D3;
 }
 
-#pwdbjxzlbq .gt_sourcenote {
+#ziahvxhpsx .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#pwdbjxzlbq .gt_left {
+#ziahvxhpsx .gt_left {
   text-align: left;
 }
 
-#pwdbjxzlbq .gt_center {
+#ziahvxhpsx .gt_center {
   text-align: center;
 }
 
-#pwdbjxzlbq .gt_right {
+#ziahvxhpsx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pwdbjxzlbq .gt_font_normal {
+#ziahvxhpsx .gt_font_normal {
   font-weight: normal;
 }
 
-#pwdbjxzlbq .gt_font_bold {
+#ziahvxhpsx .gt_font_bold {
   font-weight: bold;
 }
 
-#pwdbjxzlbq .gt_font_italic {
+#ziahvxhpsx .gt_font_italic {
   font-style: italic;
 }
 
-#pwdbjxzlbq .gt_super {
+#ziahvxhpsx .gt_super {
   font-size: 65%;
 }
 
-#pwdbjxzlbq .gt_footnote_marks {
+#ziahvxhpsx .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="pwdbjxzlbq" style="overflow-x:auto;overflow-y:auto;width:auto;height:600px;"><table class="gt_table">
+<div id="ziahvxhpsx" style="overflow-x:auto;overflow-y:auto;width:auto;height:600px;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -7524,9 +7523,9 @@ First 10 of 14911 rows are shown in table below
 <ul>
 <li>2017年の従業員数が100人以上という条件でfilterをかけると、2018年のデータも消えてしまいます</li>
 </ul>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>long_emp <span class="sc">%&gt;%</span> </span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="st">&quot;2017&quot;</span>, 従業員数 <span class="sc">&gt;=</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(year))</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>long_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb55-2"><a href="#cb55-2"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;2017&quot;</span>, 従業員数 <span class="op">&gt;=</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb55-3"><a href="#cb55-3"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(year))</span></code></pre></div>
 <pre><code># A tibble: 1,667 x 4
    企業コード year  従業員数 従業員数伸び率
    &lt;chr&gt;      &lt;chr&gt;    &lt;dbl&gt;          &lt;dbl&gt;
@@ -7550,19 +7549,19 @@ First 10 of 14911 rows are shown in table below
 </ul>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="ot">&lt;-</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  long_emp <span class="sc">%&gt;%</span></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="st">&quot;2017&quot;</span>, </span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>         従業員数 <span class="sc">&gt;=</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード) <span class="sc">%&gt;%</span> </span>
-<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(long_emp,</span>
-<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 以降は2018年のデータのみでよい</span></span>
-<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="st">&quot;2018&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>emp_growth_rank_<span class="dv">2018</span> &lt;-</span>
+<span id="cb57-2"><a href="#cb57-2"></a><span class="st">  </span>long_emp <span class="op">%&gt;%</span></span>
+<span id="cb57-3"><a href="#cb57-3"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;2017&quot;</span>, </span>
+<span id="cb57-4"><a href="#cb57-4"></a>         従業員数 <span class="op">&gt;=</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb57-5"><a href="#cb57-5"></a><span class="st">  </span><span class="kw">select</span>(企業コード) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb57-6"><a href="#cb57-6"></a><span class="st">  </span><span class="kw">left_join</span>(long_emp,</span>
+<span id="cb57-7"><a href="#cb57-7"></a>            <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb57-8"><a href="#cb57-8"></a><span class="st">  </span><span class="co"># 以降は2018年のデータのみでよい</span></span>
+<span id="cb57-9"><a href="#cb57-9"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;2018&quot;</span>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:41%;">
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>emp_growth_rank_<span class="dv">2018</span></span></code></pre></div>
 <pre><code># A tibble: 1,667 x 4
    企業コード year  従業員数 従業員数伸び率
    &lt;chr&gt;      &lt;chr&gt;    &lt;dbl&gt;          &lt;dbl&gt;
@@ -7585,12 +7584,12 @@ First 10 of 14911 rows are shown in table below
 <ul>
 <li>業種大分類はdata_2018とjoinすることで付与します</li>
 </ul>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="ot">&lt;-</span> emp_growth_rank_2018 <span class="sc">%&gt;%</span> </span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(data_list<span class="sc">$</span>data_2018 <span class="sc">%&gt;%</span></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="fu">contains</span>(<span class="st">&quot;業種大分類&quot;</span>)),</span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="sc">%&gt;%</span> </span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="fu">contains</span>(<span class="st">&quot;業種大分類&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a>emp_growth_rank_<span class="dv">2018</span> &lt;-<span class="st"> </span>emp_growth_rank_<span class="dv">2018</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb60-2"><a href="#cb60-2"></a><span class="st">  </span><span class="kw">left_join</span>(data_list<span class="op">$</span>data_<span class="dv">2018</span> <span class="op">%&gt;%</span></span>
+<span id="cb60-3"><a href="#cb60-3"></a><span class="st">              </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="kw">contains</span>(<span class="st">&quot;業種大分類&quot;</span>)),</span>
+<span id="cb60-4"><a href="#cb60-4"></a>            <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb60-5"><a href="#cb60-5"></a>emp_growth_rank_<span class="dv">2018</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb60-6"><a href="#cb60-6"></a><span class="st">  </span><span class="kw">relocate</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="kw">contains</span>(<span class="st">&quot;業種大分類&quot;</span>))</span></code></pre></div>
 <pre><code># A tibble: 1,667 x 5
    企業コード 業種大分類_2018      year  従業員数 従業員数伸び率
    &lt;chr&gt;      &lt;chr&gt;                &lt;chr&gt;    &lt;dbl&gt;          &lt;dbl&gt;
@@ -7613,20 +7612,20 @@ First 10 of 14911 rows are shown in table below
 <li>同着後は飛ばす必要がある(gapあり)ランキングなのでminn_rank関数を使用し、descで降順にrankをつけます</li>
 <li>業種とrankでソートし、不要なカラムを消去します</li>
 </ul>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="ot">&lt;-</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  emp_growth_rank_2018 <span class="sc">%&gt;%</span> </span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(業種大分類_2018) <span class="sc">%&gt;%</span> </span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rank =</span> <span class="fu">min_rank</span>(<span class="fu">desc</span>(従業員数伸び率))) <span class="sc">%&gt;%</span> </span>
-<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(業種大分類_2018, rank) <span class="sc">%&gt;%</span> </span>
-<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>従業員数, <span class="sc">-</span>year) <span class="sc">%&gt;%</span> </span>
-<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a>emp_growth_rank_<span class="dv">2018</span> &lt;-</span>
+<span id="cb62-2"><a href="#cb62-2"></a><span class="st">  </span>emp_growth_rank_<span class="dv">2018</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb62-3"><a href="#cb62-3"></a><span class="st">  </span><span class="kw">group_by</span>(業種大分類_<span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb62-4"><a href="#cb62-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(<span class="kw">desc</span>(従業員数伸び率))) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb62-5"><a href="#cb62-5"></a><span class="st">  </span><span class="kw">arrange</span>(業種大分類_<span class="dv">2018</span>, rank) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb62-6"><a href="#cb62-6"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>従業員数, <span class="op">-</span>year) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb62-7"><a href="#cb62-7"></a><span class="st">  </span><span class="kw">ungroup</span>()</span></code></pre></div>
 </section>
 <section id="kekka_ranking" class="slide level2">
 <h2>ランキングデータ完成</h2>
 <ul>
 <li>2017年の従業員数が100人以上の企業で、業種ごとに従業員数伸び率ランキングを作成したデータが完成しました</li>
 </ul>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>emp_growth_rank_<span class="dv">2018</span></span></code></pre></div>
 <pre><code># A tibble: 1,667 x 4
    企業コード 従業員数伸び率 業種大分類_2018  rank
    &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt;
@@ -7645,28 +7644,28 @@ First 10 of 14911 rows are shown in table below
 <section id="rank_tejun4" class="slide level2">
 <h2>ランキング作成まとめ</h2>
 <p>手順１から手順３のコードをまとめたものです。</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2017年の従業員数が100人以上のデータを抽出</span></span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="ot">&lt;-</span></span>
-<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>  long_emp <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="st">&quot;2017&quot;</span>, 従業員数 <span class="sc">&gt;=</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(long_emp, <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="st">&quot;2018&quot;</span>)</span>
-<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 業種大分類を付与</span></span>
-<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="ot">&lt;-</span> </span>
-<span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a>  emp_growth_rank_2018 <span class="sc">%&gt;%</span> </span>
-<span id="cb65-11"><a href="#cb65-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(data_list<span class="sc">$</span>data_2018 <span class="sc">%&gt;%</span></span>
-<span id="cb65-12"><a href="#cb65-12" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="fu">contains</span>(<span class="st">&quot;業種大分類&quot;</span>)),</span>
-<span id="cb65-13"><a href="#cb65-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb65-14"><a href="#cb65-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb65-15"><a href="#cb65-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 業種ごとにランキングを作成してデータを整形</span></span>
-<span id="cb65-16"><a href="#cb65-16" aria-hidden="true" tabindex="-1"></a>emp_growth_rank_2018 <span class="ot">&lt;-</span></span>
-<span id="cb65-17"><a href="#cb65-17" aria-hidden="true" tabindex="-1"></a>  emp_growth_rank_2018 <span class="sc">%&gt;%</span> </span>
-<span id="cb65-18"><a href="#cb65-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(業種大分類_2018) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-19"><a href="#cb65-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rank =</span> <span class="fu">min_rank</span>(<span class="fu">desc</span>(従業員数伸び率))) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-20"><a href="#cb65-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(業種大分類_2018, rank) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-21"><a href="#cb65-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>従業員数, <span class="sc">-</span>year) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-22"><a href="#cb65-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="co"># 2017年の従業員数が100人以上のデータを抽出</span></span>
+<span id="cb65-2"><a href="#cb65-2"></a>emp_growth_rank_<span class="dv">2018</span> &lt;-</span>
+<span id="cb65-3"><a href="#cb65-3"></a><span class="st">  </span>long_emp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;2017&quot;</span>, 従業員数 <span class="op">&gt;=</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb65-4"><a href="#cb65-4"></a><span class="st">  </span><span class="kw">select</span>(企業コード) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-5"><a href="#cb65-5"></a><span class="st">  </span><span class="kw">left_join</span>(long_emp, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-6"><a href="#cb65-6"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;2018&quot;</span>)</span>
+<span id="cb65-7"><a href="#cb65-7"></a></span>
+<span id="cb65-8"><a href="#cb65-8"></a><span class="co"># 業種大分類を付与</span></span>
+<span id="cb65-9"><a href="#cb65-9"></a>emp_growth_rank_<span class="dv">2018</span> &lt;-<span class="st"> </span></span>
+<span id="cb65-10"><a href="#cb65-10"></a><span class="st">  </span>emp_growth_rank_<span class="dv">2018</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-11"><a href="#cb65-11"></a><span class="st">  </span><span class="kw">left_join</span>(data_list<span class="op">$</span>data_<span class="dv">2018</span> <span class="op">%&gt;%</span></span>
+<span id="cb65-12"><a href="#cb65-12"></a><span class="st">              </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="kw">contains</span>(<span class="st">&quot;業種大分類&quot;</span>)),</span>
+<span id="cb65-13"><a href="#cb65-13"></a>            <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb65-14"><a href="#cb65-14"></a></span>
+<span id="cb65-15"><a href="#cb65-15"></a><span class="co"># 業種ごとにランキングを作成してデータを整形</span></span>
+<span id="cb65-16"><a href="#cb65-16"></a>emp_growth_rank_<span class="dv">2018</span> &lt;-</span>
+<span id="cb65-17"><a href="#cb65-17"></a><span class="st">  </span>emp_growth_rank_<span class="dv">2018</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-18"><a href="#cb65-18"></a><span class="st">  </span><span class="kw">group_by</span>(業種大分類_<span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-19"><a href="#cb65-19"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(<span class="kw">desc</span>(従業員数伸び率))) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-20"><a href="#cb65-20"></a><span class="st">  </span><span class="kw">arrange</span>(業種大分類_<span class="dv">2018</span>, rank) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-21"><a href="#cb65-21"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>従業員数, <span class="op">-</span>year) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb65-22"><a href="#cb65-22"></a><span class="st">  </span><span class="kw">ungroup</span>()</span></code></pre></div>
 </section></section>
 <section id="おわり" class="title-slide slide level1 unnumbered">
 <h1 class="unnumbered">おわり</h1>
@@ -7690,7 +7689,7 @@ First 10 of 14911 rows are shown in table below
         // Vertical centering of slides
         center: false,
         // Enable slide navigation via mouse wheel
-        mouseWheel: false,
+        mouseWheel: true,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
