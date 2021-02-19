@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 中級編前半 | データエンジニアリング人材養成演習補助教材</title>
   <meta name="description" content="本ページは、滋賀大学の集中講義「データエンジニアリング人材養成演習」の補助教材です。" />
-  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 中級編前半 | データエンジニアリング人材養成演習補助教材" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="book_02_beginner_2nd_half.html"/>
 <link rel="next" href="book_04_intermediate_2nd_half.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,15 +50,15 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -118,6 +118,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -520,14 +521,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="sec_03" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> 中級編前半</h1>
-<div id="はじめに-2" class="section level2 unnumbered" number="">
+<div id="はじめに-2" class="section level2 unnumbered">
 <h2>はじめに</h2>
-<div id="中級の作業イメージ" class="section level3 unnumbered" number="">
+<div id="中級の作業イメージ" class="section level3 unnumbered">
 <h3>中級の作業イメージ</h3>
 <p>左半分を前半、右半分を後半で進めていきます。</p>
-<p><img src="pictures/intermediate/story_image.png" /></p>
+<p><img src="../pictures/intermediate/story-image-intmed.png" width="65%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="目次中級前半" class="section level3 unnumbered" number="">
+<div id="目次中級前半" class="section level3 unnumbered">
 <h3>目次（中級前半）</h3>
 <ul>
 <li>複数ファイルの一括読み込み(イメージ)</li>
@@ -563,72 +564,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="単純な方法" class="section level3" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> 単純な方法</h3>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="book_03_intermediate_1st_half.html#cb271-1"></a><span class="co"># 読み込むカラム型を決める</span></span>
-<span id="cb271-2"><a href="book_03_intermediate_1st_half.html#cb271-2"></a>data_cols &lt;-<span class="st"> </span><span class="kw">cols</span>(</span>
-<span id="cb271-3"><a href="book_03_intermediate_1st_half.html#cb271-3"></a>  企業コード =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb271-4"><a href="book_03_intermediate_1st_half.html#cb271-4"></a>  本社所在地市区郡 =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb271-5"><a href="book_03_intermediate_1st_half.html#cb271-5"></a>  業種大分類 =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb271-6"><a href="book_03_intermediate_1st_half.html#cb271-6"></a>  <span class="st">`</span><span class="dt">資本金(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-7"><a href="book_03_intermediate_1st_half.html#cb271-7"></a>  従業員数 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-8"><a href="book_03_intermediate_1st_half.html#cb271-8"></a>  最新期業績決算期年 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-9"><a href="book_03_intermediate_1st_half.html#cb271-9"></a>  最新期業績決算期月 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-10"><a href="book_03_intermediate_1st_half.html#cb271-10"></a>  <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-11"><a href="book_03_intermediate_1st_half.html#cb271-11"></a>  <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-12"><a href="book_03_intermediate_1st_half.html#cb271-12"></a>  創業年 =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb271-13"><a href="book_03_intermediate_1st_half.html#cb271-13"></a>  設立年 =<span class="st"> </span><span class="kw">col_double</span>()</span>
-<span id="cb271-14"><a href="book_03_intermediate_1st_half.html#cb271-14"></a>)</span>
-<span id="cb271-15"><a href="book_03_intermediate_1st_half.html#cb271-15"></a></span>
-<span id="cb271-16"><a href="book_03_intermediate_1st_half.html#cb271-16"></a><span class="co"># 2012年から2018年のデータを別々に読み込む</span></span>
-<span id="cb271-17"><a href="book_03_intermediate_1st_half.html#cb271-17"></a>data_<span class="dv">2012</span> &lt;-</span>
-<span id="cb271-18"><a href="book_03_intermediate_1st_half.html#cb271-18"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2012年1月時点.csv&quot;</span>),</span>
-<span id="cb271-19"><a href="book_03_intermediate_1st_half.html#cb271-19"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-20"><a href="book_03_intermediate_1st_half.html#cb271-20"></a>                <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb271-21"><a href="book_03_intermediate_1st_half.html#cb271-21"></a></span>
-<span id="cb271-22"><a href="book_03_intermediate_1st_half.html#cb271-22"></a>data_<span class="dv">2013</span> &lt;-<span class="st"> </span></span>
-<span id="cb271-23"><a href="book_03_intermediate_1st_half.html#cb271-23"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2013年1月時点.csv&quot;</span>),</span>
-<span id="cb271-24"><a href="book_03_intermediate_1st_half.html#cb271-24"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-25"><a href="book_03_intermediate_1st_half.html#cb271-25"></a>                <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb271-26"><a href="book_03_intermediate_1st_half.html#cb271-26"></a></span>
-<span id="cb271-27"><a href="book_03_intermediate_1st_half.html#cb271-27"></a>data_<span class="dv">2014</span> &lt;-<span class="st"> </span></span>
-<span id="cb271-28"><a href="book_03_intermediate_1st_half.html#cb271-28"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2014年1月時点.csv&quot;</span>),</span>
-<span id="cb271-29"><a href="book_03_intermediate_1st_half.html#cb271-29"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-30"><a href="book_03_intermediate_1st_half.html#cb271-30"></a>                <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb271-31"><a href="book_03_intermediate_1st_half.html#cb271-31"></a></span>
-<span id="cb271-32"><a href="book_03_intermediate_1st_half.html#cb271-32"></a>data_<span class="dv">2015</span> &lt;-<span class="st"> </span></span>
-<span id="cb271-33"><a href="book_03_intermediate_1st_half.html#cb271-33"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2015年1月時点.csv&quot;</span>),</span>
-<span id="cb271-34"><a href="book_03_intermediate_1st_half.html#cb271-34"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-35"><a href="book_03_intermediate_1st_half.html#cb271-35"></a>                <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb271-36"><a href="book_03_intermediate_1st_half.html#cb271-36"></a></span>
-<span id="cb271-37"><a href="book_03_intermediate_1st_half.html#cb271-37"></a>data_<span class="dv">2016</span> &lt;-<span class="st"> </span></span>
-<span id="cb271-38"><a href="book_03_intermediate_1st_half.html#cb271-38"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2016年1月時点.csv&quot;</span>),</span>
-<span id="cb271-39"><a href="book_03_intermediate_1st_half.html#cb271-39"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-40"><a href="book_03_intermediate_1st_half.html#cb271-40"></a>                <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb271-41"><a href="book_03_intermediate_1st_half.html#cb271-41"></a></span>
-<span id="cb271-42"><a href="book_03_intermediate_1st_half.html#cb271-42"></a>data_<span class="dv">2017</span> &lt;-</span>
-<span id="cb271-43"><a href="book_03_intermediate_1st_half.html#cb271-43"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2017年1月時点.csv&quot;</span>),</span>
-<span id="cb271-44"><a href="book_03_intermediate_1st_half.html#cb271-44"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-45"><a href="book_03_intermediate_1st_half.html#cb271-45"></a>                <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb271-46"><a href="book_03_intermediate_1st_half.html#cb271-46"></a></span>
-<span id="cb271-47"><a href="book_03_intermediate_1st_half.html#cb271-47"></a>data_<span class="dv">2018</span> &lt;-</span>
-<span id="cb271-48"><a href="book_03_intermediate_1st_half.html#cb271-48"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2018年1月時点.csv&quot;</span>),</span>
-<span id="cb271-49"><a href="book_03_intermediate_1st_half.html#cb271-49"></a>                <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb271-50"><a href="book_03_intermediate_1st_half.html#cb271-50"></a>                <span class="dt">col_types =</span> data_cols)</span></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="book_03_intermediate_1st_half.html#cb271-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 読み込むカラム型を決める</span></span>
+<span id="cb271-2"><a href="book_03_intermediate_1st_half.html#cb271-2" aria-hidden="true" tabindex="-1"></a>data_cols <span class="ot">&lt;-</span> <span class="fu">cols</span>(</span>
+<span id="cb271-3"><a href="book_03_intermediate_1st_half.html#cb271-3" aria-hidden="true" tabindex="-1"></a>  企業コード <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb271-4"><a href="book_03_intermediate_1st_half.html#cb271-4" aria-hidden="true" tabindex="-1"></a>  本社所在地市区郡 <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb271-5"><a href="book_03_intermediate_1st_half.html#cb271-5" aria-hidden="true" tabindex="-1"></a>  業種大分類 <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb271-6"><a href="book_03_intermediate_1st_half.html#cb271-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">資本金(千円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-7"><a href="book_03_intermediate_1st_half.html#cb271-7" aria-hidden="true" tabindex="-1"></a>  従業員数 <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-8"><a href="book_03_intermediate_1st_half.html#cb271-8" aria-hidden="true" tabindex="-1"></a>  最新期業績決算期年 <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-9"><a href="book_03_intermediate_1st_half.html#cb271-9" aria-hidden="true" tabindex="-1"></a>  最新期業績決算期月 <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-10"><a href="book_03_intermediate_1st_half.html#cb271-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-11"><a href="book_03_intermediate_1st_half.html#cb271-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-12"><a href="book_03_intermediate_1st_half.html#cb271-12" aria-hidden="true" tabindex="-1"></a>  創業年 <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb271-13"><a href="book_03_intermediate_1st_half.html#cb271-13" aria-hidden="true" tabindex="-1"></a>  設立年 <span class="ot">=</span> <span class="fu">col_double</span>()</span>
+<span id="cb271-14"><a href="book_03_intermediate_1st_half.html#cb271-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb271-15"><a href="book_03_intermediate_1st_half.html#cb271-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-16"><a href="book_03_intermediate_1st_half.html#cb271-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 2012年から2018年のデータを別々に読み込む</span></span>
+<span id="cb271-17"><a href="book_03_intermediate_1st_half.html#cb271-17" aria-hidden="true" tabindex="-1"></a>data_2012 <span class="ot">&lt;-</span></span>
+<span id="cb271-18"><a href="book_03_intermediate_1st_half.html#cb271-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2012年1月時点.csv&quot;</span>),</span>
+<span id="cb271-19"><a href="book_03_intermediate_1st_half.html#cb271-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-20"><a href="book_03_intermediate_1st_half.html#cb271-20" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span>
+<span id="cb271-21"><a href="book_03_intermediate_1st_half.html#cb271-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-22"><a href="book_03_intermediate_1st_half.html#cb271-22" aria-hidden="true" tabindex="-1"></a>data_2013 <span class="ot">&lt;-</span> </span>
+<span id="cb271-23"><a href="book_03_intermediate_1st_half.html#cb271-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2013年1月時点.csv&quot;</span>),</span>
+<span id="cb271-24"><a href="book_03_intermediate_1st_half.html#cb271-24" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-25"><a href="book_03_intermediate_1st_half.html#cb271-25" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span>
+<span id="cb271-26"><a href="book_03_intermediate_1st_half.html#cb271-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-27"><a href="book_03_intermediate_1st_half.html#cb271-27" aria-hidden="true" tabindex="-1"></a>data_2014 <span class="ot">&lt;-</span> </span>
+<span id="cb271-28"><a href="book_03_intermediate_1st_half.html#cb271-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2014年1月時点.csv&quot;</span>),</span>
+<span id="cb271-29"><a href="book_03_intermediate_1st_half.html#cb271-29" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-30"><a href="book_03_intermediate_1st_half.html#cb271-30" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span>
+<span id="cb271-31"><a href="book_03_intermediate_1st_half.html#cb271-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-32"><a href="book_03_intermediate_1st_half.html#cb271-32" aria-hidden="true" tabindex="-1"></a>data_2015 <span class="ot">&lt;-</span> </span>
+<span id="cb271-33"><a href="book_03_intermediate_1st_half.html#cb271-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2015年1月時点.csv&quot;</span>),</span>
+<span id="cb271-34"><a href="book_03_intermediate_1st_half.html#cb271-34" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-35"><a href="book_03_intermediate_1st_half.html#cb271-35" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span>
+<span id="cb271-36"><a href="book_03_intermediate_1st_half.html#cb271-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-37"><a href="book_03_intermediate_1st_half.html#cb271-37" aria-hidden="true" tabindex="-1"></a>data_2016 <span class="ot">&lt;-</span> </span>
+<span id="cb271-38"><a href="book_03_intermediate_1st_half.html#cb271-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2016年1月時点.csv&quot;</span>),</span>
+<span id="cb271-39"><a href="book_03_intermediate_1st_half.html#cb271-39" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-40"><a href="book_03_intermediate_1st_half.html#cb271-40" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span>
+<span id="cb271-41"><a href="book_03_intermediate_1st_half.html#cb271-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-42"><a href="book_03_intermediate_1st_half.html#cb271-42" aria-hidden="true" tabindex="-1"></a>data_2017 <span class="ot">&lt;-</span></span>
+<span id="cb271-43"><a href="book_03_intermediate_1st_half.html#cb271-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2017年1月時点.csv&quot;</span>),</span>
+<span id="cb271-44"><a href="book_03_intermediate_1st_half.html#cb271-44" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-45"><a href="book_03_intermediate_1st_half.html#cb271-45" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span>
+<span id="cb271-46"><a href="book_03_intermediate_1st_half.html#cb271-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb271-47"><a href="book_03_intermediate_1st_half.html#cb271-47" aria-hidden="true" tabindex="-1"></a>data_2018 <span class="ot">&lt;-</span></span>
+<span id="cb271-48"><a href="book_03_intermediate_1st_half.html#cb271-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2018年1月時点.csv&quot;</span>),</span>
+<span id="cb271-49"><a href="book_03_intermediate_1st_half.html#cb271-49" aria-hidden="true" tabindex="-1"></a>                <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb271-50"><a href="book_03_intermediate_1st_half.html#cb271-50" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> data_cols)</span></code></pre></div>
 <ul>
 <li>このコードでは、書くのが面倒・保守が面倒・変数が無駄に増えるなど、デメリットが多いです</li>
 </ul>
 </div>
 <div id="for文を使用する方法" class="section level3" number="4.1.3">
 <h3><span class="header-section-number">4.1.3</span> for文を使用する方法</h3>
-<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="book_03_intermediate_1st_half.html#cb272-1"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
-<span id="cb272-2"><a href="book_03_intermediate_1st_half.html#cb272-2"></a>                   <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>, <span class="st">&quot;年1月時点.csv&quot;</span>)</span>
-<span id="cb272-3"><a href="book_03_intermediate_1st_half.html#cb272-3"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb272-4"><a href="book_03_intermediate_1st_half.html#cb272-4"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
-<span id="cb272-5"><a href="book_03_intermediate_1st_half.html#cb272-5"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
-<span id="cb272-6"><a href="book_03_intermediate_1st_half.html#cb272-6"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb272-7"><a href="book_03_intermediate_1st_half.html#cb272-7"></a>              <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb272-8"><a href="book_03_intermediate_1st_half.html#cb272-8"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
-<span id="cb272-9"><a href="book_03_intermediate_1st_half.html#cb272-9"></a>}</span>
-<span id="cb272-10"><a href="book_03_intermediate_1st_half.html#cb272-10"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="book_03_intermediate_1st_half.html#cb272-1" aria-hidden="true" tabindex="-1"></a>file_vec <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
+<span id="cb272-2"><a href="book_03_intermediate_1st_half.html#cb272-2" aria-hidden="true" tabindex="-1"></a>                   <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>, <span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb272-3"><a href="book_03_intermediate_1st_half.html#cb272-3" aria-hidden="true" tabindex="-1"></a>data_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb272-4"><a href="book_03_intermediate_1st_half.html#cb272-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb272-5"><a href="book_03_intermediate_1st_half.html#cb272-5" aria-hidden="true" tabindex="-1"></a>  tmp_d <span class="ot">&lt;-</span>  <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(file),</span>
+<span id="cb272-6"><a href="book_03_intermediate_1st_half.html#cb272-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb272-7"><a href="book_03_intermediate_1st_half.html#cb272-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">col_types =</span> data_cols)</span>
+<span id="cb272-8"><a href="book_03_intermediate_1st_half.html#cb272-8" aria-hidden="true" tabindex="-1"></a>  data_list <span class="ot">&lt;-</span> <span class="fu">append</span>(data_list, <span class="fu">list</span>(tmp_d))</span>
+<span id="cb272-9"><a href="book_03_intermediate_1st_half.html#cb272-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb272-10"><a href="book_03_intermediate_1st_half.html#cb272-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data_list) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>)</span></code></pre></div>
 <ul>
 <li>for文とlistを使ったコードでは、書くのが楽・保守が楽・変数の節約などのメリットを享受できます</li>
 <li>上記コードのイメージが次頁にあります</li>
@@ -636,7 +637,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="for_image" class="section level3" number="4.1.4">
 <h3><span class="header-section-number">4.1.4</span> for文5ステップのイメージ</h3>
-<p><img src="pictures/intermediate/for_explain.png" /></p>
+<p><img src="../pictures/intermediate/for-explain.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="for文による繰り返し処理のススメ" class="section level3" number="4.1.5">
 <h3><span class="header-section-number">4.1.5</span> for文による繰り返し処理のススメ</h3>
@@ -675,18 +676,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="image_list" class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> listのイメージ</h3>
-<p><img src="pictures/intermediate/list_explain.png" /></p>
+<p><img src="../pictures/intermediate/list-explain.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="make_list" class="section level3" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> listの作成</h3>
 <ul>
 <li>listは通常のベクトルとは違い、ベクトルや文字列、データフレームなどを同時に要素に持つことができます</li>
 </ul>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="book_03_intermediate_1st_half.html#cb273-1"></a>tmp_vec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">8</span>), <span class="st">&quot;滋賀県&quot;</span>)</span>
-<span id="cb273-2"><a href="book_03_intermediate_1st_half.html#cb273-2"></a>tmp_vec</span></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="book_03_intermediate_1st_half.html#cb273-1" aria-hidden="true" tabindex="-1"></a>tmp_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">8</span>), <span class="st">&quot;滋賀県&quot;</span>)</span>
+<span id="cb273-2"><a href="book_03_intermediate_1st_half.html#cb273-2" aria-hidden="true" tabindex="-1"></a>tmp_vec</span></code></pre></div>
 <pre><code>[1] &quot;2&quot;      &quot;0&quot;      &quot;1&quot;      &quot;8&quot;      &quot;滋賀県&quot;</code></pre>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="book_03_intermediate_1st_half.html#cb275-1"></a>tmp_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">8</span>), <span class="st">&quot;滋賀県&quot;</span>)</span>
-<span id="cb275-2"><a href="book_03_intermediate_1st_half.html#cb275-2"></a>tmp_list</span></code></pre></div>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="book_03_intermediate_1st_half.html#cb275-1" aria-hidden="true" tabindex="-1"></a>tmp_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">8</span>), <span class="st">&quot;滋賀県&quot;</span>)</span>
+<span id="cb275-2"><a href="book_03_intermediate_1st_half.html#cb275-2" aria-hidden="true" tabindex="-1"></a>tmp_list</span></code></pre></div>
 <pre><code>[[1]]
 [1] 2 0 1 8
 
@@ -699,8 +700,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>append</strong>関数でlistに要素を追加できます</li>
 <li>第一引数に対象のlist、第二引数に追加要素を要求します</li>
 </ul>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="book_03_intermediate_1st_half.html#cb277-1"></a>tmp_d &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="st">&quot;企業コード&quot;</span> =<span class="st"> </span><span class="dv">101</span>, <span class="st">&quot;従業員数&quot;</span> =<span class="st"> </span><span class="dv">50</span>)</span>
-<span id="cb277-2"><a href="book_03_intermediate_1st_half.html#cb277-2"></a>tmp_list &lt;-<span class="st"> </span><span class="kw">append</span>(tmp_list, <span class="kw">list</span>(tmp_d))</span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="book_03_intermediate_1st_half.html#cb277-1" aria-hidden="true" tabindex="-1"></a>tmp_d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="st">&quot;企業コード&quot;</span> <span class="ot">=</span> <span class="dv">101</span>, <span class="st">&quot;従業員数&quot;</span> <span class="ot">=</span> <span class="dv">50</span>)</span>
+<span id="cb277-2"><a href="book_03_intermediate_1st_half.html#cb277-2" aria-hidden="true" tabindex="-1"></a>tmp_list <span class="ot">&lt;-</span> <span class="fu">append</span>(tmp_list, <span class="fu">list</span>(tmp_d))</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p>appendまえ</p>
@@ -735,7 +736,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="book_03_intermediate_1st_half.html#cb280-1"></a>tmp_list</span></code></pre></div>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="book_03_intermediate_1st_half.html#cb280-1" aria-hidden="true" tabindex="-1"></a>tmp_list</span></code></pre></div>
 <pre><code>[[1]]
 [1] 2 0 1 8
 
@@ -750,9 +751,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="book_03_intermediate_1st_half.html#cb282-1"></a>tmp_list[[<span class="dv">2</span>]] <span class="co"># 2つ目の要素</span></span></code></pre></div>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="book_03_intermediate_1st_half.html#cb282-1" aria-hidden="true" tabindex="-1"></a>tmp_list[[<span class="dv">2</span>]] <span class="co"># 2つ目の要素</span></span></code></pre></div>
 <pre><code>[1] &quot;滋賀県&quot;</code></pre>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="book_03_intermediate_1st_half.html#cb284-1"></a>tmp_list[<span class="dv">2</span>] <span class="co"># listをスライス</span></span></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="book_03_intermediate_1st_half.html#cb284-1" aria-hidden="true" tabindex="-1"></a>tmp_list[<span class="dv">2</span>] <span class="co"># listをスライス</span></span></code></pre></div>
 <pre><code>[[1]]
 [1] &quot;滋賀県&quot;</code></pre>
 </div>
@@ -760,7 +761,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="list_access_image" class="section level3" number="4.2.6">
 <h3><span class="header-section-number">4.2.6</span> listの要素アクセスイメージ</h3>
-<p><img src="pictures/intermediate/list_youso.png" /></p>
+<p><img src="../pictures/intermediate/list-youso.png" width="100%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>tmp_list[2]とスライスすると、“滋賀県”が一つ目の要素になるので、[[1]]“滋賀県”となってlistが返されます</li>
 </ul>
@@ -771,7 +772,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>listの要素名の参照・命名には<strong>names</strong>関数を使用します</li>
 <li>名前はlistと同じ長さのベクトルで与えます</li>
 </ul>
-<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="book_03_intermediate_1st_half.html#cb286-1"></a><span class="kw">names</span>(tmp_list) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;数列&quot;</span>, <span class="st">&quot;都道府県&quot;</span>, <span class="st">&quot;データ&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="book_03_intermediate_1st_half.html#cb286-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(tmp_list) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;数列&quot;</span>, <span class="st">&quot;都道府県&quot;</span>, <span class="st">&quot;データ&quot;</span>)</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p>命名まえ</p>
@@ -811,7 +812,7 @@ $データ
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="book_03_intermediate_1st_half.html#cb289-1"></a>tmp_list[[<span class="st">&quot;データ&quot;</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="book_03_intermediate_1st_half.html#cb289-1" aria-hidden="true" tabindex="-1"></a>tmp_list[[<span class="st">&quot;データ&quot;</span>]]</span></code></pre></div>
 <pre><code># A tibble: 1 x 2
   企業コード 従業員数
        &lt;dbl&gt;    &lt;dbl&gt;
@@ -822,12 +823,12 @@ $データ
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="book_03_intermediate_1st_half.html#cb291-1"></a>tmp_list<span class="op">$</span>データ</span></code></pre></div>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="book_03_intermediate_1st_half.html#cb291-1" aria-hidden="true" tabindex="-1"></a>tmp_list<span class="sc">$</span>データ</span></code></pre></div>
 <pre><code># A tibble: 1 x 2
   企業コード 従業員数
        &lt;dbl&gt;    &lt;dbl&gt;
 1        101       50</code></pre>
-<p><img src="pictures/intermediate/read_result.png" /></p>
+<p><img src="../pictures/intermediate/read-result.png" width="75%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </div>
@@ -844,18 +845,18 @@ $データ
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="book_03_intermediate_1st_half.html#cb293-1"></a><span class="kw">print</span>(<span class="dv">1</span>)</span>
-<span id="cb293-2"><a href="book_03_intermediate_1st_half.html#cb293-2"></a><span class="kw">print</span>(<span class="dv">2</span>)</span>
-<span id="cb293-3"><a href="book_03_intermediate_1st_half.html#cb293-3"></a><span class="kw">print</span>(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="book_03_intermediate_1st_half.html#cb293-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="dv">1</span>)</span>
+<span id="cb293-2"><a href="book_03_intermediate_1st_half.html#cb293-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="dv">2</span>)</span>
+<span id="cb293-3"><a href="book_03_intermediate_1st_half.html#cb293-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="dv">3</span>)</span></code></pre></div>
 <pre><code>[1] 1
 [1] 2
 [1] 3</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="book_03_intermediate_1st_half.html#cb295-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>){</span>
-<span id="cb295-2"><a href="book_03_intermediate_1st_half.html#cb295-2"></a>  <span class="kw">print</span>(i)</span>
-<span id="cb295-3"><a href="book_03_intermediate_1st_half.html#cb295-3"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="book_03_intermediate_1st_half.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb295-2"><a href="book_03_intermediate_1st_half.html#cb295-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb295-3"><a href="book_03_intermediate_1st_half.html#cb295-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>[1] 1
 [1] 2
 [1] 3</code></pre>
@@ -876,13 +877,13 @@ $データ
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><img src="pictures/intermediate/for_explain_2.png" /></p>
+<p><img src="../pictures/intermediate/for-explain-2.png" width="100%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="book_03_intermediate_1st_half.html#cb297-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>){</span>
-<span id="cb297-2"><a href="book_03_intermediate_1st_half.html#cb297-2"></a>  <span class="kw">print</span>(i)</span>
-<span id="cb297-3"><a href="book_03_intermediate_1st_half.html#cb297-3"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="book_03_intermediate_1st_half.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb297-2"><a href="book_03_intermediate_1st_half.html#cb297-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb297-3"><a href="book_03_intermediate_1st_half.html#cb297-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>[1] 1
 [1] 2
 [1] 3
@@ -898,9 +899,9 @@ $データ
 <li>単なる序数の場合などはiやnを使用することが多いです</li>
 <li>たとえば2012年から2018年までの各年での繰り返し処理を行いたいときは、変数名をyearとするといいでしょう</li>
 </ul>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="book_03_intermediate_1st_half.html#cb299-1"></a><span class="cf">for</span> (year <span class="cf">in</span> <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>){</span>
-<span id="cb299-2"><a href="book_03_intermediate_1st_half.html#cb299-2"></a>  <span class="kw">print</span>(<span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,year,<span class="st">&quot;年1月時点.csv&quot;</span>))</span>
-<span id="cb299-3"><a href="book_03_intermediate_1st_half.html#cb299-3"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="book_03_intermediate_1st_half.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (year <span class="cf">in</span> <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>){</span>
+<span id="cb299-2"><a href="book_03_intermediate_1st_half.html#cb299-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,year,<span class="st">&quot;年1月時点.csv&quot;</span>))</span>
+<span id="cb299-3"><a href="book_03_intermediate_1st_half.html#cb299-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>[1] &quot;input/企業概要データ_2012年1月時点.csv&quot;
 [1] &quot;input/企業概要データ_2013年1月時点.csv&quot;
 [1] &quot;input/企業概要データ_2014年1月時点.csv&quot;
@@ -914,13 +915,13 @@ $データ
 <ul>
 <li>以下のようにしてlistとfor文を共に使うことが多いです</li>
 </ul>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="book_03_intermediate_1st_half.html#cb301-1"></a>items &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ecnomics&quot;</span>, <span class="st">&quot;data science&quot;</span>) <span class="co"># ベクトルを作成</span></span>
-<span id="cb301-2"><a href="book_03_intermediate_1st_half.html#cb301-2"></a>my_list &lt;-<span class="st"> </span><span class="kw">list</span>()                      <span class="co"># 空のlistを作成</span></span>
-<span id="cb301-3"><a href="book_03_intermediate_1st_half.html#cb301-3"></a><span class="cf">for</span>(item <span class="cf">in</span> items){   </span>
-<span id="cb301-4"><a href="book_03_intermediate_1st_half.html#cb301-4"></a>  my_list &lt;-<span class="st"> </span><span class="kw">append</span>(my_list, <span class="kw">list</span>(item)) <span class="co"># 要素を追加</span></span>
-<span id="cb301-5"><a href="book_03_intermediate_1st_half.html#cb301-5"></a>}                     </span>
-<span id="cb301-6"><a href="book_03_intermediate_1st_half.html#cb301-6"></a><span class="kw">names</span>(my_list) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;経済&quot;</span>, <span class="st">&quot;データサイエンス&quot;</span>) <span class="co"># 要素に命名</span></span>
-<span id="cb301-7"><a href="book_03_intermediate_1st_half.html#cb301-7"></a>my_list</span></code></pre></div>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="book_03_intermediate_1st_half.html#cb301-1" aria-hidden="true" tabindex="-1"></a>items <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ecnomics&quot;</span>, <span class="st">&quot;data science&quot;</span>) <span class="co"># ベクトルを作成</span></span>
+<span id="cb301-2"><a href="book_03_intermediate_1st_half.html#cb301-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>()                      <span class="co"># 空のlistを作成</span></span>
+<span id="cb301-3"><a href="book_03_intermediate_1st_half.html#cb301-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(item <span class="cf">in</span> items){   </span>
+<span id="cb301-4"><a href="book_03_intermediate_1st_half.html#cb301-4" aria-hidden="true" tabindex="-1"></a>  my_list <span class="ot">&lt;-</span> <span class="fu">append</span>(my_list, <span class="fu">list</span>(item)) <span class="co"># 要素を追加</span></span>
+<span id="cb301-5"><a href="book_03_intermediate_1st_half.html#cb301-5" aria-hidden="true" tabindex="-1"></a>}                     </span>
+<span id="cb301-6"><a href="book_03_intermediate_1st_half.html#cb301-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(my_list) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;経済&quot;</span>, <span class="st">&quot;データサイエンス&quot;</span>) <span class="co"># 要素に命名</span></span>
+<span id="cb301-7"><a href="book_03_intermediate_1st_half.html#cb301-7" aria-hidden="true" tabindex="-1"></a>my_list</span></code></pre></div>
 <pre><code>$経済
 [1] &quot;ecnomics&quot;
 
@@ -936,7 +937,7 @@ $データサイエンス
 </ul>
 <div id="for_image_2" class="section level3" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> for文の5ステップのイメージ(再掲)</h3>
-<p><img src="pictures/intermediate/for_explain.png" /></p>
+<p><img src="../pictures/intermediate/for-explain.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>では5つのステップを順番に実装していきましょう。</p>
 </div>
 <div id="for_step1" class="section level3" number="4.4.2">
@@ -947,9 +948,9 @@ $データサイエンス
 <li>ベクトルを入れると同じ長さのベクトルで返されます</li>
 <li>このpathベクトルを繰り返し範囲としてfor文を使います</li>
 </ul>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="book_03_intermediate_1st_half.html#cb303-1"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
-<span id="cb303-2"><a href="book_03_intermediate_1st_half.html#cb303-2"></a>                   <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>, <span class="st">&quot;年1月時点.csv&quot;</span>)</span>
-<span id="cb303-3"><a href="book_03_intermediate_1st_half.html#cb303-3"></a>file_vec</span></code></pre></div>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="book_03_intermediate_1st_half.html#cb303-1" aria-hidden="true" tabindex="-1"></a>file_vec <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
+<span id="cb303-2"><a href="book_03_intermediate_1st_half.html#cb303-2" aria-hidden="true" tabindex="-1"></a>                   <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>, <span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb303-3"><a href="book_03_intermediate_1st_half.html#cb303-3" aria-hidden="true" tabindex="-1"></a>file_vec</span></code></pre></div>
 <pre><code>[1] &quot;input/企業概要データ_2012年1月時点.csv&quot;
 [2] &quot;input/企業概要データ_2013年1月時点.csv&quot;
 [3] &quot;input/企業概要データ_2014年1月時点.csv&quot;
@@ -964,8 +965,8 @@ $データサイエンス
 <li>つぎに、読み込んだデータを格納するための空の箱、すなわち空のリストを作成します</li>
 <li>空箱の名前はdata_listとします</li>
 </ul>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="book_03_intermediate_1st_half.html#cb305-1"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb305-2"><a href="book_03_intermediate_1st_half.html#cb305-2"></a>data_list</span></code></pre></div>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="book_03_intermediate_1st_half.html#cb305-1" aria-hidden="true" tabindex="-1"></a>data_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb305-2"><a href="book_03_intermediate_1st_half.html#cb305-2" aria-hidden="true" tabindex="-1"></a>data_list</span></code></pre></div>
 <pre><code>list()</code></pre>
 </div>
 <div id="for_step345" class="section level3" number="4.4.4">
@@ -980,32 +981,32 @@ $データサイエンス
 </ul></li>
 <li>for文終了後に、listの要素に名前をつけます</li>
 </ul>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="book_03_intermediate_1st_half.html#cb307-1"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
-<span id="cb307-2"><a href="book_03_intermediate_1st_half.html#cb307-2"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
-<span id="cb307-3"><a href="book_03_intermediate_1st_half.html#cb307-3"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb307-4"><a href="book_03_intermediate_1st_half.html#cb307-4"></a>              <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb307-5"><a href="book_03_intermediate_1st_half.html#cb307-5"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
-<span id="cb307-6"><a href="book_03_intermediate_1st_half.html#cb307-6"></a>}</span>
-<span id="cb307-7"><a href="book_03_intermediate_1st_half.html#cb307-7"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="book_03_intermediate_1st_half.html#cb307-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb307-2"><a href="book_03_intermediate_1st_half.html#cb307-2" aria-hidden="true" tabindex="-1"></a>  tmp_d <span class="ot">&lt;-</span>  <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(file),</span>
+<span id="cb307-3"><a href="book_03_intermediate_1st_half.html#cb307-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb307-4"><a href="book_03_intermediate_1st_half.html#cb307-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">col_types =</span> data_cols)</span>
+<span id="cb307-5"><a href="book_03_intermediate_1st_half.html#cb307-5" aria-hidden="true" tabindex="-1"></a>  data_list <span class="ot">&lt;-</span> <span class="fu">append</span>(data_list, <span class="fu">list</span>(tmp_d))</span>
+<span id="cb307-6"><a href="book_03_intermediate_1st_half.html#cb307-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb307-7"><a href="book_03_intermediate_1st_half.html#cb307-7" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data_list) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>)</span></code></pre></div>
 </div>
 <div id="for_matome" class="section level3" number="4.4.5">
 <h3><span class="header-section-number">4.4.5</span> 複数ファイル読み込みまとめ</h3>
-<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="book_03_intermediate_1st_half.html#cb308-1"></a><span class="co"># ステップ１：pathベクトルを作成する</span></span>
-<span id="cb308-2"><a href="book_03_intermediate_1st_half.html#cb308-2"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
-<span id="cb308-3"><a href="book_03_intermediate_1st_half.html#cb308-3"></a>                   <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>,<span class="st">&quot;年1月時点.csv&quot;</span>)</span>
-<span id="cb308-4"><a href="book_03_intermediate_1st_half.html#cb308-4"></a><span class="co"># ステップ２：空のlistを作る</span></span>
-<span id="cb308-5"><a href="book_03_intermediate_1st_half.html#cb308-5"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb308-6"><a href="book_03_intermediate_1st_half.html#cb308-6"></a></span>
-<span id="cb308-7"><a href="book_03_intermediate_1st_half.html#cb308-7"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
-<span id="cb308-8"><a href="book_03_intermediate_1st_half.html#cb308-8"></a><span class="co"># ステップ３：データを読み込む</span></span>
-<span id="cb308-9"><a href="book_03_intermediate_1st_half.html#cb308-9"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
-<span id="cb308-10"><a href="book_03_intermediate_1st_half.html#cb308-10"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb308-11"><a href="book_03_intermediate_1st_half.html#cb308-11"></a>              <span class="dt">col_types =</span> data_cols)</span>
-<span id="cb308-12"><a href="book_03_intermediate_1st_half.html#cb308-12"></a><span class="co"># ステップ４：データをlistに格納する</span></span>
-<span id="cb308-13"><a href="book_03_intermediate_1st_half.html#cb308-13"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
-<span id="cb308-14"><a href="book_03_intermediate_1st_half.html#cb308-14"></a>}</span>
-<span id="cb308-15"><a href="book_03_intermediate_1st_half.html#cb308-15"></a><span class="co"># ステップ５：listの要素に名前を付ける</span></span>
-<span id="cb308-16"><a href="book_03_intermediate_1st_half.html#cb308-16"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="book_03_intermediate_1st_half.html#cb308-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ステップ１：pathベクトルを作成する</span></span>
+<span id="cb308-2"><a href="book_03_intermediate_1st_half.html#cb308-2" aria-hidden="true" tabindex="-1"></a>file_vec <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>,</span>
+<span id="cb308-3"><a href="book_03_intermediate_1st_half.html#cb308-3" aria-hidden="true" tabindex="-1"></a>                   <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>,<span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb308-4"><a href="book_03_intermediate_1st_half.html#cb308-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ステップ２：空のlistを作る</span></span>
+<span id="cb308-5"><a href="book_03_intermediate_1st_half.html#cb308-5" aria-hidden="true" tabindex="-1"></a>data_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb308-6"><a href="book_03_intermediate_1st_half.html#cb308-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb308-7"><a href="book_03_intermediate_1st_half.html#cb308-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb308-8"><a href="book_03_intermediate_1st_half.html#cb308-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ステップ３：データを読み込む</span></span>
+<span id="cb308-9"><a href="book_03_intermediate_1st_half.html#cb308-9" aria-hidden="true" tabindex="-1"></a>  tmp_d <span class="ot">&lt;-</span>  <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(file),</span>
+<span id="cb308-10"><a href="book_03_intermediate_1st_half.html#cb308-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb308-11"><a href="book_03_intermediate_1st_half.html#cb308-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">col_types =</span> data_cols)</span>
+<span id="cb308-12"><a href="book_03_intermediate_1st_half.html#cb308-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ステップ４：データをlistに格納する</span></span>
+<span id="cb308-13"><a href="book_03_intermediate_1st_half.html#cb308-13" aria-hidden="true" tabindex="-1"></a>  data_list <span class="ot">&lt;-</span> <span class="fu">append</span>(data_list, <span class="fu">list</span>(tmp_d))</span>
+<span id="cb308-14"><a href="book_03_intermediate_1st_half.html#cb308-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb308-15"><a href="book_03_intermediate_1st_half.html#cb308-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ステップ５：listの要素に名前を付ける</span></span>
+<span id="cb308-16"><a href="book_03_intermediate_1st_half.html#cb308-16" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data_list) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>)</span></code></pre></div>
 </div>
 <div id="複数ファイルの一括読み込み結果" class="section level3" number="4.4.6">
 <h3><span class="header-section-number">4.4.6</span> 複数ファイルの一括読み込み結果</h3>
@@ -1014,7 +1015,7 @@ $データサイエンス
 <li>結果の確認にはglimpse関数やstr関数なども便利です</li>
 <li>listの要素に命名したので、下図のようにしてもdata_listに2012年から2018年までのデータが格納されていることが確認できます</li>
 </ul>
-<p><img src="pictures/intermediate/read_result.png" /></p>
+<p><img src="../pictures/intermediate/read-result.png" width="40%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="複数データの結合方法" class="section level2" number="4.5">
@@ -1031,13 +1032,13 @@ $データサイエンス
 <div class="column" style="width:48%;">
 <p><strong>bind_rows</strong>でタテに結合<br />
 （タテ持ちデータ）</p>
-<p><img src="pictures/intermediate/bind_ver.png" /></p>
+<p><img src="../pictures/intermediate/bind-ver.png" width="100%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <p><strong>joinでヨコに結合</strong><br />
 （ヨコ持ちデータ）</p>
-<p><img src="pictures/intermediate/join_ver.png" /></p>
+<p><img src="../pictures/intermediate/join-ver.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <ul>
@@ -1057,20 +1058,19 @@ $データサイエンス
 <li>企業コード, yearの順でソートして表示しています</li>
 </ul>
 <pre><code># A tibble: 14,972 x 12
-   企業コード  year 従業員数 本社所在地市区郡 業種大分類
-   &lt;chr&gt;      &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;     
- 1 B02111302   2012     1254 34208_広島県府中市~ F:製造業  
- 2 B02111302   2013      768 34208_広島県府中市~ F:製造業  
- 3 B02111302   2014     1242 34208_広島県府中市~ F:製造業  
- 4 B02111302   2015     1409 34208_広島県府中市~ F:製造業  
- 5 B02111302   2016      728 34208_広島県府中市~ F:製造業  
- 6 B02111302   2017     1401 34208_広島県府中市~ F:製造業  
- 7 B02111302   2018     1096 34208_広島県府中市~ F:製造業  
- 8 B02117802   2012       82 34207_広島県福山市~ G:卸売・小売業，~
- 9 B02117802   2013      376 34207_広島県福山市~ G:卸売・小売業，~
-10 B02117802   2014      374 34207_広島県福山市~ G:卸売・小売業，~
-# ... with 14,962 more rows, and 7 more variables:
-#   `資本金(千円)` &lt;dbl&gt;, 最新期業績決算期年 &lt;dbl&gt;,
+   企業コード  year 従業員数 本社所在地市区郡 業種大分類 `資本金(千円)`
+   &lt;chr&gt;      &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
+ 1 B02111302   2012     1254 34208_広島県府中市~ F:製造業         11722300
+ 2 B02111302   2013      768 34208_広島県府中市~ F:製造業          9907700
+ 3 B02111302   2014     1242 34208_広島県府中市~ F:製造業          6616800
+ 4 B02111302   2015     1409 34208_広島県府中市~ F:製造業          7218100
+ 5 B02111302   2016      728 34208_広島県府中市~ F:製造業         17733300
+ 6 B02111302   2017     1401 34208_広島県府中市~ F:製造業          7440100
+ 7 B02111302   2018     1096 34208_広島県府中市~ F:製造業          6818500
+ 8 B02117802   2012       82 34207_広島県福山市~ G:卸売・小売業，~        3556300
+ 9 B02117802   2013      376 34207_広島県福山市~ G:卸売・小売業，~        1777200
+10 B02117802   2014      374 34207_広島県福山市~ G:卸売・小売業，~        3568300
+# ... with 14,962 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
 #   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
 </div>
@@ -1080,7 +1080,7 @@ $データサイエンス
 <li>for文とmutateを使って、data_listの全てのデータにyearカラムを作成する</li>
 <li>bind_rowsを使って、data_listのデータをタテ結合する</li>
 </ol>
-<p><img src="pictures/intermediate/bind_ver.png" width="60%"></p>
+<p><img src="../pictures/intermediate/bind-ver.png" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="make_yearcol" class="section level3" number="4.6.3">
 <h3><span class="header-section-number">4.6.3</span> 1. yearカラムの作成</h3>
@@ -1089,8 +1089,8 @@ $データサイエンス
 <div class="columns">
 <div class="column" style="width:48%;">
 <p>data_listの要素名</p>
-<pre><code>[1] &quot;data_2012&quot; &quot;data_2013&quot; &quot;data_2014&quot; &quot;data_2015&quot; &quot;data_2016&quot;
-[6] &quot;data_2017&quot; &quot;data_2018&quot;</code></pre>
+<pre><code>[1] &quot;data_2012&quot; &quot;data_2013&quot; &quot;data_2014&quot; &quot;data_2015&quot; &quot;data_2016&quot; &quot;data_2017&quot;
+[7] &quot;data_2018&quot;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
@@ -1109,26 +1109,25 @@ $データサイエンス
 <li>まずは2012年のデータのみで実装してみましょう</li>
 <li>コードの汎用性を高めるために、yearカラムの値はdata_listの要素名からとってきます</li>
 </ul>
-<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="book_03_intermediate_1st_half.html#cb312-1"></a>data_year &lt;-<span class="st"> </span><span class="kw">names</span>(data_list)[<span class="dv">1</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
-<span id="cb312-2"><a href="book_03_intermediate_1st_half.html#cb312-2"></a>data_list[[<span class="st">&quot;data_2012&quot;</span>]] &lt;-</span>
-<span id="cb312-3"><a href="book_03_intermediate_1st_half.html#cb312-3"></a><span class="st">  </span>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">year =</span> data_year) </span>
-<span id="cb312-4"><a href="book_03_intermediate_1st_half.html#cb312-4"></a>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(year) <span class="co"># データ確認</span></span></code></pre></div>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="book_03_intermediate_1st_half.html#cb312-1" aria-hidden="true" tabindex="-1"></a>data_year <span class="ot">&lt;-</span> <span class="fu">names</span>(data_list)[<span class="dv">1</span>] <span class="sc">%&gt;%</span> <span class="fu">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb312-2"><a href="book_03_intermediate_1st_half.html#cb312-2" aria-hidden="true" tabindex="-1"></a>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="ot">&lt;-</span></span>
+<span id="cb312-3"><a href="book_03_intermediate_1st_half.html#cb312-3" aria-hidden="true" tabindex="-1"></a>  data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">year =</span> data_year) </span>
+<span id="cb312-4"><a href="book_03_intermediate_1st_half.html#cb312-4" aria-hidden="true" tabindex="-1"></a>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(year) <span class="co"># データ確認</span></span></code></pre></div>
 <pre><code># A tibble: 2,176 x 12
-   year  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
-   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
- 1 2012  G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~        1419800
- 2 2012  G92155065  13113_東京都渋谷区~ H:金融・保険業~        8462000
- 3 2012  G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~         370700
- 4 2012  G92190707  01101_北海道札幌市中央区~ G:卸売・小売業，~         639200
- 5 2012  G92515950  01105_北海道札幌市豊平区~ F:製造業          1958700
- 6 2012  G92508571  27128_大阪府大阪市中央区~ F:製造業         30041600
- 7 2012  G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~       83595900
- 8 2012  G92552130  01104_北海道札幌市白石区~ E:建設業          2577500
- 9 2012  G92557890  01110_北海道札幌市清田区~ F:製造業          4217000
-10 2012  G92556303  01101_北海道札幌市中央区~ K:電気・ガス・水~        3913100
-# ... with 2,166 more rows, and 7 more variables: 従業員数 &lt;dbl&gt;,
-#   最新期業績決算期年 &lt;dbl&gt;, 最新期業績決算期月 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
+   year  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 2012  G92155635  01103_北海道札幌市東区~ G:卸売・小売業，~        1419800      197
+ 2 2012  G92155065  13113_東京都渋谷区~ H:金融・保険業~        8462000     1418
+ 3 2012  G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，~         370700      535
+ 4 2012  G92190707  01101_北海道札幌市中央区~ G:卸売・小売業，~         639200      694
+ 5 2012  G92515950  01105_北海道札幌市豊平区~ F:製造業          1958700      840
+ 6 2012  G92508571  27128_大阪府大阪市中央区~ F:製造業         30041600     1436
+ 7 2012  G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水~       83595900     2814
+ 8 2012  G92552130  01104_北海道札幌市白石区~ E:建設業          2577500     2145
+ 9 2012  G92557890  01110_北海道札幌市清田区~ F:製造業          4217000      461
+10 2012  G92556303  01101_北海道札幌市中央区~ K:電気・ガス・水~        3913100      769
+# ... with 2,166 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
+#   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
 <hr />
 <p><strong>yearカラムの作成実装（すべて）</strong></p>
@@ -1141,11 +1140,11 @@ $データサイエンス
 </ul></li>
 <li>前頁との違いは、for文と、要素名がdl_nameになっている部分のみです。結果は省略します</li>
 </ul>
-<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="book_03_intermediate_1st_half.html#cb314-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="kw">names</span>(data_list)){</span>
-<span id="cb314-2"><a href="book_03_intermediate_1st_half.html#cb314-2"></a>  data_year &lt;-<span class="st"> </span>dl_name <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
-<span id="cb314-3"><a href="book_03_intermediate_1st_half.html#cb314-3"></a>  data_list[[dl_name]] &lt;-</span>
-<span id="cb314-4"><a href="book_03_intermediate_1st_half.html#cb314-4"></a><span class="st">    </span>data_list[[dl_name]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">year =</span> data_year)</span>
-<span id="cb314-5"><a href="book_03_intermediate_1st_half.html#cb314-5"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="book_03_intermediate_1st_half.html#cb314-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="fu">names</span>(data_list)){</span>
+<span id="cb314-2"><a href="book_03_intermediate_1st_half.html#cb314-2" aria-hidden="true" tabindex="-1"></a>  data_year <span class="ot">&lt;-</span> dl_name <span class="sc">%&gt;%</span> <span class="fu">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb314-3"><a href="book_03_intermediate_1st_half.html#cb314-3" aria-hidden="true" tabindex="-1"></a>  data_list[[dl_name]] <span class="ot">&lt;-</span></span>
+<span id="cb314-4"><a href="book_03_intermediate_1st_half.html#cb314-4" aria-hidden="true" tabindex="-1"></a>    data_list[[dl_name]] <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">year =</span> data_year)</span>
+<span id="cb314-5"><a href="book_03_intermediate_1st_half.html#cb314-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="bind_tateketu" class="section level3" number="4.6.4">
 <h3><span class="header-section-number">4.6.4</span> 2. bind_rowsでタテ結合</h3>
@@ -1154,24 +1153,24 @@ $データサイエンス
 </li>
 <li>タテ結合したデータをlong_dataとします</li>
 </ul>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="book_03_intermediate_1st_half.html#cb315-1"></a>long_data &lt;-<span class="st"> </span>data_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">bind_rows</span>()</span>
-<span id="cb315-2"><a href="book_03_intermediate_1st_half.html#cb315-2"></a>long_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(year) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(企業コード, year)</span></code></pre></div>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="book_03_intermediate_1st_half.html#cb315-1" aria-hidden="true" tabindex="-1"></a>long_data <span class="ot">&lt;-</span> data_list <span class="sc">%&gt;%</span> <span class="fu">bind_rows</span>()</span>
+<span id="cb315-2"><a href="book_03_intermediate_1st_half.html#cb315-2" aria-hidden="true" tabindex="-1"></a>long_data <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(year) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(企業コード, year)</span></code></pre></div>
 <pre><code># A tibble: 14,972 x 12
-   year  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数 最新期業績決算期年~
-   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
- 1 2012  B02111302  34208_広島県府中市~ F:製造業         11722300     1254             2011
- 2 2013  B02111302  34208_広島県府中市~ F:製造業          9907700      768             2012
- 3 2014  B02111302  34208_広島県府中市~ F:製造業          6616800     1242             2013
- 4 2015  B02111302  34208_広島県府中市~ F:製造業          7218100     1409             2014
- 5 2016  B02111302  34208_広島県府中市~ F:製造業         17733300      728             2015
- 6 2017  B02111302  34208_広島県府中市~ F:製造業          7440100     1401             2016
- 7 2018  B02111302  34208_広島県府中市~ F:製造業          6818500     1096             2017
- 8 2012  B02117802  34207_広島県福山市~ G:卸売・小売業，~        3556300       82             2011
- 9 2013  B02117802  34207_広島県福山市~ G:卸売・小売業，~        1777200      376             2012
-10 2014  B02117802  34207_広島県福山市~ G:卸売・小売業，~        3568300      374             2013
-# ... with 14,962 more rows, and 5 more variables: 最新期業績決算期月 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;,
-#   設立年 &lt;dbl&gt;</code></pre>
+   year  企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 2012  B02111302  34208_広島県府中市~ F:製造業         11722300     1254
+ 2 2013  B02111302  34208_広島県府中市~ F:製造業          9907700      768
+ 3 2014  B02111302  34208_広島県府中市~ F:製造業          6616800     1242
+ 4 2015  B02111302  34208_広島県府中市~ F:製造業          7218100     1409
+ 5 2016  B02111302  34208_広島県府中市~ F:製造業         17733300      728
+ 6 2017  B02111302  34208_広島県府中市~ F:製造業          7440100     1401
+ 7 2018  B02111302  34208_広島県府中市~ F:製造業          6818500     1096
+ 8 2012  B02117802  34207_広島県福山市~ G:卸売・小売業，~        3556300       82
+ 9 2013  B02117802  34207_広島県福山市~ G:卸売・小売業，~        1777200      376
+10 2014  B02117802  34207_広島県福山市~ G:卸売・小売業，~        3568300      374
+# ... with 14,962 more rows, and 6 more variables: 最新期業績決算期年 &lt;dbl&gt;,
+#   最新期業績決算期月 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
+#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 創業年 &lt;dbl&gt;, 設立年 &lt;dbl&gt;</code></pre>
 </div>
 <div id="tateketugou_hosoku" class="section level3" number="4.6.5">
 <h3><span class="header-section-number">4.6.5</span> 補足</h3>
@@ -1193,7 +1192,7 @@ $データサイエンス
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="book_03_intermediate_1st_half.html#cb319-1"></a><span class="kw">bind_rows</span>(d1, d2)</span></code></pre></div>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="book_03_intermediate_1st_half.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(d1, d2)</span></code></pre></div>
 <pre><code># A tibble: 2 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1207,17 +1206,17 @@ $データサイエンス
 <ul>
 <li>今回のケースでは、データ読み込みの時点で個々のデータにyear情報を付与すると、より効率的になります</li>
 </ul>
-<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="book_03_intermediate_1st_half.html#cb321-1"></a>file_vec &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>,<span class="st">&quot;年1月時点.csv&quot;</span>)</span>
-<span id="cb321-2"><a href="book_03_intermediate_1st_half.html#cb321-2"></a>data_list &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb321-3"><a href="book_03_intermediate_1st_half.html#cb321-3"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
-<span id="cb321-4"><a href="book_03_intermediate_1st_half.html#cb321-4"></a>  tmp_d &lt;-<span class="st">  </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(file),</span>
-<span id="cb321-5"><a href="book_03_intermediate_1st_half.html#cb321-5"></a>              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb321-6"><a href="book_03_intermediate_1st_half.html#cb321-6"></a>              <span class="dt">col_types =</span> data_cols) </span>
-<span id="cb321-7"><a href="book_03_intermediate_1st_half.html#cb321-7"></a>  tmp_d &lt;-<span class="st"> </span>tmp_d <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># ここで読み込んだデータにyear付与</span></span>
-<span id="cb321-8"><a href="book_03_intermediate_1st_half.html#cb321-8"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">substr</span>(file, <span class="dv">15</span>, <span class="dv">18</span>))</span>
-<span id="cb321-9"><a href="book_03_intermediate_1st_half.html#cb321-9"></a>  data_list &lt;-<span class="st"> </span><span class="kw">append</span>(data_list, <span class="kw">list</span>(tmp_d))</span>
-<span id="cb321-10"><a href="book_03_intermediate_1st_half.html#cb321-10"></a>}</span>
-<span id="cb321-11"><a href="book_03_intermediate_1st_half.html#cb321-11"></a><span class="kw">names</span>(data_list) &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="op">:</span><span class="dv">2018</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="book_03_intermediate_1st_half.html#cb321-1" aria-hidden="true" tabindex="-1"></a>file_vec <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;input/企業概要データ_&quot;</span>, <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>,<span class="st">&quot;年1月時点.csv&quot;</span>)</span>
+<span id="cb321-2"><a href="book_03_intermediate_1st_half.html#cb321-2" aria-hidden="true" tabindex="-1"></a>data_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb321-3"><a href="book_03_intermediate_1st_half.html#cb321-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> file_vec){</span>
+<span id="cb321-4"><a href="book_03_intermediate_1st_half.html#cb321-4" aria-hidden="true" tabindex="-1"></a>  tmp_d <span class="ot">&lt;-</span>  <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(file),</span>
+<span id="cb321-5"><a href="book_03_intermediate_1st_half.html#cb321-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb321-6"><a href="book_03_intermediate_1st_half.html#cb321-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">col_types =</span> data_cols) </span>
+<span id="cb321-7"><a href="book_03_intermediate_1st_half.html#cb321-7" aria-hidden="true" tabindex="-1"></a>  tmp_d <span class="ot">&lt;-</span> tmp_d <span class="sc">%&gt;%</span> <span class="co"># ここで読み込んだデータにyear付与</span></span>
+<span id="cb321-8"><a href="book_03_intermediate_1st_half.html#cb321-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">substr</span>(file, <span class="dv">15</span>, <span class="dv">18</span>))</span>
+<span id="cb321-9"><a href="book_03_intermediate_1st_half.html#cb321-9" aria-hidden="true" tabindex="-1"></a>  data_list <span class="ot">&lt;-</span> <span class="fu">append</span>(data_list, <span class="fu">list</span>(tmp_d))</span>
+<span id="cb321-10"><a href="book_03_intermediate_1st_half.html#cb321-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb321-11"><a href="book_03_intermediate_1st_half.html#cb321-11" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data_list) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;data_&quot;</span>, <span class="dv">2012</span><span class="sc">:</span><span class="dv">2018</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="複数データのヨコ結合" class="section level2" number="4.7">
@@ -1251,13 +1250,12 @@ $データサイエンス
 #   `最新期業績税引後利益(千円)_2015` &lt;dbl&gt;, `最新期業績税引後利益(千円)_2016` &lt;dbl&gt;, `最新期業績税引後利益(千円)_2017` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2018` &lt;dbl&gt;, `最新期業績売上高(百万円)_2012` &lt;dbl&gt;, `最新期業績売上高(百万円)_2013` &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2014` &lt;dbl&gt;, `最新期業績売上高(百万円)_2015` &lt;dbl&gt;, `最新期業績売上高(百万円)_2016` &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)_2017` &lt;dbl&gt;, `最新期業績売上高(百万円)_2018` &lt;dbl&gt;, `資本金(千円)_2012` &lt;dbl&gt;,
-#   `資本金(千円)_2013` &lt;dbl&gt;, `資本金(千円)_2014` &lt;dbl&gt;, `資本金(千円)_2015` &lt;dbl&gt;, `資本金(千円)_2016` &lt;dbl&gt;,
-#   `資本金(千円)_2017` &lt;dbl&gt;, `資本金(千円)_2018` &lt;dbl&gt;, 従業員数_2012 &lt;dbl&gt;, 従業員数_2013 &lt;dbl&gt;, 従業員数_2014 &lt;dbl&gt;,
-#   従業員数_2015 &lt;dbl&gt;, 従業員数_2016 &lt;dbl&gt;, 従業員数_2017 &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;, 設立年_2012 &lt;dbl&gt;, 設立年_2013 &lt;dbl&gt;,
-#   設立年_2014 &lt;dbl&gt;, 設立年_2015 &lt;dbl&gt;, 設立年_2016 &lt;dbl&gt;, 設立年_2017 &lt;dbl&gt;, 設立年_2018 &lt;dbl&gt;, 創業年_2012 &lt;dbl&gt;,
-#   創業年_2013 &lt;dbl&gt;, 創業年_2014 &lt;dbl&gt;, 創業年_2015 &lt;dbl&gt;, 創業年_2016 &lt;dbl&gt;, 創業年_2017 &lt;dbl&gt;, 創業年_2018 &lt;dbl&gt;,
-#   本社所在地市区郡_2012 &lt;chr&gt;, 本社所在地市区郡_2013 &lt;chr&gt;, 本社所在地市区郡_2014 &lt;chr&gt;, 本社所在地市区郡_2015 &lt;chr&gt;,
+#   `最新期業績売上高(百万円)_2017` &lt;dbl&gt;, `最新期業績売上高(百万円)_2018` &lt;dbl&gt;, `資本金(千円)_2012` &lt;dbl&gt;, `資本金(千円)_2013` &lt;dbl&gt;,
+#   `資本金(千円)_2014` &lt;dbl&gt;, `資本金(千円)_2015` &lt;dbl&gt;, `資本金(千円)_2016` &lt;dbl&gt;, `資本金(千円)_2017` &lt;dbl&gt;, `資本金(千円)_2018` &lt;dbl&gt;,
+#   従業員数_2012 &lt;dbl&gt;, 従業員数_2013 &lt;dbl&gt;, 従業員数_2014 &lt;dbl&gt;, 従業員数_2015 &lt;dbl&gt;, 従業員数_2016 &lt;dbl&gt;, 従業員数_2017 &lt;dbl&gt;,
+#   従業員数_2018 &lt;dbl&gt;, 設立年_2012 &lt;dbl&gt;, 設立年_2013 &lt;dbl&gt;, 設立年_2014 &lt;dbl&gt;, 設立年_2015 &lt;dbl&gt;, 設立年_2016 &lt;dbl&gt;, 設立年_2017 &lt;dbl&gt;,
+#   設立年_2018 &lt;dbl&gt;, 創業年_2012 &lt;dbl&gt;, 創業年_2013 &lt;dbl&gt;, 創業年_2014 &lt;dbl&gt;, 創業年_2015 &lt;dbl&gt;, 創業年_2016 &lt;dbl&gt;, 創業年_2017 &lt;dbl&gt;,
+#   創業年_2018 &lt;dbl&gt;, 本社所在地市区郡_2012 &lt;chr&gt;, 本社所在地市区郡_2013 &lt;chr&gt;, 本社所在地市区郡_2014 &lt;chr&gt;, 本社所在地市区郡_2015 &lt;chr&gt;,
 #   本社所在地市区郡_2016 &lt;chr&gt;, 本社所在地市区郡_2017 &lt;chr&gt;, 本社所在地市区郡_2018 &lt;chr&gt;</code></pre>
 </div>
 <div id="ヨコ結合の手順" class="section level3" number="4.7.2">
@@ -1266,7 +1264,7 @@ $データサイエンス
 <li>for文とrename_withを使って、data_listの各データのカラム名を適当に変更する</li>
 <li>for文と*_joinを使って、data_listの全てのデータをヨコ結合する</li>
 </ol>
-<p><img src="pictures/intermediate/join_ver.png" width="60%"></p>
+<p><img src="../pictures/intermediate/join-ver.png" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="rename_with" class="section level3" number="4.7.3">
 <h3><span class="header-section-number">4.7.3</span> 1. rename_withでカラム名の変更</h3>
@@ -1275,121 +1273,81 @@ $データサイエンス
 <li>企業コードはjoinのキーなので変更しません</li>
 <li>例としてdata_2012のカラム名を一括変更します</li>
 </ul>
-<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="book_03_intermediate_1st_half.html#cb323-1"></a>data_list<span class="op">$</span>data_<span class="dv">2012</span> <span class="op">%&gt;%</span></span>
-<span id="cb323-2"><a href="book_03_intermediate_1st_half.html#cb323-2"></a><span class="st">  </span><span class="kw">rename_with</span>(<span class="dt">.fn =</span> paste0,         <span class="co"># renameに使用する関数</span></span>
-<span id="cb323-3"><a href="book_03_intermediate_1st_half.html#cb323-3"></a>              <span class="dt">.cols =</span> <span class="op">-</span>企業コード,  <span class="co"># 対称のカラムを指定</span></span>
-<span id="cb323-4"><a href="book_03_intermediate_1st_half.html#cb323-4"></a>              <span class="st">&quot;_&quot;</span>, <span class="st">&quot;2012&quot;</span>) <span class="op">%&gt;%</span><span class="st">      </span><span class="co"># 上記関数の引数</span></span>
-<span id="cb323-5"><a href="book_03_intermediate_1st_half.html#cb323-5"></a><span class="st">  </span><span class="kw">colnames</span>()</span></code></pre></div>
-<pre><code> [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2012&quot;          
- [3] &quot;業種大分類_2012&quot;                
- [4] &quot;資本金(千円)_2012&quot;              
- [5] &quot;従業員数_2012&quot;                  
- [6] &quot;最新期業績決算期年_2012&quot;        
- [7] &quot;最新期業績決算期月_2012&quot;        
- [8] &quot;最新期業績売上高(百万円)_2012&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2012&quot;
-[10] &quot;創業年_2012&quot;                    
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="book_03_intermediate_1st_half.html#cb323-1" aria-hidden="true" tabindex="-1"></a>data_list<span class="sc">$</span>data_2012 <span class="sc">%&gt;%</span></span>
+<span id="cb323-2"><a href="book_03_intermediate_1st_half.html#cb323-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(<span class="at">.fn =</span> paste0,         <span class="co"># renameに使用する関数</span></span>
+<span id="cb323-3"><a href="book_03_intermediate_1st_half.html#cb323-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">.cols =</span> <span class="sc">-</span>企業コード,  <span class="co"># 対称のカラムを指定</span></span>
+<span id="cb323-4"><a href="book_03_intermediate_1st_half.html#cb323-4" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;_&quot;</span>, <span class="st">&quot;2012&quot;</span>) <span class="sc">%&gt;%</span>      <span class="co"># 上記関数の引数</span></span>
+<span id="cb323-5"><a href="book_03_intermediate_1st_half.html#cb323-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>()</span></code></pre></div>
+<pre><code> [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2012&quot;          
+ [3] &quot;業種大分類_2012&quot;                 &quot;資本金(千円)_2012&quot;              
+ [5] &quot;従業員数_2012&quot;                   &quot;最新期業績決算期年_2012&quot;        
+ [7] &quot;最新期業績決算期月_2012&quot;         &quot;最新期業績売上高(百万円)_2012&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2012&quot; &quot;創業年_2012&quot;                    
 [11] &quot;設立年_2012&quot;                    </code></pre>
 <hr />
 <ul>
 <li>ではfor文とrename_withを使って、data_listの各データの変数名を一括変更しましょう</li>
 </ul>
-<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="book_03_intermediate_1st_half.html#cb325-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="kw">names</span>(data_list)) {</span>
-<span id="cb325-2"><a href="book_03_intermediate_1st_half.html#cb325-2"></a>  data_year &lt;-<span class="st"> </span>dl_name <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
-<span id="cb325-3"><a href="book_03_intermediate_1st_half.html#cb325-3"></a>  data_list[[dl_name]] &lt;-<span class="st"> </span>data_list[[dl_name]] <span class="op">%&gt;%</span></span>
-<span id="cb325-4"><a href="book_03_intermediate_1st_half.html#cb325-4"></a><span class="st">    </span><span class="kw">rename_with</span>(paste0, <span class="op">-</span>企業コード, <span class="st">&quot;_&quot;</span>, data_year)</span>
-<span id="cb325-5"><a href="book_03_intermediate_1st_half.html#cb325-5"></a>}</span>
-<span id="cb325-6"><a href="book_03_intermediate_1st_half.html#cb325-6"></a>data_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(colnames) <span class="co"># map関数の説明は後ほど</span></span></code></pre></div>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="book_03_intermediate_1st_half.html#cb325-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="fu">names</span>(data_list)) {</span>
+<span id="cb325-2"><a href="book_03_intermediate_1st_half.html#cb325-2" aria-hidden="true" tabindex="-1"></a>  data_year <span class="ot">&lt;-</span> dl_name <span class="sc">%&gt;%</span> <span class="fu">substr</span>(<span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb325-3"><a href="book_03_intermediate_1st_half.html#cb325-3" aria-hidden="true" tabindex="-1"></a>  data_list[[dl_name]] <span class="ot">&lt;-</span> data_list[[dl_name]] <span class="sc">%&gt;%</span></span>
+<span id="cb325-4"><a href="book_03_intermediate_1st_half.html#cb325-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename_with</span>(paste0, <span class="sc">-</span>企業コード, <span class="st">&quot;_&quot;</span>, data_year)</span>
+<span id="cb325-5"><a href="book_03_intermediate_1st_half.html#cb325-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb325-6"><a href="book_03_intermediate_1st_half.html#cb325-6" aria-hidden="true" tabindex="-1"></a>data_list <span class="sc">%&gt;%</span> <span class="fu">map</span>(colnames) <span class="co"># map関数の説明は後ほど</span></span></code></pre></div>
 <pre><code>$data_2012
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2012&quot;          
- [3] &quot;業種大分類_2012&quot;                
- [4] &quot;資本金(千円)_2012&quot;              
- [5] &quot;従業員数_2012&quot;                  
- [6] &quot;最新期業績決算期年_2012&quot;        
- [7] &quot;最新期業績決算期月_2012&quot;        
- [8] &quot;最新期業績売上高(百万円)_2012&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2012&quot;
-[10] &quot;創業年_2012&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2012&quot;          
+ [3] &quot;業種大分類_2012&quot;                 &quot;資本金(千円)_2012&quot;              
+ [5] &quot;従業員数_2012&quot;                   &quot;最新期業績決算期年_2012&quot;        
+ [7] &quot;最新期業績決算期月_2012&quot;         &quot;最新期業績売上高(百万円)_2012&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2012&quot; &quot;創業年_2012&quot;                    
 [11] &quot;設立年_2012&quot;                    
 
 $data_2013
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2013&quot;          
- [3] &quot;業種大分類_2013&quot;                
- [4] &quot;資本金(千円)_2013&quot;              
- [5] &quot;従業員数_2013&quot;                  
- [6] &quot;最新期業績決算期年_2013&quot;        
- [7] &quot;最新期業績決算期月_2013&quot;        
- [8] &quot;最新期業績売上高(百万円)_2013&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2013&quot;
-[10] &quot;創業年_2013&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2013&quot;          
+ [3] &quot;業種大分類_2013&quot;                 &quot;資本金(千円)_2013&quot;              
+ [5] &quot;従業員数_2013&quot;                   &quot;最新期業績決算期年_2013&quot;        
+ [7] &quot;最新期業績決算期月_2013&quot;         &quot;最新期業績売上高(百万円)_2013&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2013&quot; &quot;創業年_2013&quot;                    
 [11] &quot;設立年_2013&quot;                    
 
 $data_2014
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2014&quot;          
- [3] &quot;業種大分類_2014&quot;                
- [4] &quot;資本金(千円)_2014&quot;              
- [5] &quot;従業員数_2014&quot;                  
- [6] &quot;最新期業績決算期年_2014&quot;        
- [7] &quot;最新期業績決算期月_2014&quot;        
- [8] &quot;最新期業績売上高(百万円)_2014&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2014&quot;
-[10] &quot;創業年_2014&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2014&quot;          
+ [3] &quot;業種大分類_2014&quot;                 &quot;資本金(千円)_2014&quot;              
+ [5] &quot;従業員数_2014&quot;                   &quot;最新期業績決算期年_2014&quot;        
+ [7] &quot;最新期業績決算期月_2014&quot;         &quot;最新期業績売上高(百万円)_2014&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2014&quot; &quot;創業年_2014&quot;                    
 [11] &quot;設立年_2014&quot;                    
 
 $data_2015
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2015&quot;          
- [3] &quot;業種大分類_2015&quot;                
- [4] &quot;資本金(千円)_2015&quot;              
- [5] &quot;従業員数_2015&quot;                  
- [6] &quot;最新期業績決算期年_2015&quot;        
- [7] &quot;最新期業績決算期月_2015&quot;        
- [8] &quot;最新期業績売上高(百万円)_2015&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2015&quot;
-[10] &quot;創業年_2015&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2015&quot;          
+ [3] &quot;業種大分類_2015&quot;                 &quot;資本金(千円)_2015&quot;              
+ [5] &quot;従業員数_2015&quot;                   &quot;最新期業績決算期年_2015&quot;        
+ [7] &quot;最新期業績決算期月_2015&quot;         &quot;最新期業績売上高(百万円)_2015&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2015&quot; &quot;創業年_2015&quot;                    
 [11] &quot;設立年_2015&quot;                    
 
 $data_2016
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2016&quot;          
- [3] &quot;業種大分類_2016&quot;                
- [4] &quot;資本金(千円)_2016&quot;              
- [5] &quot;従業員数_2016&quot;                  
- [6] &quot;最新期業績決算期年_2016&quot;        
- [7] &quot;最新期業績決算期月_2016&quot;        
- [8] &quot;最新期業績売上高(百万円)_2016&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2016&quot;
-[10] &quot;創業年_2016&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2016&quot;          
+ [3] &quot;業種大分類_2016&quot;                 &quot;資本金(千円)_2016&quot;              
+ [5] &quot;従業員数_2016&quot;                   &quot;最新期業績決算期年_2016&quot;        
+ [7] &quot;最新期業績決算期月_2016&quot;         &quot;最新期業績売上高(百万円)_2016&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2016&quot; &quot;創業年_2016&quot;                    
 [11] &quot;設立年_2016&quot;                    
 
 $data_2017
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2017&quot;          
- [3] &quot;業種大分類_2017&quot;                
- [4] &quot;資本金(千円)_2017&quot;              
- [5] &quot;従業員数_2017&quot;                  
- [6] &quot;最新期業績決算期年_2017&quot;        
- [7] &quot;最新期業績決算期月_2017&quot;        
- [8] &quot;最新期業績売上高(百万円)_2017&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2017&quot;
-[10] &quot;創業年_2017&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2017&quot;          
+ [3] &quot;業種大分類_2017&quot;                 &quot;資本金(千円)_2017&quot;              
+ [5] &quot;従業員数_2017&quot;                   &quot;最新期業績決算期年_2017&quot;        
+ [7] &quot;最新期業績決算期月_2017&quot;         &quot;最新期業績売上高(百万円)_2017&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2017&quot; &quot;創業年_2017&quot;                    
 [11] &quot;設立年_2017&quot;                    
 
 $data_2018
- [1] &quot;企業コード&quot;                     
- [2] &quot;本社所在地市区郡_2018&quot;          
- [3] &quot;業種大分類_2018&quot;                
- [4] &quot;資本金(千円)_2018&quot;              
- [5] &quot;従業員数_2018&quot;                  
- [6] &quot;最新期業績決算期年_2018&quot;        
- [7] &quot;最新期業績決算期月_2018&quot;        
- [8] &quot;最新期業績売上高(百万円)_2018&quot;  
- [9] &quot;最新期業績税引後利益(千円)_2018&quot;
-[10] &quot;創業年_2018&quot;                    
+ [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2018&quot;          
+ [3] &quot;業種大分類_2018&quot;                 &quot;資本金(千円)_2018&quot;              
+ [5] &quot;従業員数_2018&quot;                   &quot;最新期業績決算期年_2018&quot;        
+ [7] &quot;最新期業績決算期月_2018&quot;         &quot;最新期業績売上高(百万円)_2018&quot;  
+ [9] &quot;最新期業績税引後利益(千円)_2018&quot; &quot;創業年_2018&quot;                    
 [11] &quot;設立年_2018&quot;                    </code></pre>
 </div>
 <div id="leftjoin_yokoketugo" class="section level3" number="4.7.4">
@@ -1398,7 +1356,7 @@ $data_2018
 <li>for文を用い、data_2012の企業コードをおおもとのキーとして、すべてのデータを企業コードでleft_joinします</li>
 <li>最初はdata_2012自身とleft_joinし、次に2013, 2014,…,2018とleft_joinしていきます</li>
 </ul>
-<p><img src="pictures/intermediate/join_alldata_1.png" /></p>
+<p><img src="../pictures/intermediate/join-alldata-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <hr />
 <p><strong>注意点</strong></p>
 <ul>
@@ -1408,67 +1366,60 @@ $data_2018
 <li>2012年の企業コードが無い年ではデータが欠損(<strong>NA</strong>)となる</li>
 </ul></li>
 </ul>
-<p><img src="pictures/intermediate/join_alldata_2.png" /></p>
+<p><img src="../pictures/intermediate/join-alldata-2.png" width="100%" style="display: block; margin: auto;" /></p>
 <hr />
 <p><strong>実装と確認</strong></p>
-<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="book_03_intermediate_1st_half.html#cb327-1"></a>wide_data &lt;-<span class="st"> </span>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(企業コード)</span>
-<span id="cb327-2"><a href="book_03_intermediate_1st_half.html#cb327-2"></a><span class="cf">for</span> (data <span class="cf">in</span> data_list) {</span>
-<span id="cb327-3"><a href="book_03_intermediate_1st_half.html#cb327-3"></a>  wide_data &lt;-<span class="st"> </span>wide_data <span class="op">%&gt;%</span></span>
-<span id="cb327-4"><a href="book_03_intermediate_1st_half.html#cb327-4"></a><span class="st">    </span><span class="kw">left_join</span>(data, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb327-5"><a href="book_03_intermediate_1st_half.html#cb327-5"></a>}</span>
-<span id="cb327-6"><a href="book_03_intermediate_1st_half.html#cb327-6"></a>wide_data</span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="book_03_intermediate_1st_half.html#cb327-1" aria-hidden="true" tabindex="-1"></a>wide_data <span class="ot">&lt;-</span> data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="sc">%&gt;%</span> <span class="fu">select</span>(企業コード)</span>
+<span id="cb327-2"><a href="book_03_intermediate_1st_half.html#cb327-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (data <span class="cf">in</span> data_list) {</span>
+<span id="cb327-3"><a href="book_03_intermediate_1st_half.html#cb327-3" aria-hidden="true" tabindex="-1"></a>  wide_data <span class="ot">&lt;-</span> wide_data <span class="sc">%&gt;%</span></span>
+<span id="cb327-4"><a href="book_03_intermediate_1st_half.html#cb327-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(data, <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb327-5"><a href="book_03_intermediate_1st_half.html#cb327-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb327-6"><a href="book_03_intermediate_1st_half.html#cb327-6" aria-hidden="true" tabindex="-1"></a>wide_data</span></code></pre></div>
 <pre><code># A tibble: 2,176 x 71
-   企業コード 本社所在地市区郡_2012~ 業種大分類_2012 `資本金(千円)_2012`~
-   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;                      &lt;dbl&gt;
- 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，飲食~          1419800
- 2 G92155065  13113_東京都渋谷区~ H:金融・保険業           8462000
- 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，飲食~           370700
- 4 G92190707  01101_北海道札幌市中央区~ G:卸売・小売業，飲食~           639200
- 5 G92515950  01105_北海道札幌市豊平区~ F:製造業                 1958700
- 6 G92508571  27128_大阪府大阪市中央区~ F:製造業                30041600
- 7 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水道・~         83595900
- 8 G92552130  01104_北海道札幌市白石区~ E:建設業                 2577500
- 9 G92557890  01110_北海道札幌市清田区~ F:製造業                 4217000
-10 G92556303  01101_北海道札幌市中央区~ K:電気・ガス・水道・~          3913100
-# ... with 2,166 more rows, and 67 more variables:
-#   従業員数_2012 &lt;dbl&gt;, 最新期業績決算期年_2012 &lt;dbl&gt;,
-#   最新期業績決算期月_2012 &lt;dbl&gt;,
+   企業コード 本社所在地市区郡_2012~ 業種大分類_2012 `資本金(千円)_2012`~ 従業員数_2012
+   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;                      &lt;dbl&gt;         &lt;dbl&gt;
+ 1 G92155635  01103_北海道札幌市東区~ G:卸売・小売業，飲食~          1419800           197
+ 2 G92155065  13113_東京都渋谷区~ H:金融・保険業           8462000          1418
+ 3 G92143569  01104_北海道札幌市白石区~ G:卸売・小売業，飲食~           370700           535
+ 4 G92190707  01101_北海道札幌市中央区~ G:卸売・小売業，飲食~           639200           694
+ 5 G92515950  01105_北海道札幌市豊平区~ F:製造業                 1958700           840
+ 6 G92508571  27128_大阪府大阪市中央区~ F:製造業                30041600          1436
+ 7 G92559088  01101_北海道札幌市中央区~ K:電気・ガス・水道・~         83595900          2814
+ 8 G92552130  01104_北海道札幌市白石区~ E:建設業                 2577500          2145
+ 9 G92557890  01110_北海道札幌市清田区~ F:製造業                 4217000           461
+10 G92556303  01101_北海道札幌市中央区~ K:電気・ガス・水道・~          3913100           769
+# ... with 2,166 more rows, and 66 more variables:
+#   最新期業績決算期年_2012 &lt;dbl&gt;, 最新期業績決算期月_2012 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2012` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2012` &lt;dbl&gt;, 創業年_2012 &lt;dbl&gt;,
-#   設立年_2012 &lt;dbl&gt;, 本社所在地市区郡_2013 &lt;chr&gt;,
-#   業種大分類_2013 &lt;chr&gt;, `資本金(千円)_2013` &lt;dbl&gt;,
-#   従業員数_2013 &lt;dbl&gt;, 最新期業績決算期年_2013 &lt;dbl&gt;,
-#   最新期業績決算期月_2013 &lt;dbl&gt;,
+#   設立年_2012 &lt;dbl&gt;, 本社所在地市区郡_2013 &lt;chr&gt;, 業種大分類_2013 &lt;chr&gt;,
+#   `資本金(千円)_2013` &lt;dbl&gt;, 従業員数_2013 &lt;dbl&gt;,
+#   最新期業績決算期年_2013 &lt;dbl&gt;, 最新期業績決算期月_2013 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2013` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2013` &lt;dbl&gt;, 創業年_2013 &lt;dbl&gt;,
-#   設立年_2013 &lt;dbl&gt;, 本社所在地市区郡_2014 &lt;chr&gt;,
-#   業種大分類_2014 &lt;chr&gt;, `資本金(千円)_2014` &lt;dbl&gt;,
-#   従業員数_2014 &lt;dbl&gt;, 最新期業績決算期年_2014 &lt;dbl&gt;,
-#   最新期業績決算期月_2014 &lt;dbl&gt;,
+#   設立年_2013 &lt;dbl&gt;, 本社所在地市区郡_2014 &lt;chr&gt;, 業種大分類_2014 &lt;chr&gt;,
+#   `資本金(千円)_2014` &lt;dbl&gt;, 従業員数_2014 &lt;dbl&gt;,
+#   最新期業績決算期年_2014 &lt;dbl&gt;, 最新期業績決算期月_2014 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2014` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2014` &lt;dbl&gt;, 創業年_2014 &lt;dbl&gt;,
-#   設立年_2014 &lt;dbl&gt;, 本社所在地市区郡_2015 &lt;chr&gt;,
-#   業種大分類_2015 &lt;chr&gt;, `資本金(千円)_2015` &lt;dbl&gt;,
-#   従業員数_2015 &lt;dbl&gt;, 最新期業績決算期年_2015 &lt;dbl&gt;,
-#   最新期業績決算期月_2015 &lt;dbl&gt;,
+#   設立年_2014 &lt;dbl&gt;, 本社所在地市区郡_2015 &lt;chr&gt;, 業種大分類_2015 &lt;chr&gt;,
+#   `資本金(千円)_2015` &lt;dbl&gt;, 従業員数_2015 &lt;dbl&gt;,
+#   最新期業績決算期年_2015 &lt;dbl&gt;, 最新期業績決算期月_2015 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2015` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2015` &lt;dbl&gt;, 創業年_2015 &lt;dbl&gt;,
-#   設立年_2015 &lt;dbl&gt;, 本社所在地市区郡_2016 &lt;chr&gt;,
-#   業種大分類_2016 &lt;chr&gt;, `資本金(千円)_2016` &lt;dbl&gt;,
-#   従業員数_2016 &lt;dbl&gt;, 最新期業績決算期年_2016 &lt;dbl&gt;,
-#   最新期業績決算期月_2016 &lt;dbl&gt;,
+#   設立年_2015 &lt;dbl&gt;, 本社所在地市区郡_2016 &lt;chr&gt;, 業種大分類_2016 &lt;chr&gt;,
+#   `資本金(千円)_2016` &lt;dbl&gt;, 従業員数_2016 &lt;dbl&gt;,
+#   最新期業績決算期年_2016 &lt;dbl&gt;, 最新期業績決算期月_2016 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2016` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2016` &lt;dbl&gt;, 創業年_2016 &lt;dbl&gt;,
-#   設立年_2016 &lt;dbl&gt;, 本社所在地市区郡_2017 &lt;chr&gt;,
-#   業種大分類_2017 &lt;chr&gt;, `資本金(千円)_2017` &lt;dbl&gt;,
-#   従業員数_2017 &lt;dbl&gt;, 最新期業績決算期年_2017 &lt;dbl&gt;,
-#   最新期業績決算期月_2017 &lt;dbl&gt;,
+#   設立年_2016 &lt;dbl&gt;, 本社所在地市区郡_2017 &lt;chr&gt;, 業種大分類_2017 &lt;chr&gt;,
+#   `資本金(千円)_2017` &lt;dbl&gt;, 従業員数_2017 &lt;dbl&gt;,
+#   最新期業績決算期年_2017 &lt;dbl&gt;, 最新期業績決算期月_2017 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2017` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2017` &lt;dbl&gt;, 創業年_2017 &lt;dbl&gt;,
-#   設立年_2017 &lt;dbl&gt;, 本社所在地市区郡_2018 &lt;chr&gt;,
-#   業種大分類_2018 &lt;chr&gt;, `資本金(千円)_2018` &lt;dbl&gt;,
-#   従業員数_2018 &lt;dbl&gt;, 最新期業績決算期年_2018 &lt;dbl&gt;,
-#   最新期業績決算期月_2018 &lt;dbl&gt;,
+#   設立年_2017 &lt;dbl&gt;, 本社所在地市区郡_2018 &lt;chr&gt;, 業種大分類_2018 &lt;chr&gt;,
+#   `資本金(千円)_2018` &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;,
+#   最新期業績決算期年_2018 &lt;dbl&gt;, 最新期業績決算期月_2018 &lt;dbl&gt;,
 #   `最新期業績売上高(百万円)_2018` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)_2018` &lt;dbl&gt;, 創業年_2018 &lt;dbl&gt;,
 #   設立年_2018 &lt;dbl&gt;</code></pre>
@@ -1477,15 +1428,15 @@ $data_2018
 <ul>
 <li>必要なデータが決まっている場合は、以下のようにして結合する変数を選択してjoinをすると建設的です</li>
 </ul>
-<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="book_03_intermediate_1st_half.html#cb329-1"></a>wide_emp &lt;-<span class="st"> </span>data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(企業コード)</span>
-<span id="cb329-2"><a href="book_03_intermediate_1st_half.html#cb329-2"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="kw">names</span>(data_list)) {</span>
-<span id="cb329-3"><a href="book_03_intermediate_1st_half.html#cb329-3"></a>  wide_emp &lt;-<span class="st"> </span>wide_emp <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb329-4"><a href="book_03_intermediate_1st_half.html#cb329-4"></a><span class="st">    </span><span class="kw">left_join</span>(</span>
-<span id="cb329-5"><a href="book_03_intermediate_1st_half.html#cb329-5"></a>      data_list[[dl_name]] <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># containsは後ほど解説</span></span>
-<span id="cb329-6"><a href="book_03_intermediate_1st_half.html#cb329-6"></a><span class="st">        </span><span class="kw">select</span>(企業コード, <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)),</span>
-<span id="cb329-7"><a href="book_03_intermediate_1st_half.html#cb329-7"></a>      <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb329-8"><a href="book_03_intermediate_1st_half.html#cb329-8"></a>}</span>
-<span id="cb329-9"><a href="book_03_intermediate_1st_half.html#cb329-9"></a>wide_emp</span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="book_03_intermediate_1st_half.html#cb329-1" aria-hidden="true" tabindex="-1"></a>wide_emp <span class="ot">&lt;-</span> data_list[[<span class="st">&quot;data_2012&quot;</span>]] <span class="sc">%&gt;%</span> <span class="fu">select</span>(企業コード)</span>
+<span id="cb329-2"><a href="book_03_intermediate_1st_half.html#cb329-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (dl_name <span class="cf">in</span> <span class="fu">names</span>(data_list)) {</span>
+<span id="cb329-3"><a href="book_03_intermediate_1st_half.html#cb329-3" aria-hidden="true" tabindex="-1"></a>  wide_emp <span class="ot">&lt;-</span> wide_emp <span class="sc">%&gt;%</span> </span>
+<span id="cb329-4"><a href="book_03_intermediate_1st_half.html#cb329-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(</span>
+<span id="cb329-5"><a href="book_03_intermediate_1st_half.html#cb329-5" aria-hidden="true" tabindex="-1"></a>      data_list[[dl_name]] <span class="sc">%&gt;%</span> <span class="co"># containsは後ほど解説</span></span>
+<span id="cb329-6"><a href="book_03_intermediate_1st_half.html#cb329-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(企業コード, <span class="fu">contains</span>(<span class="st">&quot;従業員数&quot;</span>)),</span>
+<span id="cb329-7"><a href="book_03_intermediate_1st_half.html#cb329-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb329-8"><a href="book_03_intermediate_1st_half.html#cb329-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb329-9"><a href="book_03_intermediate_1st_half.html#cb329-9" aria-hidden="true" tabindex="-1"></a>wide_emp</span></code></pre></div>
 <pre><code># A tibble: 2,176 x 8
    企業コード 従業員数_2012 従業員数_2013 従業員数_2014 従業員数_2015
    &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;
@@ -1499,17 +1450,17 @@ $data_2018
  8 G92552130           2145          2772          1568          1465
  9 G92557890            461           556           555           674
 10 G92556303            769           201           770           413
-# ... with 2,166 more rows, and 3 more variables:
-#   従業員数_2016 &lt;dbl&gt;, 従業員数_2017 &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;</code></pre>
+# ... with 2,166 more rows, and 3 more variables: 従業員数_2016 &lt;dbl&gt;,
+#   従業員数_2017 &lt;dbl&gt;, 従業員数_2018 &lt;dbl&gt;</code></pre>
 </div>
 <div id="yokoketugou_hosoku" class="section level3" number="4.7.5">
 <h3><span class="header-section-number">4.7.5</span> 補足</h3>
 <ul>
 <li>2012年のデータのレコード数と、すべてのデータをヨコ結合したデータのレコード数が同数であることが確認できます</li>
 </ul>
-<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="book_03_intermediate_1st_half.html#cb331-1"></a><span class="kw">nrow</span>(data_list[[<span class="st">&quot;data_2012&quot;</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="book_03_intermediate_1st_half.html#cb331-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(data_list[[<span class="st">&quot;data_2012&quot;</span>]])</span></code></pre></div>
 <pre><code>[1] 2176</code></pre>
-<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="book_03_intermediate_1st_half.html#cb333-1"></a><span class="kw">nrow</span>(wide_data)</span></code></pre></div>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="book_03_intermediate_1st_half.html#cb333-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(wide_data)</span></code></pre></div>
 <pre><code>[1] 2176</code></pre>
 </div>
 <div id="yokoketugou_sanko" class="section level3" number="4.7.6">
@@ -1518,9 +1469,9 @@ $data_2018
 <li>欠損値の可視化をする便利なパッケージもあります</li>
 <li>パッケージ名::関数()と書くことで、どのパッケージの関数を使うか明示することができます</li>
 </ul>
-<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb335-1"><a href="book_03_intermediate_1st_half.html#cb335-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(企業コード, <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb335-2"><a href="book_03_intermediate_1st_half.html#cb335-2"></a><span class="st">  </span>naniar<span class="op">::</span><span class="kw">vis_miss</span>()</span></code></pre></div>
-<p><img src="data_engineering_files/figure-html/sanko_kesson-1.png" width="672" /></p>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb335-1"><a href="book_03_intermediate_1st_half.html#cb335-1" aria-hidden="true" tabindex="-1"></a>wide_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(企業コード, <span class="fu">contains</span>(<span class="st">&quot;従業員数&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb335-2"><a href="book_03_intermediate_1st_half.html#cb335-2" aria-hidden="true" tabindex="-1"></a>  naniar<span class="sc">::</span><span class="fu">vis_miss</span>()</span></code></pre></div>
+<p><img src="data_engineering_files/figure-html/sanko_kesson-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="rest_intermediate" class="section level2" number="4.8">
@@ -1539,7 +1490,7 @@ $data_2018
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="book_03_intermediate_1st_half.html#cb336-1"></a><span class="dv">1</span><span class="op">:</span><span class="dv">3</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(log)</span></code></pre></div>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="book_03_intermediate_1st_half.html#cb336-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">%&gt;%</span> <span class="fu">map</span>(log)</span></code></pre></div>
 <pre><code>[[1]]
 [1] 0
 
@@ -1551,8 +1502,8 @@ $data_2018
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="book_03_intermediate_1st_half.html#cb338-1"></a><span class="kw">c</span>(<span class="st">&quot;東京都&quot;</span>,<span class="st">&quot;滋賀県&quot;</span>)<span class="op">%&gt;%</span></span>
-<span id="cb338-2"><a href="book_03_intermediate_1st_half.html#cb338-2"></a><span class="st">  </span><span class="kw">map</span>(substr, <span class="dv">1</span>, <span class="dv">2</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="book_03_intermediate_1st_half.html#cb338-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;東京都&quot;</span>,<span class="st">&quot;滋賀県&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb338-2"><a href="book_03_intermediate_1st_half.html#cb338-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(substr, <span class="dv">1</span>, <span class="dv">2</span>) </span></code></pre></div>
 <pre><code>[[1]]
 [1] &quot;東京&quot;
 
@@ -1564,7 +1515,7 @@ $data_2018
 <ul>
 <li>rename_withのところで使ったmapは、data_listの2012年から2018年の7つのデータに対して、colnames関数をかけた結果が、listとして返ってきていました</li>
 </ul>
-<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="book_03_intermediate_1st_half.html#cb340-1"></a>data_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(colnames)</span></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="book_03_intermediate_1st_half.html#cb340-1" aria-hidden="true" tabindex="-1"></a>data_list <span class="sc">%&gt;%</span> <span class="fu">map</span>(colnames)</span></code></pre></div>
 <pre><code>$data_2012
  [1] &quot;企業コード&quot;                      &quot;本社所在地市区郡_2012&quot;          
  [3] &quot;業種大分類_2012&quot;                 &quot;資本金(千円)_2012&quot;              
@@ -1642,8 +1593,8 @@ $data_2018
 </ul></li>
 <li>下記コードでは、「従業員数」という文字列を含むカラムと企業コードをselectしています</li>
 </ul>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="book_03_intermediate_1st_half.html#cb342-1"></a>wide_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb342-2"><a href="book_03_intermediate_1st_half.html#cb342-2"></a><span class="st">  </span><span class="kw">select</span>(企業コード, <span class="kw">contains</span>(<span class="st">&quot;従業員数&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="book_03_intermediate_1st_half.html#cb342-1" aria-hidden="true" tabindex="-1"></a>wide_data <span class="sc">%&gt;%</span> </span>
+<span id="cb342-2"><a href="book_03_intermediate_1st_half.html#cb342-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード, <span class="fu">contains</span>(<span class="st">&quot;従業員数&quot;</span>))</span></code></pre></div>
 
 </div>
 </div>

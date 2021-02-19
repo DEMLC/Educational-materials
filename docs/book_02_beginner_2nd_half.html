@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 初級編後半 | データエンジニアリング人材養成演習補助教材</title>
   <meta name="description" content="本ページは、滋賀大学の集中講義「データエンジニアリング人材養成演習」の補助教材です。" />
-  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 初級編後半 | データエンジニアリング人材養成演習補助教材" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="book_01_beginner_1st_half.html"/>
 <link rel="next" href="book_03_intermediate_1st_half.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,15 +50,15 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -118,6 +118,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -520,26 +521,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="sec_02" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> 初級編後半</h1>
-<div id="作業の確認" class="section level2 unnumbered" number="">
+<div id="作業の確認" class="section level2 unnumbered">
 <h2>作業の確認</h2>
-<div id="研磨ストーリー-1" class="section level3 unnumbered" number="">
+<div id="研磨ストーリー-1" class="section level3 unnumbered">
 <h3>研磨ストーリー</h3>
 <p>顧客から受領した企業リストに対して企業概要データを付与し、データの集計表や指標を算出して顧客へ渡します。</p>
-<p><img src="pictures/begginer/story.png" /></p>
+<p><img src="../pictures/begginer/story.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="作業イメージ-1" class="section level3 unnumbered" number="">
+<div id="作業イメージ-1" class="section level3 unnumbered">
 <h3>作業イメージ</h3>
 <p>添えてある数字が各ステップに対応しています。</p>
-<p><img src="pictures/begginer/story_image.png" /></p>
+<p><img src="../pictures/begginer/story-image-beg.png" width="65%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="前半の成果物" class="section level3 unnumbered" number="">
+<div id="前半の成果物" class="section level3 unnumbered">
 <h3>前半の成果物</h3>
 <p>企業コードをキーにしてdf_3_distinctとc2_201901_selectedを結合した<strong>data_1</strong>を作成しました。</p>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#firdlggkoy .gt_table {
+#htucorlpvv .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -564,7 +565,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_heading {
+#htucorlpvv .gt_heading {
   background-color: white;
   text-align: center;
   border-bottom-color: white;
@@ -576,7 +577,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_title {
+#htucorlpvv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -586,7 +587,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#firdlggkoy .gt_subtitle {
+#htucorlpvv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -596,13 +597,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#firdlggkoy .gt_bottom_border {
+#htucorlpvv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_col_headings {
+#htucorlpvv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -617,7 +618,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_col_heading {
+#htucorlpvv .gt_col_heading {
   color: #333333;
   background-color: white;
   font-size: 100%;
@@ -637,7 +638,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#firdlggkoy .gt_column_spanner_outer {
+#htucorlpvv .gt_column_spanner_outer {
   color: #333333;
   background-color: white;
   font-size: 100%;
@@ -649,15 +650,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#firdlggkoy .gt_column_spanner_outer:first-child {
+#htucorlpvv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#firdlggkoy .gt_column_spanner_outer:last-child {
+#htucorlpvv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#firdlggkoy .gt_column_spanner {
+#htucorlpvv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -669,7 +670,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#firdlggkoy .gt_group_heading {
+#htucorlpvv .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: white;
@@ -691,7 +692,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#firdlggkoy .gt_empty_group_heading {
+#htucorlpvv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: white;
@@ -706,15 +707,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#firdlggkoy .gt_from_md > :first-child {
+#htucorlpvv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#firdlggkoy .gt_from_md > :last-child {
+#htucorlpvv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#firdlggkoy .gt_row {
+#htucorlpvv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -733,7 +734,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#firdlggkoy .gt_stub {
+#htucorlpvv .gt_stub {
   color: #333333;
   background-color: white;
   font-size: 100%;
@@ -745,7 +746,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-left: 12px;
 }
 
-#firdlggkoy .gt_summary_row {
+#htucorlpvv .gt_summary_row {
   color: #333333;
   background-color: white;
   text-transform: inherit;
@@ -755,7 +756,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#firdlggkoy .gt_first_summary_row {
+#htucorlpvv .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -765,7 +766,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_grand_summary_row {
+#htucorlpvv .gt_grand_summary_row {
   color: #333333;
   background-color: white;
   text-transform: inherit;
@@ -775,7 +776,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#firdlggkoy .gt_first_grand_summary_row {
+#htucorlpvv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -785,11 +786,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_striped {
+#htucorlpvv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#firdlggkoy .gt_table_body {
+#htucorlpvv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -798,7 +799,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_footnotes {
+#htucorlpvv .gt_footnotes {
   color: #333333;
   background-color: white;
   border-bottom-style: none;
@@ -812,13 +813,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_footnote {
+#htucorlpvv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#firdlggkoy .gt_sourcenotes {
+#htucorlpvv .gt_sourcenotes {
   color: #333333;
   background-color: white;
   border-bottom-style: none;
@@ -832,46 +833,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#firdlggkoy .gt_sourcenote {
+#htucorlpvv .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#firdlggkoy .gt_left {
+#htucorlpvv .gt_left {
   text-align: left;
 }
 
-#firdlggkoy .gt_center {
+#htucorlpvv .gt_center {
   text-align: center;
 }
 
-#firdlggkoy .gt_right {
+#htucorlpvv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#firdlggkoy .gt_font_normal {
+#htucorlpvv .gt_font_normal {
   font-weight: normal;
 }
 
-#firdlggkoy .gt_font_bold {
+#htucorlpvv .gt_font_bold {
   font-weight: bold;
 }
 
-#firdlggkoy .gt_font_italic {
+#htucorlpvv .gt_font_italic {
   font-style: italic;
 }
 
-#firdlggkoy .gt_super {
+#htucorlpvv .gt_super {
   font-size: 65%;
 }
 
-#firdlggkoy .gt_footnote_marks {
+#htucorlpvv .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="firdlggkoy" style="overflow-x:auto;overflow-y:auto;width:auto;height:500px;"><table class="gt_table">
+<div id="htucorlpvv" style="overflow-x:auto;overflow-y:auto;width:auto;height:500px;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="7" class="gt_heading gt_title gt_font_normal" style>data_1</th>
@@ -1806,12 +1807,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="sagyou_step6" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> 作業内容</h3>
 <p><strong>mutate</strong>を使ったカラム操作方法を習得します。</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="book_02_beginner_2nd_half.html#cb157-1"></a><span class="kw">tibble</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb157-2"><a href="book_02_beginner_2nd_half.html#cb157-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">b =</span> a<span class="op">*</span><span class="dv">2</span>,       <span class="dt">c =</span> a<span class="op">+</span>b,</span>
-<span id="cb157-3"><a href="book_02_beginner_2nd_half.html#cb157-3"></a>         <span class="dt">d =</span> <span class="kw">log</span>(a),    <span class="dt">e =</span> <span class="kw">exp</span>(a),</span>
-<span id="cb157-4"><a href="book_02_beginner_2nd_half.html#cb157-4"></a>         <span class="dt">f =</span> <span class="kw">cumsum</span>(a), <span class="dt">g =</span> <span class="kw">na_if</span>(a, <span class="dv">2</span>),</span>
-<span id="cb157-5"><a href="book_02_beginner_2nd_half.html#cb157-5"></a>         <span class="dt">h =</span> <span class="kw">lead</span>(a),   <span class="dt">i =</span> <span class="kw">lag</span>(a)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb157-6"><a href="book_02_beginner_2nd_half.html#cb157-6"></a><span class="st">  </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="book_02_beginner_2nd_half.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb157-2"><a href="book_02_beginner_2nd_half.html#cb157-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">b =</span> a<span class="sc">*</span><span class="dv">2</span>,       <span class="at">c =</span> a<span class="sc">+</span>b,</span>
+<span id="cb157-3"><a href="book_02_beginner_2nd_half.html#cb157-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">d =</span> <span class="fu">log</span>(a),    <span class="at">e =</span> <span class="fu">exp</span>(a),</span>
+<span id="cb157-4"><a href="book_02_beginner_2nd_half.html#cb157-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">cumsum</span>(a), <span class="at">g =</span> <span class="fu">na_if</span>(a, <span class="dv">2</span>),</span>
+<span id="cb157-5"><a href="book_02_beginner_2nd_half.html#cb157-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">h =</span> <span class="fu">lead</span>(a),   <span class="at">i =</span> <span class="fu">lag</span>(a)) <span class="sc">%&gt;%</span> </span>
+<span id="cb157-6"><a href="book_02_beginner_2nd_half.html#cb157-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 3
 Columns: 9
 $ a &lt;int&gt; 1, 2, 3
@@ -1833,10 +1834,10 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p>元のデータ</p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="book_02_beginner_2nd_half.html#cb159-1"></a>d &lt;-<span class="st"> </span><span class="kw">tibble</span>(</span>
-<span id="cb159-2"><a href="book_02_beginner_2nd_half.html#cb159-2"></a>  <span class="dt">col_1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb159-3"><a href="book_02_beginner_2nd_half.html#cb159-3"></a>  )</span>
-<span id="cb159-4"><a href="book_02_beginner_2nd_half.html#cb159-4"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="book_02_beginner_2nd_half.html#cb159-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb159-2"><a href="book_02_beginner_2nd_half.html#cb159-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_1 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb159-3"><a href="book_02_beginner_2nd_half.html#cb159-3" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb159-4"><a href="book_02_beginner_2nd_half.html#cb159-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 1
   col_1
   &lt;dbl&gt;
@@ -1847,11 +1848,11 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 
 </div><div class="column" style="width:48%;">
 <p>データにカラムを追加</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="book_02_beginner_2nd_half.html#cb161-1"></a>vec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>) </span>
-<span id="cb161-2"><a href="book_02_beginner_2nd_half.html#cb161-2"></a>d<span class="op">$</span>col_<span class="dv">2</span> &lt;-<span class="st"> </span>vec <span class="co"># 普通のやり方</span></span>
-<span id="cb161-3"><a href="book_02_beginner_2nd_half.html#cb161-3"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st">     </span><span class="co"># dplyr</span></span>
-<span id="cb161-4"><a href="book_02_beginner_2nd_half.html#cb161-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">col_3 =</span> vec)</span>
-<span id="cb161-5"><a href="book_02_beginner_2nd_half.html#cb161-5"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="book_02_beginner_2nd_half.html#cb161-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>) </span>
+<span id="cb161-2"><a href="book_02_beginner_2nd_half.html#cb161-2" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>col_2 <span class="ot">&lt;-</span> vec <span class="co"># 普通のやり方</span></span>
+<span id="cb161-3"><a href="book_02_beginner_2nd_half.html#cb161-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span>     <span class="co"># dplyr</span></span>
+<span id="cb161-4"><a href="book_02_beginner_2nd_half.html#cb161-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">col_3 =</span> vec)</span>
+<span id="cb161-5"><a href="book_02_beginner_2nd_half.html#cb161-5" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1869,11 +1870,11 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p>既存カラムを操作して<strong>追加</strong></p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="book_02_beginner_2nd_half.html#cb163-1"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb163-2"><a href="book_02_beginner_2nd_half.html#cb163-2"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
-<span id="cb163-3"><a href="book_02_beginner_2nd_half.html#cb163-3"></a>    <span class="dt">col_4 =</span> col_<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>col_<span class="dv">2</span></span>
-<span id="cb163-4"><a href="book_02_beginner_2nd_half.html#cb163-4"></a>    )</span>
-<span id="cb163-5"><a href="book_02_beginner_2nd_half.html#cb163-5"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="book_02_beginner_2nd_half.html#cb163-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> </span>
+<span id="cb163-2"><a href="book_02_beginner_2nd_half.html#cb163-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb163-3"><a href="book_02_beginner_2nd_half.html#cb163-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_4 =</span> col_1 <span class="sc">+</span> col_2</span>
+<span id="cb163-4"><a href="book_02_beginner_2nd_half.html#cb163-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb163-5"><a href="book_02_beginner_2nd_half.html#cb163-5" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 4
   col_1 col_2 col_3 col_4
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1884,11 +1885,11 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 
 </div><div class="column" style="width:48%;">
 <p>既存カラムを操作し<strong>上書き</strong></p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="book_02_beginner_2nd_half.html#cb165-1"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb165-2"><a href="book_02_beginner_2nd_half.html#cb165-2"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
-<span id="cb165-3"><a href="book_02_beginner_2nd_half.html#cb165-3"></a>    <span class="dt">col_1 =</span> <span class="kw">log</span>(col_<span class="dv">1</span>),</span>
-<span id="cb165-4"><a href="book_02_beginner_2nd_half.html#cb165-4"></a>    <span class="dt">col_2 =</span> <span class="kw">exp</span>(col_<span class="dv">2</span>))</span>
-<span id="cb165-5"><a href="book_02_beginner_2nd_half.html#cb165-5"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="book_02_beginner_2nd_half.html#cb165-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> </span>
+<span id="cb165-2"><a href="book_02_beginner_2nd_half.html#cb165-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb165-3"><a href="book_02_beginner_2nd_half.html#cb165-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_1 =</span> <span class="fu">log</span>(col_1),</span>
+<span id="cb165-4"><a href="book_02_beginner_2nd_half.html#cb165-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_2 =</span> <span class="fu">exp</span>(col_2))</span>
+<span id="cb165-5"><a href="book_02_beginner_2nd_half.html#cb165-5" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 4
   col_1  col_2 col_3 col_4
   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1906,10 +1907,10 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <li>selectとheadは見やすさのために使用しています</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="book_02_beginner_2nd_half.html#cb167-1"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb167-2"><a href="book_02_beginner_2nd_half.html#cb167-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb167-3"><a href="book_02_beginner_2nd_half.html#cb167-3"></a><span class="st">  </span><span class="kw">mutate</span>(最新期売上高_千円=<span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span><span class="op">*</span><span class="dv">1000</span>)<span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb167-4"><a href="book_02_beginner_2nd_half.html#cb167-4"></a><span class="st">  </span><span class="kw">head</span>(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="book_02_beginner_2nd_half.html#cb167-1" aria-hidden="true" tabindex="-1"></a>data_1 <span class="sc">%&gt;%</span> </span>
+<span id="cb167-2"><a href="book_02_beginner_2nd_half.html#cb167-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb167-3"><a href="book_02_beginner_2nd_half.html#cb167-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(最新期売上高_千円<span class="ot">=</span><span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span><span class="sc">*</span><span class="dv">1000</span>)<span class="sc">%&gt;%</span> </span>
+<span id="cb167-4"><a href="book_02_beginner_2nd_half.html#cb167-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 2
   `最新期業績売上高(百万円)` 最新期売上高_千円
                        &lt;dbl&gt;             &lt;dbl&gt;
@@ -1925,9 +1926,9 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="book_02_beginner_2nd_half.html#cb169-1"></a>d &lt;-<span class="st"> </span><span class="kw">tibble</span>(</span>
-<span id="cb169-2"><a href="book_02_beginner_2nd_half.html#cb169-2"></a>  <span class="st">`</span><span class="dt">(col_1)</span><span class="st">`</span> =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
-<span id="cb169-3"><a href="book_02_beginner_2nd_half.html#cb169-3"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="book_02_beginner_2nd_half.html#cb169-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb169-2"><a href="book_02_beginner_2nd_half.html#cb169-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">(col_1)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb169-3"><a href="book_02_beginner_2nd_half.html#cb169-3" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 1
   `(col_1)`
       &lt;int&gt;
@@ -1937,9 +1938,9 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="book_02_beginner_2nd_half.html#cb171-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(</span>
-<span id="cb171-2"><a href="book_02_beginner_2nd_half.html#cb171-2"></a>  <span class="dt">col_2 =</span> <span class="st">`</span><span class="dt">(col_1)</span><span class="st">`</span><span class="op">*</span><span class="dv">10</span>,</span>
-<span id="cb171-3"><a href="book_02_beginner_2nd_half.html#cb171-3"></a>  <span class="dt">col_3 =</span> <span class="st">&quot;(col_1)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="book_02_beginner_2nd_half.html#cb171-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb171-2"><a href="book_02_beginner_2nd_half.html#cb171-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_2 =</span> <span class="st">`</span><span class="at">(col_1)</span><span class="st">`</span><span class="sc">*</span><span class="dv">10</span>,</span>
+<span id="cb171-3"><a href="book_02_beginner_2nd_half.html#cb171-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_3 =</span> <span class="st">&quot;(col_1)&quot;</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
   `(col_1)` col_2 col_3  
       &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;  
@@ -1965,33 +1966,32 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <li>したがって、まずは文字列の部分抽出方法を説明します</li>
 </ul>
 <pre><code># A tibble: 5 x 8
-  都道府県コード 本社所在地市区郡 企業コード 業種大分類
-  &lt;chr&gt;          &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;     
-1 13             13103_東京都港区 J31299770  I:不動産業
-2 27             27123_大阪府大阪市淀川区~ E32002046  L:サービス業~
-3 13             13103_東京都港区 D42585413  J:運輸・通信業~
-4 13             13101_東京都千代田区~ J39971897  L:サービス業~
-5 14             14102_神奈川県横浜市神奈~ J93122775  F:製造業  
-# ... with 4 more variables: `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+  都道府県コード 本社所在地市区郡 企業コード 業種大分類 `資本金(千円)`
+  &lt;chr&gt;          &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;
+1 13             13103_東京都港区 J31299770  I:不動産業         931300
+2 27             27123_大阪府大阪市淀川区~ E32002046  L:サービス業~        1098300
+3 13             13103_東京都港区 D42585413  J:運輸・通信業~        6120900
+4 13             13101_東京都千代田区~ J39971897  L:サービス業~       15432800
+5 14             14102_神奈川県横浜市神奈~ J93122775  F:製造業          9904900
+# ... with 3 more variables: 従業員数 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
 </div>
 <div id="substrで文字列の部分抽出" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> <strong>substr</strong>で文字列の部分抽出</h3>
 <ul>
 <li>substrは、文字列のi番目からj番目までを抽出することができる関数です</li>
 </ul>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="book_02_beginner_2nd_half.html#cb174-1"></a><span class="kw">substr</span>(<span class="st">&quot;文字列&quot;</span>, i, j)</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="book_02_beginner_2nd_half.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(<span class="st">&quot;文字列&quot;</span>, i, j)</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:46%;">
 <p>例１</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="book_02_beginner_2nd_half.html#cb175-1"></a><span class="kw">substr</span>(<span class="st">&quot;123456789&quot;</span>, <span class="dv">1</span>, <span class="dv">5</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="book_02_beginner_2nd_half.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(<span class="st">&quot;123456789&quot;</span>, <span class="dv">1</span>, <span class="dv">5</span>) </span></code></pre></div>
 <pre><code>[1] &quot;12345&quot;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:51%;">
 <p>例２</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="book_02_beginner_2nd_half.html#cb177-1"></a><span class="st">&quot;東京都豊島区&quot;</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">substr</span>(<span class="dv">4</span>,<span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="book_02_beginner_2nd_half.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;東京都豊島区&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">substr</span>(<span class="dv">4</span>,<span class="dv">6</span>)</span></code></pre></div>
 <pre><code>[1] &quot;豊島区&quot;</code></pre>
 </div>
 </div>
@@ -2004,26 +2004,24 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <li>都道府県コードは、本社所在地市区郡の頭2文字です</li>
 <li>カラムを追加したデータをdata_2とします</li>
 </ul>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="book_02_beginner_2nd_half.html#cb179-1"></a>data_<span class="dv">2</span> &lt;-<span class="st"> </span>data_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb179-2"><a href="book_02_beginner_2nd_half.html#cb179-2"></a><span class="st">  </span><span class="kw">mutate</span>(都道府県コード =<span class="st"> </span><span class="kw">substr</span>(本社所在地市区郡, <span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb179-3"><a href="book_02_beginner_2nd_half.html#cb179-3"></a>data_<span class="dv">2</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(都道府県コード, 本社所在地市区郡)</span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="book_02_beginner_2nd_half.html#cb179-1" aria-hidden="true" tabindex="-1"></a>data_2 <span class="ot">&lt;-</span> data_1 <span class="sc">%&gt;%</span> </span>
+<span id="cb179-2"><a href="book_02_beginner_2nd_half.html#cb179-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(都道府県コード <span class="ot">=</span> <span class="fu">substr</span>(本社所在地市区郡, <span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb179-3"><a href="book_02_beginner_2nd_half.html#cb179-3" aria-hidden="true" tabindex="-1"></a>data_2 <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(都道府県コード, 本社所在地市区郡)</span></code></pre></div>
 <pre><code># A tibble: 887 x 8
-   都道府県コード 本社所在地市区郡 企業コード 業種大分類
-   &lt;chr&gt;          &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;     
- 1 13             13103_東京都港区 J31299770  I:不動産業
- 2 27             27123_大阪府大阪市淀川区~ E32002046  L:サービス業~
- 3 13             13103_東京都港区 D42585413  J:運輸・通信業~
- 4 13             13101_東京都千代田区~ J39971897  L:サービス業~
- 5 14             14102_神奈川県横浜市神奈~ J93122775  F:製造業  
- 6 13             13111_東京都大田区~ J34719839  F:製造業  
- 7 23             23105_愛知県名古屋市中村~ L12571447  G:卸売・小売業，~
- 8 13             13103_東京都港区 D42395106  G:卸売・小売業，~
- 9 13             13103_東京都港区 J34594067  E:建設業  
-10 27             27126_大阪府大阪市平野区~ E32304350  F:製造業  
-# ... with 877 more rows, and 4 more variables:
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+   都道府県コード 本社所在地市区郡 企業コード 業種大分類 `資本金(千円)`
+   &lt;chr&gt;          &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;
+ 1 13             13103_東京都港区 J31299770  I:不動産業         931300
+ 2 27             27123_大阪府大阪市淀川区~ E32002046  L:サービス業~        1098300
+ 3 13             13103_東京都港区 D42585413  J:運輸・通信業~        6120900
+ 4 13             13101_東京都千代田区~ J39971897  L:サービス業~       15432800
+ 5 14             14102_神奈川県横浜市神奈~ J93122775  F:製造業          9904900
+ 6 13             13111_東京都大田区~ J34719839  F:製造業         27761400
+ 7 23             23105_愛知県名古屋市中村~ L12571447  G:卸売・小売業，~         131800
+ 8 13             13103_東京都港区 D42395106  G:卸売・小売業，~        1523000
+ 9 13             13103_東京都港区 J34594067  E:建設業          8297700
+10 27             27126_大阪府大阪市平野区~ E32304350  F:製造業           458000
+# ... with 877 more rows, and 3 more variables: 従業員数 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
 </div>
 </div>
 <div id="ステップ８マスタの結合" class="section level2" number="3.3">
@@ -2041,19 +2039,20 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <div class="column" style="width:48%;">
 <p><strong>data_2</strong></p>
 <pre><code># A tibble: 887 x 8
-   都道府県コード 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数 `最新期業績売上高(百万円)`~
-   &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
- 1 13             J31299770  13103_東京都港区 I:不動産業         931300       64             6555
- 2 27             E32002046  27123_大阪府大阪市淀川区~ L:サービス業~        1098300     1120              100
- 3 13             D42585413  13103_東京都港区 J:運輸・通信業~        6120900      216            31746
- 4 13             J39971897  13101_東京都千代田区~ L:サービス業~       15432800    31059           334093
- 5 14             J93122775  14102_神奈川県横浜市神奈~ F:製造業          9904900      314            69308
- 6 13             J34719839  13111_東京都大田区~ F:製造業         27761400     1167            54667
- 7 23             L12571447  23105_愛知県名古屋市中村~ G:卸売・小売業，~         131800      880           107643
- 8 13             D42395106  13103_東京都港区 G:卸売・小売業，~        1523000     1555            65714
- 9 13             J34594067  13103_東京都港区 E:建設業          8297700      452            63388
-10 27             E32304350  27126_大阪府大阪市平野区~ F:製造業           458000      801            40125
-# ... with 877 more rows, and 1 more variable: `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
+   都道府県コード 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
+   &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
+ 1 13             J31299770  13103_東京都港区 I:不動産業         931300
+ 2 27             E32002046  27123_大阪府大阪市淀川区~ L:サービス業~        1098300
+ 3 13             D42585413  13103_東京都港区 J:運輸・通信業~        6120900
+ 4 13             J39971897  13101_東京都千代田区~ L:サービス業~       15432800
+ 5 14             J93122775  14102_神奈川県横浜市神奈~ F:製造業          9904900
+ 6 13             J34719839  13111_東京都大田区~ F:製造業         27761400
+ 7 23             L12571447  23105_愛知県名古屋市中村~ G:卸売・小売業，~         131800
+ 8 13             D42395106  13103_東京都港区 G:卸売・小売業，~        1523000
+ 9 13             J34594067  13103_東京都港区 E:建設業          8297700
+10 27             E32304350  27126_大阪府大阪市平野区~ F:製造業           458000
+# ... with 877 more rows, and 3 more variables: 従業員数 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
@@ -2081,20 +2080,20 @@ $ i &lt;int&gt; NA, 1, 2</code></pre>
 <li>まずは都道府県マスタを読み込みます</li>
 <li>0落ちしないようにカラム型を文字列と指定します</li>
 </ul>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="book_02_beginner_2nd_half.html#cb183-1"></a>ken_mst &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">here</span>(<span class="st">&quot;input/都道府県マスタ.csv&quot;</span>),</span>
-<span id="cb183-2"><a href="book_02_beginner_2nd_half.html#cb183-2"></a>                    <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
-<span id="cb183-3"><a href="book_02_beginner_2nd_half.html#cb183-3"></a>                      <span class="st">&quot;都道府県CODE&quot;</span> =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb183-4"><a href="book_02_beginner_2nd_half.html#cb183-4"></a>                      <span class="st">&quot;都道府県名&quot;</span>   =<span class="st"> </span><span class="kw">col_character</span>()),</span>
-<span id="cb183-5"><a href="book_02_beginner_2nd_half.html#cb183-5"></a>                    <span class="dt">locale=</span><span class="kw">locale</span>(<span class="dt">encoding=</span><span class="st">&quot;shift-jis&quot;</span>))</span>
-<span id="cb183-6"><a href="book_02_beginner_2nd_half.html#cb183-6"></a>ken_mst <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="book_02_beginner_2nd_half.html#cb183-1" aria-hidden="true" tabindex="-1"></a>ken_mst <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&quot;input/都道府県マスタ.csv&quot;</span>),</span>
+<span id="cb183-2"><a href="book_02_beginner_2nd_half.html#cb183-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
+<span id="cb183-3"><a href="book_02_beginner_2nd_half.html#cb183-3" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;都道府県CODE&quot;</span> <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb183-4"><a href="book_02_beginner_2nd_half.html#cb183-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;都道府県名&quot;</span>   <span class="ot">=</span> <span class="fu">col_character</span>()),</span>
+<span id="cb183-5"><a href="book_02_beginner_2nd_half.html#cb183-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">locale=</span><span class="fu">locale</span>(<span class="at">encoding=</span><span class="st">&quot;shift-jis&quot;</span>))</span>
+<span id="cb183-6"><a href="book_02_beginner_2nd_half.html#cb183-6" aria-hidden="true" tabindex="-1"></a>ken_mst <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 47
 Columns: 2
-$ 都道府県CODE &lt;chr&gt; &quot;01&quot;, &quot;02&quot;, &quot;03&quot;, &quot;04&quot;, &quot;05&quot;, &quot;06&quot;, &quot;07&quot;, &quot;08&quot;,...
-$ 都道府県名   &lt;chr&gt; &quot;北海道&quot;, &quot;青森県&quot;, &quot;岩手県&quot;, &quot;宮城県&quot;, &quot;秋田県&quot;, &quot;山形県&quot;, &quot;福島県&quot;,...</code></pre>
+$ 都道府県CODE &lt;chr&gt; &quot;01&quot;, &quot;02&quot;, &quot;03&quot;, &quot;04&quot;, &quot;05&quot;, &quot;06&quot;, &quot;07&quot;, &quot;08&quot;, &quot;09&quot;, &quot;1...
+$ 都道府県名   &lt;chr&gt; &quot;北海道&quot;, &quot;青森県&quot;, &quot;岩手県&quot;, &quot;宮城県&quot;, &quot;秋田県&quot;, &quot;山形県&quot;, &quot;福島県&quot;, &quot;茨城県&quot;, &quot;...</code></pre>
 </div>
 <div id="join_failed" class="section level3" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> data_2にken_mstを結合（失敗）</h3>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="book_02_beginner_2nd_half.html#cb185-1"></a>data_<span class="dv">2</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(ken_mst, <span class="dt">by =</span> <span class="st">&quot;都道府県コード&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="book_02_beginner_2nd_half.html#cb185-1" aria-hidden="true" tabindex="-1"></a>data_2 <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(ken_mst, <span class="at">by =</span> <span class="st">&quot;都道府県コード&quot;</span>)</span></code></pre></div>
 <pre><code>Error: Join columns must be present in data.
 x Problem with `都道府県コード`.</code></pre>
 <ul>
@@ -2112,14 +2111,14 @@ x Problem with `都道府県コード`.</code></pre>
 <ul>
 <li>mutateと同様にして記述し、カラム名の変更ができます</li>
 </ul>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="book_02_beginner_2nd_half.html#cb187-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="st">&quot;新カラム名&quot;</span> =<span class="st"> </span>旧カラム名)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="book_02_beginner_2nd_half.html#cb187-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="st">&quot;新カラム名&quot;</span> <span class="ot">=</span> 旧カラム名)</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="book_02_beginner_2nd_half.html#cb188-1"></a><span class="co"># 元の模擬データ</span></span>
-<span id="cb188-2"><a href="book_02_beginner_2nd_half.html#cb188-2"></a>d &lt;-<span class="st"> </span><span class="kw">tibble</span>(</span>
-<span id="cb188-3"><a href="book_02_beginner_2nd_half.html#cb188-3"></a>  <span class="dt">col_1 =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,</span>
-<span id="cb188-4"><a href="book_02_beginner_2nd_half.html#cb188-4"></a>  <span class="st">`</span><span class="dt">(col_2)</span><span class="st">`</span> =<span class="st"> </span><span class="dv">3</span><span class="op">:</span><span class="dv">4</span>)</span>
-<span id="cb188-5"><a href="book_02_beginner_2nd_half.html#cb188-5"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="book_02_beginner_2nd_half.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 元の模擬データ</span></span>
+<span id="cb188-2"><a href="book_02_beginner_2nd_half.html#cb188-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb188-3"><a href="book_02_beginner_2nd_half.html#cb188-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_1 =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,</span>
+<span id="cb188-4"><a href="book_02_beginner_2nd_half.html#cb188-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">(col_2)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>)</span>
+<span id="cb188-5"><a href="book_02_beginner_2nd_half.html#cb188-5" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 2 x 2
   col_1 `(col_2)`
   &lt;int&gt;     &lt;int&gt;
@@ -2128,11 +2127,11 @@ x Problem with `都道府県コード`.</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="book_02_beginner_2nd_half.html#cb190-1"></a><span class="co"># カラム名を変更</span></span>
-<span id="cb190-2"><a href="book_02_beginner_2nd_half.html#cb190-2"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(</span>
-<span id="cb190-3"><a href="book_02_beginner_2nd_half.html#cb190-3"></a>  <span class="st">&quot;Col1&quot;</span> =<span class="st"> </span>col_<span class="dv">1</span>, </span>
-<span id="cb190-4"><a href="book_02_beginner_2nd_half.html#cb190-4"></a>  <span class="st">&quot;Col2&quot;</span> =<span class="st"> `</span><span class="dt">(col_2)</span><span class="st">`</span>)</span>
-<span id="cb190-5"><a href="book_02_beginner_2nd_half.html#cb190-5"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="book_02_beginner_2nd_half.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># カラム名を変更</span></span>
+<span id="cb190-2"><a href="book_02_beginner_2nd_half.html#cb190-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> <span class="fu">rename</span>(</span>
+<span id="cb190-3"><a href="book_02_beginner_2nd_half.html#cb190-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Col1&quot;</span> <span class="ot">=</span> col_1, </span>
+<span id="cb190-4"><a href="book_02_beginner_2nd_half.html#cb190-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Col2&quot;</span> <span class="ot">=</span> <span class="st">`</span><span class="at">(col_2)</span><span class="st">`</span>)</span>
+<span id="cb190-5"><a href="book_02_beginner_2nd_half.html#cb190-5" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 2 x 2
    Col1  Col2
   &lt;int&gt; &lt;int&gt;
@@ -2146,30 +2145,30 @@ x Problem with `都道府県コード`.</code></pre>
 <ul>
 <li>都道府県マスタの「都道府県CODE」カラムを「都道府県コード」に変更してからleft_joinを行います</li>
 </ul>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="book_02_beginner_2nd_half.html#cb192-1"></a>data_<span class="dv">3</span> &lt;-<span class="st"> </span>data_<span class="dv">2</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb192-2"><a href="book_02_beginner_2nd_half.html#cb192-2"></a><span class="st">  </span><span class="kw">left_join</span>( <span class="co"># 関数の引数内でもパイプを使えます</span></span>
-<span id="cb192-3"><a href="book_02_beginner_2nd_half.html#cb192-3"></a>    ken_mst <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="st">&quot;都道府県コード&quot;</span> =<span class="st"> </span>都道府県CODE),</span>
-<span id="cb192-4"><a href="book_02_beginner_2nd_half.html#cb192-4"></a>    <span class="dt">by =</span> <span class="st">&quot;都道府県コード&quot;</span>)</span>
-<span id="cb192-5"><a href="book_02_beginner_2nd_half.html#cb192-5"></a>data_<span class="dv">3</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="book_02_beginner_2nd_half.html#cb192-1" aria-hidden="true" tabindex="-1"></a>data_3 <span class="ot">&lt;-</span> data_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb192-2"><a href="book_02_beginner_2nd_half.html#cb192-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>( <span class="co"># 関数の引数内でもパイプを使えます</span></span>
+<span id="cb192-3"><a href="book_02_beginner_2nd_half.html#cb192-3" aria-hidden="true" tabindex="-1"></a>    ken_mst <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="st">&quot;都道府県コード&quot;</span> <span class="ot">=</span> 都道府県CODE),</span>
+<span id="cb192-4"><a href="book_02_beginner_2nd_half.html#cb192-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="st">&quot;都道府県コード&quot;</span>)</span>
+<span id="cb192-5"><a href="book_02_beginner_2nd_half.html#cb192-5" aria-hidden="true" tabindex="-1"></a>data_3 <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 887
 Columns: 9
-$ 企業コード                   &lt;chr&gt; &quot;J31299770&quot;, &quot;E32002046&quot;, &quot;D4258...
-$ 本社所在地市区郡             &lt;chr&gt; &quot;13103_東京都港区&quot;, &quot;27123_大阪府大阪市淀川区&quot;, &quot;...
-$ 業種大分類                   &lt;chr&gt; &quot;I:不動産業&quot;, &quot;L:サービス業&quot;, &quot;J:運輸・通信業&quot;,...
-$ `資本金(千円)`               &lt;dbl&gt; 931300, 1098300, 6120900, 154328...
-$ 従業員数                     &lt;dbl&gt; 64, 1120, 216, 31059, 314, 1167...
-$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 6555, 100, 31746, 334093, 69308, 54667...
-$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 910536, 1775694, 408523, 2544502, 76398...
-$ 都道府県コード               &lt;chr&gt; &quot;13&quot;, &quot;27&quot;, &quot;13&quot;, &quot;13&quot;, &quot;14&quot;, &quot;13&quot;...
-$ 都道府県名                   &lt;chr&gt; &quot;東京都&quot;, &quot;大阪府&quot;, &quot;東京都&quot;, &quot;東京都&quot;, &quot;神奈川...</code></pre>
+$ 企業コード                   &lt;chr&gt; &quot;J31299770&quot;, &quot;E32002046&quot;, &quot;D42585413&quot;, &quot;J...
+$ 本社所在地市区郡             &lt;chr&gt; &quot;13103_東京都港区&quot;, &quot;27123_大阪府大阪市淀川区&quot;, &quot;13103_東京都...
+$ 業種大分類                   &lt;chr&gt; &quot;I:不動産業&quot;, &quot;L:サービス業&quot;, &quot;J:運輸・通信業&quot;, &quot;L:サービス業...
+$ `資本金(千円)`               &lt;dbl&gt; 931300, 1098300, 6120900, 15432800, 99049...
+$ 従業員数                     &lt;dbl&gt; 64, 1120, 216, 31059, 314, 1167, 880, 15...
+$ `最新期業績売上高(百万円)`   &lt;dbl&gt; 6555, 100, 31746, 334093, 69308, 54667, 107643,...
+$ `最新期業績税引後利益(千円)` &lt;dbl&gt; 910536, 1775694, 408523, 2544502, 763986, 319544...
+$ 都道府県コード               &lt;chr&gt; &quot;13&quot;, &quot;27&quot;, &quot;13&quot;, &quot;13&quot;, &quot;14&quot;, &quot;13&quot;, &quot;23&quot;, &quot;...
+$ 都道府県名                   &lt;chr&gt; &quot;東京都&quot;, &quot;大阪府&quot;, &quot;東京都&quot;, &quot;東京都&quot;, &quot;神奈川県&quot;, &quot;東京都&quot;...</code></pre>
 </div>
 <div id="不一致なカラム名をキーにする方法" class="section level3" number="3.3.6">
 <h3><span class="header-section-number">3.3.6</span> 不一致なカラム名をキーにする方法</h3>
 <ul>
 <li>結論から書くと、以下のようにして書きます</li>
 </ul>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="book_02_beginner_2nd_half.html#cb194-1"></a>data_<span class="dv">3</span> &lt;-<span class="st"> </span>data_<span class="dv">2</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb194-2"><a href="book_02_beginner_2nd_half.html#cb194-2"></a><span class="st">  </span><span class="kw">left_join</span>(ken_mst, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;都道府県コード&quot;</span>=<span class="st">&quot;都道府県CODE&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="book_02_beginner_2nd_half.html#cb194-1" aria-hidden="true" tabindex="-1"></a>data_3 <span class="ot">&lt;-</span> data_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb194-2"><a href="book_02_beginner_2nd_half.html#cb194-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(ken_mst, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;都道府県コード&quot;</span><span class="ot">=</span><span class="st">&quot;都道府県CODE&quot;</span>))</span></code></pre></div>
 <ul>
 <li>byで指定しているキーの順番は引数の順番に対応します</li>
 <li>つまり、「data_2は都道府県コード」、「ken_mstは都道府県CODE」をキーにするという指定を行っています</li>
@@ -2208,21 +2207,20 @@ band_members %&gt;%
 <li>したがって、まずは文字列の結合方法を説明します</li>
 </ul>
 <pre><code># A tibble: 887 x 10
-   都道府県 都道府県コード 都道府県名 企業コード 本社所在地市区郡
-   &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;           
- 1 13_東京都~ 13             東京都     J31299770  13103_東京都港区
- 2 27_大阪府~ 27             大阪府     E32002046  27123_大阪府大阪市淀川区~
- 3 13_東京都~ 13             東京都     D42585413  13103_東京都港区
- 4 13_東京都~ 13             東京都     J39971897  13101_東京都千代田区~
- 5 14_神奈川県~ 14             神奈川県   J93122775  14102_神奈川県横浜市神奈~
- 6 13_東京都~ 13             東京都     J34719839  13111_東京都大田区~
- 7 23_愛知県~ 23             愛知県     L12571447  23105_愛知県名古屋市中村~
- 8 13_東京都~ 13             東京都     D42395106  13103_東京都港区
- 9 13_東京都~ 13             東京都     J34594067  13103_東京都港区
-10 27_大阪府~ 27             大阪府     E32304350  27126_大阪府大阪市平野区~
-# ... with 877 more rows, and 5 more variables: 業種大分類 &lt;chr&gt;,
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
+   都道府県 都道府県コード 都道府県名 企業コード 本社所在地市区郡 業種大分類
+   &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
+ 1 13_東京都~ 13             東京都     J31299770  13103_東京都港区 I:不動産業
+ 2 27_大阪府~ 27             大阪府     E32002046  27123_大阪府大阪市淀川区~ L:サービス業~
+ 3 13_東京都~ 13             東京都     D42585413  13103_東京都港区 J:運輸・通信業~
+ 4 13_東京都~ 13             東京都     J39971897  13101_東京都千代田区~ L:サービス業~
+ 5 14_神奈川県~ 14             神奈川県   J93122775  14102_神奈川県横浜市神奈~ F:製造業  
+ 6 13_東京都~ 13             東京都     J34719839  13111_東京都大田区~ F:製造業  
+ 7 23_愛知県~ 23             愛知県     L12571447  23105_愛知県名古屋市中村~ G:卸売・小売業，~
+ 8 13_東京都~ 13             東京都     D42395106  13103_東京都港区 G:卸売・小売業，~
+ 9 13_東京都~ 13             東京都     J34594067  13103_東京都港区 E:建設業  
+10 27_大阪府~ 27             大阪府     E32304350  27126_大阪府大阪市平野区~ F:製造業  
+# ... with 877 more rows, and 4 more variables: `資本金(千円)` &lt;dbl&gt;,
+#   従業員数 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
 </div>
 <div id="pasteで文字列の結合" class="section level3" number="3.4.2">
@@ -2231,12 +2229,12 @@ band_members %&gt;%
 <li>文字列を結合するにはpaste関数を使います</li>
 <li>pasteの挙動は以下のようになります</li>
 </ul>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="book_02_beginner_2nd_half.html#cb197-1"></a><span class="kw">paste</span>(<span class="st">&quot;神奈川県&quot;</span>, <span class="st">&quot;横浜市&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;_&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="book_02_beginner_2nd_half.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;神奈川県&quot;</span>, <span class="st">&quot;横浜市&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span></code></pre></div>
 <pre><code>[1] &quot;神奈川県_横浜市&quot;</code></pre>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="book_02_beginner_2nd_half.html#cb199-1"></a>KEN &lt;-<span class="st"> &quot;神奈川県&quot;</span></span>
-<span id="cb199-2"><a href="book_02_beginner_2nd_half.html#cb199-2"></a>CITY &lt;-<span class="st"> &quot;横浜市&quot;</span></span>
-<span id="cb199-3"><a href="book_02_beginner_2nd_half.html#cb199-3"></a>TOWN &lt;-<span class="st"> &quot;緑区&quot;</span></span>
-<span id="cb199-4"><a href="book_02_beginner_2nd_half.html#cb199-4"></a><span class="kw">paste</span>(KEN, CITY, TOWN, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="book_02_beginner_2nd_half.html#cb199-1" aria-hidden="true" tabindex="-1"></a>KEN <span class="ot">&lt;-</span> <span class="st">&quot;神奈川県&quot;</span></span>
+<span id="cb199-2"><a href="book_02_beginner_2nd_half.html#cb199-2" aria-hidden="true" tabindex="-1"></a>CITY <span class="ot">&lt;-</span> <span class="st">&quot;横浜市&quot;</span></span>
+<span id="cb199-3"><a href="book_02_beginner_2nd_half.html#cb199-3" aria-hidden="true" tabindex="-1"></a>TOWN <span class="ot">&lt;-</span> <span class="st">&quot;緑区&quot;</span></span>
+<span id="cb199-4"><a href="book_02_beginner_2nd_half.html#cb199-4" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(KEN, CITY, TOWN, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
 <pre><code>[1] &quot;神奈川県横浜市緑区&quot;</code></pre>
 </div>
 <div id="都道府県カラムの作成" class="section level3" number="3.4.3">
@@ -2245,26 +2243,25 @@ band_members %&gt;%
 <li>都道府県カラムは、都道府県コードと都道府県名の間に「_」を入れた「01_北海道」のようなデータです</li>
 <li>都道府県カラムを追加したデータをdata_4とします</li>
 </ul>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="book_02_beginner_2nd_half.html#cb201-1"></a>data_<span class="dv">4</span> &lt;-<span class="st"> </span>data_<span class="dv">3</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb201-2"><a href="book_02_beginner_2nd_half.html#cb201-2"></a><span class="st">  </span><span class="kw">mutate</span>(都道府県 =<span class="st"> </span><span class="kw">paste</span>(都道府県コード, 都道府県名,</span>
-<span id="cb201-3"><a href="book_02_beginner_2nd_half.html#cb201-3"></a>                            <span class="dt">sep =</span> <span class="st">&quot;_&quot;</span>))</span>
-<span id="cb201-4"><a href="book_02_beginner_2nd_half.html#cb201-4"></a>data_<span class="dv">4</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(都道府県, 都道府県コード, 都道府県名) </span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="book_02_beginner_2nd_half.html#cb201-1" aria-hidden="true" tabindex="-1"></a>data_4 <span class="ot">&lt;-</span> data_3 <span class="sc">%&gt;%</span> </span>
+<span id="cb201-2"><a href="book_02_beginner_2nd_half.html#cb201-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(都道府県 <span class="ot">=</span> <span class="fu">paste</span>(都道府県コード, 都道府県名,</span>
+<span id="cb201-3"><a href="book_02_beginner_2nd_half.html#cb201-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>))</span>
+<span id="cb201-4"><a href="book_02_beginner_2nd_half.html#cb201-4" aria-hidden="true" tabindex="-1"></a>data_4 <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(都道府県, 都道府県コード, 都道府県名) </span></code></pre></div>
 <pre><code># A tibble: 887 x 10
-   都道府県 都道府県コード 都道府県名 企業コード 本社所在地市区郡
-   &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;           
- 1 13_東京都~ 13             東京都     J31299770  13103_東京都港区
- 2 27_大阪府~ 27             大阪府     E32002046  27123_大阪府大阪市淀川区~
- 3 13_東京都~ 13             東京都     D42585413  13103_東京都港区
- 4 13_東京都~ 13             東京都     J39971897  13101_東京都千代田区~
- 5 14_神奈川県~ 14             神奈川県   J93122775  14102_神奈川県横浜市神奈~
- 6 13_東京都~ 13             東京都     J34719839  13111_東京都大田区~
- 7 23_愛知県~ 23             愛知県     L12571447  23105_愛知県名古屋市中村~
- 8 13_東京都~ 13             東京都     D42395106  13103_東京都港区
- 9 13_東京都~ 13             東京都     J34594067  13103_東京都港区
-10 27_大阪府~ 27             大阪府     E32304350  27126_大阪府大阪市平野区~
-# ... with 877 more rows, and 5 more variables: 業種大分類 &lt;chr&gt;,
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
+   都道府県 都道府県コード 都道府県名 企業コード 本社所在地市区郡 業種大分類
+   &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
+ 1 13_東京都~ 13             東京都     J31299770  13103_東京都港区 I:不動産業
+ 2 27_大阪府~ 27             大阪府     E32002046  27123_大阪府大阪市淀川区~ L:サービス業~
+ 3 13_東京都~ 13             東京都     D42585413  13103_東京都港区 J:運輸・通信業~
+ 4 13_東京都~ 13             東京都     J39971897  13101_東京都千代田区~ L:サービス業~
+ 5 14_神奈川県~ 14             神奈川県   J93122775  14102_神奈川県横浜市神奈~ F:製造業  
+ 6 13_東京都~ 13             東京都     J34719839  13111_東京都大田区~ F:製造業  
+ 7 23_愛知県~ 23             愛知県     L12571447  23105_愛知県名古屋市中村~ G:卸売・小売業，~
+ 8 13_東京都~ 13             東京都     D42395106  13103_東京都港区 G:卸売・小売業，~
+ 9 13_東京都~ 13             東京都     J34594067  13103_東京都港区 E:建設業  
+10 27_大阪府~ 27             大阪府     E32304350  27126_大阪府大阪市平野区~ F:製造業  
+# ... with 877 more rows, and 4 more variables: `資本金(千円)` &lt;dbl&gt;,
+#   従業員数 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;</code></pre>
 </div>
 <div id="step9_sanko" class="section level3" number="3.4.4">
@@ -2272,12 +2269,12 @@ band_members %&gt;%
 <ul>
 <li><strong>paste0</strong>関数を使うと、paste関数で引数をsep = ""とするのと同様の結果を得ることができます</li>
 </ul>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="book_02_beginner_2nd_half.html#cb203-1"></a><span class="kw">paste0</span>(<span class="st">&quot;神奈川県&quot;</span>, <span class="st">&quot;横浜市&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="book_02_beginner_2nd_half.html#cb203-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">&quot;神奈川県&quot;</span>, <span class="st">&quot;横浜市&quot;</span>)</span></code></pre></div>
 <pre><code>[1] &quot;神奈川県横浜市&quot;</code></pre>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="book_02_beginner_2nd_half.html#cb205-1"></a>KEN &lt;-<span class="st"> &quot;神奈川県&quot;</span></span>
-<span id="cb205-2"><a href="book_02_beginner_2nd_half.html#cb205-2"></a>CITY &lt;-<span class="st"> &quot;横浜市&quot;</span></span>
-<span id="cb205-3"><a href="book_02_beginner_2nd_half.html#cb205-3"></a>TOWN &lt;-<span class="st"> &quot;緑区&quot;</span></span>
-<span id="cb205-4"><a href="book_02_beginner_2nd_half.html#cb205-4"></a><span class="kw">paste0</span>(KEN, CITY, TOWN)</span></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="book_02_beginner_2nd_half.html#cb205-1" aria-hidden="true" tabindex="-1"></a>KEN <span class="ot">&lt;-</span> <span class="st">&quot;神奈川県&quot;</span></span>
+<span id="cb205-2"><a href="book_02_beginner_2nd_half.html#cb205-2" aria-hidden="true" tabindex="-1"></a>CITY <span class="ot">&lt;-</span> <span class="st">&quot;横浜市&quot;</span></span>
+<span id="cb205-3"><a href="book_02_beginner_2nd_half.html#cb205-3" aria-hidden="true" tabindex="-1"></a>TOWN <span class="ot">&lt;-</span> <span class="st">&quot;緑区&quot;</span></span>
+<span id="cb205-4"><a href="book_02_beginner_2nd_half.html#cb205-4" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(KEN, CITY, TOWN)</span></code></pre></div>
 <pre><code>[1] &quot;神奈川県横浜市緑区&quot;</code></pre>
 </div>
 </div>
@@ -2295,50 +2292,48 @@ band_members %&gt;%
 <li>利益率はround関数で少数点以下2桁にします</li>
 </ul>
 <pre><code># A tibble: 887 x 11
-   売上高利益率 `最新期業績税引後利益(千円)~ `最新期業績売上高(百万円)`~ 企業コード
-          &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;     
- 1        13.9            910536             6555 J31299770 
- 2      1776.            1775694              100 E32002046 
- 3         1.29           408523            31746 D42585413 
- 4         0.76          2544502           334093 J39971897 
- 5         1.1            763986            69308 J93122775 
- 6        58.4          31954410            54667 J34719839 
- 7         6.93          7455793           107643 L12571447 
- 8         2.11          1387429            65714 D42395106 
- 9         3.39          2149032            63388 J34594067 
-10         1.32           530833            40125 E32304350 
-# ... with 877 more rows, and 7 more variables:
-#   本社所在地市区郡 &lt;chr&gt;, 業種大分類 &lt;chr&gt;, `資本金(千円)` &lt;dbl&gt;,
-#   従業員数 &lt;dbl&gt;, 都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;,
-#   都道府県 &lt;chr&gt;</code></pre>
+   売上高利益率 `最新期業績税引後利益(千円)~ `最新期業績売上高(百万円)`~ 企業コード 本社所在地市区郡
+          &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           
+ 1        13.9            910536             6555 J31299770  13103_東京都港区
+ 2      1776.            1775694              100 E32002046  27123_大阪府大阪市淀川区~
+ 3         1.29           408523            31746 D42585413  13103_東京都港区
+ 4         0.76          2544502           334093 J39971897  13101_東京都千代田区~
+ 5         1.1            763986            69308 J93122775  14102_神奈川県横浜市神奈~
+ 6        58.4          31954410            54667 J34719839  13111_東京都大田区~
+ 7         6.93          7455793           107643 L12571447  23105_愛知県名古屋市中村~
+ 8         2.11          1387429            65714 D42395106  13103_東京都港区
+ 9         3.39          2149032            63388 J34594067  13103_東京都港区
+10         1.32           530833            40125 E32304350  27126_大阪府大阪市平野区~
+# ... with 877 more rows, and 6 more variables: 業種大分類 &lt;chr&gt;,
+#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
+#   都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;</code></pre>
 </div>
 <div id="売上高利益率カラムの作成" class="section level3" number="3.5.2">
 <h3><span class="header-section-number">3.5.2</span> 売上高利益率カラムの作成</h3>
 <ul>
 <li>売上高利益率カラムを追加したものをdata_5とします</li>
 </ul>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="book_02_beginner_2nd_half.html#cb208-1"></a>data_<span class="dv">5</span> &lt;-<span class="st"> </span>data_<span class="dv">4</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb208-2"><a href="book_02_beginner_2nd_half.html#cb208-2"></a><span class="st">  </span><span class="kw">mutate</span>(売上高利益率 =</span>
-<span id="cb208-3"><a href="book_02_beginner_2nd_half.html#cb208-3"></a><span class="st">    `</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span><span class="op">/</span>(<span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span><span class="op">*</span><span class="dv">1000</span>)<span class="op">*</span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb208-4"><a href="book_02_beginner_2nd_half.html#cb208-4"></a><span class="st">  </span><span class="kw">mutate</span>(売上高利益率 =<span class="st"> </span><span class="kw">round</span>(売上高利益率, <span class="dv">2</span>))</span>
-<span id="cb208-5"><a href="book_02_beginner_2nd_half.html#cb208-5"></a>data_<span class="dv">5</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(売上高利益率, <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span>, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="book_02_beginner_2nd_half.html#cb208-1" aria-hidden="true" tabindex="-1"></a>data_5 <span class="ot">&lt;-</span> data_4 <span class="sc">%&gt;%</span> </span>
+<span id="cb208-2"><a href="book_02_beginner_2nd_half.html#cb208-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(売上高利益率 <span class="ot">=</span></span>
+<span id="cb208-3"><a href="book_02_beginner_2nd_half.html#cb208-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span><span class="sc">/</span>(<span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span><span class="sc">*</span><span class="dv">1000</span>)<span class="sc">*</span><span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb208-4"><a href="book_02_beginner_2nd_half.html#cb208-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(売上高利益率 <span class="ot">=</span> <span class="fu">round</span>(売上高利益率, <span class="dv">2</span>))</span>
+<span id="cb208-5"><a href="book_02_beginner_2nd_half.html#cb208-5" aria-hidden="true" tabindex="-1"></a>data_5 <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(売上高利益率, <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span>, <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code># A tibble: 887 x 11
-   売上高利益率 `最新期業績税引後利益(千円)~ `最新期業績売上高(百万円)`~ 企業コード
-          &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;     
- 1        13.9            910536             6555 J31299770 
- 2      1776.            1775694              100 E32002046 
- 3         1.29           408523            31746 D42585413 
- 4         0.76          2544502           334093 J39971897 
- 5         1.1            763986            69308 J93122775 
- 6        58.4          31954410            54667 J34719839 
- 7         6.93          7455793           107643 L12571447 
- 8         2.11          1387429            65714 D42395106 
- 9         3.39          2149032            63388 J34594067 
-10         1.32           530833            40125 E32304350 
-# ... with 877 more rows, and 7 more variables:
-#   本社所在地市区郡 &lt;chr&gt;, 業種大分類 &lt;chr&gt;, `資本金(千円)` &lt;dbl&gt;,
-#   従業員数 &lt;dbl&gt;, 都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;,
-#   都道府県 &lt;chr&gt;</code></pre>
+   売上高利益率 `最新期業績税引後利益(千円)~ `最新期業績売上高(百万円)`~ 企業コード 本社所在地市区郡
+          &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           
+ 1        13.9            910536             6555 J31299770  13103_東京都港区
+ 2      1776.            1775694              100 E32002046  27123_大阪府大阪市淀川区~
+ 3         1.29           408523            31746 D42585413  13103_東京都港区
+ 4         0.76          2544502           334093 J39971897  13101_東京都千代田区~
+ 5         1.1            763986            69308 J93122775  14102_神奈川県横浜市神奈~
+ 6        58.4          31954410            54667 J34719839  13111_東京都大田区~
+ 7         6.93          7455793           107643 L12571447  23105_愛知県名古屋市中村~
+ 8         2.11          1387429            65714 D42395106  13103_東京都港区
+ 9         3.39          2149032            63388 J34594067  13103_東京都港区
+10         1.32           530833            40125 E32304350  27126_大阪府大阪市平野区~
+# ... with 877 more rows, and 6 more variables: 業種大分類 &lt;chr&gt;,
+#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
+#   都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;</code></pre>
 </div>
 </div>
 <div id="ステップ１１条件分岐処理" class="section level2" number="3.6">
@@ -2413,21 +2408,21 @@ band_members %&gt;%
 <li>引数名が異なるだけで、記法はほとんど同じです</li>
 <li>しかし次頁で説明するように、仕様が少しだけ違います</li>
 </ul>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="book_02_beginner_2nd_half.html#cb211-1"></a><span class="co"># if_else と ifelse の 引数名</span></span>
-<span id="cb211-2"><a href="book_02_beginner_2nd_half.html#cb211-2"></a><span class="kw">if_else</span>(<span class="dt">condition=</span> , <span class="dt">true=</span> , <span class="dt">false=</span> )</span>
-<span id="cb211-3"><a href="book_02_beginner_2nd_half.html#cb211-3"></a><span class="kw">ifelse</span>(<span class="dt">test=</span> , <span class="dt">yes=</span> , <span class="dt">no=</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="book_02_beginner_2nd_half.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if_else と ifelse の 引数名</span></span>
+<span id="cb211-2"><a href="book_02_beginner_2nd_half.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="fu">if_else</span>(<span class="at">condition=</span> , <span class="at">true=</span> , <span class="at">false=</span> )</span>
+<span id="cb211-3"><a href="book_02_beginner_2nd_half.html#cb211-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="at">test=</span> , <span class="at">yes=</span> , <span class="at">no=</span> )</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p><strong>if_else</strong></p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="book_02_beginner_2nd_half.html#cb212-1"></a>tmp &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb212-2"><a href="book_02_beginner_2nd_half.html#cb212-2"></a><span class="kw">if_else</span>(tmp<span class="op">==</span><span class="dv">2</span>, <span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="book_02_beginner_2nd_half.html#cb212-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb212-2"><a href="book_02_beginner_2nd_half.html#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="fu">if_else</span>(tmp<span class="sc">==</span><span class="dv">2</span>, <span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>)</span></code></pre></div>
 <pre><code>[1] &quot;no&quot;  &quot;yes&quot; &quot;no&quot; </code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <p><strong>ifelse</strong></p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="book_02_beginner_2nd_half.html#cb214-1"></a>tmp &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb214-2"><a href="book_02_beginner_2nd_half.html#cb214-2"></a><span class="kw">ifelse</span>(tmp<span class="op">==</span><span class="dv">2</span>, <span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="book_02_beginner_2nd_half.html#cb214-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb214-2"><a href="book_02_beginner_2nd_half.html#cb214-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(tmp<span class="sc">==</span><span class="dv">2</span>, <span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>)</span></code></pre></div>
 <pre><code>[1] &quot;no&quot;  &quot;yes&quot; &quot;no&quot; </code></pre>
 </div>
 </div>
@@ -2436,12 +2431,12 @@ band_members %&gt;%
 <h3><span class="header-section-number">3.6.4</span> <strong>if_else</strong>はifelseより厳格</h3>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="book_02_beginner_2nd_half.html#cb216-1"></a><span class="kw">if_else</span>(tmp<span class="op">==</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="st">&quot;no&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="book_02_beginner_2nd_half.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">if_else</span>(tmp<span class="sc">==</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="st">&quot;no&quot;</span>)</span></code></pre></div>
 <pre><code>Error: `false` must be a double vector, not a character vector.</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="book_02_beginner_2nd_half.html#cb218-1"></a><span class="kw">ifelse</span>(tmp<span class="op">==</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="st">&quot;no&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="book_02_beginner_2nd_half.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(tmp<span class="sc">==</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="st">&quot;no&quot;</span>)</span></code></pre></div>
 <pre><code>[1] &quot;no&quot; &quot;2&quot;  &quot;no&quot;</code></pre>
 </div>
 </div>
@@ -2462,21 +2457,21 @@ band_members %&gt;%
 <h3><span class="header-section-number">3.6.5</span> case_whenの使用例</h3>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="book_02_beginner_2nd_half.html#cb220-1"></a><span class="kw">case_when</span>(</span>
-<span id="cb220-2"><a href="book_02_beginner_2nd_half.html#cb220-2"></a>  条件式 <span class="op">~</span><span class="st"> </span>返り値,</span>
-<span id="cb220-3"><a href="book_02_beginner_2nd_half.html#cb220-3"></a>  条件式 <span class="op">~</span><span class="st"> </span>返り値,</span>
-<span id="cb220-4"><a href="book_02_beginner_2nd_half.html#cb220-4"></a>  条件式 <span class="op">~</span><span class="st"> </span>返り値,</span>
-<span id="cb220-5"><a href="book_02_beginner_2nd_half.html#cb220-5"></a>  ...</span>
-<span id="cb220-6"><a href="book_02_beginner_2nd_half.html#cb220-6"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="book_02_beginner_2nd_half.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="fu">case_when</span>(</span>
+<span id="cb220-2"><a href="book_02_beginner_2nd_half.html#cb220-2" aria-hidden="true" tabindex="-1"></a>  条件式 <span class="sc">~</span> 返り値,</span>
+<span id="cb220-3"><a href="book_02_beginner_2nd_half.html#cb220-3" aria-hidden="true" tabindex="-1"></a>  条件式 <span class="sc">~</span> 返り値,</span>
+<span id="cb220-4"><a href="book_02_beginner_2nd_half.html#cb220-4" aria-hidden="true" tabindex="-1"></a>  条件式 <span class="sc">~</span> 返り値,</span>
+<span id="cb220-5"><a href="book_02_beginner_2nd_half.html#cb220-5" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb220-6"><a href="book_02_beginner_2nd_half.html#cb220-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="book_02_beginner_2nd_half.html#cb221-1"></a>tmp &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb221-2"><a href="book_02_beginner_2nd_half.html#cb221-2"></a><span class="kw">case_when</span>(</span>
-<span id="cb221-3"><a href="book_02_beginner_2nd_half.html#cb221-3"></a>  tmp <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">~</span><span class="st"> &quot;one&quot;</span>,</span>
-<span id="cb221-4"><a href="book_02_beginner_2nd_half.html#cb221-4"></a>  tmp <span class="op">==</span><span class="st"> </span><span class="dv">2</span> <span class="op">~</span><span class="st"> &quot;two&quot;</span>,</span>
-<span id="cb221-5"><a href="book_02_beginner_2nd_half.html#cb221-5"></a>  <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> </span><span class="kw">as.character</span>(<span class="ot">NA</span>)</span>
-<span id="cb221-6"><a href="book_02_beginner_2nd_half.html#cb221-6"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="book_02_beginner_2nd_half.html#cb221-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb221-2"><a href="book_02_beginner_2nd_half.html#cb221-2" aria-hidden="true" tabindex="-1"></a><span class="fu">case_when</span>(</span>
+<span id="cb221-3"><a href="book_02_beginner_2nd_half.html#cb221-3" aria-hidden="true" tabindex="-1"></a>  tmp <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;one&quot;</span>,</span>
+<span id="cb221-4"><a href="book_02_beginner_2nd_half.html#cb221-4" aria-hidden="true" tabindex="-1"></a>  tmp <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&quot;two&quot;</span>,</span>
+<span id="cb221-5"><a href="book_02_beginner_2nd_half.html#cb221-5" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.character</span>(<span class="cn">NA</span>)</span>
+<span id="cb221-6"><a href="book_02_beginner_2nd_half.html#cb221-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
 <pre><code>[1] &quot;one&quot; &quot;two&quot; NA   </code></pre>
 </div>
 </div>
@@ -2495,12 +2490,12 @@ band_members %&gt;%
 <ul>
 <li>if_elseの場合は、条件式に偽となった値にさらに条件分岐をかけることで、条件分岐の階層構造を作ります</li>
 </ul>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="book_02_beginner_2nd_half.html#cb223-1"></a>data_<span class="dv">5</span> <span class="op">%&gt;%</span></span>
-<span id="cb223-2"><a href="book_02_beginner_2nd_half.html#cb223-2"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数レンジ =<span class="st"> </span></span>
-<span id="cb223-3"><a href="book_02_beginner_2nd_half.html#cb223-3"></a><span class="st">    </span><span class="kw">if_else</span>(   <span class="dv">0</span> <span class="op">&lt;=</span><span class="st"> </span>従業員数 <span class="op">&amp;</span><span class="st"> </span>従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">500</span>, <span class="st">&quot;01_500人以下&quot;</span>,</span>
-<span id="cb223-4"><a href="book_02_beginner_2nd_half.html#cb223-4"></a>    <span class="kw">if_else</span>( <span class="dv">500</span> <span class="op">&lt;=</span><span class="st"> </span>従業員数 <span class="op">&amp;</span><span class="st"> </span>従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">1000</span>, <span class="st">&quot;02_1000人以下&quot;</span>,</span>
-<span id="cb223-5"><a href="book_02_beginner_2nd_half.html#cb223-5"></a>    <span class="kw">if_else</span>(<span class="dv">1000</span> <span class="op">&lt;=</span><span class="st"> </span>従業員数, <span class="st">&quot;03_1000人超&quot;</span>, <span class="st">&quot;99_不明&quot;</span>)))) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb223-6"><a href="book_02_beginner_2nd_half.html#cb223-6"></a><span class="st">  </span><span class="kw">relocate</span>(従業員数レンジ, 従業員数)</span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="book_02_beginner_2nd_half.html#cb223-1" aria-hidden="true" tabindex="-1"></a>data_5 <span class="sc">%&gt;%</span></span>
+<span id="cb223-2"><a href="book_02_beginner_2nd_half.html#cb223-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数レンジ <span class="ot">=</span> </span>
+<span id="cb223-3"><a href="book_02_beginner_2nd_half.html#cb223-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">if_else</span>(   <span class="dv">0</span> <span class="sc">&lt;=</span> 従業員数 <span class="sc">&amp;</span> 従業員数 <span class="sc">&lt;=</span> <span class="dv">500</span>, <span class="st">&quot;01_500人以下&quot;</span>,</span>
+<span id="cb223-4"><a href="book_02_beginner_2nd_half.html#cb223-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">if_else</span>( <span class="dv">500</span> <span class="sc">&lt;=</span> 従業員数 <span class="sc">&amp;</span> 従業員数 <span class="sc">&lt;=</span> <span class="dv">1000</span>, <span class="st">&quot;02_1000人以下&quot;</span>,</span>
+<span id="cb223-5"><a href="book_02_beginner_2nd_half.html#cb223-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">if_else</span>(<span class="dv">1000</span> <span class="sc">&lt;=</span> 従業員数, <span class="st">&quot;03_1000人超&quot;</span>, <span class="st">&quot;99_不明&quot;</span>)))) <span class="sc">%&gt;%</span> </span>
+<span id="cb223-6"><a href="book_02_beginner_2nd_half.html#cb223-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(従業員数レンジ, 従業員数)</span></code></pre></div>
 <pre><code># A tibble: 887 x 12
    従業員数レンジ 従業員数 企業コード 本社所在地市区郡 業種大分類
    &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
@@ -2514,10 +2509,10 @@ band_members %&gt;%
  8 03_1000人超        1555 D42395106  13103_東京都港区 G:卸売・小売業，~
  9 01_500人以下        452 J34594067  13103_東京都港区 E:建設業  
 10 02_1000人以下       801 E32304350  27126_大阪府大阪市平野区~ F:製造業  
-# ... with 877 more rows, and 7 more variables:
-#   `資本金(千円)` &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
-#   都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;</code></pre>
+# ... with 877 more rows, and 7 more variables: `資本金(千円)` &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;,
+#   売上高利益率 &lt;dbl&gt;</code></pre>
 </div>
 <div id="case_when_ver" class="section level3" number="3.6.7">
 <h3><span class="header-section-number">3.6.7</span> 従業員数レンジカラム作成(case_when)</h3>
@@ -2526,14 +2521,14 @@ band_members %&gt;%
 <li>結果は先ほどと同じなので省略します</li>
 <li>従業員数レンジを追加したデータをdata_6とします</li>
 </ul>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="book_02_beginner_2nd_half.html#cb225-1"></a>data_<span class="dv">6</span> &lt;-<span class="st"> </span>data_<span class="dv">5</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb225-2"><a href="book_02_beginner_2nd_half.html#cb225-2"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数レンジ =<span class="st"> </span><span class="kw">case_when</span>(</span>
-<span id="cb225-3"><a href="book_02_beginner_2nd_half.html#cb225-3"></a>       <span class="dv">0</span> <span class="op">&lt;=</span><span class="st"> </span>従業員数 <span class="op">&amp;</span><span class="st"> </span>従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">500</span>  <span class="op">~</span><span class="st"> &quot;01_500人以下&quot;</span>,</span>
-<span id="cb225-4"><a href="book_02_beginner_2nd_half.html#cb225-4"></a>     <span class="dv">500</span> <span class="op">&lt;=</span><span class="st"> </span>従業員数 <span class="op">&amp;</span><span class="st"> </span>従業員数 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">1000</span> <span class="op">~</span><span class="st"> &quot;02_1000人以下&quot;</span>,</span>
-<span id="cb225-5"><a href="book_02_beginner_2nd_half.html#cb225-5"></a>    <span class="dv">1000</span> <span class="op">&lt;=</span><span class="st"> </span>従業員数                   <span class="op">~</span><span class="st"> &quot;03_1000人超&quot;</span>,</span>
-<span id="cb225-6"><a href="book_02_beginner_2nd_half.html#cb225-6"></a>    <span class="ot">TRUE</span>                            <span class="op">~</span><span class="st"> &quot;99_不明&quot;</span></span>
-<span id="cb225-7"><a href="book_02_beginner_2nd_half.html#cb225-7"></a>    )</span>
-<span id="cb225-8"><a href="book_02_beginner_2nd_half.html#cb225-8"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="book_02_beginner_2nd_half.html#cb225-1" aria-hidden="true" tabindex="-1"></a>data_6 <span class="ot">&lt;-</span> data_5 <span class="sc">%&gt;%</span> </span>
+<span id="cb225-2"><a href="book_02_beginner_2nd_half.html#cb225-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数レンジ <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb225-3"><a href="book_02_beginner_2nd_half.html#cb225-3" aria-hidden="true" tabindex="-1"></a>       <span class="dv">0</span> <span class="sc">&lt;=</span> 従業員数 <span class="sc">&amp;</span> 従業員数 <span class="sc">&lt;=</span> <span class="dv">500</span>  <span class="sc">~</span> <span class="st">&quot;01_500人以下&quot;</span>,</span>
+<span id="cb225-4"><a href="book_02_beginner_2nd_half.html#cb225-4" aria-hidden="true" tabindex="-1"></a>     <span class="dv">500</span> <span class="sc">&lt;=</span> 従業員数 <span class="sc">&amp;</span> 従業員数 <span class="sc">&lt;=</span> <span class="dv">1000</span> <span class="sc">~</span> <span class="st">&quot;02_1000人以下&quot;</span>,</span>
+<span id="cb225-5"><a href="book_02_beginner_2nd_half.html#cb225-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1000</span> <span class="sc">&lt;=</span> 従業員数                   <span class="sc">~</span> <span class="st">&quot;03_1000人超&quot;</span>,</span>
+<span id="cb225-6"><a href="book_02_beginner_2nd_half.html#cb225-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span>                            <span class="sc">~</span> <span class="st">&quot;99_不明&quot;</span></span>
+<span id="cb225-7"><a href="book_02_beginner_2nd_half.html#cb225-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb225-8"><a href="book_02_beginner_2nd_half.html#cb225-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
 </div>
 <div id="step11_sanko" class="section level3" number="3.6.8">
 <h3><span class="header-section-number">3.6.8</span> 参考：条件式</h3>
@@ -2642,8 +2637,8 @@ band_members %&gt;%
 </div>
 </div>
 <p>例）<strong>%in%</strong>はとても便利なので覚えましょう。</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="book_02_beginner_2nd_half.html#cb226-1"></a><span class="co"># %in%の後ろのベクトルに値が含まれていたらTRUE</span></span>
-<span id="cb226-2"><a href="book_02_beginner_2nd_half.html#cb226-2"></a><span class="kw">c</span>(<span class="st">&quot;滋賀&quot;</span>, <span class="st">&quot;彦根&quot;</span>) <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;日本&quot;</span>, <span class="st">&quot;滋賀&quot;</span>, <span class="st">&quot;米原&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="book_02_beginner_2nd_half.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %in%の後ろのベクトルに値が含まれていたらTRUE</span></span>
+<span id="cb226-2"><a href="book_02_beginner_2nd_half.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;滋賀&quot;</span>, <span class="st">&quot;彦根&quot;</span>) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;日本&quot;</span>, <span class="st">&quot;滋賀&quot;</span>, <span class="st">&quot;米原&quot;</span>)</span></code></pre></div>
 <pre><code>[1]  TRUE FALSE</code></pre>
 </div>
 </div>
@@ -2663,21 +2658,20 @@ band_members %&gt;%
 </ul></li>
 </ul>
 <pre><code># A tibble: 887 x 12
-   都道府県 従業員数レンジ 売上高利益率 企業コード 本社所在地市区郡
-   &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           
- 1 01_北海道~ 01_500人以下          3.41  G92668203  01104_北海道札幌市白石区~
- 2 01_北海道~ 01_500人以下          0.49  G92515950  01105_北海道札幌市豊平区~
- 3 01_北海道~ 02_1000人以下         5.05  G22109363  01203_北海道小樽市~
- 4 01_北海道~ 02_1000人以下         3.18  G92543356  01101_北海道札幌市中央区~
- 5 01_北海道~ 02_1000人以下         0.570 G92412006  01101_北海道札幌市中央区~
- 6 02_青森県~ 01_500人以下          0.96  H02154711  02202_青森県弘前市~
- 7 02_青森県~ 02_1000人以下         0.45  H92112963  02203_青森県八戸市~
- 8 04_宮城県~ 01_500人以下          3.77  H42536370  04102_宮城県仙台市宮城野~
- 9 04_宮城県~ 01_500人以下          0.86  H42053936  04104_宮城県仙台市太白区~
-10 04_宮城県~ 02_1000人以下         9.45  H42127369  04102_宮城県仙台市宮城野~
-# ... with 877 more rows, and 7 more variables: 業種大分類 &lt;chr&gt;,
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
+   都道府県 従業員数レンジ 売上高利益率 企業コード 本社所在地市区郡 業種大分類
+   &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
+ 1 01_北海道~ 01_500人以下          3.41  G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~
+ 2 01_北海道~ 01_500人以下          0.49  G92515950  01105_北海道札幌市豊平区~ F:製造業  
+ 3 01_北海道~ 02_1000人以下         5.05  G22109363  01203_北海道小樽市~ J:運輸・通信業~
+ 4 01_北海道~ 02_1000人以下         3.18  G92543356  01101_北海道札幌市中央区~ E:建設業  
+ 5 01_北海道~ 02_1000人以下         0.570 G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~
+ 6 02_青森県~ 01_500人以下          0.96  H02154711  02202_青森県弘前市~ G:卸売・小売業，~
+ 7 02_青森県~ 02_1000人以下         0.45  H92112963  02203_青森県八戸市~ G:卸売・小売業，~
+ 8 04_宮城県~ 01_500人以下          3.77  H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~
+ 9 04_宮城県~ 01_500人以下          0.86  H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~
+10 04_宮城県~ 02_1000人以下         9.45  H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~
+# ... with 877 more rows, and 6 more variables: `資本金(千円)` &lt;dbl&gt;,
+#   従業員数 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
 #   都道府県名 &lt;chr&gt;</code></pre>
 </div>
@@ -2689,47 +2683,49 @@ band_members %&gt;%
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="book_02_beginner_2nd_half.html#cb229-1"></a>data_<span class="dv">6</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># 昇順</span></span>
-<span id="cb229-2"><a href="book_02_beginner_2nd_half.html#cb229-2"></a><span class="st">  </span><span class="kw">arrange</span>(都道府県) <span class="op">%&gt;%</span></span>
-<span id="cb229-3"><a href="book_02_beginner_2nd_half.html#cb229-3"></a><span class="st">  </span><span class="kw">relocate</span>(都道府県)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="book_02_beginner_2nd_half.html#cb229-1" aria-hidden="true" tabindex="-1"></a>data_6 <span class="sc">%&gt;%</span> <span class="co"># 昇順</span></span>
+<span id="cb229-2"><a href="book_02_beginner_2nd_half.html#cb229-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(都道府県) <span class="sc">%&gt;%</span></span>
+<span id="cb229-3"><a href="book_02_beginner_2nd_half.html#cb229-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(都道府県)</span></code></pre></div>
 <pre><code># A tibble: 887 x 12
-   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
-   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
- 1 01_北海道~ G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700
- 2 01_北海道~ G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600
- 3 01_北海道~ G92515950  01105_北海道札幌市豊平区~ F:製造業           399000
- 4 01_北海道~ G92543356  01101_北海道札幌市中央区~ E:建設業           252800
- 5 01_北海道~ G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300
- 6 02_青森県~ H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000
- 7 02_青森県~ H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200
- 8 04_宮城県~ H42150036  04101_宮城県仙台市青葉区~ K:電気・ガス・水~      418451700
- 9 04_宮城県~ H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600
-10 04_宮城県~ H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1
-# ... with 877 more rows, and 7 more variables: 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
-#   都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 01_北海道~ G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807
+ 2 01_北海道~ G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606
+ 3 01_北海道~ G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 4 01_北海道~ G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903
+ 5 01_北海道~ G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455
+ 6 02_青森県~ H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288
+ 7 02_青森県~ H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571
+ 8 04_宮城県~ H42150036  04101_宮城県仙台市青葉区~ K:電気・ガス・水~      418451700     5308
+ 9 04_宮城県~ H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892
+10 04_宮城県~ H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1      303
+# ... with 877 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="book_02_beginner_2nd_half.html#cb231-1"></a>data_<span class="dv">6</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># 降順</span></span>
-<span id="cb231-2"><a href="book_02_beginner_2nd_half.html#cb231-2"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(都道府県))<span class="op">%&gt;%</span></span>
-<span id="cb231-3"><a href="book_02_beginner_2nd_half.html#cb231-3"></a><span class="st">  </span><span class="kw">relocate</span>(都道府県)</span></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="book_02_beginner_2nd_half.html#cb231-1" aria-hidden="true" tabindex="-1"></a>data_6 <span class="sc">%&gt;%</span> <span class="co"># 降順</span></span>
+<span id="cb231-2"><a href="book_02_beginner_2nd_half.html#cb231-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(都道府県))<span class="sc">%&gt;%</span></span>
+<span id="cb231-3"><a href="book_02_beginner_2nd_half.html#cb231-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(都道府県)</span></code></pre></div>
 <pre><code># A tibble: 887 x 12
-   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数 `最新期業績売上高(百万円)`~
-   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
- 1 47_沖縄県~ J42113831  47208_沖縄県浦添市~ K:電気・ガス・水~       11473100     1823            96082
- 2 46_鹿児島県~ C72124439  46201_鹿児島県鹿児島市~ F:製造業           307700      551            29978
- 3 45_宮崎県~ C32118312  45202_宮崎県都城市~ G:卸売・小売業，~        1362500      300            32821
- 4 43_熊本県~ C82153425  43105_熊本県熊本市北区~ F:製造業          3261100     1649            78346
- 5 40_福岡県~ C42110360  40132_福岡県福岡市博多区~ L:サービス業~        2198900      194            36462
- 6 40_福岡県~ C42151200  40133_福岡県福岡市中央区~ E:建設業          2535100      211            27893
- 7 40_福岡県~ C92114080  40106_福岡県北九州市小倉~ G:卸売・小売業，~        8148900      457            62768
- 8 40_福岡県~ C92180151  40109_福岡県北九州市八幡~ F:製造業         26955300     2463            76054
- 9 40_福岡県~ C92532200  40109_福岡県北九州市八幡~ L:サービス業~          95400      538             5809
-10 40_福岡県~ C42151408  40134_福岡県福岡市南区~ E:建設業          2698300    11268           178987
-# ... with 877 more rows, and 5 more variables: `最新期業績税引後利益(千円)` &lt;dbl&gt;,
-#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 47_沖縄県~ J42113831  47208_沖縄県浦添市~ K:電気・ガス・水~       11473100     1823
+ 2 46_鹿児島県~ C72124439  46201_鹿児島県鹿児島市~ F:製造業           307700      551
+ 3 45_宮崎県~ C32118312  45202_宮崎県都城市~ G:卸売・小売業，~        1362500      300
+ 4 43_熊本県~ C82153425  43105_熊本県熊本市北区~ F:製造業          3261100     1649
+ 5 40_福岡県~ C42110360  40132_福岡県福岡市博多区~ L:サービス業~        2198900      194
+ 6 40_福岡県~ C42151200  40133_福岡県福岡市中央区~ E:建設業          2535100      211
+ 7 40_福岡県~ C92114080  40106_福岡県北九州市小倉~ G:卸売・小売業，~        8148900      457
+ 8 40_福岡県~ C92180151  40109_福岡県北九州市八幡~ F:製造業         26955300     2463
+ 9 40_福岡県~ C92532200  40109_福岡県北九州市八幡~ L:サービス業~          95400      538
+10 40_福岡県~ C42151408  40134_福岡県福岡市南区~ E:建設業          2698300    11268
+# ... with 877 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -2738,48 +2734,46 @@ band_members %&gt;%
 <ul>
 <li>都道府県で昇順ソートし、都道府県内で売上高利益率を降順ソートする場合は以下のように書きます</li>
 </ul>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="book_02_beginner_2nd_half.html#cb233-1"></a>data_<span class="dv">6</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(都道府県, <span class="kw">desc</span>(売上高利益率))</span></code></pre></div>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="book_02_beginner_2nd_half.html#cb233-1" aria-hidden="true" tabindex="-1"></a>data_6 <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(都道府県, <span class="fu">desc</span>(売上高利益率))</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p><strong>ソート前</strong></p>
 <pre><code># A tibble: 887 x 12
-   都道府県 売上高利益率 企業コード 本社所在地市区郡 業種大分類
-   &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
- 1 13_東京都~        13.9  J31299770  13103_東京都港区 I:不動産業
- 2 27_大阪府~      1776.   E32002046  27123_大阪府大阪市淀川区~ L:サービス業~
- 3 13_東京都~         1.29 D42585413  13103_東京都港区 J:運輸・通信業~
- 4 13_東京都~         0.76 J39971897  13101_東京都千代田区~ L:サービス業~
- 5 14_神奈川県~         1.1  J93122775  14102_神奈川県横浜市神奈~ F:製造業  
- 6 13_東京都~        58.4  J34719839  13111_東京都大田区~ F:製造業  
- 7 23_愛知県~         6.93 L12571447  23105_愛知県名古屋市中村~ G:卸売・小売業，~
- 8 13_東京都~         2.11 D42395106  13103_東京都港区 G:卸売・小売業，~
- 9 13_東京都~         3.39 J34594067  13103_東京都港区 E:建設業  
-10 27_大阪府~         1.32 E32304350  27126_大阪府大阪市平野区~ F:製造業  
-# ... with 877 more rows, and 7 more variables:
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
-#   都道府県名 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県 売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
+   &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
+ 1 13_東京都~        13.9  J31299770  13103_東京都港区 I:不動産業         931300
+ 2 27_大阪府~      1776.   E32002046  27123_大阪府大阪市淀川区~ L:サービス業~        1098300
+ 3 13_東京都~         1.29 D42585413  13103_東京都港区 J:運輸・通信業~        6120900
+ 4 13_東京都~         0.76 J39971897  13101_東京都千代田区~ L:サービス業~       15432800
+ 5 14_神奈川県~         1.1  J93122775  14102_神奈川県横浜市神奈~ F:製造業          9904900
+ 6 13_東京都~        58.4  J34719839  13111_東京都大田区~ F:製造業         27761400
+ 7 23_愛知県~         6.93 L12571447  23105_愛知県名古屋市中村~ G:卸売・小売業，~         131800
+ 8 13_東京都~         2.11 D42395106  13103_東京都港区 G:卸売・小売業，~        1523000
+ 9 13_東京都~         3.39 J34594067  13103_東京都港区 E:建設業          8297700
+10 27_大阪府~         1.32 E32304350  27126_大阪府大阪市平野区~ F:製造業           458000
+# ... with 877 more rows, and 6 more variables: 従業員数 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <p><strong>ソート後</strong></p>
 <pre><code># A tibble: 887 x 12
-   都道府県 売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
-   &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
- 1 01_北海道~        5.05  G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807
- 2 01_北海道~        3.41  G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455
- 3 01_北海道~        3.18  G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903
- 4 01_北海道~        0.570 G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606
- 5 01_北海道~        0.49  G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
- 6 02_青森県~        0.96  H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288
- 7 02_青森県~        0.45  H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571
- 8 04_宮城県~        9.45  H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892
- 9 04_宮城県~        4.93  H42150249  04102_宮城県仙台市宮城野~ E:建設業         14733200     5146
-10 04_宮城県~        4.45  H42150036  04101_宮城県仙台市青葉区~ K:電気・ガス・水~      418451700     5308
-# ... with 877 more rows, and 5 more variables: `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;,
-#   従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県 売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
+   &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
+ 1 01_北海道~        5.05  G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700
+ 2 01_北海道~        3.41  G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300
+ 3 01_北海道~        3.18  G92543356  01101_北海道札幌市中央区~ E:建設業           252800
+ 4 01_北海道~        0.570 G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600
+ 5 01_北海道~        0.49  G92515950  01105_北海道札幌市豊平区~ F:製造業           399000
+ 6 02_青森県~        0.96  H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000
+ 7 02_青森県~        0.45  H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200
+ 8 04_宮城県~        9.45  H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600
+ 9 04_宮城県~        4.93  H42150249  04102_宮城県仙台市宮城野~ E:建設業         14733200
+10 04_宮城県~        4.45  H42150036  04101_宮城県仙台市青葉区~ K:電気・ガス・水~      418451700
+# ... with 877 more rows, and 6 more variables: 従業員数 &lt;dbl&gt;,
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
 </div>
 </div>
 <hr />
@@ -2790,25 +2784,24 @@ band_members %&gt;%
 </ul></li>
 <li>ソートしたデータをdata_7とします</li>
 </ul>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="book_02_beginner_2nd_half.html#cb236-1"></a>data_<span class="dv">7</span> &lt;-<span class="st"> </span>data_<span class="dv">6</span> <span class="op">%&gt;%</span></span>
-<span id="cb236-2"><a href="book_02_beginner_2nd_half.html#cb236-2"></a><span class="st">  </span><span class="kw">arrange</span>(都道府県, 従業員数レンジ, <span class="kw">desc</span>(売上高利益率))</span>
-<span id="cb236-3"><a href="book_02_beginner_2nd_half.html#cb236-3"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(都道府県, 従業員数レンジ, 売上高利益率)</span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="book_02_beginner_2nd_half.html#cb236-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="ot">&lt;-</span> data_6 <span class="sc">%&gt;%</span></span>
+<span id="cb236-2"><a href="book_02_beginner_2nd_half.html#cb236-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(都道府県, 従業員数レンジ, <span class="fu">desc</span>(売上高利益率))</span>
+<span id="cb236-3"><a href="book_02_beginner_2nd_half.html#cb236-3" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(都道府県, 従業員数レンジ, 売上高利益率)</span></code></pre></div>
 <pre><code># A tibble: 887 x 12
-   都道府県 従業員数レンジ 売上高利益率 企業コード 本社所在地市区郡
-   &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           
- 1 01_北海道~ 01_500人以下          3.41  G92668203  01104_北海道札幌市白石区~
- 2 01_北海道~ 01_500人以下          0.49  G92515950  01105_北海道札幌市豊平区~
- 3 01_北海道~ 02_1000人以下         5.05  G22109363  01203_北海道小樽市~
- 4 01_北海道~ 02_1000人以下         3.18  G92543356  01101_北海道札幌市中央区~
- 5 01_北海道~ 02_1000人以下         0.570 G92412006  01101_北海道札幌市中央区~
- 6 02_青森県~ 01_500人以下          0.96  H02154711  02202_青森県弘前市~
- 7 02_青森県~ 02_1000人以下         0.45  H92112963  02203_青森県八戸市~
- 8 04_宮城県~ 01_500人以下          3.77  H42536370  04102_宮城県仙台市宮城野~
- 9 04_宮城県~ 01_500人以下          0.86  H42053936  04104_宮城県仙台市太白区~
-10 04_宮城県~ 02_1000人以下         9.45  H42127369  04102_宮城県仙台市宮城野~
-# ... with 877 more rows, and 7 more variables: 業種大分類 &lt;chr&gt;,
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
+   都道府県 従業員数レンジ 売上高利益率 企業コード 本社所在地市区郡 業種大分類
+   &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
+ 1 01_北海道~ 01_500人以下          3.41  G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~
+ 2 01_北海道~ 01_500人以下          0.49  G92515950  01105_北海道札幌市豊平区~ F:製造業  
+ 3 01_北海道~ 02_1000人以下         5.05  G22109363  01203_北海道小樽市~ J:運輸・通信業~
+ 4 01_北海道~ 02_1000人以下         3.18  G92543356  01101_北海道札幌市中央区~ E:建設業  
+ 5 01_北海道~ 02_1000人以下         0.570 G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~
+ 6 02_青森県~ 01_500人以下          0.96  H02154711  02202_青森県弘前市~ G:卸売・小売業，~
+ 7 02_青森県~ 02_1000人以下         0.45  H92112963  02203_青森県八戸市~ G:卸売・小売業，~
+ 8 04_宮城県~ 01_500人以下          3.77  H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~
+ 9 04_宮城県~ 01_500人以下          0.86  H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~
+10 04_宮城県~ 02_1000人以下         9.45  H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~
+# ... with 877 more rows, and 6 more variables: `資本金(千円)` &lt;dbl&gt;,
+#   従業員数 &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
 #   都道府県名 &lt;chr&gt;</code></pre>
 </div>
@@ -2824,10 +2817,10 @@ band_members %&gt;%
 <ul>
 <li><strong>group_by</strong>と<strong>summarise</strong>での集計方法を習得します</li>
 </ul>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="book_02_beginner_2nd_half.html#cb238-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb238-2"><a href="book_02_beginner_2nd_half.html#cb238-2"></a><span class="st">  </span><span class="kw">group_by</span>(都道府県, 従業員数レンジ) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb238-3"><a href="book_02_beginner_2nd_half.html#cb238-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>(),         <span class="dt">sum =</span> <span class="kw">sum</span>(従業員数),</span>
-<span id="cb238-4"><a href="book_02_beginner_2nd_half.html#cb238-4"></a>            <span class="dt">mean =</span> <span class="kw">mean</span>(従業員数), <span class="dt">max =</span> <span class="kw">max</span>(従業員数))</span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="book_02_beginner_2nd_half.html#cb238-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb238-2"><a href="book_02_beginner_2nd_half.html#cb238-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(都道府県, 従業員数レンジ) <span class="sc">%&gt;%</span> </span>
+<span id="cb238-3"><a href="book_02_beginner_2nd_half.html#cb238-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>(),         <span class="at">sum =</span> <span class="fu">sum</span>(従業員数),</span>
+<span id="cb238-4"><a href="book_02_beginner_2nd_half.html#cb238-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(従業員数), <span class="at">max =</span> <span class="fu">max</span>(従業員数))</span></code></pre></div>
 <pre><code># A tibble: 83 x 6
 # Groups:   都道府県 [38]
    都道府県  従業員数レンジ count   sum  mean   max
@@ -2853,17 +2846,17 @@ band_members %&gt;%
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="book_02_beginner_2nd_half.html#cb240-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb240-2"><a href="book_02_beginner_2nd_half.html#cb240-2"></a><span class="st">  </span><span class="kw">group_by</span>(都道府県) <span class="op">%&gt;%</span></span>
-<span id="cb240-3"><a href="book_02_beginner_2nd_half.html#cb240-3"></a><span class="st">  </span><span class="kw">summarise</span>(</span>
-<span id="cb240-4"><a href="book_02_beginner_2nd_half.html#cb240-4"></a>   従業員数平均=<span class="kw">mean</span>(従業員数)</span>
-<span id="cb240-5"><a href="book_02_beginner_2nd_half.html#cb240-5"></a>    )</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="book_02_beginner_2nd_half.html#cb240-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb240-2"><a href="book_02_beginner_2nd_half.html#cb240-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(都道府県) <span class="sc">%&gt;%</span></span>
+<span id="cb240-3"><a href="book_02_beginner_2nd_half.html#cb240-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb240-4"><a href="book_02_beginner_2nd_half.html#cb240-4" aria-hidden="true" tabindex="-1"></a>   従業員数平均<span class="ot">=</span><span class="fu">mean</span>(従業員数)</span>
+<span id="cb240-5"><a href="book_02_beginner_2nd_half.html#cb240-5" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <pre><code># A tibble: 38 x 2
    都道府県  従業員数平均
-   &lt;chr&gt;            &lt;dbl&gt;
+ * &lt;chr&gt;            &lt;dbl&gt;
  1 01_北海道         641.
  2 02_青森県         430.
  3 04_宮城県        2363.
@@ -2883,10 +2876,10 @@ band_members %&gt;%
 <ul>
 <li>group_byの引数にカラム名を複数与えることで、複数グループでの集計ができるようになります</li>
 </ul>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="book_02_beginner_2nd_half.html#cb242-1"></a><span class="co"># 都道府県かつ従業員数レンジごとに従業員数平均を算出</span></span>
-<span id="cb242-2"><a href="book_02_beginner_2nd_half.html#cb242-2"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb242-3"><a href="book_02_beginner_2nd_half.html#cb242-3"></a><span class="st">  </span><span class="kw">group_by</span>(都道府県, 従業員数レンジ) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb242-4"><a href="book_02_beginner_2nd_half.html#cb242-4"></a><span class="st">  </span><span class="kw">summarise</span>(従業員数平均 =<span class="st"> </span><span class="kw">mean</span>(従業員数))</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="book_02_beginner_2nd_half.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 都道府県かつ従業員数レンジごとに従業員数平均を算出</span></span>
+<span id="cb242-2"><a href="book_02_beginner_2nd_half.html#cb242-2" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb242-3"><a href="book_02_beginner_2nd_half.html#cb242-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(都道府県, 従業員数レンジ) <span class="sc">%&gt;%</span> </span>
+<span id="cb242-4"><a href="book_02_beginner_2nd_half.html#cb242-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(従業員数平均 <span class="ot">=</span> <span class="fu">mean</span>(従業員数))</span></code></pre></div>
 <pre><code># A tibble: 83 x 3
 # Groups:   都道府県 [38]
    都道府県  従業員数レンジ 従業員数平均
@@ -2908,26 +2901,25 @@ band_members %&gt;%
 <ul>
 <li>mutateでは既存のtibbleに対してグループ集計値が格納されるので、同じ値が複数行に入ります</li>
 </ul>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="book_02_beginner_2nd_half.html#cb244-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(都道府県, 従業員数レンジ) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb244-2"><a href="book_02_beginner_2nd_half.html#cb244-2"></a><span class="st">  </span><span class="kw">mutate</span>(従業員数平均 =<span class="st"> </span><span class="kw">mean</span>(従業員数)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb244-3"><a href="book_02_beginner_2nd_half.html#cb244-3"></a><span class="st">  </span><span class="kw">relocate</span>(都道府県, 従業員数レンジ, 従業員数平均, 従業員数)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="book_02_beginner_2nd_half.html#cb244-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(都道府県, 従業員数レンジ) <span class="sc">%&gt;%</span> </span>
+<span id="cb244-2"><a href="book_02_beginner_2nd_half.html#cb244-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(従業員数平均 <span class="ot">=</span> <span class="fu">mean</span>(従業員数)) <span class="sc">%&gt;%</span> </span>
+<span id="cb244-3"><a href="book_02_beginner_2nd_half.html#cb244-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(都道府県, 従業員数レンジ, 従業員数平均, 従業員数)</span></code></pre></div>
 <pre><code># A tibble: 887 x 13
 # Groups:   都道府県, 従業員数レンジ [83]
-   都道府県 従業員数レンジ 従業員数平均 従業員数 企業コード
-   &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;     
- 1 01_北海道~ 01_500人以下           445       455 G92668203 
- 2 01_北海道~ 01_500人以下           445       435 G92515950 
- 3 01_北海道~ 02_1000人以下          772       807 G22109363 
- 4 01_北海道~ 02_1000人以下          772       903 G92543356 
- 5 01_北海道~ 02_1000人以下          772       606 G92412006 
- 6 02_青森県~ 01_500人以下           288       288 H02154711 
- 7 02_青森県~ 02_1000人以下          571       571 H92112963 
- 8 04_宮城県~ 01_500人以下           236.      303 H42536370 
- 9 04_宮城県~ 01_500人以下           236.      168 H42053936 
-10 04_宮城県~ 02_1000人以下          892       892 H42127369 
-# ... with 877 more rows, and 8 more variables:
-#   本社所在地市区郡 &lt;chr&gt;, 業種大分類 &lt;chr&gt;, `資本金(千円)` &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
+   都道府県 従業員数レンジ 従業員数平均 従業員数 企業コード 本社所在地市区郡
+   &lt;chr&gt;    &lt;chr&gt;                 &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           
+ 1 01_北海道~ 01_500人以下           445       455 G92668203  01104_北海道札幌市白石区~
+ 2 01_北海道~ 01_500人以下           445       435 G92515950  01105_北海道札幌市豊平区~
+ 3 01_北海道~ 02_1000人以下          772       807 G22109363  01203_北海道小樽市~
+ 4 01_北海道~ 02_1000人以下          772       903 G92543356  01101_北海道札幌市中央区~
+ 5 01_北海道~ 02_1000人以下          772       606 G92412006  01101_北海道札幌市中央区~
+ 6 02_青森県~ 01_500人以下           288       288 H02154711  02202_青森県弘前市~
+ 7 02_青森県~ 02_1000人以下          571       571 H92112963  02203_青森県八戸市~
+ 8 04_宮城県~ 01_500人以下           236.      303 H42536370  04102_宮城県仙台市宮城野~
+ 9 04_宮城県~ 01_500人以下           236.      168 H42053936  04104_宮城県仙台市太白区~
+10 04_宮城県~ 02_1000人以下          892       892 H42127369  04102_宮城県仙台市宮城野~
+# ... with 877 more rows, and 7 more variables: 業種大分類 &lt;chr&gt;,
+#   `資本金(千円)` &lt;dbl&gt;, `最新期業績売上高(百万円)` &lt;dbl&gt;,
 #   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
 #   都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;</code></pre>
 </div>
@@ -2937,30 +2929,32 @@ band_members %&gt;%
 <li>summariseで<strong>n()</strong>を用いてレコード数を集計できます</li>
 <li><strong>n()</strong>はsummariseの中で使える特殊な関数です</li>
 </ul>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="book_02_beginner_2nd_half.html#cb246-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(都道府県) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="book_02_beginner_2nd_half.html#cb246-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(都道府県) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <pre><code># A tibble: 887 x 12
-   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数 `最新期業績売上高(百万円)`~
-   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
- 1 01_北海道~ G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455           361158
- 2 01_北海道~ G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435            18093
- 3 01_北海道~ G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807            19857
- 4 01_北海道~ G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903            16223
- 5 01_北海道~ G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606           127831
- 6 02_青森県~ H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288            23258
- 7 02_青森県~ H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571            31691
- 8 04_宮城県~ H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1      303            99463
- 9 04_宮城県~ H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~        1966400      168            34224
-10 04_宮城県~ H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892            22243
-# ... with 877 more rows, and 5 more variables: `最新期業績税引後利益(千円)` &lt;dbl&gt;,
-#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 01_北海道~ G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455
+ 2 01_北海道~ G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 3 01_北海道~ G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807
+ 4 01_北海道~ G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903
+ 5 01_北海道~ G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606
+ 6 02_青森県~ H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288
+ 7 02_青森県~ H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571
+ 8 04_宮城県~ H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1      303
+ 9 04_宮城県~ H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~        1966400      168
+10 04_宮城県~ H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892
+# ... with 877 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <pre><code># A tibble: 38 x 2
    都道府県  count
-   &lt;chr&gt;     &lt;int&gt;
+ * &lt;chr&gt;     &lt;int&gt;
  1 01_北海道     5
  2 02_青森県     2
  3 04_宮城県     5
@@ -2978,24 +2972,26 @@ band_members %&gt;%
 <ul>
 <li>別の方法として、group_byしたデータを<strong>count()</strong>しても同様な結果を得ることができます</li>
 </ul>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="book_02_beginner_2nd_half.html#cb249-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(都道府県) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">count</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="book_02_beginner_2nd_half.html#cb249-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(都道府県) <span class="sc">%&gt;%</span> <span class="fu">count</span>()</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <pre><code># A tibble: 887 x 12
-   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数 `最新期業績売上高(百万円)`~
-   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
- 1 01_北海道~ G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455           361158
- 2 01_北海道~ G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435            18093
- 3 01_北海道~ G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807            19857
- 4 01_北海道~ G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903            16223
- 5 01_北海道~ G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606           127831
- 6 02_青森県~ H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288            23258
- 7 02_青森県~ H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571            31691
- 8 04_宮城県~ H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1      303            99463
- 9 04_宮城県~ H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~        1966400      168            34224
-10 04_宮城県~ H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892            22243
-# ... with 877 more rows, and 5 more variables: `最新期業績税引後利益(千円)` &lt;dbl&gt;,
-#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 01_北海道~ G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455
+ 2 01_北海道~ G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 3 01_北海道~ G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807
+ 4 01_北海道~ G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903
+ 5 01_北海道~ G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606
+ 6 02_青森県~ H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288
+ 7 02_青森県~ H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571
+ 8 04_宮城県~ H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1      303
+ 9 04_宮城県~ H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~        1966400      168
+10 04_宮城県~ H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892
+# ... with 877 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
@@ -3020,10 +3016,10 @@ band_members %&gt;%
 <div id="step13_sanko3" class="section level3" number="3.8.6">
 <h3><span class="header-section-number">3.8.6</span> 参考３：ピボットテーブル</h3>
 <p>データの横持ち変換（中級編で説明）を行えば、ピボットテーブル形式にもできます</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="book_02_beginner_2nd_half.html#cb252-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(都道府県, 従業員数レンジ) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb252-2"><a href="book_02_beginner_2nd_half.html#cb252-2"></a><span class="st">  </span><span class="kw">summarise</span>(従業員数平均 =<span class="st"> </span><span class="kw">mean</span>(従業員数)) <span class="op">%&gt;%</span></span>
-<span id="cb252-3"><a href="book_02_beginner_2nd_half.html#cb252-3"></a><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from =</span> <span class="st">&quot;従業員数レンジ&quot;</span>, </span>
-<span id="cb252-4"><a href="book_02_beginner_2nd_half.html#cb252-4"></a>              <span class="dt">values_from =</span> <span class="st">&quot;従業員数平均&quot;</span>, <span class="dt">values_fill=</span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="book_02_beginner_2nd_half.html#cb252-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(都道府県, 従業員数レンジ) <span class="sc">%&gt;%</span> </span>
+<span id="cb252-2"><a href="book_02_beginner_2nd_half.html#cb252-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(従業員数平均 <span class="ot">=</span> <span class="fu">mean</span>(従業員数)) <span class="sc">%&gt;%</span></span>
+<span id="cb252-3"><a href="book_02_beginner_2nd_half.html#cb252-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;従業員数レンジ&quot;</span>, </span>
+<span id="cb252-4"><a href="book_02_beginner_2nd_half.html#cb252-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> <span class="st">&quot;従業員数平均&quot;</span>, <span class="at">values_fill=</span><span class="dv">0</span>)</span></code></pre></div>
 <pre><code># A tibble: 38 x 4
 # Groups:   都道府県 [38]
    都道府県  `01_500人以下` `02_1000人以下` `03_1000人超`
@@ -3052,46 +3048,46 @@ band_members %&gt;%
 <li>特定の条件を満たすレコードをデータから抽出します</li>
 <li>たとえば、売上高利益率がマイナスの企業は、<strong>filter</strong>を使って以下のようにして抽出できます</li>
 </ul>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="book_02_beginner_2nd_half.html#cb254-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(売上高利益率<span class="op">&lt;</span><span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(売上高利益率)</span></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="book_02_beginner_2nd_half.html#cb254-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(売上高利益率<span class="sc">&lt;</span><span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(売上高利益率)</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <pre><code># A tibble: 887 x 12
-   売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
-          &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
- 1        3.41  G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300
- 2        0.49  G92515950  01105_北海道札幌市豊平区~ F:製造業           399000
- 3        5.05  G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700
- 4        3.18  G92543356  01101_北海道札幌市中央区~ E:建設業           252800
- 5        0.570 G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600
- 6        0.96  H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000
- 7        0.45  H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200
- 8        3.77  H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1
- 9        0.86  H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~        1966400
-10        9.45  H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600
-# ... with 877 more rows, and 7 more variables: 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
-#   都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+          &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1        3.41  G92668203  01104_北海道札幌市白石区~ G:卸売・小売業，~        9316300      455
+ 2        0.49  G92515950  01105_北海道札幌市豊平区~ F:製造業           399000      435
+ 3        5.05  G22109363  01203_北海道小樽市~ J:運輸・通信業~        1590700      807
+ 4        3.18  G92543356  01101_北海道札幌市中央区~ E:建設業           252800      903
+ 5        0.570 G92412006  01101_北海道札幌市中央区~ G:卸売・小売業，~        1748600      606
+ 6        0.96  H02154711  02202_青森県弘前市~ G:卸売・小売業，~        1247000      288
+ 7        0.45  H92112963  02203_青森県八戸市~ G:卸売・小売業，~        4006200      571
+ 8        3.77  H42536370  04102_宮城県仙台市宮城野~ G:卸売・小売業，~              1      303
+ 9        0.86  H42053936  04104_宮城県仙台市太白区~ G:卸売・小売業，~        1966400      168
+10        9.45  H42127369  04102_宮城県仙台市宮城野~ G:卸売・小売業，~        1065600      892
+# ... with 877 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
 <pre><code># A tibble: 53 x 12
-   売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
-          &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
- 1        -3.44 H72516758  07203_福島県郡山市~ F:製造業          6134400
- 2        -1.15 D82130703  11102_埼玉県さいたま市北~ G:卸売・小売業，~              1
- 3       -14.0  B92598280  11221_埼玉県草加市~ G:卸売・小売業，~        2334500
- 4        -1.48 D22802868  12106_千葉県千葉市美浜区~ G:卸売・小売業，~        1619500
- 5        -8.31 J34983560  12204_千葉県船橋市~ F:製造業          1413700
- 6        -5.26 D22716170  12106_千葉県千葉市美浜区~ G:卸売・小売業，~         146800
- 7        -0.08 J33168656  13109_東京都品川区~ J:運輸・通信業~         263200
- 8        -0.1  J39262517  13101_東京都千代田区~ G:卸売・小売業，~        1859600
- 9        -0.13 J31728828  13116_東京都豊島区~ G:卸売・小売業，~         528500
-10        -0.27 J33707893  13116_東京都豊島区~ F:製造業          1281800
-# ... with 43 more rows, and 7 more variables: 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
-#   都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   売上高利益率 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+          &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1        -3.44 H72516758  07203_福島県郡山市~ F:製造業          6134400      192
+ 2        -1.15 D82130703  11102_埼玉県さいたま市北~ G:卸売・小売業，~              1      206
+ 3       -14.0  B92598280  11221_埼玉県草加市~ G:卸売・小売業，~        2334500       29
+ 4        -1.48 D22802868  12106_千葉県千葉市美浜区~ G:卸売・小売業，~        1619500       83
+ 5        -8.31 J34983560  12204_千葉県船橋市~ F:製造業          1413700      143
+ 6        -5.26 D22716170  12106_千葉県千葉市美浜区~ G:卸売・小売業，~         146800      720
+ 7        -0.08 J33168656  13109_東京都品川区~ J:運輸・通信業~         263200       16
+ 8        -0.1  J39262517  13101_東京都千代田区~ G:卸売・小売業，~        1859600      139
+ 9        -0.13 J31728828  13116_東京都豊島区~ G:卸売・小売業，~         528500      408
+10        -0.27 J33707893  13116_東京都豊島区~ F:製造業          1281800      498
+# ... with 43 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -3100,24 +3096,24 @@ band_members %&gt;%
 <ul>
 <li>filterの引数に条件式を与えることで、条件式に真であるレコードのみを抽出することができます（<a href="#/step11_sanko">条件式link</a>）</li>
 </ul>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="book_02_beginner_2nd_half.html#cb257-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(都道府県名<span class="op">==</span><span class="st">&quot;大阪府&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(都道府県名)</span></code></pre></div>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="book_02_beginner_2nd_half.html#cb257-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(都道府県名<span class="sc">==</span><span class="st">&quot;大阪府&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">relocate</span>(都道府県名)</span></code></pre></div>
 <pre><code># A tibble: 123 x 12
-   都道府県名 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
-   &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
- 1 大阪府     E32510267  27106_大阪府大阪市西区~ E:建設業          4497700
- 2 大阪府     E32119566  27227_大阪府東大阪市~ F:製造業          4827300
- 3 大阪府     E32012305  27128_大阪府大阪市中央区~ F:製造業          7518400
- 4 大阪府     E32427103  27127_大阪府大阪市北区~ F:製造業          2410500
- 5 大阪府     E32995244  27113_大阪府大阪市西淀川~ F:製造業          1371100
- 6 大阪府     E32656531  27128_大阪府大阪市中央区~ F:製造業          3426900
- 7 大阪府     E12576662  27123_大阪府大阪市淀川区~ L:サービス業~         935400
- 8 大阪府     E38927358  27128_大阪府大阪市中央区~ I:不動産業        3098700
- 9 大阪府     E62112080  27128_大阪府大阪市中央区~ F:製造業          3295700
-10 大阪府     E38334059  27106_大阪府大阪市西区~ G:卸売・小売業，~         335700
-# ... with 113 more rows, and 7 more variables: 従業員数 &lt;dbl&gt;,
-#   `最新期業績売上高(百万円)` &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
-#   都道府県 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
+   都道府県名 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
+   &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+ 1 大阪府     E32510267  27106_大阪府大阪市西区~ E:建設業          4497700      167
+ 2 大阪府     E32119566  27227_大阪府東大阪市~ F:製造業          4827300      274
+ 3 大阪府     E32012305  27128_大阪府大阪市中央区~ F:製造業          7518400      347
+ 4 大阪府     E32427103  27127_大阪府大阪市北区~ F:製造業          2410500      388
+ 5 大阪府     E32995244  27113_大阪府大阪市西淀川~ F:製造業          1371100      332
+ 6 大阪府     E32656531  27128_大阪府大阪市中央区~ F:製造業          3426900      217
+ 7 大阪府     E12576662  27123_大阪府大阪市淀川区~ L:サービス業~         935400      391
+ 8 大阪府     E38927358  27128_大阪府大阪市中央区~ I:不動産業        3098700      140
+ 9 大阪府     E62112080  27128_大阪府大阪市中央区~ F:製造業          3295700      378
+10 大阪府     E38334059  27106_大阪府大阪市西区~ G:卸売・小売業，~         335700       74
+# ... with 113 more rows, and 6 more variables:
+#   `最新期業績売上高(百万円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県 &lt;chr&gt;, 売上高利益率 &lt;dbl&gt;,
+#   従業員数レンジ &lt;chr&gt;</code></pre>
 </div>
 <div id="複数条件で抽出" class="section level3" number="3.9.3">
 <h3><span class="header-section-number">3.9.3</span> 複数条件で抽出</h3>
@@ -3134,73 +3130,73 @@ band_members %&gt;%
 <ul>
 <li>売上高利益率が10%以上、または売上高が1兆円以上の企業のレコードを抽出します（「または」は「<strong>|</strong>」）</li>
 </ul>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="book_02_beginner_2nd_half.html#cb259-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb259-2"><a href="book_02_beginner_2nd_half.html#cb259-2"></a><span class="st">  </span><span class="kw">filter</span>(売上高利益率<span class="op">&gt;=</span><span class="dv">10</span> <span class="op">|</span><span class="st"> `</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span><span class="op">&gt;</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb259-3"><a href="book_02_beginner_2nd_half.html#cb259-3"></a><span class="st">  </span><span class="kw">relocate</span>(売上高利益率, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="book_02_beginner_2nd_half.html#cb259-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb259-2"><a href="book_02_beginner_2nd_half.html#cb259-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(売上高利益率<span class="sc">&gt;=</span><span class="dv">10</span> <span class="sc">|</span> <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span><span class="sc">&gt;</span><span class="dv">10</span><span class="sc">**</span><span class="dv">6</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb259-3"><a href="book_02_beginner_2nd_half.html#cb259-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(売上高利益率, <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code># A tibble: 239 x 12
-   売上高利益率 `最新期業績売上高(百万円)`~ 企業コード 本社所在地市区郡
-          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;           
- 1         10.1            13524 D82183414  11105_埼玉県さいたま市中~
- 2         41.6            21267 D82325861  11107_埼玉県さいたま市浦~
- 3         17.4            37081 D82402989  11211_埼玉県本庄市~
- 4         10.3            34488 J34003761  11206_埼玉県行田市~
- 5         15.8             3415 D22182297  12213_千葉県東金市~
- 6         14.8            10957 D22153185  12224_千葉県鎌ケ谷市~
- 7         21.0            23109 D22165655  12217_千葉県柏市
- 8       3890.               100 J34860668  13101_東京都千代田区~
- 9        301.             12830 J33209601  13116_東京都豊島区~
-10        230.              4960 J34732870  13109_東京都品川区~
-# ... with 229 more rows, and 8 more variables: 業種大分類 &lt;chr&gt;,
-#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
+   売上高利益率 `最新期業績売上高(百万円)`~ 企業コード 本社所在地市区郡 業種大分類
+          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
+ 1         10.1            13524 D82183414  11105_埼玉県さいたま市中~ F:製造業  
+ 2         41.6            21267 D82325861  11107_埼玉県さいたま市浦~ G:卸売・小売業，~
+ 3         17.4            37081 D82402989  11211_埼玉県本庄市~ I:不動産業
+ 4         10.3            34488 J34003761  11206_埼玉県行田市~ F:製造業  
+ 5         15.8             3415 D22182297  12213_千葉県東金市~ J:運輸・通信業~
+ 6         14.8            10957 D22153185  12224_千葉県鎌ケ谷市~ J:運輸・通信業~
+ 7         21.0            23109 D22165655  12217_千葉県柏市 L:サービス業~
+ 8       3890.               100 J34860668  13101_東京都千代田区~ F:製造業  
+ 9        301.             12830 J33209601  13116_東京都豊島区~ L:サービス業~
+10        230.              4960 J34732870  13109_東京都品川区~ I:不動産業
+# ... with 229 more rows, and 7 more variables: `資本金(千円)` &lt;dbl&gt;,
+#   従業員数 &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;,
 #   都道府県名 &lt;chr&gt;, 都道府県 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
 <hr />
 <ul>
 <li>先ほどの条件に加えて、東京or大阪の企業であるという条件を追加します（<strong>%in% ~</strong>で、~に含まれてればTRUE）</li>
 </ul>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="book_02_beginner_2nd_half.html#cb261-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb261-2"><a href="book_02_beginner_2nd_half.html#cb261-2"></a><span class="st">  </span><span class="kw">filter</span>(売上高利益率<span class="op">&gt;=</span><span class="dv">10</span> <span class="op">|</span><span class="st"> `</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span><span class="op">&gt;</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>,</span>
-<span id="cb261-3"><a href="book_02_beginner_2nd_half.html#cb261-3"></a>         都道府県名 <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;東京都&quot;</span>, <span class="st">&quot;大阪府&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb261-4"><a href="book_02_beginner_2nd_half.html#cb261-4"></a><span class="st">  </span><span class="kw">relocate</span>(売上高利益率, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>, 都道府県名)</span></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="book_02_beginner_2nd_half.html#cb261-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb261-2"><a href="book_02_beginner_2nd_half.html#cb261-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(売上高利益率<span class="sc">&gt;=</span><span class="dv">10</span> <span class="sc">|</span> <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span><span class="sc">&gt;</span><span class="dv">10</span><span class="sc">**</span><span class="dv">6</span>,</span>
+<span id="cb261-3"><a href="book_02_beginner_2nd_half.html#cb261-3" aria-hidden="true" tabindex="-1"></a>         都道府県名 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;東京都&quot;</span>, <span class="st">&quot;大阪府&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb261-4"><a href="book_02_beginner_2nd_half.html#cb261-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(売上高利益率, <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>, 都道府県名)</span></code></pre></div>
 <pre><code># A tibble: 165 x 12
-   売上高利益率 `最新期業績売上高(百万円)`~ 都道府県名 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
-          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
- 1       3890.               100 東京都     J34860668  13101_東京都千代田区~ F:製造業          3409800
- 2        301.             12830 東京都     J33209601  13116_東京都豊島区~ L:サービス業~       77775000
- 3        230.              4960 東京都     J34732870  13109_東京都品川区~ I:不動産業       10731100
- 4        123.              1115 東京都     J36311119  13101_東京都千代田区~ I:不動産業         735000
- 5         81.2             5905 東京都     J34353008  13103_東京都港区 J:運輸・通信業~              1
- 6         72.2            15374 東京都     J33418285  13101_東京都千代田区~ I:不動産業          78000
- 7         54.3             1116 東京都     J31963141  13104_東京都新宿区~ I:不動産業        1448100
- 8         42.4             8029 東京都     J31486759  13101_東京都千代田区~ L:サービス業~         708200
- 9         36.8             3316 東京都     J36322142  13113_東京都渋谷区~ L:サービス業~         290200
-10         36.0            29345 東京都     J33003842  13101_東京都千代田区~ L:サービス業~        1991700
-# ... with 155 more rows, and 5 more variables: 従業員数 &lt;dbl&gt;,
-#   `最新期業績税引後利益(千円)` &lt;dbl&gt;, 都道府県コード &lt;chr&gt;, 都道府県 &lt;chr&gt;,
-#   従業員数レンジ &lt;chr&gt;</code></pre>
+   売上高利益率 `最新期業績売上高(百万円)`~ 都道府県名 企業コード 本社所在地市区郡
+          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;           
+ 1       3890.               100 東京都     J34860668  13101_東京都千代田区~
+ 2        301.             12830 東京都     J33209601  13116_東京都豊島区~
+ 3        230.              4960 東京都     J34732870  13109_東京都品川区~
+ 4        123.              1115 東京都     J36311119  13101_東京都千代田区~
+ 5         81.2             5905 東京都     J34353008  13103_東京都港区
+ 6         72.2            15374 東京都     J33418285  13101_東京都千代田区~
+ 7         54.3             1116 東京都     J31963141  13104_東京都新宿区~
+ 8         42.4             8029 東京都     J31486759  13101_東京都千代田区~
+ 9         36.8             3316 東京都     J36322142  13113_東京都渋谷区~
+10         36.0            29345 東京都     J33003842  13101_東京都千代田区~
+# ... with 155 more rows, and 7 more variables: 業種大分類 &lt;chr&gt;,
+#   `資本金(千円)` &lt;dbl&gt;, 従業員数 &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+#   都道府県コード &lt;chr&gt;, 都道府県 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
 <hr />
 <ul>
 <li>先ほどの条件に加えて、従業員数が50人未満の企業であるという条件を追加します</li>
 </ul>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="book_02_beginner_2nd_half.html#cb263-1"></a>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb263-2"><a href="book_02_beginner_2nd_half.html#cb263-2"></a><span class="st">  </span><span class="kw">filter</span>(売上高利益率<span class="op">&gt;=</span><span class="dv">10</span> <span class="op">|</span><span class="st"> `</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span><span class="op">&gt;</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span>,</span>
-<span id="cb263-3"><a href="book_02_beginner_2nd_half.html#cb263-3"></a>         都道府県名 <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;東京都&quot;</span>, <span class="st">&quot;大阪府&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb263-4"><a href="book_02_beginner_2nd_half.html#cb263-4"></a><span class="st">  </span><span class="kw">filter</span>(従業員数 <span class="op">&lt;</span><span class="st"> </span><span class="dv">50</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb263-5"><a href="book_02_beginner_2nd_half.html#cb263-5"></a><span class="st">  </span><span class="kw">relocate</span>(売上高利益率, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>, 都道府県名, 従業員数)</span></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="book_02_beginner_2nd_half.html#cb263-1" aria-hidden="true" tabindex="-1"></a>data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb263-2"><a href="book_02_beginner_2nd_half.html#cb263-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(売上高利益率<span class="sc">&gt;=</span><span class="dv">10</span> <span class="sc">|</span> <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span><span class="sc">&gt;</span><span class="dv">10</span><span class="sc">**</span><span class="dv">6</span>,</span>
+<span id="cb263-3"><a href="book_02_beginner_2nd_half.html#cb263-3" aria-hidden="true" tabindex="-1"></a>         都道府県名 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;東京都&quot;</span>, <span class="st">&quot;大阪府&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb263-4"><a href="book_02_beginner_2nd_half.html#cb263-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(従業員数 <span class="sc">&lt;</span> <span class="dv">50</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb263-5"><a href="book_02_beginner_2nd_half.html#cb263-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(売上高利益率, <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>, 都道府県名, 従業員数)</span></code></pre></div>
 <pre><code># A tibble: 10 x 12
-   売上高利益率 `最新期業績売上高(百万円)`~ 都道府県名 従業員数 企業コード 本社所在地市区郡 業種大分類
-          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;     
- 1        230.              4960 東京都           35 J34732870  13109_東京都品川区~ I:不動産業
- 2         81.2             5905 東京都           33 J34353008  13103_東京都港区 J:運輸・通信業~
- 3         54.3             1116 東京都           22 J31963141  13104_東京都新宿区~ I:不動産業
- 4         26.9           151194 東京都           24 J34020161  13102_東京都中央区~ I:不動産業
- 5         24.0            36479 東京都           48 J34014761  13229_東京都西東京市~ F:製造業  
- 6         17.2            10673 東京都           39 J22144564  13103_東京都港区 I:不動産業
- 7         14.6            10133 東京都           16 J34338556  13101_東京都千代田区~ I:不動産業
- 8         11.3            22639 東京都           11 J30572230  13101_東京都千代田区~ I:不動産業
- 9         11              17870 東京都           43 J34500137  13103_東京都港区 F:製造業  
-10         12.6            24151 大阪府            1 E38259980  27128_大阪府大阪市中央区~ L:サービス業~
-# ... with 5 more variables: `資本金(千円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
+   売上高利益率 `最新期業績売上高(百万円)`~ 都道府県名 従業員数 企業コード
+          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     
+ 1        230.              4960 東京都           35 J34732870 
+ 2         81.2             5905 東京都           33 J34353008 
+ 3         54.3             1116 東京都           22 J31963141 
+ 4         26.9           151194 東京都           24 J34020161 
+ 5         24.0            36479 東京都           48 J34014761 
+ 6         17.2            10673 東京都           39 J22144564 
+ 7         14.6            10133 東京都           16 J34338556 
+ 8         11.3            22639 東京都           11 J30572230 
+ 9         11              17870 東京都           43 J34500137 
+10         12.6            24151 大阪府            1 E38259980 
+# ... with 7 more variables: 本社所在地市区郡 &lt;chr&gt;, 業種大分類 &lt;chr&gt;,
+#   `資本金(千円)` &lt;dbl&gt;, `最新期業績税引後利益(千円)` &lt;dbl&gt;,
 #   都道府県コード &lt;chr&gt;, 都道府県 &lt;chr&gt;, 従業員数レンジ &lt;chr&gt;</code></pre>
 </div>
 </div>
@@ -3230,9 +3226,9 @@ band_members %&gt;%
 <li>初級編前半で説明したように、selectで<strong>ー変数名</strong>とすることで変数消去できます</li>
 <li>不要な変数を消去したデータをdata_8とします</li>
 </ul>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="book_02_beginner_2nd_half.html#cb265-1"></a>data_<span class="dv">8</span> &lt;-<span class="st"> </span>data_<span class="dv">7</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb265-2"><a href="book_02_beginner_2nd_half.html#cb265-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span><span class="st">&quot;本社所在地市区郡&quot;</span>, <span class="op">-</span><span class="st">&quot;都道府県コード&quot;</span>, <span class="op">-</span><span class="st">&quot;都道府県名&quot;</span>) </span>
-<span id="cb265-3"><a href="book_02_beginner_2nd_half.html#cb265-3"></a>data_<span class="dv">8</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">colnames</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="book_02_beginner_2nd_half.html#cb265-1" aria-hidden="true" tabindex="-1"></a>data_8 <span class="ot">&lt;-</span> data_7 <span class="sc">%&gt;%</span> </span>
+<span id="cb265-2"><a href="book_02_beginner_2nd_half.html#cb265-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">&quot;本社所在地市区郡&quot;</span>, <span class="sc">-</span><span class="st">&quot;都道府県コード&quot;</span>, <span class="sc">-</span><span class="st">&quot;都道府県名&quot;</span>) </span>
+<span id="cb265-3"><a href="book_02_beginner_2nd_half.html#cb265-3" aria-hidden="true" tabindex="-1"></a>data_8 <span class="sc">%&gt;%</span> <span class="fu">colnames</span>()</span></code></pre></div>
 <pre><code>[1] &quot;企業コード&quot;                 &quot;業種大分類&quot;                
 [3] &quot;資本金(千円)&quot;               &quot;従業員数&quot;                  
 [5] &quot;最新期業績売上高(百万円)&quot;   &quot;最新期業績税引後利益(千円)&quot;
@@ -3245,12 +3241,12 @@ band_members %&gt;%
 <li>並び変えたい順番でカラム名をselectすることで、カラムを並び変えることができます（ここで不要カラムをselectしなければ、変数消去は不要な作業になります）</li>
 <li>カラムを並び替えたデータをdata_9とします</li>
 </ul>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="book_02_beginner_2nd_half.html#cb267-1"></a>data_<span class="dv">9</span> &lt;-<span class="st"> </span>data_<span class="dv">8</span> <span class="op">%&gt;%</span></span>
-<span id="cb267-2"><a href="book_02_beginner_2nd_half.html#cb267-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;都道府県&quot;</span>, <span class="st">&quot;従業員数&quot;</span>,</span>
-<span id="cb267-3"><a href="book_02_beginner_2nd_half.html#cb267-3"></a>         <span class="st">&quot;業種大分類&quot;</span>,<span class="st">&quot;最新期業績売上高(百万円)&quot;</span>,</span>
-<span id="cb267-4"><a href="book_02_beginner_2nd_half.html#cb267-4"></a>         <span class="st">&quot;最新期業績税引後利益(千円)&quot;</span>, <span class="st">&quot;売上高利益率&quot;</span>, </span>
-<span id="cb267-5"><a href="book_02_beginner_2nd_half.html#cb267-5"></a>         <span class="st">&quot;従業員数レンジ&quot;</span>)</span>
-<span id="cb267-6"><a href="book_02_beginner_2nd_half.html#cb267-6"></a>data_<span class="dv">9</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">colnames</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="book_02_beginner_2nd_half.html#cb267-1" aria-hidden="true" tabindex="-1"></a>data_9 <span class="ot">&lt;-</span> data_8 <span class="sc">%&gt;%</span></span>
+<span id="cb267-2"><a href="book_02_beginner_2nd_half.html#cb267-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;都道府県&quot;</span>, <span class="st">&quot;従業員数&quot;</span>,</span>
+<span id="cb267-3"><a href="book_02_beginner_2nd_half.html#cb267-3" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;業種大分類&quot;</span>,<span class="st">&quot;最新期業績売上高(百万円)&quot;</span>,</span>
+<span id="cb267-4"><a href="book_02_beginner_2nd_half.html#cb267-4" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;最新期業績税引後利益(千円)&quot;</span>, <span class="st">&quot;売上高利益率&quot;</span>, </span>
+<span id="cb267-5"><a href="book_02_beginner_2nd_half.html#cb267-5" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;従業員数レンジ&quot;</span>)</span>
+<span id="cb267-6"><a href="book_02_beginner_2nd_half.html#cb267-6" aria-hidden="true" tabindex="-1"></a>data_9 <span class="sc">%&gt;%</span> <span class="fu">colnames</span>()</span></code></pre></div>
 <pre><code>[1] &quot;企業コード&quot;                 &quot;都道府県&quot;                  
 [3] &quot;従業員数&quot;                   &quot;業種大分類&quot;                
 [5] &quot;最新期業績売上高(百万円)&quot;   &quot;最新期業績税引後利益(千円)&quot;
@@ -3269,8 +3265,8 @@ band_members %&gt;%
 </ul></li>
 <li>encodingは<strong>UTF-8</strong>になります（現状は変更不可）</li>
 </ul>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="book_02_beginner_2nd_half.html#cb269-1"></a>data_<span class="dv">9</span> <span class="op">%&gt;%</span></span>
-<span id="cb269-2"><a href="book_02_beginner_2nd_half.html#cb269-2"></a><span class="st">  </span><span class="kw">write_csv</span>(<span class="kw">here</span>(<span class="st">&quot;output/研磨後最終ファイル.csv&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="book_02_beginner_2nd_half.html#cb269-1" aria-hidden="true" tabindex="-1"></a>data_9 <span class="sc">%&gt;%</span></span>
+<span id="cb269-2"><a href="book_02_beginner_2nd_half.html#cb269-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">&quot;output/研磨後最終ファイル.csv&quot;</span>))</span></code></pre></div>
 </div>
 <div id="step15_sanko" class="section level3" number="3.10.5">
 <h3><span class="header-section-number">3.10.5</span> 参考：ファイル出力のencoding</h3>
@@ -3290,13 +3286,13 @@ band_members %&gt;%
 </ul></li>
 <li>引数fileEncodingで、encodingを指定します</li>
 </ul>
-<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="book_02_beginner_2nd_half.html#cb270-1"></a>data_<span class="dv">9</span> <span class="op">%&gt;%</span></span>
-<span id="cb270-2"><a href="book_02_beginner_2nd_half.html#cb270-2"></a><span class="st">  </span><span class="kw">write.csv</span>(<span class="kw">here</span>(<span class="st">&quot;output/研磨後最終ファイル.csv&quot;</span>), </span>
-<span id="cb270-3"><a href="book_02_beginner_2nd_half.html#cb270-3"></a>            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb270-4"><a href="book_02_beginner_2nd_half.html#cb270-4"></a>            <span class="dt">fileEncoding =</span> <span class="st">&quot;shift-jis&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="book_02_beginner_2nd_half.html#cb270-1" aria-hidden="true" tabindex="-1"></a>data_9 <span class="sc">%&gt;%</span></span>
+<span id="cb270-2"><a href="book_02_beginner_2nd_half.html#cb270-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.csv</span>(<span class="fu">here</span>(<span class="st">&quot;output/研磨後最終ファイル.csv&quot;</span>), </span>
+<span id="cb270-3"><a href="book_02_beginner_2nd_half.html#cb270-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb270-4"><a href="book_02_beginner_2nd_half.html#cb270-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">fileEncoding =</span> <span class="st">&quot;shift-jis&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="おわり-1" class="section level2 unnumbered" number="">
+<div id="おわり-1" class="section level2 unnumbered">
 <h2>おわり</h2>
 <p>これで初級編は終了です。お疲れさまでした。</p>
 
