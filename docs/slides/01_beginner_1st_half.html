@@ -14,6 +14,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -45,7 +46,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span. { color: #1f1c1b; } /* Normal */
+code span { color: #1f1c1b; } /* Normal */
 code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
 code span.an { color: #ca60ca; } /* Annotation */
 code span.at { color: #0057ae; } /* Attribute */
@@ -513,7 +514,7 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="01_beginner_1st_half_files/header-attrs-2.5/header-attrs.js"></script>
+    <script src="01_beginner_1st_half_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="01_beginner_1st_half_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
     <link href="01_beginner_1st_half_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 </head>
@@ -523,7 +524,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section>
     <h1 class="title">データ研磨スキル<br>[初級編前半]</h1>
-    <h3 class="date">2020/11/28</h3>
+    <h3 class="date">2021/02/20</h3>
 </section>
 
 <section>
@@ -534,18 +535,18 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="研磨ストーリー" class="slide level2 unnumbered">
 <h2 class="unnumbered">研磨ストーリー</h2>
 <p>顧客から受領した企業リストに対して企業概要データを付与し、データの集計表や指標を算出して顧客へ渡します。</p>
-<p><img data-src="../pictures/begginer/story.png" /></p>
+<p><img src="../pictures/begginer/story.png" width="100%" style="display: block; margin: auto;" /></p>
 </section>
 <section id="作業イメージ" class="slide level2 unnumbered">
 <h2 class="unnumbered">作業イメージ</h2>
 <p>添えてある数字が各ステップに対応しています。</p>
-<p><img data-src="../pictures/begginer/story_image.png" /></p>
+<p><img src="../pictures/begginer/story-image-beg.png" width="65%" style="display: block; margin: auto;" /></p>
 </section>
 <section id="ディレクトリ構成" class="slide level2 unnumbered">
 <h2 class="unnumbered">ディレクトリ構成</h2>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><img data-src="../pictures/begginer/dir_structure.png" /></p>
+<p><img src="../pictures/begginer/dir-structure.png" width="100%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
@@ -554,7 +555,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wgjahkengy .gt_table {
+#zuksohuxvw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -579,7 +580,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-left-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_heading {
+#zuksohuxvw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -591,7 +592,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_title {
+#zuksohuxvw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -601,7 +602,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-width: 0;
 }
 
-#wgjahkengy .gt_subtitle {
+#zuksohuxvw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -611,13 +612,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-width: 0;
 }
 
-#wgjahkengy .gt_bottom_border {
+#zuksohuxvw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_col_headings {
+#zuksohuxvw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -632,7 +633,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_col_heading {
+#zuksohuxvw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -652,7 +653,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#wgjahkengy .gt_column_spanner_outer {
+#zuksohuxvw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -664,15 +665,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 4px;
 }
 
-#wgjahkengy .gt_column_spanner_outer:first-child {
+#zuksohuxvw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wgjahkengy .gt_column_spanner_outer:last-child {
+#zuksohuxvw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wgjahkengy .gt_column_spanner {
+#zuksohuxvw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -684,7 +685,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   width: 100%;
 }
 
-#wgjahkengy .gt_group_heading {
+#zuksohuxvw .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -706,7 +707,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#wgjahkengy .gt_empty_group_heading {
+#zuksohuxvw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -721,15 +722,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
   vertical-align: middle;
 }
 
-#wgjahkengy .gt_from_md > :first-child {
+#zuksohuxvw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wgjahkengy .gt_from_md > :last-child {
+#zuksohuxvw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wgjahkengy .gt_row {
+#zuksohuxvw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -748,7 +749,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   overflow-x: hidden;
 }
 
-#wgjahkengy .gt_stub {
+#zuksohuxvw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -760,7 +761,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-left: 12px;
 }
 
-#wgjahkengy .gt_summary_row {
+#zuksohuxvw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -770,7 +771,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#wgjahkengy .gt_first_summary_row {
+#zuksohuxvw .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -780,7 +781,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_grand_summary_row {
+#zuksohuxvw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -790,7 +791,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   padding-right: 5px;
 }
 
-#wgjahkengy .gt_first_grand_summary_row {
+#zuksohuxvw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -800,11 +801,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-top-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_striped {
+#zuksohuxvw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wgjahkengy .gt_table_body {
+#zuksohuxvw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -813,7 +814,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-bottom-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_footnotes {
+#zuksohuxvw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -827,13 +828,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_footnote {
+#zuksohuxvw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wgjahkengy .gt_sourcenotes {
+#zuksohuxvw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -847,46 +848,46 @@ document.getElementsByTagName('head')[0].appendChild(style);
   border-right-color: #D3D3D3;
 }
 
-#wgjahkengy .gt_sourcenote {
+#zuksohuxvw .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wgjahkengy .gt_left {
+#zuksohuxvw .gt_left {
   text-align: left;
 }
 
-#wgjahkengy .gt_center {
+#zuksohuxvw .gt_center {
   text-align: center;
 }
 
-#wgjahkengy .gt_right {
+#zuksohuxvw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wgjahkengy .gt_font_normal {
+#zuksohuxvw .gt_font_normal {
   font-weight: normal;
 }
 
-#wgjahkengy .gt_font_bold {
+#zuksohuxvw .gt_font_bold {
   font-weight: bold;
 }
 
-#wgjahkengy .gt_font_italic {
+#zuksohuxvw .gt_font_italic {
   font-style: italic;
 }
 
-#wgjahkengy .gt_super {
+#zuksohuxvw .gt_super {
   font-size: 65%;
 }
 
-#wgjahkengy .gt_footnote_marks {
+#zuksohuxvw .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="wgjahkengy" style="overflow-x:auto;overflow-y:auto;width:500px;height:auto;"><table class="gt_table">
+<div id="zuksohuxvw" style="overflow-x:auto;overflow-y:auto;width:500px;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -923,8 +924,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li>tidyverseとhereを読み込みます</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(here)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div>
 </section></section>
 <section>
 <section id="ステップ１csvファイルの読み込み" class="title-slide slide level1">
@@ -952,9 +953,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>read_csvの引数の説明は2頁先ににまとめてあります</li>
 <li>カラム型を指定しないときは、カラム型をある程度自動識別し、読み込んだカラム型のメッセージが出ます</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>df_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/企業リスト1.csv&quot;</span>),</span>
-<span id="cb2-2"><a href="#cb2-2"></a>                 <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>))</span>
-<span id="cb2-3"><a href="#cb2-3"></a>df_<span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;input/企業リスト1.csv&quot;</span>),</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df_1</span></code></pre></div>
 <div class="columns">
 <div class="column" style="width:58%;">
 <pre><code>
@@ -988,11 +989,11 @@ cols(
 <li>同様にして<strong>企業リスト2.csv</strong>も読み込みます</li>
 <li>ここではカラム型の指定も行っています</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/企業リスト2.csv&quot;</span>),</span>
-<span id="cb5-2"><a href="#cb5-2"></a>                 <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb5-3"><a href="#cb5-3"></a>                 <span class="dt">col_types =</span> <span class="st">&quot;c&quot;</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># これでも可 col_types = cols(企業コード = col_character())</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>df_<span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;input/企業リスト2.csv&quot;</span>),</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">col_types =</span> <span class="st">&quot;c&quot;</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># これでも可 col_types = cols(企業コード = col_character())</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df_2</span></code></pre></div>
 <pre><code># A tibble: 500 x 1
    企業コード
    &lt;chr&gt;     
@@ -1014,7 +1015,7 @@ cols(
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#mymuyzpyqm .gt_table {
+#klcpngkkkr .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1039,7 +1040,7 @@ cols(
   border-left-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_heading {
+#klcpngkkkr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1051,7 +1052,7 @@ cols(
   border-right-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_title {
+#klcpngkkkr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1061,7 +1062,7 @@ cols(
   border-bottom-width: 0;
 }
 
-#mymuyzpyqm .gt_subtitle {
+#klcpngkkkr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1071,13 +1072,13 @@ cols(
   border-top-width: 0;
 }
 
-#mymuyzpyqm .gt_bottom_border {
+#klcpngkkkr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_col_headings {
+#klcpngkkkr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1092,7 +1093,7 @@ cols(
   border-right-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_col_heading {
+#klcpngkkkr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1112,7 +1113,7 @@ cols(
   overflow-x: hidden;
 }
 
-#mymuyzpyqm .gt_column_spanner_outer {
+#klcpngkkkr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1124,15 +1125,15 @@ cols(
   padding-right: 4px;
 }
 
-#mymuyzpyqm .gt_column_spanner_outer:first-child {
+#klcpngkkkr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mymuyzpyqm .gt_column_spanner_outer:last-child {
+#klcpngkkkr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mymuyzpyqm .gt_column_spanner {
+#klcpngkkkr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1144,7 +1145,7 @@ cols(
   width: 100%;
 }
 
-#mymuyzpyqm .gt_group_heading {
+#klcpngkkkr .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1166,7 +1167,7 @@ cols(
   vertical-align: middle;
 }
 
-#mymuyzpyqm .gt_empty_group_heading {
+#klcpngkkkr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1181,15 +1182,15 @@ cols(
   vertical-align: middle;
 }
 
-#mymuyzpyqm .gt_from_md > :first-child {
+#klcpngkkkr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mymuyzpyqm .gt_from_md > :last-child {
+#klcpngkkkr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mymuyzpyqm .gt_row {
+#klcpngkkkr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1208,7 +1209,7 @@ cols(
   overflow-x: hidden;
 }
 
-#mymuyzpyqm .gt_stub {
+#klcpngkkkr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1220,7 +1221,7 @@ cols(
   padding-left: 12px;
 }
 
-#mymuyzpyqm .gt_summary_row {
+#klcpngkkkr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1230,7 +1231,7 @@ cols(
   padding-right: 5px;
 }
 
-#mymuyzpyqm .gt_first_summary_row {
+#klcpngkkkr .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1240,7 +1241,7 @@ cols(
   border-top-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_grand_summary_row {
+#klcpngkkkr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1250,7 +1251,7 @@ cols(
   padding-right: 5px;
 }
 
-#mymuyzpyqm .gt_first_grand_summary_row {
+#klcpngkkkr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1260,11 +1261,11 @@ cols(
   border-top-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_striped {
+#klcpngkkkr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mymuyzpyqm .gt_table_body {
+#klcpngkkkr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1273,7 +1274,7 @@ cols(
   border-bottom-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_footnotes {
+#klcpngkkkr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1287,13 +1288,13 @@ cols(
   border-right-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_footnote {
+#klcpngkkkr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#mymuyzpyqm .gt_sourcenotes {
+#klcpngkkkr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1307,46 +1308,46 @@ cols(
   border-right-color: #D3D3D3;
 }
 
-#mymuyzpyqm .gt_sourcenote {
+#klcpngkkkr .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#mymuyzpyqm .gt_left {
+#klcpngkkkr .gt_left {
   text-align: left;
 }
 
-#mymuyzpyqm .gt_center {
+#klcpngkkkr .gt_center {
   text-align: center;
 }
 
-#mymuyzpyqm .gt_right {
+#klcpngkkkr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mymuyzpyqm .gt_font_normal {
+#klcpngkkkr .gt_font_normal {
   font-weight: normal;
 }
 
-#mymuyzpyqm .gt_font_bold {
+#klcpngkkkr .gt_font_bold {
   font-weight: bold;
 }
 
-#mymuyzpyqm .gt_font_italic {
+#klcpngkkkr .gt_font_italic {
   font-style: italic;
 }
 
-#mymuyzpyqm .gt_super {
+#klcpngkkkr .gt_super {
   font-size: 65%;
 }
 
-#mymuyzpyqm .gt_footnote_marks {
+#klcpngkkkr .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="mymuyzpyqm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="klcpngkkkr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1459,13 +1460,13 @@ cols(
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># 例）このコードは動きません</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="kw">here</span>(<span class="st">&quot;input/data.csv&quot;</span>),</span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="dt">col_1 =</span> <span class="kw">col_character</span>(),</span>
-<span id="cb7-6"><a href="#cb7-6"></a>    <span class="dt">col_2 =</span> <span class="kw">col_integer</span>()</span>
-<span id="cb7-7"><a href="#cb7-7"></a>  ))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 例）このコードは動きません</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">&quot;input/data.csv&quot;</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_1 =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_2 =</span> <span class="fu">col_integer</span>()</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  ))</span></code></pre></div>
 </div>
 </div>
 </section>
@@ -1474,9 +1475,9 @@ cols(
 <ul>
 <li>ステップ4以降で扱うCOSMOS2のデータ(企業概要データ_2019年1月時点.csv)を読み込みます</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>c2_<span class="dv">201901</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>))</span></code></pre></div>
 <pre><code>
 -- Column specification --------------------------------------------------------
 cols(
@@ -1498,7 +1499,7 @@ cols(
 <ul>
 <li>カラム数が多いときは、コンソールでデータを表示しても、全てのカラムを確認することができません</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>c2_<span class="dv">201901</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>c2_201901</span></code></pre></div>
 <pre><code># A tibble: 2,111 x 11
    企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
@@ -1523,7 +1524,7 @@ cols(
 <li>大規模データの確認には<strong>glimpse</strong>を使いましょう</li>
 <li>カラムが縦に並ぶのでデータが確認しやすいです</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">glimpse</span>(c2_<span class="dv">201901</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(c2_201901)</span></code></pre></div>
 <pre><code>Rows: 2,111
 Columns: 11
 $ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
@@ -1573,9 +1574,9 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <li>生データのファイルは、任意のテキストエディタ等で確認する他にも、次のようにして確認する方法があります</li>
 <li><strong>read_lines</strong>関数を使って、read_csvと同様に書くことで、生データをテキストとして1行ずつ読み込みます</li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">read_lines</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/都道府県マスタ.csv&quot;</span>),</span>
-<span id="cb16-2"><a href="#cb16-2"></a>           <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb16-3"><a href="#cb16-3"></a>           <span class="dt">n_max =</span> <span class="dv">10</span>) <span class="co"># 先頭から10行を読み込む</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_lines</span>(<span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;input/都道府県マスタ.csv&quot;</span>),</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">n_max =</span> <span class="dv">10</span>) <span class="co"># 先頭から10行を読み込む</span></span></code></pre></div>
 <pre><code> [1] &quot;都道府県CODE,都道府県名&quot; &quot;01,北海道&quot;              
  [3] &quot;02,青森県&quot;               &quot;03,岩手県&quot;              
  [5] &quot;04,宮城県&quot;               &quot;05,秋田県&quot;              
@@ -1590,23 +1591,23 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>カラム数が多いデータでcol_typesを手作業で入力するのは面倒なので、tipsを伝授します</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>c2_<span class="dv">201901</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
-<span id="cb18-2"><a href="#cb18-2"></a>  <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
-<span id="cb18-3"><a href="#cb18-3"></a>  <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb18-4"><a href="#cb18-4"></a>  <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    企業コード  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb18-6"><a href="#cb18-6"></a>    本社所在地市区郡  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb18-7"><a href="#cb18-7"></a>    業種大分類  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb18-8"><a href="#cb18-8"></a>    <span class="st">`</span><span class="dt">資本金(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-9"><a href="#cb18-9"></a>    従業員数  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-10"><a href="#cb18-10"></a>    最新期業績決算期年  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-11"><a href="#cb18-11"></a>    最新期業績決算期月  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-12"><a href="#cb18-12"></a>    <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-13"><a href="#cb18-13"></a>    <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-14"><a href="#cb18-14"></a>    創業年  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb18-15"><a href="#cb18-15"></a>    設立年  =<span class="st"> </span><span class="kw">col_double</span>()</span>
-<span id="cb18-16"><a href="#cb18-16"></a>  )</span>
-<span id="cb18-17"><a href="#cb18-17"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    企業コード  <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    本社所在地市区郡  <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    業種大分類  <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">資本金(千円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    従業員数  <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    最新期業績決算期年  <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    最新期業績決算期月  <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    創業年  <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    設立年  <span class="ot">=</span> <span class="fu">col_double</span>()</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </section>
 <section class="slide level2">
 
@@ -1614,9 +1615,9 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <li>カラム型を指定せずに100行程データを読み込み、読み込んだデータを<strong>spec</strong>という関数にかけます</li>
 <li>spec関数の出力をコピーして、必要があれば編集し、read_csvの引数に与えればおっけーです</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
-<span id="cb19-2"><a href="#cb19-2"></a>         <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb19-3"><a href="#cb19-3"></a>         <span class="dt">n_max =</span> <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spec</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="at">file =</span> <span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">n_max =</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">spec</span>()</span></code></pre></div>
 <pre><code>cols(
   企業コード = col_character(),
   本社所在地市区郡 = col_character(),
@@ -1635,7 +1636,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <h2>参考２：()付きカラムの取り扱い</h2>
 <div class="columns">
 <div class="column" style="width:43%;">
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">glimpse</span>(c2_<span class="dv">201901</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(c2_201901)</span></code></pre></div>
 <pre><code>Rows: 2,111
 Columns: 11
 $ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
@@ -1717,8 +1718,8 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <li>結合したいデータをbind_rowsの引数に与えることで、データを縦結合することができます</li>
 <li>df_1とdf_2を縦結合したデータをdf_3とします</li>
 </ul>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>df_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(df_<span class="dv">1</span>, df_<span class="dv">2</span>)</span>
-<span id="cb25-2"><a href="#cb25-2"></a>df_<span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_3 <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(df_1, df_2)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>df_3</span></code></pre></div>
 <pre><code># A tibble: 1,000 x 1
    企業コード
    &lt;chr&gt;     
@@ -1739,7 +1740,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>3つ以上のデータを縦結合したい場合も、2つの場合と同様にして引数に渡します</li>
 </ul>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">bind_rows</span>(df_<span class="dv">1</span>, df_<span class="dv">2</span>, df_<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(df_1, df_2, df_3)</span></code></pre></div>
 <pre><code># A tibble: 2,000 x 1
    企業コード
    &lt;chr&gt;     
@@ -1777,7 +1778,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">bind_rows</span>(d1, d2)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(d1, d2)</span></code></pre></div>
 <pre><code># A tibble: 2 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1792,7 +1793,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <li>縦結合と同様に<strong>bind_cols</strong>でデータを横(列)結合できます</li>
 <li>カラム名が重複すると、カラムの識別がつくようにカラム名が自動的に変更されます</li>
 </ul>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">bind_cols</span>(df_<span class="dv">1</span>, df_<span class="dv">2</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(df_1, df_2) </span></code></pre></div>
 <pre><code># A tibble: 500 x 2
    企業コード...1 企業コード...2
    &lt;chr&gt;          &lt;chr&gt;         
@@ -1813,7 +1814,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>縦結合とは異なり、行数が揃っていないと横結合することはできません</li>
 </ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">bind_cols</span>(df_<span class="dv">1</span>, df_<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(df_1, df_3)</span></code></pre></div>
 <pre><code>Error: Can&#39;t recycle `..1` (size 500) to match `..2` (size 1000).</code></pre>
 <p><strong>補足</strong></p>
 <ul>
@@ -1860,7 +1861,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 7 x 1
   code 
   &lt;chr&gt;
@@ -1874,7 +1875,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">n_distinct</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">n_distinct</span>()</span></code></pre></div>
 <pre><code>[1] 4</code></pre>
 </div>
 </div>
@@ -1887,7 +1888,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 7 x 1
   code 
   &lt;chr&gt;
@@ -1901,7 +1902,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="kw">nrow</span>(d) <span class="op">-</span><span class="st"> </span><span class="kw">n_distinct</span>(d)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(d) <span class="sc">-</span> <span class="fu">n_distinct</span>(d)</span></code></pre></div>
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
@@ -1914,7 +1915,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 7 x 1
   code 
   &lt;chr&gt;
@@ -1928,7 +1929,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">distinct</span>()</span></code></pre></div>
 <pre><code># A tibble: 4 x 1
   code 
   &lt;chr&gt;
@@ -1946,11 +1947,11 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <li>重複を消去したデータを、df_3_distinctとします</li>
 </ul>
 <p>重複レコード数の確認</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co"># もとのデータ数 - 重複消去後のデータ数 = 重複データ数</span></span>
-<span id="cb50-2"><a href="#cb50-2"></a><span class="kw">nrow</span>(df_<span class="dv">3</span>) <span class="op">-</span><span class="st"> </span><span class="kw">n_distinct</span>(df_<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># もとのデータ数 - 重複消去後のデータ数 = 重複データ数</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_3) <span class="sc">-</span> <span class="fu">n_distinct</span>(df_3)</span></code></pre></div>
 <pre><code>[1] 113</code></pre>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>df_<span class="dv">3</span>_distinct &lt;-<span class="st"> </span>df_<span class="dv">3</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>() </span>
-<span id="cb52-2"><a href="#cb52-2"></a><span class="kw">nrow</span>(df_<span class="dv">3</span>_distinct)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>df_3_distinct <span class="ot">&lt;-</span> df_3 <span class="sc">%&gt;%</span> <span class="fu">distinct</span>() </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_3_distinct)</span></code></pre></div>
 <pre><code>[1] 887</code></pre>
 </section>
 <section id="step3_sanko1" class="slide level2">
@@ -1961,7 +1962,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 4 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
@@ -1972,7 +1973,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>(col_<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(col_1)</span></code></pre></div>
 <pre><code># A tibble: 2 x 1
   col_1
   &lt;dbl&gt;
@@ -1987,7 +1988,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>引数<strong>.keep_all = TRUE</strong>とすることによって、重複消去したカラム以外のカラムも残すことができます。</li>
 </ul>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 4 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
@@ -1995,7 +1996,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 2     2 a     滋賀 
 3     2 b     大阪 
 4     2 a     滋賀 </code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>(col_<span class="dv">1</span>, <span class="dt">.keep_all =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(col_1, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code># A tibble: 2 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
@@ -2007,7 +2008,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>複数のカラムを引数に与えると、<strong>与えたカラムのレコードの積集合</strong>が重複していた時、レコードが消去されます</li>
 </ul>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 4 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
@@ -2015,7 +2016,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 2     2 a     滋賀 
 3     2 b     大阪 
 4     2 a     滋賀 </code></pre>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">distinct</span>(col_<span class="dv">1</span>, col_<span class="dv">2</span>, col_<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(col_1, col_2, col_3)</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
   col_1 col_2 col_3
   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
@@ -2035,7 +2036,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>c2のデータから必要なカラムのみを抽出します</li>
 </ul>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 2,111
 Columns: 11
 $ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
@@ -2077,7 +2078,7 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>今c2データにあるカラムは以下の11個です</li>
 </ul>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">colnames</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="sc">%&gt;%</span> <span class="fu">colnames</span>()</span></code></pre></div>
 <pre><code> [1] &quot;企業コード&quot;                 &quot;本社所在地市区郡&quot;          
  [3] &quot;業種大分類&quot;                 &quot;資本金(千円)&quot;              
  [5] &quot;従業員数&quot;                   &quot;最新期業績決算期年&quot;        
@@ -2090,11 +2091,11 @@ $ 設立年                       &lt;dbl&gt; 1951, 1948, 1951, 1951, 1971, 1946
 <ul>
 <li>データとカラム名をselectの引数に渡すことで、データから選択したカラムを抽出することができます</li>
 </ul>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span></span>
-<span id="cb70-2"><a href="#cb70-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;本社所在地市区郡&quot;</span>, <span class="st">&quot;業種大分類&quot;</span>,</span>
-<span id="cb70-3"><a href="#cb70-3"></a>         <span class="st">&quot;従業員数&quot;</span>, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>,</span>
-<span id="cb70-4"><a href="#cb70-4"></a>         <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb70-5"><a href="#cb70-5"></a><span class="st">  </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="sc">%&gt;%</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;本社所在地市区郡&quot;</span>, <span class="st">&quot;業種大分類&quot;</span>,</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;従業員数&quot;</span>, <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>,</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 2,111
 Columns: 6
 $ 企業コード                   &lt;chr&gt; &quot;G92155635&quot;, &quot;G92155065&quot;, &quot;G92143569&quot;, &quot;G92...
@@ -2109,14 +2110,14 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <ul>
 <li>変数を選択したデータを<strong>c2_201901_selected</strong>とします</li>
 </ul>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>c2_<span class="dv">201901</span>_selected &lt;-<span class="st"> </span>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span></span>
-<span id="cb72-2"><a href="#cb72-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="st">&quot;企業コード&quot;</span>,</span>
-<span id="cb72-3"><a href="#cb72-3"></a>         <span class="st">&quot;本社所在地市区郡&quot;</span>,</span>
-<span id="cb72-4"><a href="#cb72-4"></a>         <span class="st">&quot;業種大分類&quot;</span>,</span>
-<span id="cb72-5"><a href="#cb72-5"></a>         <span class="st">&quot;従業員数&quot;</span>,</span>
-<span id="cb72-6"><a href="#cb72-6"></a>         <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>,</span>
-<span id="cb72-7"><a href="#cb72-7"></a>         <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span>)</span>
-<span id="cb72-8"><a href="#cb72-8"></a>c2_<span class="dv">201901</span>_selected</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>c2_201901_selected <span class="ot">&lt;-</span> c2_201901 <span class="sc">%&gt;%</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">&quot;企業コード&quot;</span>,</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;本社所在地市区郡&quot;</span>,</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;業種大分類&quot;</span>,</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;従業員数&quot;</span>,</span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>,</span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span>)</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>c2_201901_selected</span></code></pre></div>
 <pre><code># A tibble: 2,111 x 6
    企業コード 本社所在地市区郡 業種大分類 従業員数 `最新期業績売上高(百万円)`~
    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;         &lt;dbl&gt;            &lt;dbl&gt;
@@ -2138,30 +2139,30 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <ul>
 <li>不要カラムが事前に分かっている場合は、(特に大規模データでは)データ読み込み時点で対処した方が効率的です</li>
 </ul>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="co"># 不要なカラムはcol_skip()として読み込まないようにする</span></span>
-<span id="cb74-2"><a href="#cb74-2"></a>c2_<span class="dv">201901</span>_selected &lt;-<span class="st"> </span><span class="kw">read_csv</span>(</span>
-<span id="cb74-3"><a href="#cb74-3"></a>  <span class="kw">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
-<span id="cb74-4"><a href="#cb74-4"></a>  <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
-<span id="cb74-5"><a href="#cb74-5"></a>  <span class="dt">col_types =</span> <span class="kw">cols</span>(</span>
-<span id="cb74-6"><a href="#cb74-6"></a>    企業コード  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb74-7"><a href="#cb74-7"></a>    本社所在地市区郡  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb74-8"><a href="#cb74-8"></a>    業種大分類  =<span class="st"> </span><span class="kw">col_character</span>(),</span>
-<span id="cb74-9"><a href="#cb74-9"></a>    <span class="st">`</span><span class="dt">資本金(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb74-10"><a href="#cb74-10"></a>    従業員数  =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb74-11"><a href="#cb74-11"></a>    最新期業績決算期年  =<span class="st"> </span><span class="kw">col_skip</span>(), <span class="co"># 不要</span></span>
-<span id="cb74-12"><a href="#cb74-12"></a>    最新期業績決算期月  =<span class="st"> </span><span class="kw">col_skip</span>(), <span class="co"># 不要</span></span>
-<span id="cb74-13"><a href="#cb74-13"></a>    <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb74-14"><a href="#cb74-14"></a>    <span class="st">`</span><span class="dt">最新期業績税引後利益(千円)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">col_double</span>(),</span>
-<span id="cb74-15"><a href="#cb74-15"></a>    創業年  =<span class="st"> </span><span class="kw">col_skip</span>(),  <span class="co"># 不要</span></span>
-<span id="cb74-16"><a href="#cb74-16"></a>    設立年  =<span class="st"> </span><span class="kw">col_skip</span>()   <span class="co"># 不要</span></span>
-<span id="cb74-17"><a href="#cb74-17"></a>  )</span>
-<span id="cb74-18"><a href="#cb74-18"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 不要なカラムはcol_skip()として読み込まないようにする</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>c2_201901_selected <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">&quot;input/企業概要データ_2019年1月時点.csv&quot;</span>),</span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">&quot;shift-jis&quot;</span>),</span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a>    企業コード  <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>    本社所在地市区郡  <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a>    業種大分類  <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb74-9"><a href="#cb74-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">資本金(千円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb74-10"><a href="#cb74-10" aria-hidden="true" tabindex="-1"></a>    従業員数  <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb74-11"><a href="#cb74-11" aria-hidden="true" tabindex="-1"></a>    最新期業績決算期年  <span class="ot">=</span> <span class="fu">col_skip</span>(), <span class="co"># 不要</span></span>
+<span id="cb74-12"><a href="#cb74-12" aria-hidden="true" tabindex="-1"></a>    最新期業績決算期月  <span class="ot">=</span> <span class="fu">col_skip</span>(), <span class="co"># 不要</span></span>
+<span id="cb74-13"><a href="#cb74-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb74-14"><a href="#cb74-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">最新期業績税引後利益(千円)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb74-15"><a href="#cb74-15" aria-hidden="true" tabindex="-1"></a>    創業年  <span class="ot">=</span> <span class="fu">col_skip</span>(),  <span class="co"># 不要</span></span>
+<span id="cb74-16"><a href="#cb74-16" aria-hidden="true" tabindex="-1"></a>    設立年  <span class="ot">=</span> <span class="fu">col_skip</span>()   <span class="co"># 不要</span></span>
+<span id="cb74-17"><a href="#cb74-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb74-18"><a href="#cb74-18" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </section>
 <section id="step4_sanko2" class="slide level2">
 <h2>参考２：ベクトルで変数の選択</h2>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>want_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;col_1&quot;</span>, <span class="st">&quot;col_2&quot;</span>)</span>
-<span id="cb75-2"><a href="#cb75-2"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">any_of</span>(want_var))</span>
-<span id="cb75-3"><a href="#cb75-3"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">all_of</span>(want_var))</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>want_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;col_1&quot;</span>, <span class="st">&quot;col_2&quot;</span>)</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">any_of</span>(want_var))</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">all_of</span>(want_var))</span></code></pre></div>
 <ul>
 <li>上記のようにカラムをベクトルで選択することもできますが、any_ofとall_ofを使い分ける必要があります</li>
 </ul>
@@ -2190,8 +2191,8 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <ul>
 <li><strong>any_of</strong>は存在しないカラムがあってもエラーが出ない</li>
 </ul>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a>want_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;従業員数&quot;</span>, <span class="st">&quot;企業規模&quot;</span>)</span>
-<span id="cb76-2"><a href="#cb76-2"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">any_of</span>(want_var)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>want_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;従業員数&quot;</span>, <span class="st">&quot;企業規模&quot;</span>)</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">any_of</span>(want_var)) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">2</span>)</span></code></pre></div>
 <pre><code># A tibble: 2 x 2
   企業コード 従業員数
   &lt;chr&gt;         &lt;dbl&gt;
@@ -2200,10 +2201,10 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <ul>
 <li><strong>all_of</strong>は存在しないカラムがあるとエラーが出る</li>
 </ul>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a>want_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;従業員数&quot;</span>, <span class="st">&quot;企業規模&quot;</span>)</span>
-<span id="cb78-2"><a href="#cb78-2"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="kw">all_of</span>(want_var)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>want_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;企業コード&quot;</span>, <span class="st">&quot;従業員数&quot;</span>, <span class="st">&quot;企業規模&quot;</span>)</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">all_of</span>(want_var)) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>Error: Can&#39;t subset columns that don&#39;t exist.
-[31mx[39m Column `企業規模` doesn&#39;t exist.</code></pre>
+x Column `企業規模` doesn&#39;t exist.</code></pre>
 </section>
 <section id="step4_sanko3" class="slide level2">
 <h2>参考３：変数消去</h2>
@@ -2212,7 +2213,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
       x     y     z
   &lt;int&gt; &lt;int&gt; &lt;int&gt;
@@ -2222,7 +2223,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span><span class="st">&quot;y&quot;</span>, <span class="op">-</span><span class="st">&quot;z&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="st">&quot;y&quot;</span>, <span class="sc">-</span><span class="st">&quot;z&quot;</span>) </span></code></pre></div>
 <pre><code># A tibble: 3 x 1
       x
   &lt;int&gt;
@@ -2240,7 +2241,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </ul>
 <div class="columns">
 <div class="column" style="width:38%;">
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a>d</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
       x     y     z
   &lt;int&gt; &lt;int&gt; &lt;int&gt;
@@ -2250,8 +2251,8 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:60%;">
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1"></a>del_var &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;z&quot;</span>)</span>
-<span id="cb86-2"><a href="#cb86-2"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">all_of</span>(del_var))</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>del_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;z&quot;</span>)</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="fu">all_of</span>(del_var))</span></code></pre></div>
 <pre><code># A tibble: 3 x 1
       x
   &lt;int&gt;
@@ -2270,9 +2271,9 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <li>カラム名の括弧がコードの括弧と混同するのを防ぐためです</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1"></a>c2_<span class="dv">201901</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb88-2"><a href="#cb88-2"></a><span class="st">  </span><span class="kw">select</span>(企業コード, <span class="st">&quot;従業員数&quot;</span>, <span class="st">`</span><span class="dt">最新期業績売上高(百万円)</span><span class="st">`</span>) <span class="op">%&gt;%</span></span>
-<span id="cb88-3"><a href="#cb88-3"></a><span class="st">  </span><span class="kw">head</span>(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>c2_201901 <span class="sc">%&gt;%</span> </span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(企業コード, <span class="st">&quot;従業員数&quot;</span>, <span class="st">`</span><span class="at">最新期業績売上高(百万円)</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 3
   企業コード 従業員数 `最新期業績売上高(百万円)`
   &lt;chr&gt;         &lt;dbl&gt;                      &lt;dbl&gt;
@@ -2294,7 +2295,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1"></a>df_<span class="dv">3</span>_distinct</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>df_3_distinct</span></code></pre></div>
 <pre><code># A tibble: 887 x 1
    企業コード
    &lt;chr&gt;     
@@ -2312,7 +2313,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1"></a>c2_<span class="dv">201901</span>_selected</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>c2_201901_selected</span></code></pre></div>
 <pre><code># A tibble: 2,111 x 7
    企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
@@ -2335,28 +2336,28 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <h2>いろいろな結合方法</h2>
 <div class="columns">
 <div class="column" style="width:24%;">
-<p><strong>left_join</strong> <img src="../pictures/begginer/left-join.gif" height="200"></p>
+<p><strong>left_join</strong> <img src="../pictures/begginer/left-join.gif" width="95%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:1%;">
 
 </div><div class="column" style="width:24%;">
-<p><strong>left_join</strong> <img src="../pictures/begginer/left-join-extra.gif" height="200"></p>
+<p><strong>left_join</strong> <img src="../pictures/begginer/left-join-extra.gif" width="95%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:1%;">
 
 </div><div class="column" style="width:24%;">
-<p><strong>right_join</strong> <img src="../pictures/begginer/right-join.gif" height="200"></p>
+<p><strong>right_join</strong> <img src="../pictures/begginer/right-join.gif" width="95%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div class="columns">
 <div class="column" style="width:24%;">
-<p><strong>full_join</strong> <img src="../pictures/begginer/full-join.gif" height="200"></p>
+<p><strong>full_join</strong> <img src="../pictures/begginer/full-join.gif" width="95%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:1%;">
 
 </div><div class="column" style="width:24%;">
-<p><strong>inner_join</strong> <img src="../pictures/begginer/inner-join.gif" height="200"></p>
+<p><strong>inner_join</strong> <img src="../pictures/begginer/inner-join.gif" width="95%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:1%;">
 
 </div><div class="column" style="width:24%;">
-<p><strong>anti_join</strong> <img src="../pictures/begginer/anti-join.gif" height="200"></p>
+<p><strong>anti_join</strong> <img src="../pictures/begginer/anti-join.gif" width="95%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </section>
@@ -2365,7 +2366,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <p>色付きカラムが企業コードだと思ってください。</p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><img data-src="../pictures/begginer/left-join.gif" /></p>
+<p><img src="../pictures/begginer/left-join.gif" width="100%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
@@ -2384,7 +2385,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </ul>
 <div class="columns">
 <div class="column" style="width:42%;">
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1"></a>df_<span class="dv">3</span>_distinct</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>df_3_distinct</span></code></pre></div>
 <pre><code># A tibble: 887 x 1
    企業コード
    &lt;chr&gt;     
@@ -2402,7 +2403,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:55%;">
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1"></a>c2_<span class="dv">201901</span>_selected </span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>c2_201901_selected </span></code></pre></div>
 <pre><code># A tibble: 2,111 x 7
    企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
    &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
@@ -2427,10 +2428,10 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 539348, 4389077, -18044, 
 <li>キーとするカラムは引数<strong>by</strong>で指定します</li>
 <li>ジョインしたデータをdata_1とします</li>
 </ul>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a>data_<span class="dv">1</span> &lt;-<span class="st"> </span></span>
-<span id="cb98-2"><a href="#cb98-2"></a><span class="st">  </span>df_<span class="dv">3</span>_distinct <span class="op">%&gt;%</span></span>
-<span id="cb98-3"><a href="#cb98-3"></a><span class="st">  </span><span class="kw">left_join</span>(c2_<span class="dv">201901</span>_selected, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
-<span id="cb98-4"><a href="#cb98-4"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>data_1 <span class="ot">&lt;-</span> </span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a>  df_3_distinct <span class="sc">%&gt;%</span></span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(c2_201901_selected, <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>)</span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>data_1 <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 887
 Columns: 7
 $ 企業コード                   &lt;chr&gt; &quot;J31299770&quot;, &quot;E32002046&quot;, &quot;D42585413&quot;, &quot;J39...
@@ -2447,9 +2448,9 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 910536, 1775694, 408523, 
 <li>引数に与えるデータの順番を変えれば、right_joinを使っても、先ほどと同様の結合をすることができます</li>
 <li>left_joinとright_joinは混在させないようにしましょう（混在すると可読性が下がってしまうため）</li>
 </ul>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a>c2_<span class="dv">201901</span>_selected <span class="op">%&gt;%</span></span>
-<span id="cb100-2"><a href="#cb100-2"></a><span class="st">  </span><span class="kw">right_join</span>(df_<span class="dv">3</span>_distinct, <span class="dt">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb100-3"><a href="#cb100-3"></a><span class="st">  </span><span class="kw">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>c2_201901_selected <span class="sc">%&gt;%</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(df_3_distinct, <span class="at">by =</span> <span class="st">&quot;企業コード&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>Rows: 887
 Columns: 7
 $ 企業コード                   &lt;chr&gt; &quot;G92155065&quot;, &quot;G92515950&quot;, &quot;G92543356&quot;, &quot;G92...
@@ -2477,8 +2478,8 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 4389077, 88283, 515387, 4
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span></span>
-<span id="cb102-2"><a href="#cb102-2"></a><span class="st">  </span><span class="kw">head</span>(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>data_1 <span class="sc">%&gt;%</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div>
 <pre><code># A tibble: 3 x 7
   企業コード 本社所在地市区郡 業種大分類 `資本金(千円)` 従業員数
   &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
@@ -2490,8 +2491,8 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 4389077, 88283, 515387, 4
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a>data_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">3</span>) <span class="op">%&gt;%</span></span>
-<span id="cb104-2"><a href="#cb104-2"></a><span class="st">  </span><span class="kw">relocate</span>(従業員数)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>data_1 <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(従業員数)</span></code></pre></div>
 <pre><code># A tibble: 3 x 7
   従業員数 企業コード 本社所在地市区郡 業種大分類 `資本金(千円)`
      &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;               &lt;dbl&gt;
@@ -2508,7 +2509,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 4389077, 88283, 515387, 4
 <ul>
 <li>関数内でTabキー(またはctrl + space)を押すと、使用できる引数候補が表示され引数の説明も表示してくれます</li>
 </ul>
-<p><img data-src="../pictures/begginer/Tab_hokan_1.png" /></p>
+<p><img src="../pictures/begginer/Tab-hokan-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </section>
 <section class="slide level2">
 
@@ -2518,11 +2519,11 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 4389077, 88283, 515387, 4
 </ul>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><img data-src="../pictures/begginer/Tab_hokan_2.png" /></p>
+<p><img src="../pictures/begginer/Tab-hokan-2.png" width="100%" style="display: block; margin: auto;" /></p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:48%;">
-<p><img data-src="../pictures/begginer/Tab_hokan_3.png" /></p>
+<p><img src="../pictures/begginer/Tab-hokan-3.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </section></section>
@@ -2544,7 +2545,7 @@ $ `最新期業績税引後利益(千円)` &lt;dbl&gt; 4389077, 88283, 515387, 4
         // Vertical centering of slides
         center: false,
         // Enable slide navigation via mouse wheel
-        mouseWheel: true,
+        mouseWheel: false,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
